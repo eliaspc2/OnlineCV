@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor JSON — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">Editor JSON — Currículo</div>
+      <div class="actions">
+        <button id="loadAllBtn">Carregar ficheiros</button>
+        <button id="validateBtn">Validar</button>
+        <button id="downloadBtn">Download</button>
+        <button id="exitBtn">Sair</button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="editor-pane">
+        <div class="file-tabs" id="fileTabs"></div>
+        <div class="aggregate-view hidden" id="aggregateView">
+          <div class="tree-pane">
+            <div class="panel-title">Árvore</div>
+            <div class="tree-list" id="aggregateTree"></div>
+          </div>
+          <div class="detail-pane">
+            <div class="panel-title">JSON</div>
+            <div class="detail-list" id="aggregateDetail"></div>
+          </div>
+        </div>
+        <textarea id="editor" spellcheck="false"></textarea>
+      </div>
+      <aside class="side">
+        <h3>Ajuda</h3>
+        <p>Edite o <code>public/data/config.json</code> (layout/estética) e clique em <strong>Validar</strong> para ver erros no console.</p>
+        <p>As strings ficam em <code>public/data/pt-pt.json</code>, <code>public/data/es-es.json</code>, <code>public/data/fr-fr.json</code> e <code>public/data/uk-en.json</code>.</p>
+        <p><strong>Carregar ficheiros</strong> puxa e guarda os JSONs centrais.</p>
+        <p><strong>Download</strong> gera o ficheiro que está selecionado.</p>
+        <p>O conteúdo também fica em <code>localStorage</code> como rascunho.</p>
+        <p><strong>Agregado</strong> mostra uma árvore (estilo regedit) e um painel JSON filtrado pela seleção.</p>
+        <p>O editor abre no <strong>Agregado</strong> por defeito.</p>
+      </aside>
+    </main>
+  </div>
+  <script type="module" src="editor.js"></script>
+</body>
+</html>
