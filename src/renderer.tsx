@@ -10,7 +10,7 @@ export function renderNode(
   strings?: Record<string, string>
 ): React.ReactNode {
   const tag = def.tag || 'div';
-  const Tag = tag as keyof JSX.IntrinsicElements;
+  const Tag = tag as React.ElementType;
 
   const props: Record<string, unknown> = {};
   if (key !== undefined) props.key = key;
@@ -48,8 +48,8 @@ export function renderNode(
   }
 
   if (isVoidTag(tag)) {
-    return React.createElement(Tag, props);
+    return React.createElement(Tag, props as React.Attributes);
   }
 
-  return React.createElement(Tag, props, children.length ? children : undefined);
+  return React.createElement(Tag, props as React.Attributes, children.length ? children : undefined);
 }
