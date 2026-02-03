@@ -3,7 +3,23 @@ import { renderNode } from './renderer';
 import { validateConfig, type Config } from './validator';
 
 const STORAGE_KEY = 'json-site-lang';
-const DEFAULT_STRINGS_FILE = '/data/uk-en.json';
+const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
+
+const isAbsoluteUrl = (value: string) =>
+  value.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(value);
+
+const toPublicUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}${normalizedPath}`;
+};
+
+const toPublicUrlIfRelative = (path?: string) => {
+  if (!path) return path;
+  if (isAbsoluteUrl(path)) return path;
+  return toPublicUrl(path);
+};
 
 type StringsBundle = {
   lang?: string;
@@ -16,7 +32,7 @@ const normalizeStringsFile = (value?: string | null) => {
   if (!file.endsWith('.json')) file = `${file}.json`;
   file = file.replace(/^\//, '');
   file = file.replace(/^data\//, '');
-  return `/data/${file}`;
+  return `data/${file}`;
 };
 
 const getInitialStringsFile = () => {
@@ -97,17 +113,26 @@ const applyMeta = (
 
   if (favicon?.icon) {
     const type = guessType(favicon.icon);
-    createHeadEl('link', { rel: 'icon', href: `/${favicon.icon}`, ...(type ? { type } : {}) });
+    const href = toPublicUrlIfRelative(favicon.icon);
+    if (href) {
+      createHeadEl('link', { rel: 'icon', href, ...(type ? { type } : {}) });
+    }
   }
   if (favicon?.appleTouchIcon) {
-    createHeadEl('link', { rel: 'apple-touch-icon', href: `/${favicon.appleTouchIcon}` });
+    const href = toPublicUrlIfRelative(favicon.appleTouchIcon);
+    if (href) {
+      createHeadEl('link', { rel: 'apple-touch-icon', href });
+    }
   }
   if (favicon?.maskIcon) {
-    createHeadEl('link', {
-      rel: 'mask-icon',
-      href: `/${favicon.maskIcon}`,
-      ...(favicon.color ? { color: favicon.color } : {})
-    });
+    const href = toPublicUrlIfRelative(favicon.maskIcon);
+    if (href) {
+      createHeadEl('link', {
+        rel: 'mask-icon',
+        href,
+        ...(favicon.color ? { color: favicon.color } : {})
+      });
+    }
   }
 
   if (pwa?.enabled) {
@@ -125,7 +150,7 @@ const applyMeta = (
       theme_color: pwa.themeColor,
       background_color: pwa.backgroundColor,
       icons: (pwa.icons || []).map((icon) => ({
-        src: icon.src?.startsWith('assets/') ? `/${icon.src}` : icon.src,
+        src: toPublicUrlIfRelative(icon.src),
         sizes: icon.sizes || 'any',
         type: icon.type,
         purpose: icon.purpose
@@ -148,7 +173,7 @@ export default function App() {
 
   useEffect(() => {
     const load = async () => {
-      const res = await fetch('/data/config.json');
+      const res = await fetch(toPublicUrl('data/config.json'));
       if (!res.ok) throw new Error('Failed to load data/config.json');
       const data = (await res.json()) as Config;
       setConfig(data);
@@ -160,7 +185,7 @@ export default function App() {
   useEffect(() => {
     if (!stringsFile) return;
     const load = async () => {
-      const res = await fetch(stringsFile.startsWith('/') ? stringsFile : `/${stringsFile}`);
+      const res = await fetch(toPublicUrl(stringsFile));
       if (!res.ok) throw new Error(`Failed to load ${stringsFile}`);
       const data = (await res.json()) as StringsBundle;
       setStrings(data);
