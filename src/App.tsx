@@ -14,8 +14,8 @@ const normalizeStringsFile = (value?: string | null) => {
   if (!value) return null;
   let file = value;
   if (!file.endsWith('.json')) file = `${file}.json`;
-  file = file.replace(/^\\//, '');
-  file = file.replace(/^data\\//, '');
+  file = file.replace(/^\//, '');
+  file = file.replace(/^data\//, '');
   return `/data/${file}`;
 };
 
