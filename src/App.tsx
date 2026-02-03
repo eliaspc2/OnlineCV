@@ -426,7 +426,7 @@ export default function App() {
         if (clickIndicator) clickIndicator.classList.add('hidden');
         if (adminOverlay) adminOverlay.classList.remove('hidden');
         setTimeout(() => {
-          window.location.href = '/editor.html';
+          window.location.href = toPublicUrl('editor.html');
         }, 500);
         return;
       }
@@ -478,7 +478,7 @@ export default function App() {
     copyButtons.forEach((btn) => btn.addEventListener('click', onCopyClick));
 
     if (config.meta?.pwa?.enabled && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch((err) => {
+      navigator.serviceWorker.register(toPublicUrl('sw.js')).catch((err) => {
         console.warn('[JSON-SITE] Service worker registration failed', err);
       });
     }

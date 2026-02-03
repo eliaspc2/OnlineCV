@@ -4,6 +4,26 @@ import type { NodeDef } from './validator';
 const isVoidTag = (tag: string) =>
   ['img', 'input', 'br', 'hr', 'meta', 'link'].includes(tag);
 
+const isAbsoluteUrl = (value: string) =>
+  value.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(value);
+
+const toPublicUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}${normalizedPath}`;
+};
+
+const normalizeStyleValue = (value: unknown) => {
+  if (typeof value !== 'string') return value;
+  if (!value.includes('url(')) return value;
+  return value.replace(/url\((['"]?)(\/[^'")]+)\1\)/g, (_match, quote, urlPath) => {
+    if (isAbsoluteUrl(urlPath)) return _match;
+    const resolved = toPublicUrl(urlPath);
+    return `url(${quote}${resolved}${quote})`;
+  });
+};
+
 export function renderNode(
   def: NodeDef,
   key?: React.Key,
@@ -32,7 +52,11 @@ export function renderNode(
     }
   });
   if (def.styles) {
-    props.style = def.styles as React.CSSProperties;
+    const normalized: Record<string, unknown> = {};
+    Object.entries(def.styles).forEach(([k, v]) => {
+      normalized[k] = normalizeStyleValue(v);
+    });
+    props.style = normalized as React.CSSProperties;
   }
 
   const children: React.ReactNode[] = [];
