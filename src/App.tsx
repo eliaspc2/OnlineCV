@@ -478,7 +478,10 @@ export default function App() {
     copyButtons.forEach((btn) => btn.addEventListener('click', onCopyClick));
 
     if (config.meta?.pwa?.enabled && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register(toPublicUrl('sw.js')).catch((err) => {
+      navigator.serviceWorker
+        .register(toPublicUrl('sw.js'), { scope: import.meta.env.BASE_URL })
+        .then((registration) => registration.update())
+        .catch((err) => {
         console.warn('[JSON-SITE] Service worker registration failed', err);
       });
     }

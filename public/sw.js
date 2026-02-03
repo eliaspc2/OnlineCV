@@ -1,11 +1,14 @@
-const CACHE_NAME = 'json-site-v1';
-const CORE_ASSETS = ['/', '/index.html'];
+const CACHE_NAME = 'json-site-v2';
+const scopeUrl = new URL(self.registration.scope);
+const BASE_PATH = scopeUrl.pathname.endsWith('/') ? scopeUrl.pathname : `${scopeUrl.pathname}/`;
+const INDEX_URL = new URL(`${BASE_PATH}index.html`, scopeUrl.origin).toString();
+const ROOT_URL = new URL(`${BASE_PATH}`, scopeUrl.origin).toString();
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then((cache) => cache.addAll(CORE_ASSETS))
+      .then((cache) => cache.addAll([ROOT_URL, INDEX_URL]))
       .catch(() => undefined)
   );
   self.skipWaiting();
@@ -26,15 +29,36 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (request.mode === 'navigate') {
+  const isHtml =
+    request.mode === 'navigate' ||
+    (request.headers.get('accept') || '').includes('text/html');
+  const isJson = url.pathname.endsWith('.json');
+
+  if (isHtml) {
     event.respondWith(
       fetch(request)
         .then((response) => {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put('/index.html', copy));
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, copy);
+            cache.put(INDEX_URL, response.clone());
+          });
           return response;
         })
-        .catch(() => caches.match('/index.html'))
+        .catch(() => caches.match(request).then((cached) => cached || caches.match(INDEX_URL)))
+    );
+    return;
+  }
+
+  if (isJson) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          return response;
+        })
+        .catch(() => caches.match(request))
     );
     return;
   }
