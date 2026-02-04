@@ -65,6 +65,34 @@ Procura um `href` para PDF:
 
 Troca por outro ficheiro dentro de `json-site/public/assets/docs/`.
 
+## 3c) Definir como abre cada link
+
+Para documentos dentro da página (modal interno):
+
+```json
+{
+  "tag": "a",
+  "attrs": {
+    "href": "assets/docs/cv-andre-camara.pdf",
+    "download": "cv-andre-camara.pdf",
+    "data-open-inline": "true"
+  }
+}
+```
+
+Para abrir num separador novo:
+
+```json
+{
+  "tag": "a",
+  "attrs": {
+    "href": "https://example.com",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  }
+}
+```
+
 ## 4) Adicionar nova secção
 
 Em `pages[0].sections`, adiciona um novo bloco:
@@ -146,6 +174,11 @@ Abre `json-site/public/editor.html`. O editor:
 - Faz download do ficheiro selecionado
 - O separador **Agregado** mostra uma árvore (estilo regedit) e um painel JSON filtrado pela seleção
 - O editor abre no **Agregado** por defeito
+
+## 11) Se o site parecer desatualizado após deploy
+
+1. Faz `Shift + Refresh` no browser.
+2. Se necessário, abre DevTools e limpa o service worker/cache do domínio.
 
 ---
 

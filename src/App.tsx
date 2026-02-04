@@ -621,15 +621,15 @@ export default function App() {
         )}
       </div>
       {docViewer && (
-        <div className="fixed inset-0 z-[2147483647] flex items-center justify-center p-2 sm:p-4">
+        <div className="doc-viewer-root">
           <button
             type="button"
             aria-label={getUiString('ui.viewer.close', 'Close')}
-            className="absolute inset-0 bg-black/60"
+            className="doc-viewer-backdrop"
             onClick={() => setDocViewer(null)}
           />
-          <div className="relative z-10 flex h-[94vh] w-[min(98vw,1600px)] flex-col overflow-hidden rounded-xl border border-[#e2e8f0] bg-white shadow-2xl">
-            <div className="flex shrink-0 flex-wrap items-center justify-between gap-3 border-b border-[#e2e8f0] px-5 py-4">
+          <div className="doc-viewer-dialog">
+            <div className="doc-viewer-header">
               <div className="text-sm font-semibold text-[#0f172a]">
                 {docViewer.title}
               </div>
@@ -650,18 +650,18 @@ export default function App() {
                 </button>
               </div>
             </div>
-            <div className="min-h-0 flex-1 bg-[#f8fafc]">
+            <div className="doc-viewer-content">
               {docViewer.isImage ? (
                 <img
                   src={docViewer.url}
                   alt={docViewer.title}
-                  className="h-full w-full object-contain"
+                  className="doc-viewer-media"
                 />
               ) : (
                 <iframe
                   title={docViewer.title}
                   src={docViewer.url}
-                  className="h-full w-full"
+                  className="doc-viewer-frame"
                 />
               )}
             </div>

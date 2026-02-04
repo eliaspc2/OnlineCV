@@ -170,6 +170,43 @@ Exemplo:
 "attrs": { "href": "assets/docs/cv-andre-camara.pdf" }
 ```
 
+## Comportamento de links e documentos
+
+Os links são configurados no próprio JSON (`attrs` do nó `a`):
+
+- `href`: destino do link
+- `download`: nome do ficheiro para download (quando aplicável)
+- `data-open-inline`: controla se abre no viewer interno
+
+Exemplos:
+
+```json
+{
+  "tag": "a",
+  "attrs": {
+    "href": "assets/docs/cv-andre-camara.pdf",
+    "download": "cv-andre-camara.pdf",
+    "data-open-inline": "true"
+  }
+}
+```
+
+```json
+{
+  "tag": "a",
+  "attrs": {
+    "href": "https://github.com/eliaspc2",
+    "target": "_blank",
+    "rel": "noopener noreferrer"
+  }
+}
+```
+
+Regras práticas:
+
+- Documentos (`assets/docs/...`): usar `data-open-inline: "true"` para abrir no modal interno.
+- Links externos (`https://...`): usar `target: "_blank"` (e idealmente `rel: "noopener noreferrer"`).
+
 ## Como publicar
 
 1. Faz build com `npm run build`
@@ -195,6 +232,22 @@ Qualquer editor pode gerar o `public/data/config.json`. Se criares uma app exter
 
 Se `meta.languages` estiver definido, o site cria um seletor de idioma (bandeiras) à direita.
 Cada botão carrega o respetivo ficheiro de **strings** e faz re-render.
+
+## Acordeões
+
+O site usa atributos `data-accordion-*` para abrir/fechar painéis:
+
+- `data-accordion-item`: id do item
+- `data-accordion-group`: grupo (fecha os outros do mesmo grupo)
+- `data-accordion-toggle`: botão/cabeçalho de toggle
+- `data-accordion-panel`: conteúdo colapsável
+
+Para manter “apenas um aberto de cada vez”, todos os itens devem partilhar o mesmo `data-accordion-group`.
+
+## Notas de consola (PDF/Service Worker)
+
+- Warnings do `pdf.mjs`/cookies particionados podem aparecer ao embebedar PDFs no browser; são comuns e não bloqueiam a app.
+- Após deploy, se vires comportamento antigo, faz `Shift + Refresh` para limpar cache do service worker.
 
 Se precisares, posso gerar um **schema JSON** e um **editor visual**.
 

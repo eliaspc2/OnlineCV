@@ -155,7 +155,7 @@
                       },
                       {
                         "tag": "span",
-                        "class": "text-lg font-bold text-[#0f172a] hidden sm:block",
+                        "class": "text-base sm:text-lg font-bold text-[#0f172a]",
                         "children": [
                           {
                             "tag": "span",
@@ -1334,7 +1334,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#3b82f6] shadow-lg shadow-[#3b82f6]/10",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#3b82f6] shadow-lg shadow-[#3b82f6]/10 overflow-hidden",
                                       "children": [
                                         {
                                           "tag": "div",
@@ -1348,7 +1348,7 @@
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4",
+                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4 cursor-pointer select-none",
                                           "children": [
                                             {
                                               "tag": "div",
@@ -1410,95 +1410,138 @@
                                                   ]
                                                 }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-[#64748b] mb-6",
-                                          "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i3.text"
-                                        },
-                                        {
-                                          "tag": "div",
-                                          "class": "grid sm:grid-cols-3 gap-4 mb-6",
-                                          "children": [
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#fef3c7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#92400e] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i0.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#a16207]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i0.children.i1.text"
-                                                }
-                                              ]
                                             },
                                             {
                                               "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                              "class": "flex items-center justify-center",
                                               "children": [
                                                 {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#1e40af] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i1.children.i0.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-down.svg",
+                                                    "alt": "Expand",
+                                                    "data-accordion-icon": "down",
+                                                    "data-accordion-for": "experience-card-0"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8] hidden"
                                                 },
                                                 {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#3b82f6]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i1.children.i1.text"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dcfce7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#166534] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i2.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#22c55e]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i2.children.i1.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-up.svg",
+                                                    "alt": "Collapse",
+                                                    "data-accordion-icon": "up",
+                                                    "data-accordion-for": "experience-card-0"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8]"
                                                 }
                                               ]
                                             }
-                                          ]
+                                          ],
+                                          "attrs": {
+                                            "data-accordion-toggle": "experience-card-0"
+                                          }
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-wrap gap-2",
+                                          "class": "overflow-hidden transition-all duration-500 max-h-[2000px] opacity-100",
+                                          "attrs": {
+                                            "data-accordion-panel": "experience-card-0",
+                                            "data-accordion-max": "max-h-[2000px]"
+                                          },
                                           "children": [
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i0.text"
+                                              "tag": "p",
+                                              "class": "text-[#64748b] mb-6",
+                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i3.text"
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i1.text"
+                                              "tag": "div",
+                                              "class": "grid sm:grid-cols-3 gap-4 mb-6",
+                                              "children": [
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#fef3c7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#92400e] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i0.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#a16207]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i0.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#1e40af] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i1.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#3b82f6]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i1.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dcfce7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#166534] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i2.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#22c55e]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i2.children.i1.text"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i2.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i3.text"
+                                              "tag": "div",
+                                              "class": "flex flex-wrap gap-2",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i0.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i1.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i2.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i3.text"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "attrs": {
+                                        "data-accordion-item": "experience-card-0",
+                                        "data-accordion-group": "experience-cards"
+                                      }
                                     }
                                   ]
                                 },
@@ -1518,7 +1561,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0]",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0] overflow-hidden",
                                       "children": [
                                         {
                                           "tag": "blockquote",
@@ -1527,7 +1570,7 @@
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4",
+                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4 cursor-pointer select-none",
                                           "children": [
                                             {
                                               "tag": "div",
@@ -1589,95 +1632,138 @@
                                                   ]
                                                 }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-[#64748b] mb-6",
-                                          "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i2.text"
-                                        },
-                                        {
-                                          "tag": "div",
-                                          "class": "grid sm:grid-cols-3 gap-4 mb-6",
-                                          "children": [
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#fef3c7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#92400e] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i0.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#a16207]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i0.children.i1.text"
-                                                }
-                                              ]
                                             },
                                             {
                                               "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                              "class": "flex items-center justify-center",
                                               "children": [
                                                 {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#1e40af] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i1.children.i0.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-down.svg",
+                                                    "alt": "Expand",
+                                                    "data-accordion-icon": "down",
+                                                    "data-accordion-for": "experience-card-1"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8]"
                                                 },
                                                 {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#3b82f6]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dcfce7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#166534] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#22c55e]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i1.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-up.svg",
+                                                    "alt": "Collapse",
+                                                    "data-accordion-icon": "up",
+                                                    "data-accordion-for": "experience-card-1"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8] hidden"
                                                 }
                                               ]
                                             }
-                                          ]
+                                          ],
+                                          "attrs": {
+                                            "data-accordion-toggle": "experience-card-1"
+                                          }
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-wrap gap-2",
+                                          "class": "overflow-hidden transition-all duration-500 max-h-0 opacity-0",
+                                          "attrs": {
+                                            "data-accordion-panel": "experience-card-1",
+                                            "data-accordion-max": "max-h-[2000px]"
+                                          },
                                           "children": [
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i0.text"
+                                              "tag": "p",
+                                              "class": "text-[#64748b] mb-6",
+                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i2.text"
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i1.text"
+                                              "tag": "div",
+                                              "class": "grid sm:grid-cols-3 gap-4 mb-6",
+                                              "children": [
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#fef3c7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#92400e] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i0.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#a16207]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i0.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#1e40af] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i1.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#3b82f6]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dcfce7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#166534] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#22c55e]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i1.text"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i2.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i3.text"
+                                              "tag": "div",
+                                              "class": "flex flex-wrap gap-2",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i0.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i1.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i2.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i3.text"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "attrs": {
+                                        "data-accordion-item": "experience-card-1",
+                                        "data-accordion-group": "experience-cards"
+                                      }
                                     }
                                   ]
                                 },
@@ -1697,7 +1783,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0]",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0] overflow-hidden",
                                       "children": [
                                         {
                                           "tag": "blockquote",
@@ -1706,7 +1792,7 @@
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4",
+                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4 cursor-pointer select-none",
                                           "children": [
                                             {
                                               "tag": "div",
@@ -1768,90 +1854,133 @@
                                                   ]
                                                 }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-[#64748b] mb-6",
-                                          "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i2.text"
-                                        },
-                                        {
-                                          "tag": "div",
-                                          "class": "grid sm:grid-cols-3 gap-4 mb-6",
-                                          "children": [
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#fef3c7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#92400e] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i0.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#a16207]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i0.children.i1.text"
-                                                }
-                                              ]
                                             },
                                             {
                                               "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                              "class": "flex items-center justify-center",
                                               "children": [
                                                 {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#1e40af] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i1.children.i0.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-down.svg",
+                                                    "alt": "Expand",
+                                                    "data-accordion-icon": "down",
+                                                    "data-accordion-for": "experience-card-2"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8]"
                                                 },
                                                 {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#3b82f6]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i1.children.i1.text"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dcfce7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#166534] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i2.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#22c55e]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i2.children.i1.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-up.svg",
+                                                    "alt": "Collapse",
+                                                    "data-accordion-icon": "up",
+                                                    "data-accordion-for": "experience-card-2"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8] hidden"
                                                 }
                                               ]
                                             }
-                                          ]
+                                          ],
+                                          "attrs": {
+                                            "data-accordion-toggle": "experience-card-2"
+                                          }
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-wrap gap-2",
+                                          "class": "overflow-hidden transition-all duration-500 max-h-0 opacity-0",
+                                          "attrs": {
+                                            "data-accordion-panel": "experience-card-2",
+                                            "data-accordion-max": "max-h-[2000px]"
+                                          },
                                           "children": [
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i4.children.i0.text"
+                                              "tag": "p",
+                                              "class": "text-[#64748b] mb-6",
+                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i2.text"
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i4.children.i1.text"
+                                              "tag": "div",
+                                              "class": "grid sm:grid-cols-3 gap-4 mb-6",
+                                              "children": [
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#fef3c7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#92400e] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i0.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#a16207]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i0.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#1e40af] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i1.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#3b82f6]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i1.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dcfce7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#166534] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i2.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#22c55e]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i3.children.i2.children.i1.text"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i4.children.i2.text"
+                                              "tag": "div",
+                                              "class": "flex flex-wrap gap-2",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i4.children.i0.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i4.children.i1.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i4.children.i2.text"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "attrs": {
+                                        "data-accordion-item": "experience-card-2",
+                                        "data-accordion-group": "experience-cards"
+                                      }
                                     }
                                   ]
                                 },
@@ -1871,7 +2000,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0]",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0] overflow-hidden",
                                       "children": [
                                         {
                                           "tag": "blockquote",
@@ -1880,7 +2009,7 @@
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4",
+                                          "class": "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4 cursor-pointer select-none",
                                           "children": [
                                             {
                                               "tag": "div",
@@ -1942,90 +2071,133 @@
                                                   ]
                                                 }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-[#64748b] mb-6",
-                                          "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i2.text"
-                                        },
-                                        {
-                                          "tag": "div",
-                                          "class": "grid sm:grid-cols-3 gap-4 mb-6",
-                                          "children": [
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#fef3c7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#92400e] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i0.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#a16207]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i0.children.i1.text"
-                                                }
-                                              ]
                                             },
                                             {
                                               "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                              "class": "flex items-center justify-center",
                                               "children": [
                                                 {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#1e40af] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i1.children.i0.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-down.svg",
+                                                    "alt": "Expand",
+                                                    "data-accordion-icon": "down",
+                                                    "data-accordion-for": "experience-card-3"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8]"
                                                 },
                                                 {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#3b82f6]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i1.children.i1.text"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "tag": "div",
-                                              "class": "p-4 rounded-lg bg-[#dcfce7]",
-                                              "children": [
-                                                {
-                                                  "tag": "h4",
-                                                  "class": "text-sm font-semibold text-[#166534] mb-2",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i2.children.i0.text"
-                                                },
-                                                {
-                                                  "tag": "p",
-                                                  "class": "text-sm text-[#22c55e]",
-                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i2.children.i1.text"
+                                                  "tag": "img",
+                                                  "attrs": {
+                                                    "src": "assets/images/icons/chevron-up.svg",
+                                                    "alt": "Collapse",
+                                                    "data-accordion-icon": "up",
+                                                    "data-accordion-for": "experience-card-3"
+                                                  },
+                                                  "class": "w-5 h-5 text-[#94a3b8] hidden"
                                                 }
                                               ]
                                             }
-                                          ]
+                                          ],
+                                          "attrs": {
+                                            "data-accordion-toggle": "experience-card-3"
+                                          }
                                         },
                                         {
                                           "tag": "div",
-                                          "class": "flex flex-wrap gap-2",
+                                          "class": "overflow-hidden transition-all duration-500 max-h-0 opacity-0",
+                                          "attrs": {
+                                            "data-accordion-panel": "experience-card-3",
+                                            "data-accordion-max": "max-h-[2000px]"
+                                          },
                                           "children": [
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i4.children.i0.text"
+                                              "tag": "p",
+                                              "class": "text-[#64748b] mb-6",
+                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i2.text"
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i4.children.i1.text"
+                                              "tag": "div",
+                                              "class": "grid sm:grid-cols-3 gap-4 mb-6",
+                                              "children": [
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#fef3c7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#92400e] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i0.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#a16207]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i0.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dbeafe]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#1e40af] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i1.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#3b82f6]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i1.children.i1.text"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "div",
+                                                  "class": "p-4 rounded-lg bg-[#dcfce7]",
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "class": "text-sm font-semibold text-[#166534] mb-2",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i2.children.i0.text"
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "class": "text-sm text-[#22c55e]",
+                                                      "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i3.children.i2.children.i1.text"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             },
                                             {
-                                              "tag": "span",
-                                              "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
-                                              "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i4.children.i2.text"
+                                              "tag": "div",
+                                              "class": "flex flex-wrap gap-2",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i4.children.i0.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i4.children.i1.text"
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full border border-[#e2e8f0]",
+                                                  "textKey": "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i3.children.i1.children.i4.children.i2.text"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "attrs": {
+                                        "data-accordion-item": "experience-card-3",
+                                        "data-accordion-group": "experience-cards"
+                                      }
                                     }
                                   ]
                                 }
@@ -5598,7 +5770,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "grid grid-cols-2 sm:grid-cols-3 gap-2 justify-items-start",
+                                      "class": "flex flex-wrap gap-2",
                                       "children": [
                                         {
                                           "tag": "span",
@@ -6389,7 +6561,7 @@
                                 },
                                 {
                                   "tag": "div",
-                                  "class": "grid grid-cols-2 sm:grid-cols-3 gap-2 justify-items-start",
+                                  "class": "flex flex-wrap gap-2",
                                   "children": [
                                     {
                                       "tag": "span",
