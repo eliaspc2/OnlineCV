@@ -102,8 +102,8 @@
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i2.children.i1.text": "Llevo esa disciplina operativa al software: entregas predecibles, cambios seguros y fiabilidad a largo plazo.",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i0.text": "PowerShell",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i1.text": "Automatización",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i2.text": "Servidores",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i3.text": "Infraestructura Bancaria",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i2.text": "Soporte VIP",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i3.text": "Soporte Trading",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i0.text": "\"Robustez industrial. Cada sistema detenido tenía un coste físico inmediato y tangible.\"",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i1.children.i0.children.i0.text": "IT Support Technician",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i1.children.i0.children.i1.text": "CEPSA (via Tecnocom)",
@@ -118,10 +118,10 @@
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text": "Robustez primero: diseñar para fallo y recuperación, no para el mejor caso.",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i0.text": "Impacto Hoy",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i1.text": "Esa mentalidad de resiliencia se traduce en software que degrada con elegancia y es mantenible.",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i0.text": "Redes",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i1.text": "Terminales Industriales",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i2.text": "Soporte IT",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i3.text": "Logística de Energía",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i0.text": "Soporte a Usuarios",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i1.text": "Soporte VIP",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i2.text": "Oficinas CEPSA",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i3.text": "Entorno Industrial",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i0.text": "\"La era de la escala. Donde aprendí que las grandes infraestructuras se construyen con capas de abstracción.\"",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i1.children.i0.children.i0.text": "Cloud Computing Support",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i1.children.i0.children.i1.text": "Telefónica (via Anadat)",
@@ -472,7 +472,7 @@
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i0.children.i0.attrs.alt": "Target",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i0.children.i1.text": "Formación",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i0.children.i1.text": "12.º año completado",
-    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i1.children.i1.text": "EFA – Programador Informático (Nivel 4, 1.416h, en curso) + CET Técnico/a Especialista en Ciberseguridad (Nivel 5, 1.510h, en curso)",
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i1.children.i1.text": "EFA – Programador Informático (Nivel 4, 1.416h, en curso)",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i0.text": "Destacados Profesionales",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i0.children.i0.children.i0.attrs.alt": "10+ Anos em Sistemas Críticos",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i0.children.i1.children.i0.text": "10+ Años en Sistemas Críticos",
@@ -562,6 +562,7 @@
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i2.children.i2.text": "Herramientas de comunicación de valor, métricas y posicionamiento (19/20)",
     "ui.viewer.title": "Documento",
     "ui.viewer.download": "Descargar",
-    "ui.viewer.close": "Cerrar"
+    "ui.viewer.close": "Cerrar",
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text": "CET Técnico/a Especialista en Ciberseguridad (Nivel 5, 1.510h, en curso)"
   }
 }

@@ -102,8 +102,8 @@
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i4.children.i2.children.i1.text": "I bring that operational discipline into software: predictable delivery, safe changes, and long-term reliability.",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i0.text": "PowerShell",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i1.text": "Automation",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i2.text": "Servers",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i3.text": "Banking Infrastructure",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i2.text": "VIP Support",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i0.children.i1.children.i5.children.i3.text": "Trading Support",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i0.text": "\"Industrial robustness. Every stopped system had an immediate, tangible physical cost.\"",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i1.children.i0.children.i0.text": "IT Support Technician",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i1.children.i0.children.i1.text": "CEPSA (via Tecnocom)",
@@ -118,10 +118,10 @@
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text": "Robustness first: design for failure and recovery, not best-case paths.",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i0.text": "Impact Today",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i3.children.i2.children.i1.text": "That resilience mindset translates into software that degrades gracefully and stays maintainable.",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i0.text": "Networks",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i1.text": "Industrial Terminals",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i2.text": "IT Support",
-    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i3.text": "Energy Logistics",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i0.text": "User Support",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i1.text": "VIP Support",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i2.text": "CEPSA Offices",
+    "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i4.children.i3.text": "Industrial Environment",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i0.text": "\"The era of scale. Where I learned that large infrastructures are built in layers of abstraction.\"",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i1.children.i0.children.i0.text": "Cloud Computing Support",
     "t.pages.i0.sections.i2.nodes.i0.children.i1.children.i1.children.i0.children.i1.children.i2.children.i1.children.i1.children.i0.children.i1.text": "Telefónica (via Anadat)",
@@ -472,7 +472,7 @@
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i0.children.i0.attrs.alt": "Target",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i0.children.i1.text": "Education",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i0.children.i1.text": "12th grade completed",
-    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i1.children.i1.text": "EFA – IT Programmer (Level 4, 1,416h, in progress) + CET Technical Specialist in Cybersecurity (Level 5, 1,510h, in progress)",
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i1.children.i1.text": "EFA – IT Programmer (Level 4, 1,416h, in progress)",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i0.text": "Professional Highlights",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i0.children.i0.children.i0.attrs.alt": "10+ Anos em Sistemas Críticos",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i0.children.i1.children.i0.text": "10+ Years in Critical Systems",
@@ -562,6 +562,7 @@
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i2.children.i2.text": "Tools for value communication, metrics, and positioning (19/20)",
     "ui.viewer.title": "Document",
     "ui.viewer.download": "Download",
-    "ui.viewer.close": "Close"
+    "ui.viewer.close": "Close",
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text": "CET Technical Specialist in Cybersecurity (Level 5, 1,510h, in progress)"
   }
 }

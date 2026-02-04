@@ -1334,7 +1334,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#3b82f6] shadow-lg shadow-[#3b82f6]/10 overflow-hidden",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#3b82f6] shadow-lg shadow-[#3b82f6]/10",
                                       "children": [
                                         {
                                           "tag": "div",
@@ -1561,7 +1561,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0] overflow-hidden",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0]",
                                       "children": [
                                         {
                                           "tag": "blockquote",
@@ -1783,7 +1783,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0] overflow-hidden",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0]",
                                       "children": [
                                         {
                                           "tag": "blockquote",
@@ -2000,7 +2000,7 @@
                                     },
                                     {
                                       "tag": "div",
-                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0] overflow-hidden",
+                                      "class": "flex-1 card-hover p-6 sm:p-8 rounded-2xl bg-white border relative border-[#e2e8f0]",
                                       "children": [
                                         {
                                           "tag": "blockquote",
@@ -5986,43 +5986,6 @@
                                   ]
                                 }
                               ]
-                            },
-                            {
-                              "tag": "div",
-                              "class": "text-center p-6 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white",
-                              "children": [
-                                {
-                                  "tag": "h4",
-                                  "class": "font-semibold mb-2",
-                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i0.text"
-                                },
-                                {
-                                  "tag": "p",
-                                  "class": "text-sm text-white/80 mb-4",
-                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i1.text"
-                                },
-                                {
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "mailto:eliaspc2@gmail.com"
-                                  },
-                                  "class": "inline-flex items-center gap-2 px-6 py-3 bg-white text-[#3b82f6] font-semibold rounded-lg hover:bg-white/90 transition-colors",
-                                  "children": [
-                                    {
-                                      "tag": "img",
-                                      "attrs": {
-                                        "src": "assets/images/icons/mail.svg",
-                                        "alt": ""
-                                      },
-                                      "class": "w-4 h-4"
-                                    },
-                                    {
-                                      "tag": "span",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i2.children.i1.text"
-                                    }
-                                  ]
-                                }
-                              ]
                             }
                           ]
                         },
@@ -6349,6 +6312,43 @@
                                           "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i2.children.i1.text"
                                         }
                                       ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "class": "text-center p-6 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white",
+                              "children": [
+                                {
+                                  "tag": "h4",
+                                  "class": "font-semibold mb-2",
+                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i0.text"
+                                },
+                                {
+                                  "tag": "p",
+                                  "class": "text-sm text-white/80 mb-4",
+                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i1.text"
+                                },
+                                {
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "mailto:eliaspc2@gmail.com"
+                                  },
+                                  "class": "inline-flex items-center gap-2 px-6 py-3 bg-white text-[#3b82f6] font-semibold rounded-lg hover:bg-white/90 transition-colors",
+                                  "children": [
+                                    {
+                                      "tag": "img",
+                                      "attrs": {
+                                        "src": "assets/images/icons/mail.svg",
+                                        "alt": ""
+                                      },
+                                      "class": "w-4 h-4"
+                                    },
+                                    {
+                                      "tag": "span",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i2.children.i1.text"
                                     }
                                   ]
                                 }
@@ -6764,7 +6764,7 @@
                                             {
                                               "tag": "img",
                                               "attrs": {
-                                                "src": "assets/images/icons/code.svg",
+                                                "src": "assets/images/icons/target.svg",
                                                 "alt": ""
                                               },
                                               "class": "w-3 h-3 text-[#3b82f6]"
@@ -6772,6 +6772,24 @@
                                             {
                                               "tag": "span",
                                               "textKey": "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i1.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "li",
+                                          "class": "text-sm text-[#64748b] flex items-center gap-2",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/target.svg",
+                                                "alt": ""
+                                              },
+                                              "class": "w-3 h-3 text-[#3b82f6]"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text"
                                             }
                                           ]
                                         }
