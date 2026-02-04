@@ -170,6 +170,11 @@ export default function App() {
   const [isLangTransition, setIsLangTransition] = useState(false);
   const langTimer = useRef<number | null>(null);
   const manifestUrlRef = useRef<string | null>(null);
+  const stringsFileRef = useRef(stringsFile);
+
+  useEffect(() => {
+    stringsFileRef.current = stringsFile;
+  }, [stringsFile]);
 
   useEffect(() => {
     const load = async () => {
@@ -184,14 +189,28 @@ export default function App() {
 
   useEffect(() => {
     if (!stringsFile) return;
+    let active = true;
+    const controller = new AbortController();
     const load = async () => {
-      const res = await fetch(toPublicUrl(stringsFile));
-      if (!res.ok) throw new Error(`Failed to load ${stringsFile}`);
-      const data = (await res.json()) as StringsBundle;
-      setStrings(data);
+      try {
+        const res = await fetch(toPublicUrl(stringsFile), { signal: controller.signal });
+        if (!res.ok) throw new Error(`Failed to load ${stringsFile}`);
+        const data = (await res.json()) as StringsBundle;
+        if (active) setStrings(data);
+      } catch (err) {
+        if (!controller.signal.aborted) {
+          console.error('[JSON-SITE]', err);
+        }
+      } finally {
+        if (active) setIsLangTransition(false);
+      }
     };
 
-    load().catch((err) => console.error('[JSON-SITE]', err));
+    load();
+    return () => {
+      active = false;
+      controller.abort();
+    };
   }, [stringsFile]);
 
   useEffect(() => {
@@ -401,10 +420,13 @@ export default function App() {
     const onLangClick = (evt: Event) => {
       const file = (evt.currentTarget as HTMLElement).getAttribute('data-lang-file');
       if (!file) return;
+      const normalized = normalizeStringsFile(file) || DEFAULT_STRINGS_FILE;
+      if (normalized === stringsFileRef.current) {
+        return;
+      }
       if (langTimer.current) window.clearTimeout(langTimer.current);
       setIsLangTransition(true);
       langTimer.current = window.setTimeout(() => {
-        const normalized = normalizeStringsFile(file) || DEFAULT_STRINGS_FILE;
         localStorage.setItem(STORAGE_KEY, normalized);
         setStringsFile(normalized);
       }, 180);
@@ -506,17 +528,10 @@ export default function App() {
       });
       if (brandIcon) brandIcon.removeEventListener('click', onBrandClick);
       if (timer) window.clearTimeout(timer);
+      if (langTimer.current) window.clearTimeout(langTimer.current);
       copyTimeouts.forEach((timeout) => window.clearTimeout(timeout));
     };
   }, [config, strings]);
-
-  useEffect(() => {
-    if (!config) return;
-    if (langTimer.current) window.clearTimeout(langTimer.current);
-    langTimer.current = window.setTimeout(() => {
-      setIsLangTransition(false);
-    }, 200);
-  }, [config]);
 
   if (!config || !strings) return null;
 
