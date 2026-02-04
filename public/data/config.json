@@ -510,7 +510,7 @@
                               "target": "_blank",
                               "rel": "noopener noreferrer"
                             },
-                            "class": "interactive-icon w-10 h-10 rounded-lg bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                            "class": "social-icon",
                             "children": [
                               {
                                 "tag": "img",
@@ -531,7 +531,7 @@
                               "target": "_blank",
                               "rel": "noopener noreferrer"
                             },
-                            "class": "interactive-icon w-10 h-10 rounded-lg bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                            "class": "social-icon",
                             "children": [
                               {
                                 "tag": "img",
@@ -550,7 +550,7 @@
                             "attrs": {
                               "href": "mailto:eliaspc2@gmail.com"
                             },
-                            "class": "interactive-icon w-10 h-10 rounded-lg bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                            "class": "social-icon",
                             "children": [
                               {
                                 "tag": "img",
@@ -1011,7 +1011,7 @@
                               "children": [
                                 {
                                   "tag": "a",
-                                  "class": "interactive-icon w-12 h-12 rounded-full bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                                  "class": "social-icon",
                                   "attrs": {
                                     "href": "https://github.com/eliaspc2",
                                     "target": "_blank",
@@ -1032,7 +1032,7 @@
                                 },
                                 {
                                   "tag": "a",
-                                  "class": "interactive-icon w-12 h-12 rounded-full bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                                  "class": "social-icon",
                                   "attrs": {
                                     "href": "https://www.linkedin.com/in/eliaspc/",
                                     "target": "_blank",
@@ -1053,7 +1053,7 @@
                                 },
                                 {
                                   "tag": "a",
-                                  "class": "interactive-icon w-12 h-12 rounded-full bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                                  "class": "social-icon",
                                   "attrs": {
                                     "href": "mailto:eliaspc2@gmail.com"
                                   },
@@ -2484,7 +2484,7 @@
                       "children": [
                         {
                           "tag": "div",
-                          "class": "rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
+                          "class": "card-hover rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
                           "attrs": {
                             "data-accordion-item": "skills-cat-0",
                             "data-accordion-group": "skills-categories"
@@ -2492,7 +2492,7 @@
                           "children": [
                             {
                               "tag": "button",
-                              "class": "w-full p-6 flex items-center gap-4 text-left hover:bg-[#f8fafc] transition-colors",
+                              "class": "w-full p-6 flex items-center gap-4 text-left transition-all duration-300",
                               "attrs": {
                                 "type": "button",
                                 "data-accordion-toggle": "skills-cat-0"
@@ -2616,7 +2616,7 @@
                                             "target": "_blank",
                                             "rel": "noopener noreferrer"
                                           },
-                                          "class": "px-4 py-2 bg-[#f1f5f9] hover:bg-[#e2e8f0] rounded-lg text-sm font-medium text-[#64748b] flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-[#e2e8f0] text-sm font-medium text-[#64748b] flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -2641,7 +2641,7 @@
                                             "download": "cert-python-intro-helsinki.png",
                                             "data-open-inline": "true"
                                           },
-                                          "class": "px-4 py-2 bg-green-50 hover:bg-green-100 rounded-lg text-sm font-medium text-green-700 flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-green-200 text-sm font-medium text-green-700 flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -2666,7 +2666,7 @@
                                             "download": "cert-python-adv-helsinki.png",
                                             "data-open-inline": "true"
                                           },
-                                          "class": "px-4 py-2 bg-green-50 hover:bg-green-100 rounded-lg text-sm font-medium text-green-700 flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-green-200 text-sm font-medium text-green-700 flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -2980,7 +2980,7 @@
                         },
                         {
                           "tag": "div",
-                          "class": "rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
+                          "class": "card-hover rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
                           "attrs": {
                             "data-accordion-item": "skills-cat-1",
                             "data-accordion-group": "skills-categories"
@@ -2988,7 +2988,7 @@
                           "children": [
                             {
                               "tag": "button",
-                              "class": "w-full p-6 flex items-center gap-4 text-left hover:bg-[#f8fafc] transition-colors",
+                              "class": "w-full p-6 flex items-center gap-4 text-left transition-all duration-300",
                               "attrs": {
                                 "type": "button",
                                 "data-accordion-toggle": "skills-cat-1"
@@ -3132,7 +3132,7 @@
                                             "target": "_blank",
                                             "rel": "noopener noreferrer"
                                           },
-                                          "class": "px-4 py-2 bg-[#f1f5f9] hover:bg-[#e2e8f0] rounded-lg text-sm font-medium text-[#64748b] flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-[#e2e8f0] text-sm font-medium text-[#64748b] flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -3157,7 +3157,7 @@
                                             "download": "efa-program-content.pdf",
                                             "data-open-inline": "true"
                                           },
-                                          "class": "px-4 py-2 bg-[#3b82f6]/10 hover:bg-[#3b82f6]/20 rounded-lg text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-[#bfdbfe] text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -3471,7 +3471,7 @@
                         },
                         {
                           "tag": "div",
-                          "class": "rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
+                          "class": "card-hover rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
                           "attrs": {
                             "data-accordion-item": "skills-cat-2",
                             "data-accordion-group": "skills-categories"
@@ -3479,7 +3479,7 @@
                           "children": [
                             {
                               "tag": "button",
-                              "class": "w-full p-6 flex items-center gap-4 text-left hover:bg-[#f8fafc] transition-colors",
+                              "class": "w-full p-6 flex items-center gap-4 text-left transition-all duration-300",
                               "attrs": {
                                 "type": "button",
                                 "data-accordion-toggle": "skills-cat-2"
@@ -3603,7 +3603,7 @@
                                             "target": "_blank",
                                             "rel": "noopener noreferrer"
                                           },
-                                          "class": "px-4 py-2 bg-[#f1f5f9] hover:bg-[#e2e8f0] rounded-lg text-sm font-medium text-[#64748b] flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-[#e2e8f0] text-sm font-medium text-[#64748b] flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -3628,7 +3628,7 @@
                                             "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf",
                                             "data-open-inline": "true"
                                           },
-                                          "class": "px-4 py-2 bg-[#3b82f6]/10 hover:bg-[#3b82f6]/20 rounded-lg text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-colors",
+                                          "class": "card-hover px-4 py-2 bg-white rounded-lg border border-[#bfdbfe] text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-all duration-300",
                                           "children": [
                                             {
                                               "tag": "img",
@@ -4167,13 +4167,13 @@
                           "children": [
                             {
                               "tag": "button",
-                              "class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                              "class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
                               "attrs": {
                                 "type": "button",
                                 "data-tab-trigger": "mindset-0",
                                 "data-tab-group": "mindset",
-                                "data-active-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
-                                "data-inactive-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                                "data-active-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                                "data-inactive-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                                 "data-tab-default": "true"
                               },
                               "children": [
@@ -4240,13 +4240,13 @@
                             },
                             {
                               "tag": "button",
-                              "class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                              "class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                               "attrs": {
                                 "type": "button",
                                 "data-tab-trigger": "mindset-1",
                                 "data-tab-group": "mindset",
-                                "data-active-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
-                                "data-inactive-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                                "data-active-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                                "data-inactive-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                                 "data-tab-default": "false"
                               },
                               "children": [
@@ -4313,13 +4313,13 @@
                             },
                             {
                               "tag": "button",
-                              "class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                              "class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                               "attrs": {
                                 "type": "button",
                                 "data-tab-trigger": "mindset-2",
                                 "data-tab-group": "mindset",
-                                "data-active-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
-                                "data-inactive-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                                "data-active-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                                "data-inactive-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                                 "data-tab-default": "false"
                               },
                               "children": [
@@ -4386,13 +4386,13 @@
                             },
                             {
                               "tag": "button",
-                              "class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                              "class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                               "attrs": {
                                 "type": "button",
                                 "data-tab-trigger": "mindset-3",
                                 "data-tab-group": "mindset",
-                                "data-active-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
-                                "data-inactive-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                                "data-active-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                                "data-inactive-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                                 "data-tab-default": "false"
                               },
                               "children": [
@@ -4459,13 +4459,13 @@
                             },
                             {
                               "tag": "button",
-                              "class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                              "class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                               "attrs": {
                                 "type": "button",
                                 "data-tab-trigger": "mindset-4",
                                 "data-tab-group": "mindset",
-                                "data-active-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
-                                "data-inactive-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                                "data-active-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                                "data-inactive-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                                 "data-tab-default": "false"
                               },
                               "children": [
@@ -4532,13 +4532,13 @@
                             },
                             {
                               "tag": "button",
-                              "class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                              "class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                               "attrs": {
                                 "type": "button",
                                 "data-tab-trigger": "mindset-5",
                                 "data-tab-group": "mindset",
-                                "data-active-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
-                                "data-inactive-class": "w-full p-4 rounded-xl text-left transition-all duration-300 bg-white/50 border border-[#e2e8f0] hover:bg-white hover:shadow-md",
+                                "data-active-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white shadow-lg border-2 border-[#3b82f6]",
+                                "data-inactive-class": "card-hover w-full p-4 rounded-xl text-left transition-all duration-300 bg-white border border-[#e2e8f0]",
                                 "data-tab-default": "false"
                               },
                               "children": [
@@ -6448,7 +6448,7 @@
             {
               "tag": "section",
               "attrs": {
-                "id": "contact"
+                "id": "summary"
               },
               "class": "section-padding bg-[#f8fafc] relative",
               "children": [
@@ -7605,7 +7605,21 @@
                       ]
                     }
                   ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contact",
+          "nodes": [
+            {
+              "tag": "section",
+              "attrs": {
+                "id": "contact"
+              },
+              "class": "section-padding bg-[#f8fafc] relative",
+              "children": [
                 {
                   "tag": "div",
                   "class": "container-custom relative z-10 space-y-6",
@@ -7893,7 +7907,7 @@
                                         "target": "_blank",
                                         "rel": "noopener noreferrer"
                                       },
-                                      "class": "interactive-icon w-12 h-12 rounded-xl bg-white border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                                      "class": "social-icon",
                                       "children": [
                                         {
                                           "tag": "img",
@@ -7914,7 +7928,7 @@
                                         "target": "_blank",
                                         "rel": "noopener noreferrer"
                                       },
-                                      "class": "interactive-icon w-12 h-12 rounded-xl bg-white border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                                      "class": "social-icon",
                                       "children": [
                                         {
                                           "tag": "img",
@@ -7935,7 +7949,7 @@
                                         "target": "_blank",
                                         "rel": "noopener noreferrer"
                                       },
-                                      "class": "interactive-icon w-12 h-12 rounded-xl bg-white border border-[#e2e8f0] flex items-center justify-center text-[#64748b]",
+                                      "class": "social-icon",
                                       "children": [
                                         {
                                           "tag": "img",
