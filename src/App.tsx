@@ -368,22 +368,40 @@ export default function App() {
       }
     };
 
+    const toggleAccordionById = (panelId: string, contextEl?: HTMLElement) => {
+      const item = (contextEl?.closest('[data-accordion-item]') as HTMLElement | null) || null;
+      const group = item?.getAttribute('data-accordion-group');
+      const panel = document.querySelector(`[data-accordion-panel=\"${panelId}\"]`) as HTMLElement | null;
+      if (!panel) return;
+      const isOpen = panel.classList.contains('max-h-40');
+      if (group) {
+        document.querySelectorAll(`[data-accordion-group=\"${group}\"]`).forEach((el) => {
+          const id = (el as HTMLElement).getAttribute('data-accordion-item');
+          if (id) setAccordionState(id, false);
+        });
+      }
+      setAccordionState(panelId, !isOpen);
+    };
+
     accordionToggles.forEach((toggle) => {
       toggle.addEventListener('click', () => {
         const panelId = (toggle as HTMLElement).getAttribute('data-accordion-toggle');
         if (!panelId) return;
-        const item = (toggle as HTMLElement).closest('[data-accordion-item]') as HTMLElement | null;
-        const group = item?.getAttribute('data-accordion-group');
-        const panel = document.querySelector(`[data-accordion-panel=\"${panelId}\"]`) as HTMLElement | null;
-        if (!panel) return;
-        const isOpen = panel.classList.contains('max-h-40');
-        if (group) {
-          document.querySelectorAll(`[data-accordion-group=\"${group}\"]`).forEach((el) => {
-            const id = (el as HTMLElement).getAttribute('data-accordion-item');
-            if (id) setAccordionState(id, false);
-          });
-        }
-        setAccordionState(panelId, !isOpen);
+        toggleAccordionById(panelId, toggle as HTMLElement);
+      });
+    });
+
+    const clickAnywhereAccordionItems = document.querySelectorAll('[data-accordion-item][data-accordion-click-anywhere=\"true\"]');
+    clickAnywhereAccordionItems.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement;
+        if (!target) return;
+        if (target.closest('[data-accordion-toggle]')) return;
+        if (target.closest('[data-accordion-panel]')) return;
+        if (target.closest('a,button,input,textarea,select,label')) return;
+        const panelId = (item as HTMLElement).getAttribute('data-accordion-item');
+        if (!panelId) return;
+        toggleAccordionById(panelId, item as HTMLElement);
       });
     });
 
@@ -571,6 +589,9 @@ export default function App() {
       });
       scrollTopButtons.forEach((btn) => {
         btn.removeEventListener('click', () => undefined);
+      });
+      clickAnywhereAccordionItems.forEach((item) => {
+        item.removeEventListener('click', () => undefined);
       });
       if (brandIcon) brandIcon.removeEventListener('click', onBrandClick);
       if (timer) window.clearTimeout(timer);

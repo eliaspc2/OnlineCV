@@ -360,6 +360,42 @@
   object-fit: contain;
 }
 
+[data-accordion-item][data-accordion-click-anywhere="true"] > :not([data-accordion-panel]) {
+  cursor: pointer;
+}
+
+[data-accordion-item][data-accordion-click-anywhere="true"] [data-accordion-panel] {
+  cursor: auto;
+}
+
+/* Consistent elevation for clickable cards */
+.card-hover,
+[data-accordion-item] {
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.card-hover:hover,
+[data-accordion-item]:hover {
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+}
+
+/* Unified hover/elevation style for social clickable cards */
+.interactive-icon {
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.interactive-icon:hover {
+  transform: translateY(-1px) scale(1.06);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+  background: rgba(59, 130, 246, 0.14) !important;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.interactive-icon:active {
+  transform: translateY(0) scale(1.02);
+}
+
 @media (max-width: 720px) {
   .doc-viewer-root {
     padding: 6px;
