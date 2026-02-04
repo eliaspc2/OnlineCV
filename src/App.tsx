@@ -168,6 +168,12 @@ export default function App() {
   const [stringsFile, setStringsFile] = useState(getInitialStringsFile());
   const [strings, setStrings] = useState<StringsBundle | null>(null);
   const [isLangTransition, setIsLangTransition] = useState(false);
+  const [docViewer, setDocViewer] = useState<{
+    url: string;
+    title: string;
+    downloadName?: string;
+    isImage: boolean;
+  } | null>(null);
   const langTimer = useRef<number | null>(null);
   const manifestUrlRef = useRef<string | null>(null);
   const stringsFileRef = useRef(stringsFile);
@@ -499,6 +505,24 @@ export default function App() {
     };
     copyButtons.forEach((btn) => btn.addEventListener('click', onCopyClick));
 
+    const docLinks = document.querySelectorAll('a[download]');
+    const onDocClick = (evt: Event) => {
+      const link = evt.currentTarget as HTMLAnchorElement;
+      const href = link.getAttribute('href');
+      if (!href) return;
+      evt.preventDefault();
+      const resolved = toPublicUrlIfRelative(href) || href;
+      const title =
+        link.getAttribute('data-doc-title') ||
+        link.textContent?.trim() ||
+        strings?.strings?.['ui.viewer.title'] ||
+        'Documento';
+      const downloadName = link.getAttribute('download') || undefined;
+      const isImage = /\.(png|jpe?g|gif|webp|svg)$/i.test(href);
+      setDocViewer({ url: resolved, title, downloadName, isImage });
+    };
+    docLinks.forEach((link) => link.addEventListener('click', onDocClick));
+
     if (config.meta?.pwa?.enabled && 'serviceWorker' in navigator) {
       navigator.serviceWorker
         .register(toPublicUrl('sw.js'), { scope: import.meta.env.BASE_URL })
@@ -530,10 +554,27 @@ export default function App() {
       if (timer) window.clearTimeout(timer);
       if (langTimer.current) window.clearTimeout(langTimer.current);
       copyTimeouts.forEach((timeout) => window.clearTimeout(timeout));
+      docLinks.forEach((link) => link.removeEventListener('click', onDocClick));
     };
   }, [config, strings]);
 
+  useEffect(() => {
+    if (!docViewer) return;
+    const onKeyDown = (evt: KeyboardEvent) => {
+      if (evt.key === 'Escape') setDocViewer(null);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [docViewer]);
+
   if (!config || !strings) return null;
+  const getUiString = (key: string, fallback: string) =>
+    strings.strings?.[key] ?? fallback;
 
   return (
     <div className={`lang-fade ${isLangTransition ? 'is-fading' : ''} min-h-screen bg-[#fcfcfd] text-[#0f172a]`}>
@@ -557,6 +598,54 @@ export default function App() {
           renderNode(node, idx, strings.strings)
         )}
       </div>
+      {docViewer && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center px-4 py-6">
+          <button
+            type="button"
+            aria-label={getUiString('ui.viewer.close', 'Close')}
+            className="absolute inset-0 bg-black/60"
+            onClick={() => setDocViewer(null)}
+          />
+          <div className="relative z-10 w-full max-w-5xl rounded-2xl bg-white shadow-2xl border border-[#e2e8f0] overflow-hidden">
+            <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-4 border-b border-[#e2e8f0]">
+              <div className="text-sm font-semibold text-[#0f172a]">
+                {docViewer.title}
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  className="px-3 py-2 rounded-lg text-sm font-medium bg-[#3b82f6] text-white hover:bg-[#2563eb] transition-colors"
+                  href={docViewer.url}
+                  download={docViewer.downloadName}
+                >
+                  {getUiString('ui.viewer.download', 'Download')}
+                </a>
+                <button
+                  type="button"
+                  className="px-3 py-2 rounded-lg text-sm font-medium bg-[#f1f5f9] text-[#0f172a] hover:bg-[#e2e8f0] transition-colors"
+                  onClick={() => setDocViewer(null)}
+                >
+                  {getUiString('ui.viewer.close', 'Close')}
+                </button>
+              </div>
+            </div>
+            <div className="bg-[#f8fafc]">
+              {docViewer.isImage ? (
+                <img
+                  src={docViewer.url}
+                  alt={docViewer.title}
+                  className="max-h-[80vh] w-full object-contain"
+                />
+              ) : (
+                <iframe
+                  title={docViewer.title}
+                  src={docViewer.url}
+                  className="h-[80vh] w-full"
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -420,9 +420,9 @@
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i1.children.i1.children.i0.text": "Contenu du programme (CET)",
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i1.children.i1.children.i1.text": "CET Cybersécurité – Niveau 5 (1 510h)",
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i0.text": "Certificat Python I",
-    "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i1.text": "Université d'Helsinki (135h)",
+    "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i1.text": "Université d'Helsinki (135 h, 5 ECTS)",
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i0.text": "Certificat Python II",
-    "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text": "Université d'Helsinki (135h)",
+    "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text": "Université d'Helsinki (135 h, 5 ECTS)",
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i0.children.i1.children.i0.text": "Disponible pour des opportunités",
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i0.children.i1.children.i1.text": "Stage ou poste junior",
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i0.children.i1.text": "Télétravail",
@@ -436,7 +436,7 @@
     "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i2.children.i1.text": "Années en IT",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i0.children.i0.text": "Identité",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i0.children.i1.children.i0.text": "Qui je suis se reflète dans la façon dont je ",
-    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i0.children.i1.children.i1.text": "build",
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i0.children.i1.children.i1.text": "construis",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.attrs.alt": "André Câmara",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i0.text": "André Câmara",
     "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.text": "Développeur logiciel | Bragança, Portugal",
@@ -555,10 +555,13 @@
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i0.children.i1.children.i1.children.i1.children.i1.text": "Version complète détaillée",
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i0.text": "Certifications structurées",
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i0.children.i1.text": "Python I (Helsinki)",
-    "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i0.children.i2.text": "MOOC de programmation 2025",
+    "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i0.children.i2.text": "MOOC de programmation 2025 (5 ECTS)",
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i1.children.i1.text": "Python II (Helsinki)",
-    "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i1.children.i2.text": "Programmation avancée",
+    "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i1.children.i2.text": "Programmation avancée (5 ECTS)",
     "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i2.children.i1.text": "Marketing digital",
-    "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i2.children.i2.text": "Formation complémentaire"
+    "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i1.children.i1.children.i1.children.i2.children.i2.text": "Formation complémentaire",
+    "ui.viewer.title": "Document",
+    "ui.viewer.download": "Télécharger",
+    "ui.viewer.close": "Fermer"
   }
 }

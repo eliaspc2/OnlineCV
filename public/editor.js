@@ -1062,7 +1062,7 @@ validateBtn.addEventListener('click', validate);
 downloadBtn.addEventListener('click', download);
 if (exitBtn) {
   exitBtn.addEventListener('click', () => {
-    window.location.href = '/';
+    window.location.href = new URL('./', window.location.href).toString();
   });
 }
 
