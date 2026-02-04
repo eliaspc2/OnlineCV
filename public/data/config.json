@@ -1105,7 +1105,8 @@
                                   "class": "btn-outline flex items-center gap-2",
                                   "attrs": {
                                     "href": "assets/docs/cv-andre-camara.pdf",
-                                    "download": "cv-andre-camara.pdf"
+                                    "download": "cv-andre-camara.pdf",
+                                    "data-open-inline": "true"
                                   },
                                   "children": [
                                     {
@@ -2155,7 +2156,7 @@
                                           "class": "h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-1000",
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "90",
+                                            "data-level": "85",
                                             "data-delay": "0"
                                           }
                                         }
@@ -2186,7 +2187,7 @@
                                           "class": "h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full transition-all duration-1000",
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "70",
+                                            "data-level": "65",
                                             "data-delay": "100"
                                           }
                                         }
@@ -2217,7 +2218,7 @@
                                           "class": "h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full transition-all duration-1000",
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "65",
+                                            "data-level": "55",
                                             "data-delay": "200"
                                           }
                                         }
@@ -2248,7 +2249,7 @@
                                           "class": "h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full transition-all duration-1000",
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "65",
+                                            "data-level": "60",
                                             "data-delay": "300"
                                           }
                                         }
@@ -2279,7 +2280,7 @@
                                           "class": "h-full bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full transition-all duration-1000",
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "75",
+                                            "data-level": "70",
                                             "data-delay": "400"
                                           }
                                         }
@@ -2461,7 +2462,8 @@
                                           "tag": "a",
                                           "attrs": {
                                             "href": "assets/images/cert-python-intro-helsinki.png",
-                                            "download": "cert-python-intro-helsinki.png"
+                                            "download": "cert-python-intro-helsinki.png",
+                                            "data-open-inline": "true"
                                           },
                                           "class": "px-4 py-2 bg-green-50 hover:bg-green-100 rounded-lg text-sm font-medium text-green-700 flex items-center gap-2 transition-colors",
                                           "children": [
@@ -2485,7 +2487,8 @@
                                           "tag": "a",
                                           "attrs": {
                                             "href": "assets/images/cert-python-adv-helsinki.png",
-                                            "download": "cert-python-adv-helsinki.png"
+                                            "download": "cert-python-adv-helsinki.png",
+                                            "data-open-inline": "true"
                                           },
                                           "class": "px-4 py-2 bg-green-50 hover:bg-green-100 rounded-lg text-sm font-medium text-green-700 flex items-center gap-2 transition-colors",
                                           "children": [
@@ -2591,7 +2594,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "90",
+                                                        "data-level": "80",
                                                         "data-delay": "0"
                                                       }
                                                     }
@@ -2627,7 +2630,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "85",
+                                                        "data-level": "78",
                                                         "data-delay": "100"
                                                       }
                                                     }
@@ -2663,7 +2666,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "85",
+                                                        "data-level": "78",
                                                         "data-delay": "200"
                                                       }
                                                     }
@@ -2699,7 +2702,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "90",
+                                                        "data-level": "80",
                                                         "data-delay": "300"
                                                       }
                                                     }
@@ -2955,7 +2958,8 @@
                                           "tag": "a",
                                           "attrs": {
                                             "href": "assets/docs/efa-program-content.pdf",
-                                            "download": "efa-program-content.pdf"
+                                            "download": "efa-program-content.pdf",
+                                            "data-open-inline": "true"
                                           },
                                           "class": "px-4 py-2 bg-[#3b82f6]/10 hover:bg-[#3b82f6]/20 rounded-lg text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-colors",
                                           "children": [
@@ -3061,7 +3065,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "70",
+                                                        "data-level": "65",
                                                         "data-delay": "0"
                                                       }
                                                     }
@@ -3097,7 +3101,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "75",
+                                                        "data-level": "70",
                                                         "data-delay": "100"
                                                       }
                                                     }
@@ -3133,7 +3137,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "65",
+                                                        "data-level": "60",
                                                         "data-delay": "200"
                                                       }
                                                     }
@@ -3169,7 +3173,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "60",
+                                                        "data-level": "55",
                                                         "data-delay": "300"
                                                       }
                                                     }
@@ -3205,7 +3209,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "80",
+                                                        "data-level": "85",
                                                         "data-delay": "400"
                                                       }
                                                     }
@@ -3425,7 +3429,8 @@
                                           "tag": "a",
                                           "attrs": {
                                             "href": "assets/docs/q481ra057_referencial-competencias-tecnologica_cet.pdf",
-                                            "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf"
+                                            "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf",
+                                            "data-open-inline": "true"
                                           },
                                           "class": "px-4 py-2 bg-[#3b82f6]/10 hover:bg-[#3b82f6]/20 rounded-lg text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-colors",
                                           "children": [
@@ -3531,7 +3536,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "50",
+                                                        "data-level": "45",
                                                         "data-delay": "0"
                                                       }
                                                     }
@@ -3567,7 +3572,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "55",
+                                                        "data-level": "40",
                                                         "data-delay": "100"
                                                       }
                                                     }
@@ -3603,7 +3608,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "60",
+                                                        "data-level": "45",
                                                         "data-delay": "200"
                                                       }
                                                     }
@@ -3639,7 +3644,7 @@
                                                       "class": "h-full bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] rounded-full skill-bar",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "65",
+                                                        "data-level": "50",
                                                         "data-delay": "300"
                                                       }
                                                     }
@@ -5882,7 +5887,8 @@
                                   "tag": "a",
                                   "attrs": {
                                     "href": "assets/docs/efa-program-content.pdf",
-                                    "download": "efa-program-content.pdf"
+                                    "download": "efa-program-content.pdf",
+                                    "data-open-inline": "true"
                                   },
                                   "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
                                   "children": [
@@ -5930,7 +5936,8 @@
                                   "tag": "a",
                                   "attrs": {
                                     "href": "assets/docs/q481ra057_referencial-competencias-tecnologica_cet.pdf",
-                                    "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf"
+                                    "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf",
+                                    "data-open-inline": "true"
                                   },
                                   "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
                                   "children": [
@@ -5978,7 +5985,8 @@
                                   "tag": "a",
                                   "attrs": {
                                     "href": "assets/images/cert-python-intro-helsinki.png",
-                                    "download": "cert-python-intro-helsinki.png"
+                                    "download": "cert-python-intro-helsinki.png",
+                                    "data-open-inline": "true"
                                   },
                                   "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
                                   "children": [
@@ -6026,7 +6034,8 @@
                                   "tag": "a",
                                   "attrs": {
                                     "href": "assets/images/cert-python-adv-helsinki.png",
-                                    "download": "cert-python-adv-helsinki.png"
+                                    "download": "cert-python-adv-helsinki.png",
+                                    "data-open-inline": "true"
                                   },
                                   "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
                                   "children": [
@@ -7248,7 +7257,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/docs/cv-andre-camara.pdf",
-                                        "download": "cv-andre-camara.pdf"
+                                        "download": "cv-andre-camara.pdf",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors",
                                       "children": [
@@ -7272,7 +7282,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/docs/cv-extended-andre-camara.pdf",
-                                        "download": "cv-extended-andre-camara.pdf"
+                                        "download": "cv-extended-andre-camara.pdf",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors",
                                       "children": [
@@ -7296,7 +7307,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/docs/efa-program-content.pdf",
-                                        "download": "efa-program-content.pdf"
+                                        "download": "efa-program-content.pdf",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors",
                                       "children": [
@@ -7749,7 +7761,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/docs/cv-andre-camara.pdf",
-                                        "download": "cv-andre-camara.pdf"
+                                        "download": "cv-andre-camara.pdf",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
                                       "children": [
@@ -7797,7 +7810,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/docs/cv-extended-andre-camara.pdf",
-                                        "download": "cv-extended-andre-camara.pdf"
+                                        "download": "cv-extended-andre-camara.pdf",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
                                       "children": [
@@ -7861,7 +7875,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/images/cert-python-intro-helsinki.png",
-                                        "download": "cert-python-intro-helsinki.png"
+                                        "download": "cert-python-intro-helsinki.png",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "card-hover p-4 rounded-xl bg-white border border-[#e2e8f0] group text-center",
                                       "children": [
@@ -7895,7 +7910,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/images/cert-python-adv-helsinki.png",
-                                        "download": "cert-python-adv-helsinki.png"
+                                        "download": "cert-python-adv-helsinki.png",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "card-hover p-4 rounded-xl bg-white border border-[#e2e8f0] group text-center",
                                       "children": [
@@ -7929,7 +7945,8 @@
                                       "tag": "a",
                                       "attrs": {
                                         "href": "assets/docs/cert-marketing-digital.pdf",
-                                        "download": "cert-marketing-digital.pdf"
+                                        "download": "cert-marketing-digital.pdf",
+                                        "data-open-inline": "true"
                                       },
                                       "class": "card-hover p-4 rounded-xl bg-white border border-[#e2e8f0] group text-center",
                                       "children": [

@@ -21,6 +21,13 @@ const toPublicUrlIfRelative = (path?: string) => {
   return toPublicUrl(path);
 };
 
+const parseBooleanAttr = (el: Element, attr: string, fallback: boolean) => {
+  const raw = el.getAttribute(attr);
+  if (raw === null || raw.trim() === '') return fallback;
+  const normalized = raw.trim().toLowerCase();
+  return !['0', 'false', 'no', 'off'].includes(normalized);
+};
+
 type StringsBundle = {
   lang?: string;
   strings: Record<string, string>;
@@ -505,13 +512,28 @@ export default function App() {
     };
     copyButtons.forEach((btn) => btn.addEventListener('click', onCopyClick));
 
-    const docLinks = document.querySelectorAll('a[download]');
+    const docLinks = document.querySelectorAll('a[download], a[data-open-inline]');
     const onDocClick = (evt: Event) => {
       const link = evt.currentTarget as HTMLAnchorElement;
       const href = link.getAttribute('href');
       if (!href) return;
-      evt.preventDefault();
       const resolved = toPublicUrlIfRelative(href) || href;
+      const shouldOpenInline = parseBooleanAttr(
+        link,
+        'data-open-inline',
+        link.hasAttribute('download')
+      );
+      if (!shouldOpenInline) {
+        evt.preventDefault();
+        const target = link.getAttribute('target') || '_blank';
+        if (target === '_self') {
+          window.location.href = resolved;
+          return;
+        }
+        window.open(resolved, target, 'noopener,noreferrer');
+        return;
+      }
+      evt.preventDefault();
       const title =
         link.getAttribute('data-doc-title') ||
         link.textContent?.trim() ||
@@ -599,15 +621,15 @@ export default function App() {
         )}
       </div>
       {docViewer && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center px-4 py-6">
+        <div className="fixed inset-0 z-[2147483647] flex items-center justify-center p-2 sm:p-4">
           <button
             type="button"
             aria-label={getUiString('ui.viewer.close', 'Close')}
             className="absolute inset-0 bg-black/60"
             onClick={() => setDocViewer(null)}
           />
-          <div className="relative z-10 w-full max-w-5xl rounded-2xl bg-white shadow-2xl border border-[#e2e8f0] overflow-hidden">
-            <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-4 border-b border-[#e2e8f0]">
+          <div className="relative z-10 flex h-[94vh] w-[min(98vw,1600px)] flex-col overflow-hidden rounded-xl border border-[#e2e8f0] bg-white shadow-2xl">
+            <div className="flex shrink-0 flex-wrap items-center justify-between gap-3 border-b border-[#e2e8f0] px-5 py-4">
               <div className="text-sm font-semibold text-[#0f172a]">
                 {docViewer.title}
               </div>
@@ -628,18 +650,18 @@ export default function App() {
                 </button>
               </div>
             </div>
-            <div className="bg-[#f8fafc]">
+            <div className="min-h-0 flex-1 bg-[#f8fafc]">
               {docViewer.isImage ? (
                 <img
                   src={docViewer.url}
                   alt={docViewer.title}
-                  className="max-h-[80vh] w-full object-contain"
+                  className="h-full w-full object-contain"
                 />
               ) : (
                 <iframe
                   title={docViewer.title}
                   src={docViewer.url}
-                  className="h-[80vh] w-full"
+                  className="h-full w-full"
                 />
               )}
             </div>

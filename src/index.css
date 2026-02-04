@@ -43,7 +43,7 @@
   .lang-switcher {
     right: 10px;
     top: auto;
-    bottom: 18px;
+    bottom: calc(86px + env(safe-area-inset-bottom, 0px));
   }
 }
 
