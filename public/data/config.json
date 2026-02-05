@@ -1166,7 +1166,7 @@
                                 },
                                 {
                                   "tag": "div",
-                                  "class": "absolute -bottom-2 -right-2 bg-white rounded-xl shadow-lg p-3 flex items-center gap-2",
+                                  "class": "absolute -bottom-2 -right-2 bg-white rounded-xl shadow-lg p-3 flex items-center gap-2 floating-pill",
                                   "children": [
                                     {
                                       "tag": "div",
@@ -3533,6 +3533,26 @@
                                               "textKey": "t.pages.i0.sections.i3.nodes.i0.children.i3.children.i2.children.i2.children.i0.children.i1.children.i0.children.i1.children.i1.text"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "class": "px-2 py-0.5 text-xs font-medium rounded-full border flex items-center gap-1 bg-sky-100 text-sky-700 border-sky-200",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/calendar.svg"
+                                              },
+                                              "class": "w-4 h-4",
+                                              "attrsI18n": {
+                                                "alt": "t.custom.education.cetInternshipPillAlt"
+                                              }
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.custom.education.cetInternshipPill"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -5624,826 +5644,7 @@
           ]
         },
         {
-          "id": "now",
-          "nodes": [
-            {
-              "tag": "section",
-              "attrs": {
-                "id": "now"
-              },
-              "class": "section-padding bg-[#fcfcfd] relative",
-              "children": [
-                {
-                  "tag": "div",
-                  "class": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#eff6ff] to-[#fcfcfd]"
-                },
-                {
-                  "tag": "div",
-                  "class": "absolute top-20 right-10 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl"
-                },
-                {
-                  "tag": "div",
-                  "class": "container-custom relative z-10",
-                  "styles": {
-                    "paddingLeft": "30px",
-                    "paddingRight": "40px"
-                  },
-                  "children": [
-                    {
-                      "tag": "div",
-                      "class": "reveal opacity-0 text-center mb-16",
-                      "children": [
-                        {
-                          "tag": "span",
-                          "class": "text-[#3b82f6] text-sm font-semibold tracking-wider uppercase mb-2 block",
-                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i0.children.i0.text"
-                        },
-                        {
-                          "tag": "h2",
-                          "class": "text-3xl sm:text-4xl md:text-5xl font-bold text-[#0f172a] mb-6",
-                          "children": [
-                            {
-                              "tag": "span",
-                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i0.children.i1.children.i0.text"
-                            },
-                            {
-                              "tag": "span",
-                              "class": "gradient-text",
-                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i0.children.i1.children.i1.text"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "tag": "div",
-                      "class": "grid lg:grid-cols-2 gap-12 items-start",
-                      "children": [
-                        {
-                          "tag": "div",
-                          "class": "reveal opacity-0 space-y-8",
-                          "styles": {
-                            "animationDelay": "0.2s"
-                          },
-                          "children": [
-                            {
-                              "tag": "div",
-                              "class": "p-8 rounded-2xl bg-white border border-[#e2e8f0] shadow-lg",
-                              "children": [
-                                {
-                                  "tag": "div",
-                                  "class": "flex items-center gap-4 mb-6",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "relative",
-                                      "children": [
-                                        {
-                                          "tag": "div",
-                                          "class": "w-20 h-20 rounded-full overflow-hidden border-4 border-[#3b82f6]/20",
-                                          "children": [
-                                            {
-                                              "tag": "img",
-                                              "attrs": {
-                                                "src": "assets/images/now-portrait.png"
-                                              },
-                                              "class": "w-full h-full object-cover object-top",
-                                              "styles": {
-                                                "objectPosition": "38% 22%"
-                                              },
-                                              "attrsI18n": {
-                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i0.children.i0.children.i0.attrs.alt"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "div",
-                                          "class": "absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center",
-                                          "children": [
-                                            {
-                                              "tag": "div",
-                                              "class": "w-2 h-2 bg-white rounded-full animate-pulse"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "children": [
-                                        {
-                                          "tag": "h3",
-                                          "class": "text-xl font-bold text-[#0f172a]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i1.children.i0.text"
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-[#64748b]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i1.children.i1.text"
-                                        },
-                                        {
-                                          "tag": "div",
-                                          "class": "flex items-center gap-2 mt-1",
-                                          "children": [
-                                            {
-                                              "tag": "img",
-                                              "attrs": {
-                                                "src": "assets/images/icons/briefcase.svg",
-                                                "alt": ""
-                                              },
-                                              "class": "w-4 h-4 text-[#3b82f6]"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-sm text-[#94a3b8]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i1.children.i2.children.i1.text"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "p",
-                                  "class": "text-lg text-[#64748b] mb-6",
-                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i1.text"
-                                },
-                                {
-                                  "tag": "div",
-                                  "class": "mb-6",
-                                  "children": [
-                                    {
-                                      "tag": "h4",
-                                      "class": "text-sm font-semibold text-[#0f172a] mb-3 flex items-center gap-2",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/cpu.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-4 h-4 text-[#3b82f6]"
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i0.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "flex flex-wrap gap-2",
-                                      "children": [
-                                        {
-                                          "tag": "span",
-                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
-                                          "children": [
-                                            {
-                                              "tag": "span",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i0.children.i0.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-[#94a3b8]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i0.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
-                                          "children": [
-                                            {
-                                              "tag": "span",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i1.children.i0.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-[#94a3b8]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i1.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
-                                          "children": [
-                                            {
-                                              "tag": "span",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i2.children.i0.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-[#94a3b8]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i2.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
-                                          "children": [
-                                            {
-                                              "tag": "span",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i3.children.i0.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-[#94a3b8]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i3.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
-                                          "children": [
-                                            {
-                                              "tag": "span",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i4.children.i0.text"
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-[#94a3b8]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i4.children.i1.text"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "div",
-                                  "class": "grid sm:grid-cols-2 gap-4",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "p-4 rounded-xl bg-[#f8fafc]",
-                                      "children": [
-                                        {
-                                          "tag": "div",
-                                          "class": "flex items-center gap-2 mb-2",
-                                          "children": [
-                                            {
-                                              "tag": "img",
-                                              "attrs": {
-                                                "src": "assets/images/icons/calendar.svg"
-                                              },
-                                              "class": "w-4 h-4 text-[#94a3b8]",
-                                              "attrsI18n": {
-                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i0.children.i0.children.i0.attrs.alt"
-                                              }
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-sm font-semibold text-[#0f172a]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i0.children.i0.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#64748b]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i0.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "p-4 rounded-xl bg-[#f8fafc]",
-                                      "children": [
-                                        {
-                                          "tag": "div",
-                                          "class": "flex items-center gap-2 mb-2",
-                                          "children": [
-                                            {
-                                              "tag": "img",
-                                              "attrs": {
-                                                "src": "assets/images/icons/map-pin.svg"
-                                              },
-                                              "class": "w-4 h-4 text-[#94a3b8]",
-                                              "attrsI18n": {
-                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i1.children.i0.children.i0.attrs.alt"
-                                              }
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-sm font-semibold text-[#0f172a]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i1.children.i0.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#64748b]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "p-4 rounded-xl bg-[#f8fafc]",
-                                      "children": [
-                                        {
-                                          "tag": "div",
-                                          "class": "flex items-center gap-2 mb-2",
-                                          "children": [
-                                            {
-                                              "tag": "img",
-                                              "attrs": {
-                                                "src": "assets/images/icons/building-2.svg"
-                                              },
-                                              "class": "w-4 h-4 text-[#94a3b8]",
-                                              "attrsI18n": {
-                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i2.children.i0.children.i0.attrs.alt"
-                                              }
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-sm font-semibold text-[#0f172a]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i2.children.i0.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#64748b]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i2.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "p-4 rounded-xl bg-[#3b82f6]/5 border border-[#3b82f6]/20",
-                                      "children": [
-                                        {
-                                          "tag": "div",
-                                          "class": "flex items-center gap-2 mb-2",
-                                          "children": [
-                                            {
-                                              "tag": "img",
-                                              "attrs": {
-                                                "src": "assets/images/icons/graduation-cap.svg"
-                                              },
-                                              "class": "w-4 h-4 text-[#3b82f6]",
-                                              "attrsI18n": {
-                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i3.children.i0.children.i0.attrs.alt"
-                                              }
-                                            },
-                                            {
-                                              "tag": "span",
-                                              "class": "text-sm font-semibold text-[#3b82f6]",
-                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i3.children.i0.children.i1.text"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#64748b]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i3.children.i1.text"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "tag": "div",
-                              "class": "grid grid-cols-3 gap-3",
-                              "children": [
-                                {
-                                  "tag": "div",
-                                  "class": "text-center p-4 rounded-xl bg-gradient-to-br from-[#3b82f6]/10 to-[#3b82f6]/5",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "text-2xl font-bold gradient-text",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i0.children.i0.text"
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "text-xs text-[#94a3b8]",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i0.children.i1.text"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "div",
-                                  "class": "text-center p-4 rounded-xl bg-gradient-to-br from-[#3b82f6]/10 to-[#3b82f6]/5",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "text-2xl font-bold gradient-text",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i1.children.i0.text"
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "text-xs text-[#94a3b8]",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i1.children.i1.text"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "div",
-                                  "class": "text-center p-4 rounded-xl bg-gradient-to-br from-[#3b82f6]/10 to-[#3b82f6]/5",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "text-2xl font-bold gradient-text",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i2.children.i0.text"
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "text-xs text-[#94a3b8]",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i2.children.i1.text"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "tag": "div",
-                          "class": "reveal opacity-0 space-y-6",
-                          "styles": {
-                            "animationDelay": "0.4s"
-                          },
-                          "children": [
-                            {
-                              "tag": "h3",
-                              "class": "text-xl font-bold text-[#0f172a] flex items-center gap-2",
-                              "children": [
-                                {
-                                  "tag": "img",
-                                  "attrs": {
-                                    "src": "assets/images/icons/external-link.svg",
-                                    "alt": ""
-                                  },
-                                  "class": "w-5 h-5 text-[#3b82f6]"
-                                },
-                                {
-                                  "tag": "span",
-                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i0.children.i1.text"
-                                }
-                              ]
-                            },
-                            {
-                              "tag": "div",
-                              "class": "space-y-3",
-                              "children": [
-                                {
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "assets/docs/efa-program-content.pdf",
-                                    "download": "efa-program-content.pdf",
-                                    "data-open-inline": "true"
-                                  },
-                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "w-12 h-12 rounded-xl bg-[#3b82f6]/10 text-[#3b82f6] flex items-center justify-center",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/download.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-5 h-5"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "flex-1",
-                                      "children": [
-                                        {
-                                          "tag": "h4",
-                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i1.children.i0.text"
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#94a3b8]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "img",
-                                      "attrs": {
-                                        "src": "assets/images/icons/external-link.svg",
-                                        "alt": ""
-                                      },
-                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "assets/docs/q481ra057_referencial-competencias-tecnologica_cet.pdf",
-                                    "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf",
-                                    "data-open-inline": "true"
-                                  },
-                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/download.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-5 h-5"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "flex-1",
-                                      "children": [
-                                        {
-                                          "tag": "h4",
-                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i1.children.i1.children.i0.text"
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#94a3b8]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i1.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "img",
-                                      "attrs": {
-                                        "src": "assets/images/icons/external-link.svg",
-                                        "alt": ""
-                                      },
-                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "assets/images/cert-python-intro-helsinki.png",
-                                    "download": "cert-python-intro-helsinki.png",
-                                    "data-open-inline": "true"
-                                  },
-                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/external-link.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-5 h-5"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "flex-1",
-                                      "children": [
-                                        {
-                                          "tag": "h4",
-                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i0.text"
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#94a3b8]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "img",
-                                      "attrs": {
-                                        "src": "assets/images/icons/external-link.svg",
-                                        "alt": ""
-                                      },
-                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "assets/images/cert-python-adv-helsinki.png",
-                                    "download": "cert-python-adv-helsinki.png",
-                                    "data-open-inline": "true"
-                                  },
-                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/external-link.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-5 h-5"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "class": "flex-1",
-                                      "children": [
-                                        {
-                                          "tag": "h4",
-                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i0.text"
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#94a3b8]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "img",
-                                      "attrs": {
-                                        "src": "assets/images/icons/external-link.svg",
-                                        "alt": ""
-                                      },
-                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "tag": "div",
-                              "class": "p-6 rounded-xl bg-white border border-[#e2e8f0] shadow-sm",
-                              "children": [
-                                {
-                                  "tag": "div",
-                                  "class": "flex items-center gap-3 mb-4",
-                                  "children": [
-                                    {
-                                      "tag": "div",
-                                      "class": "w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/circle-check.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-5 h-5 text-green-600"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "div",
-                                      "children": [
-                                        {
-                                          "tag": "span",
-                                          "class": "font-semibold text-green-700",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i0.children.i1.children.i0.text"
-                                        },
-                                        {
-                                          "tag": "p",
-                                          "class": "text-sm text-[#94a3b8]",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i0.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "tag": "div",
-                                  "class": "flex flex-wrap gap-2",
-                                  "children": [
-                                    {
-                                      "tag": "span",
-                                      "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full flex items-center gap-1",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/globe.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-3 h-3"
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i0.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "span",
-                                      "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full flex items-center gap-1",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/map-pin.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-3 h-3"
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i1.children.i1.text"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "tag": "span",
-                                      "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full flex items-center gap-1",
-                                      "children": [
-                                        {
-                                          "tag": "img",
-                                          "attrs": {
-                                            "src": "assets/images/icons/clock.svg",
-                                            "alt": ""
-                                          },
-                                          "class": "w-3 h-3"
-                                        },
-                                        {
-                                          "tag": "span",
-                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i2.children.i1.text"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "tag": "div",
-                              "class": "text-center p-6 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white",
-                              "children": [
-                                {
-                                  "tag": "h4",
-                                  "class": "font-semibold mb-2",
-                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i0.text"
-                                },
-                                {
-                                  "tag": "p",
-                                  "class": "text-sm text-white/80 mb-4",
-                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i1.text"
-                                },
-                                {
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "mailto:eliaspc2@gmail.com"
-                                  },
-                                  "class": "inline-flex items-center gap-2 px-6 py-3 bg-white text-[#3b82f6] font-semibold rounded-lg hover:bg-white/90 transition-colors",
-                                  "children": [
-                                    {
-                                      "tag": "img",
-                                      "attrs": {
-                                        "src": "assets/images/icons/mail.svg",
-                                        "alt": ""
-                                      },
-                                      "class": "w-4 h-4"
-                                    },
-                                    {
-                                      "tag": "span",
-                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i2.children.i1.text"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "contact",
+          "id": "summary",
           "nodes": [
             {
               "tag": "section",
@@ -7595,6 +6796,825 @@
                                       "tag": "div",
                                       "class": "text-xs text-[#94a3b8]",
                                       "textKey": "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i2.children.i1.text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "now",
+          "nodes": [
+            {
+              "tag": "section",
+              "attrs": {
+                "id": "now"
+              },
+              "class": "section-padding bg-[#fcfcfd] relative",
+              "children": [
+                {
+                  "tag": "div",
+                  "class": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#eff6ff] to-[#fcfcfd]"
+                },
+                {
+                  "tag": "div",
+                  "class": "absolute top-20 right-10 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl"
+                },
+                {
+                  "tag": "div",
+                  "class": "container-custom relative z-10",
+                  "styles": {
+                    "paddingLeft": "30px",
+                    "paddingRight": "40px"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "class": "reveal opacity-0 text-center mb-16",
+                      "children": [
+                        {
+                          "tag": "span",
+                          "class": "text-[#3b82f6] text-sm font-semibold tracking-wider uppercase mb-2 block",
+                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i0.children.i0.text"
+                        },
+                        {
+                          "tag": "h2",
+                          "class": "text-3xl sm:text-4xl md:text-5xl font-bold text-[#0f172a] mb-6",
+                          "children": [
+                            {
+                              "tag": "span",
+                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i0.children.i1.children.i0.text"
+                            },
+                            {
+                              "tag": "span",
+                              "class": "gradient-text",
+                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i0.children.i1.children.i1.text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "class": "grid lg:grid-cols-2 gap-12 items-start",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "class": "reveal opacity-0 space-y-8",
+                          "styles": {
+                            "animationDelay": "0.2s"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "class": "p-8 rounded-2xl bg-white border border-[#e2e8f0] shadow-lg",
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "class": "flex items-center gap-4 mb-6",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "relative",
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "class": "w-20 h-20 rounded-full overflow-hidden border-4 border-[#3b82f6]/20",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/now-portrait.png"
+                                              },
+                                              "class": "w-full h-full object-cover object-top",
+                                              "styles": {
+                                                "objectPosition": "38% 22%"
+                                              },
+                                              "attrsI18n": {
+                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i0.children.i0.children.i0.attrs.alt"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "class": "absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center",
+                                          "children": [
+                                            {
+                                              "tag": "div",
+                                              "class": "w-2 h-2 bg-white rounded-full animate-pulse"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "children": [
+                                        {
+                                          "tag": "h3",
+                                          "class": "text-xl font-bold text-[#0f172a]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i1.children.i0.text"
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-[#64748b]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i1.children.i1.text"
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "class": "flex items-center gap-2 mt-1",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/briefcase.svg",
+                                                "alt": ""
+                                              },
+                                              "class": "w-4 h-4 text-[#3b82f6]"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-sm text-[#94a3b8]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i0.children.i1.children.i2.children.i1.text"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "p",
+                                  "class": "text-lg text-[#64748b] mb-6",
+                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i1.text"
+                                },
+                                {
+                                  "tag": "div",
+                                  "class": "mb-6",
+                                  "children": [
+                                    {
+                                      "tag": "h4",
+                                      "class": "text-sm font-semibold text-[#0f172a] mb-3 flex items-center gap-2",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/cpu.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-4 h-4 text-[#3b82f6]"
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i0.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "flex flex-wrap gap-2",
+                                      "children": [
+                                        {
+                                          "tag": "span",
+                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
+                                          "children": [
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i0.children.i0.text"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-[#94a3b8]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i0.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
+                                          "children": [
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i1.children.i0.text"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-[#94a3b8]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i1.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
+                                          "children": [
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i2.children.i0.text"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-[#94a3b8]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i2.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
+                                          "children": [
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i3.children.i0.text"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-[#94a3b8]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i3.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "class": "px-3 py-1 text-sm bg-[#f1f5f9] text-[#64748b] rounded-full",
+                                          "children": [
+                                            {
+                                              "tag": "span",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i4.children.i0.text"
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-[#94a3b8]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i2.children.i1.children.i4.children.i1.text"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "class": "grid sm:grid-cols-2 gap-4",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "p-4 rounded-xl bg-[#f8fafc]",
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "class": "flex items-center gap-2 mb-2",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/calendar.svg"
+                                              },
+                                              "class": "w-4 h-4 text-[#94a3b8]",
+                                              "attrsI18n": {
+                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i0.children.i0.children.i0.attrs.alt"
+                                              }
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-sm font-semibold text-[#0f172a]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i0.children.i0.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#64748b]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i0.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "p-4 rounded-xl bg-[#f8fafc]",
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "class": "flex items-center gap-2 mb-2",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/map-pin.svg"
+                                              },
+                                              "class": "w-4 h-4 text-[#94a3b8]",
+                                              "attrsI18n": {
+                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i1.children.i0.children.i0.attrs.alt"
+                                              }
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-sm font-semibold text-[#0f172a]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i1.children.i0.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#64748b]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "p-4 rounded-xl bg-[#f8fafc]",
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "class": "flex items-center gap-2 mb-2",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/building-2.svg"
+                                              },
+                                              "class": "w-4 h-4 text-[#94a3b8]",
+                                              "attrsI18n": {
+                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i2.children.i0.children.i0.attrs.alt"
+                                              }
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-sm font-semibold text-[#0f172a]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i2.children.i0.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#64748b]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i2.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "p-4 rounded-xl bg-[#3b82f6]/5 border border-[#3b82f6]/20",
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "class": "flex items-center gap-2 mb-2",
+                                          "children": [
+                                            {
+                                              "tag": "img",
+                                              "attrs": {
+                                                "src": "assets/images/icons/graduation-cap.svg"
+                                              },
+                                              "class": "w-4 h-4 text-[#3b82f6]",
+                                              "attrsI18n": {
+                                                "alt": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i3.children.i0.children.i0.attrs.alt"
+                                              }
+                                            },
+                                            {
+                                              "tag": "span",
+                                              "class": "text-sm font-semibold text-[#3b82f6]",
+                                              "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i3.children.i0.children.i1.text"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#64748b]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i0.children.i3.children.i3.children.i1.text"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "class": "grid grid-cols-3 gap-3",
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "class": "text-center p-4 rounded-xl bg-gradient-to-br from-[#3b82f6]/10 to-[#3b82f6]/5",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "text-2xl font-bold gradient-text",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i0.children.i0.text"
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "text-xs text-[#94a3b8]",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i0.children.i1.text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "class": "text-center p-4 rounded-xl bg-gradient-to-br from-[#3b82f6]/10 to-[#3b82f6]/5",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "text-2xl font-bold gradient-text",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i1.children.i0.text"
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "text-xs text-[#94a3b8]",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i1.children.i1.text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "class": "text-center p-4 rounded-xl bg-gradient-to-br from-[#3b82f6]/10 to-[#3b82f6]/5",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "text-2xl font-bold gradient-text",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i2.children.i0.text"
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "text-xs text-[#94a3b8]",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i3.children.i2.children.i1.text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "class": "reveal opacity-0 space-y-6",
+                          "styles": {
+                            "animationDelay": "0.4s"
+                          },
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "class": "text-xl font-bold text-[#0f172a] flex items-center gap-2",
+                              "children": [
+                                {
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "assets/images/icons/external-link.svg",
+                                    "alt": ""
+                                  },
+                                  "class": "w-5 h-5 text-[#3b82f6]"
+                                },
+                                {
+                                  "tag": "span",
+                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i0.children.i1.text"
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "class": "space-y-3",
+                              "children": [
+                                {
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "assets/docs/efa-program-content.pdf",
+                                    "download": "efa-program-content.pdf",
+                                    "data-open-inline": "true"
+                                  },
+                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "w-12 h-12 rounded-xl bg-[#3b82f6]/10 text-[#3b82f6] flex items-center justify-center",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/download.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-5 h-5"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "flex-1",
+                                      "children": [
+                                        {
+                                          "tag": "h4",
+                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i1.children.i0.text"
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#94a3b8]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i0.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "img",
+                                      "attrs": {
+                                        "src": "assets/images/icons/external-link.svg",
+                                        "alt": ""
+                                      },
+                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "assets/docs/q481ra057_referencial-competencias-tecnologica_cet.pdf",
+                                    "download": "q481ra057_referencial-competencias-tecnologica_cet.pdf",
+                                    "data-open-inline": "true"
+                                  },
+                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/download.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-5 h-5"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "flex-1",
+                                      "children": [
+                                        {
+                                          "tag": "h4",
+                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i1.children.i1.children.i0.text"
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#94a3b8]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i1.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "img",
+                                      "attrs": {
+                                        "src": "assets/images/icons/external-link.svg",
+                                        "alt": ""
+                                      },
+                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "assets/images/cert-python-intro-helsinki.png",
+                                    "download": "cert-python-intro-helsinki.png",
+                                    "data-open-inline": "true"
+                                  },
+                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/external-link.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-5 h-5"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "flex-1",
+                                      "children": [
+                                        {
+                                          "tag": "h4",
+                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i0.text"
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#94a3b8]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i2.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "img",
+                                      "attrs": {
+                                        "src": "assets/images/icons/external-link.svg",
+                                        "alt": ""
+                                      },
+                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "assets/images/cert-python-adv-helsinki.png",
+                                    "download": "cert-python-adv-helsinki.png",
+                                    "data-open-inline": "true"
+                                  },
+                                  "class": "card-hover flex items-center gap-4 p-4 rounded-xl bg-white border border-[#e2e8f0] group",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/external-link.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-5 h-5"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "class": "flex-1",
+                                      "children": [
+                                        {
+                                          "tag": "h4",
+                                          "class": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i0.text"
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#94a3b8]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i1.children.i3.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "img",
+                                      "attrs": {
+                                        "src": "assets/images/icons/external-link.svg",
+                                        "alt": ""
+                                      },
+                                      "class": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "class": "p-6 rounded-xl bg-white border border-[#e2e8f0] shadow-sm",
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "class": "flex items-center gap-3 mb-4",
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "class": "w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/circle-check.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-5 h-5 text-green-600"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "children": [
+                                        {
+                                          "tag": "span",
+                                          "class": "font-semibold text-green-700",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i0.children.i1.children.i0.text"
+                                        },
+                                        {
+                                          "tag": "p",
+                                          "class": "text-sm text-[#94a3b8]",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i0.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "class": "flex flex-wrap gap-2",
+                                  "children": [
+                                    {
+                                      "tag": "span",
+                                      "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full flex items-center gap-1",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/globe.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-3 h-3"
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i0.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "span",
+                                      "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full flex items-center gap-1",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/map-pin.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-3 h-3"
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i1.children.i1.text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "span",
+                                      "class": "px-3 py-1 text-xs bg-[#f1f5f9] text-[#64748b] rounded-full flex items-center gap-1",
+                                      "children": [
+                                        {
+                                          "tag": "img",
+                                          "attrs": {
+                                            "src": "assets/images/icons/clock.svg",
+                                            "alt": ""
+                                          },
+                                          "class": "w-3 h-3"
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i1.children.i2.children.i1.children.i2.children.i1.text"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "class": "text-center p-6 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white",
+                              "children": [
+                                {
+                                  "tag": "h4",
+                                  "class": "font-semibold mb-2",
+                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i0.text"
+                                },
+                                {
+                                  "tag": "p",
+                                  "class": "text-sm text-white/80 mb-4",
+                                  "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i1.text"
+                                },
+                                {
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "mailto:eliaspc2@gmail.com"
+                                  },
+                                  "class": "inline-flex items-center gap-2 px-6 py-3 bg-white text-[#3b82f6] font-semibold rounded-lg hover:bg-white/90 transition-colors",
+                                  "children": [
+                                    {
+                                      "tag": "img",
+                                      "attrs": {
+                                        "src": "assets/images/icons/mail.svg",
+                                        "alt": ""
+                                      },
+                                      "class": "w-4 h-4"
+                                    },
+                                    {
+                                      "tag": "span",
+                                      "textKey": "t.pages.i0.sections.i5.nodes.i0.children.i2.children.i1.children.i0.children.i1.children.i2.children.i1.text"
                                     }
                                   ]
                                 }
