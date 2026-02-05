@@ -49,6 +49,10 @@ export type Config = {
     lang?: string;
     defaultLanguage?: string;
     theme?: Record<string, string>;
+    styles?: {
+      order?: string[];
+      [group: string]: string | string[] | undefined;
+    };
     languages?: { code: string; label: string; stringsFile?: string; flag: string }[];
     favicon?: FaviconConfig;
     pwa?: PwaConfig;

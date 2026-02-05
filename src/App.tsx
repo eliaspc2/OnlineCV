@@ -63,6 +63,8 @@ const applyMeta = (
 ) => {
   const head = document.head;
   head.querySelectorAll('[data-json-site-head]').forEach((el) => el.remove());
+  const existingStyle = head.querySelector('[data-json-site-style]') as HTMLStyleElement | null;
+  if (existingStyle) existingStyle.remove();
   if (manifestUrlRef.current) {
     URL.revokeObjectURL(manifestUrlRef.current);
     manifestUrlRef.current = null;
@@ -95,6 +97,24 @@ const applyMeta = (
   }
   if (description) {
     createHeadEl('meta', { name: 'description', content: description });
+  }
+
+  const styles = meta?.styles;
+  if (styles) {
+    const styleEl = document.createElement('style');
+    styleEl.setAttribute('data-json-site-style', 'true');
+    const order = Array.isArray(styles.order) ? styles.order : [];
+    const blocks: string[] = [];
+    const addBlock = (key: string) => {
+      const value = styles[key];
+      if (typeof value === 'string' && value.trim()) blocks.push(value.trim());
+    };
+    order.forEach(addBlock);
+    Object.keys(styles)
+      .filter((key) => key !== 'order' && !order.includes(key))
+      .forEach(addBlock);
+    styleEl.textContent = blocks.join('\n');
+    head.appendChild(styleEl);
   }
 
   const pwa = meta?.pwa;
