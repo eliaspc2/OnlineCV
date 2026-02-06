@@ -266,18 +266,6 @@
                         "tag": "button",
                         "attrs": {
                           "type": "button",
-                          "data-scroll-to": "about",
-                          "data-nav-link": "about",
-                          "data-base-class": "px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]",
-                          "data-active-class": "text-[#3b82f6] bg-[#3b82f6]/10"
-                        },
-                        "class": "px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]",
-                        "textKey": "t.layout.header.i1.children.i0.children.i0.children.i1.children.i1.text"
-                      },
-                      {
-                        "tag": "button",
-                        "attrs": {
-                          "type": "button",
                           "data-scroll-to": "experience",
                           "data-nav-link": "experience",
                           "data-base-class": "px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]",
@@ -425,18 +413,6 @@
                     },
                     "class": "w-full px-4 py-3 text-left text-base font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]",
                     "textKey": "t.layout.header.i2.children.i1.children.i0.children.i0.text"
-                  },
-                  {
-                    "tag": "button",
-                    "attrs": {
-                      "type": "button",
-                      "data-scroll-to": "about",
-                      "data-nav-link": "about",
-                      "data-base-class": "w-full px-4 py-3 text-left text-base font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]",
-                      "data-active-class": "text-[#3b82f6] bg-[#3b82f6]/10"
-                    },
-                    "class": "w-full px-4 py-3 text-left text-base font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]",
-                    "textKey": "t.layout.header.i2.children.i1.children.i0.children.i1.text"
                   },
                   {
                     "tag": "button",

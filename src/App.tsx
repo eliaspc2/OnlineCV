@@ -326,7 +326,7 @@ export default function App() {
     skillBars.forEach((bar) => skillObserver.observe(bar));
 
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
+      const sections = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (!element) continue;
