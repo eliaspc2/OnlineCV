@@ -109,8 +109,8 @@
           "absolute_inset_0_overflow_hidden": "absolute inset-0 overflow-hidden",
           "absolute_top_1_2_left_1_2_translate_x_1_2_translate_y": "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/5 rounded-full blur-3xl",
           "absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_rounded": "absolute top-20 left-10 w-72 h-72 bg-[#3b82f6]/5 rounded-full blur-3xl animate-float",
-          "flex_items_center_gap_2_text_64748b": "flex items-center gap-2 text-[#64748b] hover:text-[#3b82f6] transition-all duration-300 hover:-translate-y-0.5",
-          "flex_items_center_gap_2_text_64748b_hover_text_3b82f6": "flex items-center gap-2 text-[#64748b] hover:text-[#3b82f6] transition-all duration-300 hover:-translate-y-0.5",
+          "flex_items_center_gap_2_text_64748b": "inline-contact-link flex items-center gap-2 text-[#64748b]",
+          "flex_items_center_gap_2_text_64748b_hover_text_3b82f6": "inline-contact-link flex items-center gap-2 text-[#64748b]",
           "grid_lg_grid_cols_2_gap_12_items_center": "grid lg:grid-cols-2 gap-12 items-center",
           "min_h_screen_flex_items_center_justify_center_relative": "min-h-screen flex items-center justify-center relative overflow-hidden bg-[#fcfcfd]",
           "relative_w_64_h_64_sm_w_80_sm_h_80_rounded_full_overfl": "relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl",
@@ -337,7 +337,7 @@
         },
         "footer": {
           "bg_white_border_t_border_e2e8f0_relative": "bg-white border-t border-[#e2e8f0] relative",
-          "container_custom_py_12_md_py_16": "container-custom py-12 md:py-16",
+          "container_custom_py_12_md_py_16": "container-custom py-12 md:py-16 footer-no-motion",
           "fixed_bottom_6_right_6_w_12_h_12_rounded_full_bg_3b82f": "fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#3b82f6] text-white flex items-center justify-center shadow-lg hover:bg-[#2563eb] transition-all duration-300 hover:scale-110 z-40",
           "flex_gap_3": "flex gap-3",
           "flex_items_center_gap_2_mb_4": "flex items-center gap-2 mb-4",
@@ -459,7 +459,7 @@
       },
       "language": {
         "switcher": ".lang-switcher{position:fixed;right:18px;top:120px;display:flex;flex-direction:column;gap:8px;z-index:60}.lang-btn{width:32px;height:22px;border-radius:6px;border:1px solid rgba(148,163,184,.5);background:rgba(255,255,255,.9);padding:0;cursor:pointer;box-shadow:0 6px 16px rgba(15,23,42,.08);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background-color .2s ease}.lang-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 26px rgba(15,23,42,.18);border-color:rgba(59,130,246,.45);background:#ffffff}.lang-btn:active{transform:translateY(0) scale(1)}.lang-btn:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}.lang-btn img{width:100%;height:100%;object-fit:cover;border-radius:5px;display:block}.lang-fade{transition:opacity .25s ease,transform .25s ease}.lang-fade.is-fading{opacity:0;transform:translateY(6px)}",
-        "responsive": "@media (max-width:720px){.lang-switcher{right:10px;top:auto;bottom:calc(86px + env(safe-area-inset-bottom,0px))}}"
+        "responsive": "@media (max-width:720px){.lang-switcher{right:10px;top:auto;bottom:calc(196px + env(safe-area-inset-bottom,0px));gap:6px}.lang-btn{width:30px;height:20px}}"
       },
       "helpers": {
         "responsive": [
@@ -474,7 +474,9 @@
       "interactions": {
         "accordion": "[data-accordion-item][data-accordion-click-anywhere=\"true\"] > :not([data-accordion-panel]){cursor:pointer}[data-accordion-item][data-accordion-click-anywhere=\"true\"] [data-accordion-panel]{cursor:auto}",
         "cards": ".card-hover,[data-accordion-item]{box-shadow:0 6px 16px rgba(15,23,42,.08)}.card-hover:hover,[data-accordion-item]:hover{box-shadow:0 14px 30px rgba(15,23,42,.14)}.card-hover [class*=\"text-[#0f172a]\"]{transition:color .25s ease}.card-hover:hover [class*=\"text-[#0f172a]\"],.card-hover:focus-within [class*=\"text-[#0f172a]\"]{color:#3b82f6 !important}",
-        "icons": ".interactive-icon{box-shadow:0 6px 16px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}.interactive-icon:hover{transform:translateY(-1px) scale(1.06);box-shadow:0 14px 30px rgba(15,23,42,.16);background:rgba(59,130,246,.14) !important;border-color:rgba(59,130,246,.35)}.interactive-icon:active{transform:translateY(0) scale(1.02)}.social-icon{width:3rem;height:3rem;border-radius:.75rem;border:1px solid #e2e8f0;background:#f8fafc;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}.social-icon:hover{transform:translateY(-1px) scale(1.06);box-shadow:0 14px 30px rgba(15,23,42,.16);background:rgba(59,130,246,.14);border-color:rgba(59,130,246,.35)}.social-icon:active{transform:translateY(0) scale(1.02)}.social-icon img{width:1.25rem !important;height:1.25rem !important}"
+        "icons": ".interactive-icon{box-shadow:0 6px 16px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}.interactive-icon:hover{transform:translateY(-1px) scale(1.06);box-shadow:0 14px 30px rgba(15,23,42,.16);background:rgba(59,130,246,.14) !important;border-color:rgba(59,130,246,.35)}.interactive-icon:active{transform:translateY(0) scale(1.02)}.social-icon{width:3rem;height:3rem;border-radius:.75rem;border:1px solid #e2e8f0;background:#f8fafc;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(15,23,42,.08);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,border-color .25s ease}.social-icon:hover{transform:translateY(-1px) scale(1.06);box-shadow:0 14px 30px rgba(15,23,42,.16);background:rgba(59,130,246,.14);border-color:rgba(59,130,246,.35)}.social-icon:active{transform:translateY(0) scale(1.02)}.social-icon img{width:1.25rem !important;height:1.25rem !important}",
+        "inlineContactLinks": ".inline-contact-link{transition:transform .28s cubic-bezier(.4,0,.2,1),color .28s cubic-bezier(.4,0,.2,1),filter .28s cubic-bezier(.4,0,.2,1)}.inline-contact-link:hover{transform:translateY(-3px);color:#3b82f6;filter:drop-shadow(0 8px 16px rgba(59,130,246,.2))}.inline-contact-link img{transition:transform .28s cubic-bezier(.4,0,.2,1)}.inline-contact-link:hover img{transform:translateY(-1px) scale(1.08)}",
+        "footerNoMotion": ".footer-no-motion a{transition:none !important}.footer-no-motion a:hover{color:#64748b !important;transform:none !important;filter:none !important}.footer-no-motion .social-icon{transition:none !important;transform:none !important;box-shadow:0 6px 16px rgba(15,23,42,.08) !important;background:#f8fafc !important;border-color:#e2e8f0 !important}.footer-no-motion .social-icon:hover{transform:none !important;box-shadow:0 6px 16px rgba(15,23,42,.08) !important;background:#f8fafc !important;border-color:#e2e8f0 !important}"
       }
     }
   },
@@ -3509,7 +3511,7 @@
                               "classKey": "visual.shared.overflow_hidden_transition_all_duration_500_max_h_2000"
                             }
                           ],
-                          "classKey": "visual.shared.no_motion_rounded_2xl_bg_white_border_border_e2e8f0_overfl"
+                          "classKey": "visual.skills.card_hover_rounded_2xl_bg_white_border_border_e2e8f0_o"
                         },
                         {
                           "tag": "div",
@@ -4010,7 +4012,7 @@
                               "classKey": "visual.shared.overflow_hidden_transition_all_duration_500_max_h_0_op"
                             }
                           ],
-                          "classKey": "visual.shared.no_motion_rounded_2xl_bg_white_border_border_e2e8f0_overfl"
+                          "classKey": "visual.skills.card_hover_rounded_2xl_bg_white_border_border_e2e8f0_o"
                         },
                         {
                           "tag": "div",
@@ -4469,7 +4471,7 @@
                               "classKey": "visual.shared.overflow_hidden_transition_all_duration_500_max_h_0_op"
                             }
                           ],
-                          "classKey": "visual.shared.no_motion_rounded_2xl_bg_white_border_border_e2e8f0_overfl"
+                          "classKey": "visual.skills.card_hover_rounded_2xl_bg_white_border_border_e2e8f0_o"
                         }
                       ],
                       "classKey": "visual.skills.reveal_opacity_0_skills_container_space_y_4_mb_16"
@@ -6732,7 +6734,7 @@
                                       "classKey": "visual.summary.overflow_hidden_transition_all_duration_300_max_h_0_op"
                                     }
                                   ],
-                                  "classKey": "visual.shared.no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo"
+                                  "classKey": "visual.summary.card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov"
                                 },
                                 {
                                   "tag": "div",
@@ -6834,7 +6836,7 @@
                                       "classKey": "visual.summary.overflow_hidden_transition_all_duration_300_max_h_0_op"
                                     }
                                   ],
-                                  "classKey": "visual.shared.no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo"
+                                  "classKey": "visual.summary.card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov"
                                 },
                                 {
                                   "tag": "div",
@@ -6936,7 +6938,7 @@
                                       "classKey": "visual.summary.overflow_hidden_transition_all_duration_300_max_h_0_op"
                                     }
                                   ],
-                                  "classKey": "visual.shared.no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo"
+                                  "classKey": "visual.summary.card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov"
                                 },
                                 {
                                   "tag": "div",
@@ -7038,7 +7040,7 @@
                                       "classKey": "visual.summary.overflow_hidden_transition_all_duration_300_max_h_0_op"
                                     }
                                   ],
-                                  "classKey": "visual.shared.no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo"
+                                  "classKey": "visual.summary.card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov"
                                 },
                                 {
                                   "tag": "div",
@@ -7140,7 +7142,7 @@
                                       "classKey": "visual.summary.overflow_hidden_transition_all_duration_300_max_h_0_op"
                                     }
                                   ],
-                                  "classKey": "visual.shared.no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo"
+                                  "classKey": "visual.summary.card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov"
                                 },
                                 {
                                   "tag": "div",
@@ -7242,7 +7244,7 @@
                                       "classKey": "visual.summary.overflow_hidden_transition_all_duration_300_max_h_0_op"
                                     }
                                   ],
-                                  "classKey": "visual.shared.no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo"
+                                  "classKey": "visual.summary.card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov"
                                 }
                               ],
                               "classKey": "visual.shared.space_y_4"
@@ -8393,7 +8395,7 @@
                                           "classKey": "visual.contact.p_2_rounded_lg_hover_bg_f1f5f9_transition_colors"
                                         }
                                       ],
-                                      "classKey": "visual.shared.no_motion_flex_items_center_gap_4_p_5_rounded_xl_bg_white"
+                                      "classKey": "visual.contact.card_hover_flex_items_center_gap_4_p_5_rounded_xl_bg_w"
                                     },
                                     {
                                       "tag": "div",
@@ -8472,7 +8474,7 @@
                                           "classKey": "visual.contact.p_2_rounded_lg_hover_bg_f1f5f9_transition_colors"
                                         }
                                       ],
-                                      "classKey": "visual.shared.no_motion_flex_items_center_gap_4_p_5_rounded_xl_bg_white"
+                                      "classKey": "visual.contact.card_hover_flex_items_center_gap_4_p_5_rounded_xl_bg_w"
                                     },
                                     {
                                       "tag": "div",
@@ -8480,7 +8482,9 @@
                                         {
                                           "tag": "a",
                                           "attrs": {
-                                            "href": "#"
+                                            "href": "https://www.google.com/maps/search/?api=1&query=Quintanilha%2C%20Braganca%20PT",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer"
                                           },
                                           "children": [
                                             {
@@ -8507,7 +8511,9 @@
                                             {
                                               "tag": "a",
                                               "attrs": {
-                                                "href": "#"
+                                                "href": "https://www.google.com/maps/search/?api=1&query=Quintanilha%2C%20Braganca%20PT",
+                                                "target": "_blank",
+                                                "rel": "noopener noreferrer"
                                               },
                                               "textKey": "t.pages.i0.sections.i6.nodes.i0.children.i3.children.i1.children.i0.children.i1.children.i2.children.i1.children.i1.text",
                                               "classKey": "visual.contact.text_lg_font_semibold_text_0f172a_group_hover_text_3b8"
@@ -8516,7 +8522,7 @@
                                           "classKey": "visual.shared.flex_1"
                                         }
                                       ],
-                                      "classKey": "visual.shared.no_motion_flex_items_center_gap_4_p_5_rounded_xl_bg_white"
+                                      "classKey": "visual.contact.card_hover_flex_items_center_gap_4_p_5_rounded_xl_bg_w"
                                     }
                                   ],
                                   "classKey": "visual.shared.space_y_4"
