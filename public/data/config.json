@@ -6010,167 +6010,6 @@
                     },
                     {
                       "styles": {
-                        "animationDelay": "0.3s"
-                      },
-                      "children": [
-                        {
-                          "children": [
-                            {
-                              "id": "n_7d0797fa",
-                              "ref": "text.gradient"
-                            }
-                          ],
-                          "id": "n_754ba802",
-                          "ref": "auto.singleton.h3.visual_skills_text_xl_font_bold_text_0f172a_mb_6_text_center"
-                        },
-                        {
-                          "children": [
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/target.svg"
-                                  },
-                                  "id": "n_97119f84",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_9626f0c3",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_2d311c98",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/list-checks.svg"
-                                  },
-                                  "id": "n_8cfe9ba3",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_00ae6d13",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_1525bcc4",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/megaphone.svg"
-                                  },
-                                  "id": "n_0c606380",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_6aa7db48",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_a2acf296",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/compass.svg"
-                                  },
-                                  "id": "n_793a4a76",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_649e49d7",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_1b3027f9",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/clock.svg"
-                                  },
-                                  "id": "n_5a6a4920",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_64514afc",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_cfa13b8d",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/lightbulb.svg"
-                                  },
-                                  "id": "n_8a718bf6",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_96eb8961",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_36c25976",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/shield.svg"
-                                  },
-                                  "id": "n_09d75917",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_da360e0c",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_0c31e00e",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/users.svg"
-                                  },
-                                  "id": "n_001b0354",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_2f75bb96",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_227353a8",
-                              "ref": "chip.no_motion"
-                            }
-                          ],
-                          "id": "n_e82dbd5b",
-                          "ref": "auto.singleton.div.visual_skills_flex_flex_wrap_justify_center_gap_4"
-                        }
-                      ],
-                      "id": "n_d2acb54f",
-                      "ref": "reveal.base"
-                    },
-                    {
-                      "styles": {
                         "animationDelay": "0.4s"
                       },
                       "children": [
@@ -7489,6 +7328,171 @@
                     {
                       "styles": {
                         "animationDelay": "0.6s"
+                      },
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "n_7d0797fa",
+                              "ref": "text.gradient"
+                            }
+                          ],
+                          "id": "n_754ba802",
+                          "ref": "auto.singleton.h3.visual_skills_text_xl_font_bold_text_0f172a_mb_6_text_center"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/target.svg"
+                                  },
+                                  "id": "n_97119f84",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_9626f0c3",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_2d311c98",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/list-checks.svg"
+                                  },
+                                  "id": "n_8cfe9ba3",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_00ae6d13",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_1525bcc4",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/megaphone.svg"
+                                  },
+                                  "id": "n_0c606380",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_6aa7db48",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_a2acf296",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/compass.svg"
+                                  },
+                                  "id": "n_793a4a76",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_649e49d7",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_1b3027f9",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/clock.svg"
+                                  },
+                                  "id": "n_5a6a4920",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_64514afc",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_cfa13b8d",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/lightbulb.svg"
+                                  },
+                                  "id": "n_8a718bf6",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_96eb8961",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_36c25976",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/shield.svg"
+                                  },
+                                  "id": "n_09d75917",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_da360e0c",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_0c31e00e",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/users.svg"
+                                  },
+                                  "id": "n_001b0354",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_2f75bb96",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_227353a8",
+                              "ref": "chip.no_motion"
+                            }
+                          ],
+                          "id": "n_e82dbd5b",
+                          "ref": "auto.singleton.div.visual_skills_flex_flex_wrap_justify_center_gap_4",
+                          "styles": {
+                            "paddingLeft": "8px",
+                            "paddingRight": "8px"
+                          }
+                        }
+                      ],
+                      "id": "n_d2acb54f",
+                      "ref": "auto.div.visual_shared_reveal_opacity_0_mt_12_text_center"
+                    },
+                    {
+                      "styles": {
+                        "animationDelay": "0.8s"
                       },
                       "children": [
                         {
