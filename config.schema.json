@@ -26,6 +26,34 @@
           },
           "additionalProperties": true
         },
+        "classPresets": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/definitions/classPresetValue"}
+        },
+        "styles": {
+          "type": "object",
+          "properties": {
+            "order": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {"type": "string"},
+              {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {"type": "string"},
+                    {"$ref": "#/definitions/styleValue"}
+                  ]
+                }
+              },
+              {"$ref": "#/definitions/styleValue"}
+            ]
+          }
+        },
         "languages": {
           "type": "array",
           "items": {
@@ -122,12 +150,40 @@
     }
   },
   "definitions": {
+    "classPresetValue": {
+      "anyOf": [
+        {"type": "string"},
+        {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/definitions/classPresetValue"}
+        }
+      ]
+    },
+    "styleValue": {
+      "anyOf": [
+        {"type": "string"},
+        {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {"type": "string"},
+              {"$ref": "#/definitions/styleValue"}
+            ]
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/definitions/styleValue"}
+        }
+      ]
+    },
     "node": {
       "type": "object",
       "required": ["tag"],
       "properties": {
         "tag": {"type": "string"},
         "class": {"type": "string"},
+        "classKey": {"type": "string"},
         "text": {"type": "string"},
         "textKey": {"type": "string"},
         "attrs": {"type": "object", "additionalProperties": {"type": "string"}},

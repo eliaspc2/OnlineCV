@@ -49,8 +49,8 @@
     "t.layout.header.i1.children.i0.children.i0.children.i1.children.i2.text": "Foundation",
     "t.layout.header.i1.children.i0.children.i0.children.i1.children.i3.text": "Engineering",
     "t.layout.header.i1.children.i0.children.i0.children.i1.children.i4.text": "Mindset",
-    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i5.text": "Now",
-    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i6.text": "Contact",
+    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i5.text": "Summary",
+    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i6.text": "Now",
     "t.layout.header.i1.children.i0.children.i0.children.i2.attrs.aria-label": "Toggle menu",
     "t.layout.header.i1.children.i0.children.i0.children.i2.children.i0.attrs.alt": "Menu",
     "t.layout.header.i1.children.i0.children.i0.children.i2.children.i1.attrs.alt": "Fechar",
@@ -59,8 +59,8 @@
     "t.layout.header.i2.children.i1.children.i0.children.i2.text": "Foundation",
     "t.layout.header.i2.children.i1.children.i0.children.i3.text": "Engineering",
     "t.layout.header.i2.children.i1.children.i0.children.i4.text": "Mindset",
-    "t.layout.header.i2.children.i1.children.i0.children.i5.text": "Now",
-    "t.layout.header.i2.children.i1.children.i0.children.i6.text": "Contact",
+    "t.layout.header.i2.children.i1.children.i0.children.i5.text": "Summary",
+    "t.layout.header.i2.children.i1.children.i0.children.i6.text": "Now",
     "t.pages.i0.sections.i0.nodes.i0.children.i3.children.i0.children.i0.children.i0.children.i0.children.i0.text": "André",
     "t.pages.i0.sections.i0.nodes.i0.children.i3.children.i0.children.i0.children.i0.children.i0.children.i1.text": " Câmara",
     "t.pages.i0.sections.i0.nodes.i0.children.i3.children.i0.children.i0.children.i1.children.i0.text": "Software Engineer",
@@ -567,6 +567,8 @@
     "ui.viewer.title": "Document",
     "ui.viewer.download": "Download",
     "ui.viewer.close": "Close",
-    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text": "CET Technical Specialist in Cybersecurity (Level 5, 1,510h, in progress)"
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text": "CET Technical Specialist in Cybersecurity (Level 5, 1,510h, in progress)",
+    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i7.text": "Contact",
+    "t.layout.header.i2.children.i1.children.i0.children.i7.text": "Contact"
   }
 }

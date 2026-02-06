@@ -27,14 +27,17 @@ const normalizeStyleValue = (value: unknown) => {
 export function renderNode(
   def: NodeDef,
   key?: React.Key,
-  strings?: Record<string, string>
+  strings?: Record<string, string>,
+  classPresets?: Record<string, string>
 ): React.ReactNode {
   const tag = def.tag || 'div';
   const Tag = tag as React.ElementType;
 
   const props: Record<string, unknown> = {};
   if (key !== undefined) props.key = key;
-  if (def.class) props.className = def.class;
+  const presetClass = def.classKey ? classPresets?.[def.classKey] || '' : '';
+  const className = [presetClass, def.class || ''].filter(Boolean).join(' ').trim();
+  if (className) props.className = className;
   if (def.attrs) {
     Object.entries(def.attrs).forEach(([k, v]) => {
       if (k === 'class' || k === 'className') return;
@@ -67,7 +70,7 @@ export function renderNode(
   }
   if (def.children?.length) {
     def.children.forEach((child, idx) => {
-      children.push(renderNode(child, idx, strings));
+      children.push(renderNode(child, idx, strings, classPresets));
     });
   }
 

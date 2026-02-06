@@ -1,6 +1,7 @@
 export type NodeDef = {
   tag?: string;
   class?: string;
+  classKey?: string;
   text?: string;
   textKey?: string;
   attrs?: Record<string, string>;
@@ -40,6 +41,15 @@ export type FaviconConfig = {
   color?: string;
 };
 
+export type StyleGroupValue =
+  | string
+  | StyleGroupValue[]
+  | { [key: string]: StyleGroupValue };
+
+export type ClassPresetGroup = {
+  [key: string]: string | ClassPresetGroup;
+};
+
 export type Config = {
   meta: {
     title?: string;
@@ -49,9 +59,10 @@ export type Config = {
     lang?: string;
     defaultLanguage?: string;
     theme?: Record<string, string>;
+    classPresets?: ClassPresetGroup;
     styles?: {
       order?: string[];
-      [group: string]: string | string[] | undefined;
+      [group: string]: StyleGroupValue | undefined;
     };
     languages?: { code: string; label: string; stringsFile?: string; flag: string }[];
     favicon?: FaviconConfig;
@@ -94,6 +105,9 @@ export function validateConfig(config: Config) {
     }
     if (node.class && typeof node.class !== 'string') {
       warn.push(`${path}.class not string`);
+    }
+    if (node.classKey && typeof node.classKey !== 'string') {
+      warn.push(`${path}.classKey not string`);
     }
     if (node.text && typeof node.text !== 'string') {
       warn.push(`${path}.text not string`);

@@ -49,8 +49,8 @@
     "t.layout.header.i1.children.i0.children.i0.children.i1.children.i2.text": "Fondation",
     "t.layout.header.i1.children.i0.children.i0.children.i1.children.i3.text": "Ingénierie",
     "t.layout.header.i1.children.i0.children.i0.children.i1.children.i4.text": "Mentalité",
-    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i5.text": "Maintenant",
-    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i6.text": "Contact",
+    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i5.text": "Résumé",
+    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i6.text": "Maintenant",
     "t.layout.header.i1.children.i0.children.i0.children.i2.attrs.aria-label": "Ouvrir le menu",
     "t.layout.header.i1.children.i0.children.i0.children.i2.children.i0.attrs.alt": "Menu",
     "t.layout.header.i1.children.i0.children.i0.children.i2.children.i1.attrs.alt": "Fermer",
@@ -59,8 +59,8 @@
     "t.layout.header.i2.children.i1.children.i0.children.i2.text": "Fondation",
     "t.layout.header.i2.children.i1.children.i0.children.i3.text": "Ingénierie",
     "t.layout.header.i2.children.i1.children.i0.children.i4.text": "Mentalité",
-    "t.layout.header.i2.children.i1.children.i0.children.i5.text": "Maintenant",
-    "t.layout.header.i2.children.i1.children.i0.children.i6.text": "Contact",
+    "t.layout.header.i2.children.i1.children.i0.children.i5.text": "Résumé",
+    "t.layout.header.i2.children.i1.children.i0.children.i6.text": "Maintenant",
     "t.pages.i0.sections.i0.nodes.i0.children.i3.children.i0.children.i0.children.i0.children.i0.children.i0.text": "André",
     "t.pages.i0.sections.i0.nodes.i0.children.i3.children.i0.children.i0.children.i0.children.i0.children.i1.text": " Câmara",
     "t.pages.i0.sections.i0.nodes.i0.children.i3.children.i0.children.i0.children.i1.children.i0.text": "Ingénieur logiciel",
@@ -567,6 +567,8 @@
     "ui.viewer.title": "Document",
     "ui.viewer.download": "Télécharger",
     "ui.viewer.close": "Fermer",
-    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text": "CET Spécialiste technique en cybersécurité (Niveau 5, 1 510h, en cours)"
+    "t.pages.i0.sections.i6.nodes.i0.children.i2.children.i1.children.i0.children.i5.children.i1.children.i1.children.i2.children.i1.text": "CET Spécialiste technique en cybersécurité (Niveau 5, 1 510h, en cours)",
+    "t.layout.header.i1.children.i0.children.i0.children.i1.children.i7.text": "Contact",
+    "t.layout.header.i2.children.i1.children.i0.children.i7.text": "Contact"
   }
 }

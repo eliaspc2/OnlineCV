@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type MutableRefObject } from 'react';
 import { renderNode } from './renderer';
-import { validateConfig, type Config } from './validator';
+import { validateConfig, type ClassPresetGroup, type Config } from './validator';
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
@@ -40,6 +40,25 @@ const normalizeStringsFile = (value?: string | null) => {
   file = file.replace(/^\//, '');
   file = file.replace(/^data\//, '');
   return `data/${file}`;
+};
+
+const flattenClassPresets = (tree?: ClassPresetGroup) => {
+  const map: Record<string, string> = {};
+  if (!tree) return map;
+  const walk = (node: ClassPresetGroup, prefix: string) => {
+    Object.entries(node).forEach(([key, value]) => {
+      const path = prefix ? `${prefix}.${key}` : key;
+      if (typeof value === 'string') {
+        map[path] = value;
+        return;
+      }
+      if (value && typeof value === 'object') {
+        walk(value as ClassPresetGroup, path);
+      }
+    });
+  };
+  walk(tree, '');
+  return map;
 };
 
 const getInitialStringsFile = () => {
@@ -105,9 +124,21 @@ const applyMeta = (
     styleEl.setAttribute('data-json-site-style', 'true');
     const order = Array.isArray(styles.order) ? styles.order : [];
     const blocks: string[] = [];
+    const flattenStyleValue = (value: unknown) => {
+      if (typeof value === 'string') {
+        if (value.trim()) blocks.push(value.trim());
+        return;
+      }
+      if (Array.isArray(value)) {
+        value.forEach(flattenStyleValue);
+        return;
+      }
+      if (value && typeof value === 'object') {
+        Object.values(value as Record<string, unknown>).forEach(flattenStyleValue);
+      }
+    };
     const addBlock = (key: string) => {
-      const value = styles[key];
-      if (typeof value === 'string' && value.trim()) blocks.push(value.trim());
+      flattenStyleValue(styles[key]);
     };
     order.forEach(addBlock);
     Object.keys(styles)
@@ -295,7 +326,7 @@ export default function App() {
     skillBars.forEach((bar) => skillObserver.observe(bar));
 
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'experience', 'skills', 'mindset', 'now', 'contact'];
+      const sections = ['hero', 'about', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (!element) continue;
@@ -638,27 +669,32 @@ export default function App() {
   if (!config || !strings) return null;
   const getUiString = (key: string, fallback: string) =>
     strings.strings?.[key] ?? fallback;
+  const classPresets = flattenClassPresets(config.meta?.classPresets);
 
   return (
     <div className={`lang-fade ${isLangTransition ? 'is-fading' : ''} min-h-screen bg-[#fcfcfd] text-[#0f172a]`}>
       <header id="site-header">
-        {(config.layout?.header || []).map((node, idx) => renderNode(node, idx, strings.strings))}
+        {(config.layout?.header || []).map((node, idx) =>
+          renderNode(node, idx, strings.strings, classPresets)
+        )}
       </header>
       <main id="main">
         {(config.pages || []).map((page, pIdx) =>
           (page.sections || []).map((section, sIdx) =>
             (section.nodes || []).map((node, nIdx) =>
-              renderNode(node, `${pIdx}-${sIdx}-${nIdx}`, strings.strings)
+              renderNode(node, `${pIdx}-${sIdx}-${nIdx}`, strings.strings, classPresets)
             )
           )
         )}
       </main>
       <footer id="site-footer">
-        {(config.layout?.footer || []).map((node, idx) => renderNode(node, idx, strings.strings))}
+        {(config.layout?.footer || []).map((node, idx) =>
+          renderNode(node, idx, strings.strings, classPresets)
+        )}
       </footer>
       <div className="floating">
         {(config.layout?.floating || []).map((node, idx) =>
-          renderNode(node, idx, strings.strings)
+          renderNode(node, idx, strings.strings, classPresets)
         )}
       </div>
       {docViewer && (
