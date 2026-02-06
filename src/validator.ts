@@ -95,6 +95,26 @@ export function validateConfig(config: Config) {
     }
   }
 
+  const classPresetKeys = new Set<string>();
+  const collectClassPresetKeys = (node: ClassPresetGroup | string, prefix = '') => {
+    if (typeof node === 'string') {
+      if (prefix) classPresetKeys.add(prefix);
+      return;
+    }
+    if (!isObj(node)) return;
+    Object.entries(node).forEach(([key, value]) => {
+      const path = prefix ? `${prefix}.${key}` : key;
+      if (typeof value === 'string') {
+        classPresetKeys.add(path);
+        return;
+      }
+      collectClassPresetKeys(value as ClassPresetGroup, path);
+    });
+  };
+  if (config?.meta?.classPresets) {
+    collectClassPresetKeys(config.meta.classPresets);
+  }
+
   const validateNode = (node: NodeDef, path: string) => {
     if (!isObj(node)) {
       errors.push(`${path} is not an object`);
@@ -106,8 +126,14 @@ export function validateConfig(config: Config) {
     if (node.class && typeof node.class !== 'string') {
       warn.push(`${path}.class not string`);
     }
+    if (node.class && typeof node.class === 'string' && !node.classKey) {
+      warn.push(`${path}.class has no classKey`);
+    }
     if (node.classKey && typeof node.classKey !== 'string') {
       warn.push(`${path}.classKey not string`);
+    }
+    if (node.classKey && typeof node.classKey === 'string' && !classPresetKeys.has(node.classKey)) {
+      warn.push(`${path}.classKey "${node.classKey}" missing in meta.classPresets`);
     }
     if (node.text && typeof node.text !== 'string') {
       warn.push(`${path}.text not string`);
