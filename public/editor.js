@@ -21,7 +21,7 @@ const FILES = [
 const STORAGE_PREFIX = 'json_site_draft:';
 let currentFile = AGGREGATE_FILE;
 let aggregateSelectedPath = 'meta';
-const aggregateExpanded = new Set(['meta', 'layout', 'pages']);
+const aggregateExpanded = new Set(['meta', 'objects', 'layout', 'pages']);
 
 const getDraftKey = (file) => `${STORAGE_PREFIX}${file}`;
 
@@ -84,6 +84,13 @@ const buildAggregateView = () => {
     if (!file || !key) return '';
     return (stringsByFile[file] && stringsByFile[file][key]) || '';
   };
+  const hasAnyString = (key) => {
+    if (!key) return false;
+    return languages.some((lang) => {
+      const file = lang.stringsFile;
+      return Boolean(file && stringsByFile[file] && stringsByFile[file][key] !== undefined);
+    });
+  };
 
   const persistConfig = () => {
     localStorage.setItem(getDraftKey('data/config.json'), JSON.stringify(config, null, 2));
@@ -106,9 +113,11 @@ const buildAggregateView = () => {
   const buildNodeLabel = (node) => {
     if (!node || typeof node !== 'object') return 'node';
     const tag = node.tag || 'div';
+    const nodeId = node.id ? `#${node.id}` : '';
+    const refName = node.ref ? ` -> ${node.ref}` : '';
     const id = node.attrs?.id ? `#${node.attrs.id}` : '';
     const className = node.class ? `.${node.class.split(' ')[0]}` : '';
-    return `${tag}${id}${className}`;
+    return `${tag}${nodeId}${id}${className}${refName}`;
   };
 
   const createSection = (title) => {
@@ -584,8 +593,30 @@ const buildAggregateView = () => {
     });
   };
 
+  const buildObjectTree = (objects) => {
+    if (!objects || typeof objects !== 'object') return [];
+    return Object.entries(objects).map(([key, node]) => ({
+      kind: 'object-node',
+      label: key,
+      path: `objects.${key}`,
+      ref: node,
+      parentArray: objects,
+      index: key,
+      children: buildNodeTree(node.children, `objects.${key}.children`)
+    }));
+  };
+
   const treeData = [];
   treeData.push({ kind: 'meta', label: 'Meta', path: 'meta', ref: config.meta || {}, children: [] });
+
+  const objectsEntry = {
+    kind: 'objects',
+    label: 'Objects',
+    path: 'objects',
+    ref: config.objects || {},
+    children: buildObjectTree(config.objects)
+  };
+  treeData.push(objectsEntry);
 
   const layoutEntry = {
     kind: 'layout',
@@ -787,21 +818,67 @@ const buildAggregateView = () => {
     });
   };
 
+  const renderObjectsDetail = () => {
+    const objects = config.objects && typeof config.objects === 'object' ? config.objects : (config.objects = {});
+    const entries = Object.entries(objects);
+    renderArraySection(aggregateDetail, 'Objects', entries, {
+      labelFn: (item) => item[0],
+      subtitleFn: (item) => buildNodeLabel(item[1]),
+      onSelect: (idx) => {
+        const key = entries[idx]?.[0];
+        if (!key) return;
+        aggregateSelectedPath = `objects.${key}`;
+        buildAggregateView();
+      },
+      onRemove: (idx) => {
+        const key = entries[idx]?.[0];
+        if (!key) return;
+        delete objects[key];
+        persistConfig();
+        buildAggregateView();
+      },
+      onAdd: () => {
+        let index = 1;
+        let key = `object_${index}`;
+        while (Object.prototype.hasOwnProperty.call(objects, key)) {
+          index += 1;
+          key = `object_${index}`;
+        }
+        objects[key] = { tag: 'div', class: '', children: [] };
+        persistConfig();
+        aggregateSelectedPath = `objects.${key}`;
+        buildAggregateView();
+      }
+    });
+  };
+
   const renderNodeDetail = (entry) => {
     const node = entry.ref;
     const { section, body } = createSection('Node');
+    addFieldRow(body, 'id', node.id || '', (val) => {
+      node.id = val || undefined;
+    });
+    addFieldRow(body, 'ref', node.ref || '', (val) => {
+      node.ref = val || undefined;
+    });
+    addFieldRow(body, 'i18nKey', node.i18nKey || '', (val) => {
+      node.i18nKey = val || undefined;
+    });
     addFieldRow(body, 'tag', node.tag, (val) => {
-      node.tag = val;
+      node.tag = val || undefined;
+    });
+    addFieldRow(body, 'classKey', node.classKey || '', (val) => {
+      node.classKey = val || undefined;
     });
     addFieldRow(body, 'class', node.class || '', (val) => {
-      node.class = val;
+      node.class = val || undefined;
     });
     addFieldRow(body, 'textKey', node.textKey || '', (val) => {
-      node.textKey = val;
+      node.textKey = val || undefined;
     });
     if (node.text !== undefined) {
       addFieldRow(body, 'text', node.text || '', (val) => {
-        node.text = val;
+        node.text = val || undefined;
       });
     }
     aggregateDetail.appendChild(section);
@@ -818,6 +895,19 @@ const buildAggregateView = () => {
 
     const fields = [];
     if (node.textKey) fields.push({ label: 'text', key: node.textKey });
+    const i18nBase = node.i18nKey || (node.id ? `obj.${node.id}` : '');
+    if (i18nBase) {
+      const textKey = `${i18nBase}.text`;
+      if (node.text !== undefined || hasAnyString(textKey)) {
+        fields.push({ label: 'text', key: textKey });
+      }
+      if (node.attrs && typeof node.attrs === 'object') {
+        Object.keys(node.attrs).forEach((attr) => {
+          const key = `${i18nBase}.attrs.${attr}`;
+          if (hasAnyString(key)) fields.push({ label: `attr:${attr}`, key });
+        });
+      }
+    }
     if (node.attrsI18n) {
       Object.entries(node.attrsI18n).forEach(([attr, key]) => {
         fields.push({ label: `attr:${attr}`, key });
@@ -888,6 +978,9 @@ const buildAggregateView = () => {
     case 'layout':
       renderOverview(selected);
       break;
+    case 'objects':
+      renderObjectsDetail();
+      break;
     case 'layout-group':
       renderLayoutGroupDetail(selected);
       break;
@@ -920,6 +1013,7 @@ const buildAggregateView = () => {
       renderSectionDetail(selected);
       break;
     case 'node':
+    case 'object-node':
       renderNodeDetail(selected);
       break;
     default:

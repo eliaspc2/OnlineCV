@@ -1,4 +1,7 @@
 export type NodeDef = {
+  id?: string;
+  ref?: string;
+  i18nKey?: string;
   tag?: string;
   class?: string;
   classKey?: string;
@@ -68,6 +71,7 @@ export type Config = {
     favicon?: FaviconConfig;
     pwa?: PwaConfig;
   };
+  objects?: Record<string, NodeDef>;
   layout?: { header?: NodeDef[]; footer?: NodeDef[]; floating?: NodeDef[] };
   pages: { id: string; sections: { id: string; nodes: NodeDef[] }[] }[];
 };
@@ -96,6 +100,8 @@ export function validateConfig(config: Config) {
   }
 
   const classPresetKeys = new Set<string>();
+  const objectKeys = new Set<string>();
+  const usedNodeIds = new Map<string, string>();
   const collectClassPresetKeys = (node: ClassPresetGroup | string, prefix = '') => {
     if (typeof node === 'string') {
       if (prefix) classPresetKeys.add(prefix);
@@ -115,13 +121,43 @@ export function validateConfig(config: Config) {
     collectClassPresetKeys(config.meta.classPresets);
   }
 
+  if (config?.objects && !isObj(config.objects)) {
+    errors.push('objects is not an object');
+  }
+  if (isObj(config?.objects)) {
+    Object.keys(config.objects as Record<string, NodeDef>).forEach((key) => objectKeys.add(key));
+  }
+
   const validateNode = (node: NodeDef, path: string) => {
     if (!isObj(node)) {
       errors.push(`${path} is not an object`);
       return;
     }
-    if (!node.tag || typeof node.tag !== 'string') {
-      errors.push(`${path}.tag missing or not string`);
+    if (node.id !== undefined && typeof node.id !== 'string') {
+      warn.push(`${path}.id not string`);
+    }
+    if (typeof node.id === 'string') {
+      const prev = usedNodeIds.get(node.id);
+      if (prev) {
+        warn.push(`${path}.id "${node.id}" duplicates ${prev}`);
+      } else {
+        usedNodeIds.set(node.id, path);
+      }
+    }
+    if (node.ref !== undefined && typeof node.ref !== 'string') {
+      warn.push(`${path}.ref not string`);
+    }
+    if (typeof node.ref === 'string' && !objectKeys.has(node.ref)) {
+      warn.push(`${path}.ref "${node.ref}" missing in objects`);
+    }
+    if (node.i18nKey !== undefined && typeof node.i18nKey !== 'string') {
+      warn.push(`${path}.i18nKey not string`);
+    }
+    if (!node.tag && !node.ref) {
+      errors.push(`${path}.tag or ${path}.ref required`);
+    }
+    if (node.tag !== undefined && typeof node.tag !== 'string') {
+      errors.push(`${path}.tag not string`);
     }
     if (node.class && typeof node.class !== 'string') {
       warn.push(`${path}.class not string`);
@@ -146,6 +182,10 @@ export function validateConfig(config: Config) {
     }
     if (node.attrsI18n && !isObj(node.attrsI18n)) {
       warn.push(`${path}.attrsI18n not object`);
+    } else if (node.attrsI18n && isObj(node.attrsI18n)) {
+      Object.entries(node.attrsI18n).forEach(([k, v]) => {
+        if (typeof v !== 'string') warn.push(`${path}.attrsI18n.${k} not string`);
+      });
     }
     if (node.styles && !isObj(node.styles)) {
       warn.push(`${path}.styles not object`);
@@ -158,6 +198,24 @@ export function validateConfig(config: Config) {
       }
     }
   };
+
+  if (isObj(config?.objects)) {
+    Object.entries(config.objects as Record<string, NodeDef>).forEach(([key, node]) =>
+      validateNode(node, `objects.${key}`)
+    );
+  }
+
+  if (config?.layout && !isObj(config.layout)) {
+    errors.push('layout is not an object');
+  } else if (isObj(config?.layout)) {
+    Object.entries(config.layout as Record<string, NodeDef[] | undefined>).forEach(([name, nodes]) => {
+      if (!Array.isArray(nodes)) {
+        errors.push(`layout.${name} missing or not array`);
+        return;
+      }
+      nodes.forEach((node, idx) => validateNode(node, `layout.${name}[${idx}]`));
+    });
+  }
 
   if (Array.isArray(config?.pages)) {
     config.pages.forEach((page, pIdx) => {

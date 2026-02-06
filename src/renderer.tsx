@@ -24,53 +24,114 @@ const normalizeStyleValue = (value: unknown) => {
   });
 };
 
+const mergeNode = (base: NodeDef, override: NodeDef): NodeDef => {
+  const merged: NodeDef = { ...base, ...override, ref: undefined };
+  if (base.attrs || override.attrs) {
+    merged.attrs = { ...(base.attrs || {}), ...(override.attrs || {}) };
+  }
+  if (base.attrsI18n || override.attrsI18n) {
+    merged.attrsI18n = { ...(base.attrsI18n || {}), ...(override.attrsI18n || {}) };
+  }
+  if (base.styles || override.styles) {
+    merged.styles = { ...(base.styles || {}), ...(override.styles || {}) };
+  }
+  if (override.children !== undefined) {
+    merged.children = override.children;
+  } else if (base.children !== undefined) {
+    merged.children = base.children;
+  }
+  return merged;
+};
+
+const resolveNodeRef = (
+  def: NodeDef,
+  objects?: Record<string, NodeDef>,
+  stack = new Set<string>()
+): NodeDef => {
+  if (!def.ref || !objects) return def;
+  const target = objects[def.ref];
+  if (!target) return def;
+  if (stack.has(def.ref)) return { ...def, ref: undefined };
+  stack.add(def.ref);
+  const resolvedTarget = resolveNodeRef(target, objects, stack);
+  stack.delete(def.ref);
+  return mergeNode(resolvedTarget, def);
+};
+
+const resolveI18nBaseKey = (def: NodeDef) => {
+  if (def.i18nKey) return def.i18nKey;
+  if (def.id) return `obj.${def.id}`;
+  return '';
+};
+
+const fromStrings = (strings: Record<string, string> | undefined, key?: string) => {
+  if (!strings || !key) return undefined;
+  return strings[key];
+};
+
 export function renderNode(
   def: NodeDef,
   key?: React.Key,
   strings?: Record<string, string>,
-  classPresets?: Record<string, string>
+  classPresets?: Record<string, string>,
+  objects?: Record<string, NodeDef>
 ): React.ReactNode {
-  const tag = def.tag || 'div';
+  const resolved = resolveNodeRef(def, objects);
+  const tag = resolved.tag || 'div';
   const Tag = tag as React.ElementType;
+  const i18nBase = resolveI18nBaseKey(resolved);
 
   const props: Record<string, unknown> = {};
   if (key !== undefined) props.key = key;
-  const presetClass = def.classKey ? classPresets?.[def.classKey] || '' : '';
-  const className = [presetClass, def.class || ''].filter(Boolean).join(' ').trim();
+  const presetClass = resolved.classKey ? classPresets?.[resolved.classKey] || '' : '';
+  const className = [presetClass, resolved.class || ''].filter(Boolean).join(' ').trim();
   if (className) props.className = className;
-  if (def.attrs) {
-    Object.entries(def.attrs).forEach(([k, v]) => {
+  if (resolved.attrs) {
+    Object.entries(resolved.attrs).forEach(([k, v]) => {
       if (k === 'class' || k === 'className') return;
-      props[k] = v;
+      const attrKey = i18nBase ? `${i18nBase}.attrs.${k}` : '';
+      const translated = fromStrings(strings, attrKey);
+      props[k] = translated ?? v;
     });
   }
-  if (def.attrsI18n && strings) {
-    Object.entries(def.attrsI18n).forEach(([k, v]) => {
-      props[k] = strings[v] ?? '';
+  if (resolved.attrsI18n && strings) {
+    Object.entries(resolved.attrsI18n).forEach(([k, v]) => {
+      const translated = strings[v];
+      if (translated !== undefined) {
+        props[k] = translated;
+      } else if (resolved.attrs?.[k] !== undefined) {
+        props[k] = resolved.attrs[k];
+      }
     });
   }
-  Object.entries(def).forEach(([k, v]) => {
+  Object.entries(resolved).forEach(([k, v]) => {
     if ((k.startsWith('data-') || k.startsWith('aria-')) && typeof v === 'string') {
       props[k] = v;
     }
   });
-  if (def.styles) {
+  if (resolved.styles) {
     const normalized: Record<string, unknown> = {};
-    Object.entries(def.styles).forEach(([k, v]) => {
+    Object.entries(resolved.styles).forEach(([k, v]) => {
       normalized[k] = normalizeStyleValue(v);
     });
     props.style = normalized as React.CSSProperties;
   }
 
   const children: React.ReactNode[] = [];
-  if (def.textKey && strings) {
-    children.push(strings[def.textKey] ?? '');
-  } else if (def.text !== undefined) {
-    children.push(def.text);
+  if (resolved.textKey && strings) {
+    children.push(strings[resolved.textKey] ?? '');
+  } else {
+    const textByObject = fromStrings(strings, i18nBase ? `${i18nBase}.text` : undefined);
+    if (textByObject !== undefined) {
+      children.push(textByObject);
+    } else if (resolved.text !== undefined) {
+      children.push(resolved.text);
+    }
   }
-  if (def.children?.length) {
-    def.children.forEach((child, idx) => {
-      children.push(renderNode(child, idx, strings, classPresets));
+  if (resolved.children?.length) {
+    resolved.children.forEach((child, idx) => {
+      const childKey = child.id || idx;
+      children.push(renderNode(child, childKey, strings, classPresets, objects));
     });
   }
 

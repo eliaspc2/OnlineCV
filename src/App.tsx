@@ -670,31 +670,40 @@ export default function App() {
   const getUiString = (key: string, fallback: string) =>
     strings.strings?.[key] ?? fallback;
   const classPresets = flattenClassPresets(config.meta?.classPresets);
+  const objects = config.objects || {};
+  const getNodeKey = (node: { id?: string; ref?: string }, fallback: string | number) =>
+    node.id || node.ref || fallback;
 
   return (
     <div className={`lang-fade ${isLangTransition ? 'is-fading' : ''} min-h-screen bg-[#fcfcfd] text-[#0f172a]`}>
       <header id="site-header">
         {(config.layout?.header || []).map((node, idx) =>
-          renderNode(node, idx, strings.strings, classPresets)
+          renderNode(node, getNodeKey(node, `header-${idx}`), strings.strings, classPresets, objects)
         )}
       </header>
       <main id="main">
         {(config.pages || []).map((page, pIdx) =>
           (page.sections || []).map((section, sIdx) =>
             (section.nodes || []).map((node, nIdx) =>
-              renderNode(node, `${pIdx}-${sIdx}-${nIdx}`, strings.strings, classPresets)
+              renderNode(
+                node,
+                getNodeKey(node, `${pIdx}-${sIdx}-${nIdx}`),
+                strings.strings,
+                classPresets,
+                objects
+              )
             )
           )
         )}
       </main>
       <footer id="site-footer">
         {(config.layout?.footer || []).map((node, idx) =>
-          renderNode(node, idx, strings.strings, classPresets)
+          renderNode(node, getNodeKey(node, `footer-${idx}`), strings.strings, classPresets, objects)
         )}
       </footer>
       <div className="floating">
         {(config.layout?.floating || []).map((node, idx) =>
-          renderNode(node, idx, strings.strings, classPresets)
+          renderNode(node, getNodeKey(node, `floating-${idx}`), strings.strings, classPresets, objects)
         )}
       </div>
       {docViewer && (
