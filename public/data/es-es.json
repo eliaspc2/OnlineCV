@@ -2852,13 +2852,13 @@
     {
       "ref": "obj.n_eb5ea660",
       "strings": {
-        "text": "Seguridad de Sistemas"
+        "text": "Detección y Respuesta a Amenazas"
       }
     },
     {
       "ref": "obj.n_ec5ea7f3",
       "strings": {
-        "text": "45%"
+        "text": "55%"
       }
     },
     {
@@ -2880,13 +2880,13 @@
     {
       "ref": "obj.n_1e8fe848",
       "strings": {
-        "text": "Gestión de Riesgo"
+        "text": "Redes, Sistemas y Servicios Seguros"
       }
     },
     {
       "ref": "obj.n_1f8fe9dc",
       "strings": {
-        "text": "40%"
+        "text": "50%"
       }
     },
     {
@@ -2908,7 +2908,7 @@
     {
       "ref": "obj.n_67114fd0",
       "strings": {
-        "text": "Control de Accesos"
+        "text": "Automatización y Scripting de Seguridad"
       }
     },
     {
@@ -2936,13 +2936,13 @@
     {
       "ref": "obj.n_baa8d0a8",
       "strings": {
-        "text": "Entornos Regulados"
+        "text": "Gobernanza, Cumplimiento y Criptografía"
       }
     },
     {
       "ref": "obj.n_bba8d23c",
       "strings": {
-        "text": "50%"
+        "text": "40%"
       }
     },
     {
@@ -2970,31 +2970,31 @@
     {
       "ref": "obj.n_41bf5924",
       "strings": {
-        "text": "Análisis de riesgo e impacto en sistemas"
+        "text": "Detección y análisis de vulnerabilidades en aplicaciones web y redes"
       }
     },
     {
       "ref": "obj.n_42bf5ab8",
       "strings": {
-        "text": "Aplicación de principios de seguridad en entornos operativos"
+        "text": "Recolección, normalización y análisis de logs y evidencias de seguridad"
       }
     },
     {
       "ref": "obj.n_43bf5c48",
       "strings": {
-        "text": "Comprensión de requisitos de conformidad y buenas prácticas"
+        "text": "Automatización de tareas de hardening y monitorización con scripts"
       }
     },
     {
       "ref": "obj.n_44bf5ddc",
       "strings": {
-        "text": "Protección de sistemas e información en contextos críticos"
+        "text": "Configuración segura de sistemas operativos, servicios e infraestructura de red"
       }
     },
     {
       "ref": "obj.n_3dbf52d8",
       "strings": {
-        "text": "Integración de la seguridad en el ciclo operativo y de desarrollo"
+        "text": "Aplicación de legislación, políticas y normas de seguridad en contexto operativo"
       }
     },
     {

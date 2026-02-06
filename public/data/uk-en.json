@@ -2852,13 +2852,13 @@
     {
       "ref": "obj.n_eb5ea660",
       "strings": {
-        "text": "Systems Security"
+        "text": "Threat Detection and Response"
       }
     },
     {
       "ref": "obj.n_ec5ea7f3",
       "strings": {
-        "text": "45%"
+        "text": "55%"
       }
     },
     {
@@ -2880,13 +2880,13 @@
     {
       "ref": "obj.n_1e8fe848",
       "strings": {
-        "text": "Risk Management"
+        "text": "Secure Networks, Systems and Services"
       }
     },
     {
       "ref": "obj.n_1f8fe9dc",
       "strings": {
-        "text": "40%"
+        "text": "50%"
       }
     },
     {
@@ -2908,7 +2908,7 @@
     {
       "ref": "obj.n_67114fd0",
       "strings": {
-        "text": "Access Control"
+        "text": "Security Automation and Scripting"
       }
     },
     {
@@ -2936,13 +2936,13 @@
     {
       "ref": "obj.n_baa8d0a8",
       "strings": {
-        "text": "Regulated Environments"
+        "text": "Governance, Compliance and Cryptography"
       }
     },
     {
       "ref": "obj.n_bba8d23c",
       "strings": {
-        "text": "50%"
+        "text": "40%"
       }
     },
     {
@@ -2970,31 +2970,31 @@
     {
       "ref": "obj.n_41bf5924",
       "strings": {
-        "text": "Risk and impact analysis in systems"
+        "text": "Detection and analysis of vulnerabilities in web applications and networks"
       }
     },
     {
       "ref": "obj.n_42bf5ab8",
       "strings": {
-        "text": "Application of security principles in operational environments"
+        "text": "Collection, normalization and analysis of security logs and evidence"
       }
     },
     {
       "ref": "obj.n_43bf5c48",
       "strings": {
-        "text": "Understanding of compliance requirements and best practices"
+        "text": "Automation of hardening and monitoring tasks with scripts"
       }
     },
     {
       "ref": "obj.n_44bf5ddc",
       "strings": {
-        "text": "Protection of systems and information in critical contexts"
+        "text": "Secure configuration of operating systems, services and network infrastructure"
       }
     },
     {
       "ref": "obj.n_3dbf52d8",
       "strings": {
-        "text": "Integration of security into the operational and development cycle"
+        "text": "Application of legislation, policies and security standards in operational contexts"
       }
     },
     {
