@@ -33,6 +33,69 @@ type StringsBundle = {
   strings: Record<string, string>;
 };
 
+type StringsReference = {
+  ref?: string;
+  strings?: unknown;
+};
+
+type RawStringsBundle = {
+  lang?: string;
+  strings?: Record<string, string>;
+  globals?: Record<string, string>;
+  references?: StringsReference[];
+};
+
+type ClassKeysBundle = {
+  classPresets?: ClassPresetGroup;
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  !!value && typeof value === 'object' && !Array.isArray(value);
+
+const flattenReferenceStrings = (
+  ref: string,
+  value: unknown,
+  out: Record<string, string>,
+  trail: string[] = []
+) => {
+  if (typeof value === 'string') {
+    const key = [ref, ...trail].join('.');
+    out[key] = value;
+    return;
+  }
+  if (!isRecord(value)) return;
+  Object.entries(value).forEach(([k, v]) => {
+    flattenReferenceStrings(ref, v, out, [...trail, k]);
+  });
+};
+
+const normalizeStringsBundle = (raw: unknown): StringsBundle => {
+  const out: Record<string, string> = {};
+  const data = (isRecord(raw) ? raw : {}) as RawStringsBundle;
+
+  const appendFlat = (obj?: Record<string, string>) => {
+    if (!obj || typeof obj !== 'object') return;
+    Object.entries(obj).forEach(([k, v]) => {
+      if (typeof v === 'string') out[k] = v;
+    });
+  };
+
+  appendFlat(data.strings);
+  appendFlat(data.globals);
+
+  if (Array.isArray(data.references)) {
+    data.references.forEach((entry) => {
+      if (!entry || typeof entry.ref !== 'string' || !entry.ref.trim()) return;
+      flattenReferenceStrings(entry.ref, entry.strings, out);
+    });
+  }
+
+  return {
+    lang: typeof data.lang === 'string' ? data.lang : undefined,
+    strings: out
+  };
+};
+
 const normalizeStringsFile = (value?: string | null) => {
   if (!value) return null;
   let file = value;
@@ -59,6 +122,12 @@ const flattenClassPresets = (tree?: ClassPresetGroup) => {
   };
   walk(tree, '');
   return map;
+};
+
+const normalizeClassPresetTree = (raw: unknown): ClassPresetGroup | undefined => {
+  if (!isRecord(raw)) return undefined;
+  if (isRecord(raw.classPresets)) return raw.classPresets as ClassPresetGroup;
+  return raw as ClassPresetGroup;
 };
 
 const getInitialStringsFile = () => {
@@ -223,6 +292,8 @@ const applyMeta = (
 
 export default function App() {
   const [config, setConfig] = useState<Config | null>(null);
+  const [classPresetTree, setClassPresetTree] = useState<ClassPresetGroup | null>(null);
+  const [classPresetMap, setClassPresetMap] = useState<Record<string, string>>({});
   const [stringsFile, setStringsFile] = useState(getInitialStringsFile());
   const [strings, setStrings] = useState<StringsBundle | null>(null);
   const [isLangTransition, setIsLangTransition] = useState(false);
@@ -245,6 +316,18 @@ export default function App() {
       const res = await fetch(toPublicUrl('data/config.json'));
       if (!res.ok) throw new Error('Failed to load data/config.json');
       const data = (await res.json()) as Config;
+      let classTree = data.meta?.classPresets;
+      const classKeysFile = data.meta?.classPresetsFile;
+      if (classKeysFile) {
+        const classRes = await fetch(
+          toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile)
+        );
+        if (!classRes.ok) throw new Error(`Failed to load ${classKeysFile}`);
+        const classData = (await classRes.json()) as ClassKeysBundle;
+        classTree = normalizeClassPresetTree(classData);
+      }
+      setClassPresetTree(classTree || {});
+      setClassPresetMap(flattenClassPresets(classTree));
       setConfig(data);
     };
 
@@ -259,7 +342,7 @@ export default function App() {
       try {
         const res = await fetch(toPublicUrl(stringsFile), { signal: controller.signal });
         if (!res.ok) throw new Error(`Failed to load ${stringsFile}`);
-        const data = (await res.json()) as StringsBundle;
+        const data = normalizeStringsBundle(await res.json());
         if (active) setStrings(data);
       } catch (err) {
         if (!controller.signal.aborted) {
@@ -280,7 +363,7 @@ export default function App() {
   useEffect(() => {
     if (!config) return;
 
-    const result = validateConfig(config);
+    const result = validateConfig(config, classPresetTree || undefined);
     if (result.errors.length) {
       console.error('[JSON-SITE] Config validation errors:', result.errors);
     }
@@ -650,7 +733,7 @@ export default function App() {
       copyTimeouts.forEach((timeout) => window.clearTimeout(timeout));
       docLinks.forEach((link) => link.removeEventListener('click', onDocClick));
     };
-  }, [config, strings]);
+  }, [config, strings, classPresetTree]);
 
   useEffect(() => {
     if (!docViewer) return;
@@ -666,10 +749,10 @@ export default function App() {
     };
   }, [docViewer]);
 
-  if (!config || !strings) return null;
+  if (!config || !strings || classPresetTree === null) return null;
   const getUiString = (key: string, fallback: string) =>
     strings.strings?.[key] ?? fallback;
-  const classPresets = flattenClassPresets(config.meta?.classPresets);
+  const classPresets = classPresetMap;
   const objects = config.objects || {};
   const getNodeKey = (node: { id?: string; ref?: string }, fallback: string | number) =>
     node.id || node.ref || fallback;

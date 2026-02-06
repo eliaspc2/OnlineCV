@@ -62,6 +62,7 @@ export type Config = {
     lang?: string;
     defaultLanguage?: string;
     theme?: Record<string, string>;
+    classPresetsFile?: string;
     classPresets?: ClassPresetGroup;
     styles?: {
       order?: string[];
@@ -76,7 +77,21 @@ export type Config = {
   pages: { id: string; sections: { id: string; nodes: NodeDef[] }[] }[];
 };
 
-export function validateConfig(config: Config) {
+const resolveClassPresetTree = (
+  source?: ClassPresetGroup | { classPresets?: ClassPresetGroup }
+) => {
+  if (!source || typeof source !== 'object') return undefined;
+  if ('classPresets' in source) {
+    const nested = (source as { classPresets?: ClassPresetGroup }).classPresets;
+    if (nested && typeof nested === 'object' && !Array.isArray(nested)) return nested;
+  }
+  return source as ClassPresetGroup;
+};
+
+export function validateConfig(
+  config: Config,
+  classPresetsSource?: ClassPresetGroup | { classPresets?: ClassPresetGroup }
+) {
   const errors: string[] = [];
   const warn: string[] = [];
 
@@ -90,6 +105,12 @@ export function validateConfig(config: Config) {
     if (!config.meta.title && !config.meta.titleKey) warn.push('meta.title missing');
     if (!config.meta.lang) warn.push('meta.lang missing');
     if (!config.meta.theme) warn.push('meta.theme missing');
+    if (!config.meta.classPresetsFile && !config.meta.classPresets) {
+      errors.push('meta.classPresetsFile missing');
+    }
+    if (config.meta.classPresets) {
+      warn.push('meta.classPresets is deprecated; move class keys to data/class-keys.json');
+    }
     if (!config.meta.description && !config.meta.descriptionKey) warn.push('meta.description missing');
     if (config.meta.pwa?.enabled) {
       if (!config.meta.pwa.name && !config.meta.pwa.nameKey) warn.push('meta.pwa.name missing');
@@ -117,8 +138,12 @@ export function validateConfig(config: Config) {
       collectClassPresetKeys(value as ClassPresetGroup, path);
     });
   };
-  if (config?.meta?.classPresets) {
-    collectClassPresetKeys(config.meta.classPresets);
+  const classPresetTree =
+    resolveClassPresetTree(classPresetsSource) || config?.meta?.classPresets;
+  if (classPresetTree) {
+    collectClassPresetKeys(classPresetTree);
+  } else {
+    warn.push('Class keys catalog missing or invalid');
   }
 
   if (config?.objects && !isObj(config.objects)) {
@@ -128,7 +153,7 @@ export function validateConfig(config: Config) {
     Object.keys(config.objects as Record<string, NodeDef>).forEach((key) => objectKeys.add(key));
   }
 
-  const validateNode = (node: NodeDef, path: string) => {
+  const validateNode = (node: NodeDef, path: string, scope: 'object' | 'instance') => {
     if (!isObj(node)) {
       errors.push(`${path} is not an object`);
       return;
@@ -144,14 +169,28 @@ export function validateConfig(config: Config) {
         usedNodeIds.set(node.id, path);
       }
     }
+    if (scope === 'instance' && !node.id) {
+      errors.push(`${path}.id missing (deploy nodes must define id for obj.<id> i18n ref)`);
+    }
     if (node.ref !== undefined && typeof node.ref !== 'string') {
       warn.push(`${path}.ref not string`);
     }
+    if (scope === 'instance' && !node.ref) {
+      errors.push(`${path}.ref missing (deploy nodes must reference objects.<key>)`);
+    }
     if (typeof node.ref === 'string' && !objectKeys.has(node.ref)) {
-      warn.push(`${path}.ref "${node.ref}" missing in objects`);
+      errors.push(`${path}.ref "${node.ref}" missing in objects`);
     }
     if (node.i18nKey !== undefined && typeof node.i18nKey !== 'string') {
       warn.push(`${path}.i18nKey not string`);
+    }
+    if (scope === 'instance' && node.i18nKey) {
+      errors.push(`${path}.i18nKey not allowed in deploy nodes (strings are keyed by obj.<id>)`);
+    }
+    if (typeof node.i18nKey === 'string' && node.i18nKey) {
+      if (!/^obj(def)?\./.test(node.i18nKey)) {
+        warn.push(`${path}.i18nKey "${node.i18nKey}" should start with "obj." or "objdef."`);
+      }
     }
     if (!node.tag && !node.ref) {
       errors.push(`${path}.tag or ${path}.ref required`);
@@ -159,23 +198,39 @@ export function validateConfig(config: Config) {
     if (node.tag !== undefined && typeof node.tag !== 'string') {
       errors.push(`${path}.tag not string`);
     }
+    if (scope === 'instance' && node.tag) {
+      errors.push(`${path}.tag not allowed in deploy nodes (comes from ref object)`);
+    }
     if (node.class && typeof node.class !== 'string') {
       warn.push(`${path}.class not string`);
     }
-    if (node.class && typeof node.class === 'string' && !node.classKey) {
-      warn.push(`${path}.class has no classKey`);
+    if (scope === 'instance' && node.class) {
+      errors.push(`${path}.class not allowed in deploy nodes (comes from ref object)`);
+    }
+    if (scope === 'instance' && node.classKey) {
+      errors.push(`${path}.classKey not allowed in deploy nodes (comes from ref object)`);
+    }
+    const requiresClassKey = scope === 'object';
+    if (requiresClassKey && !node.classKey) {
+      errors.push(`${path}.classKey missing`);
     }
     if (node.classKey && typeof node.classKey !== 'string') {
-      warn.push(`${path}.classKey not string`);
+      errors.push(`${path}.classKey not string`);
     }
     if (node.classKey && typeof node.classKey === 'string' && !classPresetKeys.has(node.classKey)) {
-      warn.push(`${path}.classKey "${node.classKey}" missing in meta.classPresets`);
+      errors.push(`${path}.classKey "${node.classKey}" missing in class keys catalog`);
     }
     if (node.text && typeof node.text !== 'string') {
       warn.push(`${path}.text not string`);
     }
+    if (scope === 'instance' && node.text !== undefined) {
+      errors.push(`${path}.text not allowed in deploy nodes (use obj.<id>.text in language files)`);
+    }
     if (node.textKey && typeof node.textKey !== 'string') {
       warn.push(`${path}.textKey not string`);
+    }
+    if (scope === 'instance' && node.textKey) {
+      errors.push(`${path}.textKey not allowed in deploy nodes (use obj.<id>.text in language files)`);
     }
     if (node.attrs && !isObj(node.attrs)) {
       warn.push(`${path}.attrs not object`);
@@ -187,6 +242,9 @@ export function validateConfig(config: Config) {
         if (typeof v !== 'string') warn.push(`${path}.attrsI18n.${k} not string`);
       });
     }
+    if (scope === 'instance' && node.attrsI18n) {
+      errors.push(`${path}.attrsI18n not allowed in deploy nodes (use obj.<id>.attrs.* in language files)`);
+    }
     if (node.styles && !isObj(node.styles)) {
       warn.push(`${path}.styles not object`);
     }
@@ -194,15 +252,17 @@ export function validateConfig(config: Config) {
       if (!Array.isArray(node.children)) {
         errors.push(`${path}.children not array`);
       } else {
-        node.children.forEach((child, idx) => validateNode(child, `${path}.children[${idx}]`));
+        node.children.forEach((child, idx) =>
+          validateNode(child, `${path}.children[${idx}]`, scope)
+        );
       }
     }
   };
 
   if (isObj(config?.objects)) {
-    Object.entries(config.objects as Record<string, NodeDef>).forEach(([key, node]) =>
-      validateNode(node, `objects.${key}`)
-    );
+    Object.entries(config.objects as Record<string, NodeDef>).forEach(([key, node]) => {
+      validateNode(node, `objects.${key}`, 'object');
+    });
   }
 
   if (config?.layout && !isObj(config.layout)) {
@@ -213,7 +273,7 @@ export function validateConfig(config: Config) {
         errors.push(`layout.${name} missing or not array`);
         return;
       }
-      nodes.forEach((node, idx) => validateNode(node, `layout.${name}[${idx}]`));
+      nodes.forEach((node, idx) => validateNode(node, `layout.${name}[${idx}]`, 'instance'));
     });
   }
 
@@ -224,7 +284,9 @@ export function validateConfig(config: Config) {
       (page.sections || []).forEach((section, sIdx) => {
         if (!section.id) warn.push(`pages[${pIdx}].sections[${sIdx}].id missing`);
         if (!Array.isArray(section.nodes)) errors.push(`pages[${pIdx}].sections[${sIdx}].nodes missing or not array`);
-        (section.nodes || []).forEach((node, nIdx) => validateNode(node, `pages[${pIdx}].sections[${sIdx}].nodes[${nIdx}]`));
+        (section.nodes || []).forEach((node, nIdx) =>
+          validateNode(node, `pages[${pIdx}].sections[${sIdx}].nodes[${nIdx}]`, 'instance')
+        );
       });
     });
   }

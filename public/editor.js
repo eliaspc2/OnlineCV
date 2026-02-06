@@ -11,8 +11,16 @@ const aggregateTree = document.getElementById('aggregateTree');
 const aggregateDetail = document.getElementById('aggregateDetail');
 
 const AGGREGATE_FILE = '__aggregate__';
+const CLASS_KEYS_FILE = 'data/class-keys.json';
 const FILES = [
   'data/config.json',
+  CLASS_KEYS_FILE,
+  'data/uk-en.json',
+  'data/pt-pt.json',
+  'data/es-es.json',
+  'data/fr-fr.json'
+];
+const LANGUAGE_FILES = [
   'data/uk-en.json',
   'data/pt-pt.json',
   'data/es-es.json',
@@ -58,6 +66,196 @@ const parseJsonSafe = (text) => {
   }
 };
 
+const isObject = (value) => value && typeof value === 'object' && !Array.isArray(value);
+
+const normalizeClassPresetTree = (raw) => {
+  if (!isObject(raw)) return null;
+  if (isObject(raw.classPresets)) return raw.classPresets;
+  return raw;
+};
+
+const getClassPresetSourceFromDraft = () => {
+  const classKeys = getDraftJson(CLASS_KEYS_FILE);
+  const fromFile = normalizeClassPresetTree(classKeys);
+  if (fromFile) return fromFile;
+  const config = getDraftJson('data/config.json');
+  return config?.meta?.classPresets;
+};
+
+const collectConfigI18nRefs = (config) => {
+  const refs = new Set();
+  if (!isObject(config)) return refs;
+
+  const walk = (node, scope) => {
+    if (!isObject(node)) return;
+    if (scope === 'instance' && typeof node.id === 'string' && node.id.trim()) {
+      refs.add(`obj.${node.id}`);
+    }
+    if (Array.isArray(node.children)) node.children.forEach((child) => walk(child, scope));
+  };
+
+  if (isObject(config.layout)) {
+    Object.values(config.layout).forEach((nodes) => {
+      if (Array.isArray(nodes)) nodes.forEach((node) => walk(node, 'instance'));
+    });
+  }
+  if (Array.isArray(config.pages)) {
+    config.pages.forEach((page) => {
+      (page.sections || []).forEach((section) => {
+        (section.nodes || []).forEach((node) => walk(node, 'instance'));
+      });
+    });
+  }
+  return refs;
+};
+
+const flattenReferenceStrings = (ref, value, out, trail = []) => {
+  if (typeof value === 'string') {
+    const key = [ref, ...trail].join('.');
+    out[key] = value;
+    return;
+  }
+  if (!isObject(value)) return;
+  Object.entries(value).forEach(([k, v]) => {
+    flattenReferenceStrings(ref, v, out, [...trail, k]);
+  });
+};
+
+const flattenLanguageStrings = (data) => {
+  const out = {};
+  if (!isObject(data)) return out;
+
+  const appendFlat = (obj) => {
+    if (!isObject(obj)) return;
+    Object.entries(obj).forEach(([k, v]) => {
+      if (typeof v === 'string') out[k] = v;
+    });
+  };
+
+  appendFlat(data.strings);
+  appendFlat(data.globals);
+
+  if (Array.isArray(data.references)) {
+    data.references.forEach((entry) => {
+      if (!isObject(entry) || typeof entry.ref !== 'string' || !entry.ref.trim()) return;
+      flattenReferenceStrings(entry.ref, entry.strings, out);
+    });
+  }
+
+  return out;
+};
+
+const parseObjI18nKey = (key) => {
+  if (typeof key !== 'string' || !/^obj\./.test(key)) return null;
+  if (key.endsWith('.text')) {
+    return { ref: key.slice(0, -5), path: ['text'] };
+  }
+  const attrsMarker = '.attrs.';
+  const attrsIdx = key.indexOf(attrsMarker, 4);
+  if (attrsIdx >= 0) {
+    return {
+      ref: key.slice(0, attrsIdx),
+      path: ['attrs', key.slice(attrsIdx + attrsMarker.length)]
+    };
+  }
+  const lastDot = key.lastIndexOf('.');
+  if (lastDot > 4) {
+    return { ref: key.slice(0, lastDot), path: [key.slice(lastDot + 1)] };
+  }
+  return { ref: key, path: ['text'] };
+};
+
+const setByPath = (obj, path, value) => {
+  let cursor = obj;
+  for (let i = 0; i < path.length; i += 1) {
+    const part = path[i];
+    const isLeaf = i === path.length - 1;
+    if (isLeaf) {
+      cursor[part] = value;
+      return;
+    }
+    if (!isObject(cursor[part])) cursor[part] = {};
+    cursor = cursor[part];
+  }
+};
+
+const setLanguageString = (data, key, value) => {
+  if (!isObject(data)) return;
+
+  const parsed = parseObjI18nKey(key);
+  if (parsed) {
+    if (!Array.isArray(data.references)) data.references = [];
+    let entry = data.references.find((item) => isObject(item) && item.ref === parsed.ref);
+    if (!entry) {
+      entry = { ref: parsed.ref, strings: {} };
+      data.references.push(entry);
+    }
+    if (!isObject(entry.strings)) entry.strings = {};
+    setByPath(entry.strings, parsed.path, value);
+    return;
+  }
+
+  if (!isObject(data.globals)) data.globals = {};
+  data.globals[key] = value;
+};
+
+const validateLanguageBundle = (data, config, fileLabel = 'strings') => {
+  const errors = [];
+  const warns = [];
+
+  if (!data || typeof data !== 'object') {
+    errors.push(`${fileLabel}: Strings file is not an object`);
+    return { errors, warns };
+  }
+  if (!data.lang) errors.push(`${fileLabel}: Missing lang`);
+
+  const hasTranslations =
+    (data.strings && typeof data.strings === 'object') ||
+    (data.globals && typeof data.globals === 'object') ||
+    Array.isArray(data.references);
+  if (!hasTranslations) {
+    errors.push(`${fileLabel}: Missing translations (strings/globals/references)`);
+  }
+
+  const validRefs = collectConfigI18nRefs(config);
+  const languageRefs = new Set();
+  if (Array.isArray(data.references)) {
+    data.references.forEach((entry, idx) => {
+      if (!isObject(entry)) {
+        errors.push(`${fileLabel}: references[${idx}] is not an object`);
+        return;
+      }
+      if (!entry.ref || typeof entry.ref !== 'string') {
+        errors.push(`${fileLabel}: references[${idx}].ref missing or not string`);
+      } else if (languageRefs.has(entry.ref)) {
+        errors.push(`${fileLabel}: duplicate reference ref "${entry.ref}"`);
+      } else {
+        languageRefs.add(entry.ref);
+        if (validRefs.size && !validRefs.has(entry.ref)) {
+          warns.push(`${fileLabel}: references[${idx}].ref "${entry.ref}" not found in config`);
+        }
+      }
+      if (!isObject(entry.strings)) {
+        errors.push(`${fileLabel}: references[${idx}].strings missing or not object`);
+      }
+    });
+  }
+
+  if (validRefs.size) {
+    const missingRefs = [...validRefs].filter((ref) => !languageRefs.has(ref));
+    if (missingRefs.length) {
+      const sample = missingRefs.slice(0, 5).join(', ');
+      warns.push(
+        `${fileLabel}: missing ${missingRefs.length} translation refs from config (${sample}${
+          missingRefs.length > 5 ? ', ...' : ''
+        })`
+      );
+    }
+  }
+
+  return { errors, warns };
+};
+
 const getDraftJson = (file) => parseJsonSafe(localStorage.getItem(getDraftKey(file)) || '');
 
 const buildAggregateView = () => {
@@ -75,8 +273,8 @@ const buildAggregateView = () => {
     const file = lang.stringsFile;
     if (!file) return;
     const data = getDraftJson(file);
-    if (data && data.strings) {
-      stringsByFile[file] = data.strings;
+    if (data) {
+      stringsByFile[file] = flattenLanguageStrings(data);
     }
   });
 
@@ -96,17 +294,50 @@ const buildAggregateView = () => {
     localStorage.setItem(getDraftKey('data/config.json'), JSON.stringify(config, null, 2));
   };
 
+  const buildUniqueInstanceId = (prefix = 'n') => {
+    const used = new Set();
+    const walk = (node) => {
+      if (!isObject(node)) return;
+      if (typeof node.id === 'string' && node.id.trim()) used.add(node.id.trim());
+      if (Array.isArray(node.children)) node.children.forEach(walk);
+    };
+    if (isObject(config.layout)) {
+      Object.values(config.layout).forEach((nodes) => {
+        if (Array.isArray(nodes)) nodes.forEach(walk);
+      });
+    }
+    if (Array.isArray(config.pages)) {
+      config.pages.forEach((page) => {
+        (page.sections || []).forEach((section) => {
+          (section.nodes || []).forEach(walk);
+        });
+      });
+    }
+    let idx = 1;
+    let id = `${prefix}_${String(idx).padStart(4, '0')}`;
+    while (used.has(id)) {
+      idx += 1;
+      id = `${prefix}_${String(idx).padStart(4, '0')}`;
+    }
+    return id;
+  };
+
+  const buildDeployNodeTemplate = () => {
+    const objectKeys = isObject(config.objects) ? Object.keys(config.objects) : [];
+    return {
+      id: buildUniqueInstanceId('n'),
+      ref: objectKeys[0] || ''
+    };
+  };
+
   const updateStringValue = (file, key, value) => {
     if (!file || !key) return;
-    const data = getDraftJson(file) || { lang: '', strings: {} };
+    const data = getDraftJson(file) || { lang: '', globals: {}, references: [] };
     if (!data.lang) {
       const langDef = languages.find((l) => l.stringsFile === file);
       data.lang = langDef?.code || 'en-GB';
     }
-    if (!data.strings || typeof data.strings !== 'object') {
-      data.strings = {};
-    }
-    data.strings[key] = value;
+    setLanguageString(data, key, value);
     localStorage.setItem(getDraftKey(file), JSON.stringify(data, null, 2));
   };
 
@@ -542,18 +773,18 @@ const buildAggregateView = () => {
     container.appendChild(iconsSection.section);
   };
 
-  const buildNodeTree = (nodes, basePath) => {
+  const buildNodeTree = (nodes, basePath, kind = 'node') => {
     if (!Array.isArray(nodes)) return [];
     return nodes.map((node, idx) => {
       const path = `${basePath}.${idx}`;
       const entry = {
-        kind: 'node',
+        kind,
         label: buildNodeLabel(node),
         path,
         ref: node,
         parentArray: nodes,
         index: idx,
-        children: buildNodeTree(node.children, `${path}.children`)
+        children: buildNodeTree(node.children, `${path}.children`, kind)
       };
       return entry;
     });
@@ -602,7 +833,7 @@ const buildAggregateView = () => {
       ref: node,
       parentArray: objects,
       index: key,
-      children: buildNodeTree(node.children, `objects.${key}.children`)
+      children: buildNodeTree(node.children, `objects.${key}.children`, 'object-node')
     }));
   };
 
@@ -713,6 +944,9 @@ const buildAggregateView = () => {
     addFieldRow(body, 'defaultLanguage', meta.defaultLanguage, (val) => {
       meta.defaultLanguage = val;
     });
+    addFieldRow(body, 'classPresetsFile', meta.classPresetsFile || '', (val) => {
+      meta.classPresetsFile = val || undefined;
+    });
     aggregateDetail.appendChild(section);
 
     renderKeyValueSection(aggregateDetail, 'meta.theme', meta.theme, (val) => {
@@ -790,7 +1024,7 @@ const buildAggregateView = () => {
         buildAggregateView();
       },
       onAdd: () => {
-        nodes.push({ tag: 'div', class: '', children: [] });
+        nodes.push(buildDeployNodeTemplate());
         persistConfig();
         buildAggregateView();
       }
@@ -811,7 +1045,7 @@ const buildAggregateView = () => {
         buildAggregateView();
       },
       onAdd: () => {
-        nodes.push({ tag: 'div', class: '', children: [] });
+        nodes.push(buildDeployNodeTemplate());
         persistConfig();
         buildAggregateView();
       }
@@ -844,7 +1078,11 @@ const buildAggregateView = () => {
           index += 1;
           key = `object_${index}`;
         }
-        objects[key] = { tag: 'div', class: '', children: [] };
+        objects[key] = {
+          tag: 'div',
+          classKey: '',
+          children: []
+        };
         persistConfig();
         aggregateSelectedPath = `objects.${key}`;
         buildAggregateView();
@@ -854,31 +1092,31 @@ const buildAggregateView = () => {
 
   const renderNodeDetail = (entry) => {
     const node = entry.ref;
+    const isObjectNode = entry.kind === 'object-node';
+    const getObjectByRef = (ref) => {
+      if (!ref || !isObject(config.objects)) return null;
+      return config.objects[ref] || null;
+    };
     const { section, body } = createSection('Node');
-    addFieldRow(body, 'id', node.id || '', (val) => {
-      node.id = val || undefined;
-    });
-    addFieldRow(body, 'ref', node.ref || '', (val) => {
-      node.ref = val || undefined;
-    });
-    addFieldRow(body, 'i18nKey', node.i18nKey || '', (val) => {
-      node.i18nKey = val || undefined;
-    });
-    addFieldRow(body, 'tag', node.tag, (val) => {
-      node.tag = val || undefined;
-    });
-    addFieldRow(body, 'classKey', node.classKey || '', (val) => {
-      node.classKey = val || undefined;
-    });
-    addFieldRow(body, 'class', node.class || '', (val) => {
-      node.class = val || undefined;
-    });
-    addFieldRow(body, 'textKey', node.textKey || '', (val) => {
-      node.textKey = val || undefined;
-    });
-    if (node.text !== undefined) {
-      addFieldRow(body, 'text', node.text || '', (val) => {
+    if (isObjectNode) {
+      addFieldRow(body, 'tag', node.tag, (val) => {
+        node.tag = val || undefined;
+      });
+      addFieldRow(body, 'classKey', node.classKey || '', (val) => {
+        node.classKey = val || undefined;
+      });
+      addFieldRow(body, 'class (optional override)', node.class || '', (val) => {
+        node.class = val || undefined;
+      });
+      addFieldRow(body, 'text (optional static)', node.text || '', (val) => {
         node.text = val || undefined;
+      });
+    } else {
+      addFieldRow(body, 'id (required)', node.id || '', (val) => {
+        node.id = val || undefined;
+      });
+      addFieldRow(body, 'ref (required)', node.ref || '', (val) => {
+        node.ref = val || undefined;
       });
     }
     aggregateDetail.appendChild(section);
@@ -889,29 +1127,32 @@ const buildAggregateView = () => {
     renderKeyValueSection(aggregateDetail, 'styles', node.styles, (val) => {
       node.styles = val;
     });
-    renderKeyValueSection(aggregateDetail, 'attrsI18n', node.attrsI18n, (val) => {
-      node.attrsI18n = val;
-    });
+    if (isObjectNode) {
+      renderKeyValueSection(aggregateDetail, 'attrsI18n', node.attrsI18n, (val) => {
+        node.attrsI18n = val;
+      });
+    }
 
     const fields = [];
-    if (node.textKey) fields.push({ label: 'text', key: node.textKey });
-    const i18nBase = node.i18nKey || (node.id ? `obj.${node.id}` : '');
-    if (i18nBase) {
-      const textKey = `${i18nBase}.text`;
-      if (node.text !== undefined || hasAnyString(textKey)) {
-        fields.push({ label: 'text', key: textKey });
-      }
-      if (node.attrs && typeof node.attrs === 'object') {
-        Object.keys(node.attrs).forEach((attr) => {
-          const key = `${i18nBase}.attrs.${attr}`;
-          if (hasAnyString(key)) fields.push({ label: `attr:${attr}`, key });
+    if (!isObjectNode) {
+      const i18nBase = node.id ? `obj.${node.id}` : '';
+      const baseObject = getObjectByRef(node.ref);
+      if (i18nBase) {
+        const textKey = `${i18nBase}.text`;
+        if ((baseObject && baseObject.text !== undefined) || hasAnyString(textKey)) {
+          fields.push({ label: 'text', key: textKey });
+        }
+        const attrKeys = new Set();
+        if (isObject(baseObject?.attrs)) {
+          Object.keys(baseObject.attrs).forEach((k) => attrKeys.add(k));
+        }
+        if (isObject(node.attrs)) {
+          Object.keys(node.attrs).forEach((k) => attrKeys.add(k));
+        }
+        attrKeys.forEach((attr) => {
+          fields.push({ label: `attr:${attr}`, key: `${i18nBase}.attrs.${attr}` });
         });
       }
-    }
-    if (node.attrsI18n) {
-      Object.entries(node.attrsI18n).forEach(([attr, key]) => {
-        fields.push({ label: `attr:${attr}`, key });
-      });
     }
     renderStringsSection(aggregateDetail, fields);
 
@@ -928,7 +1169,11 @@ const buildAggregateView = () => {
         buildAggregateView();
       },
       onAdd: () => {
-        children.push({ tag: 'div', class: '', children: [] });
+        if (entry.kind === 'object-node') {
+          children.push({ tag: 'div', classKey: '', children: [] });
+        } else {
+          children.push(buildDeployNodeTemplate());
+        }
         persistConfig();
         buildAggregateView();
       }
@@ -1027,7 +1272,7 @@ const validate = () => {
     if (currentFile === AGGREGATE_FILE) {
       const config = getDraftJson('data/config.json');
       if (config) {
-        const result = validateConfig(config);
+        const result = validateConfig(config, getClassPresetSourceFromDraft());
         if (result.errors.length) {
           console.error('[EDITOR] Errors:', result.errors);
           alert('JSON inválido. Ver console.');
@@ -1037,16 +1282,16 @@ const validate = () => {
           console.warn('[EDITOR] Warnings:', result.warn);
         }
       }
-      FILES.filter((f) => f !== 'data/config.json').forEach((file) => {
+      LANGUAGE_FILES.forEach((file) => {
         const data = getDraftJson(file);
-        const errors = [];
-        if (!data || typeof data !== 'object') errors.push(`${file}: Strings file is not an object`);
-        if (!data?.lang) errors.push(`${file}: Missing lang`);
-        if (!data?.strings || typeof data.strings !== 'object') errors.push(`${file}: Missing strings object`);
+        const { errors, warns } = validateLanguageBundle(data, config, file);
         if (errors.length) {
           console.error('[EDITOR] Errors:', errors);
           alert('JSON inválido. Ver console.');
           return;
+        }
+        if (warns.length) {
+          console.warn('[EDITOR] Warnings:', warns);
         }
       });
       alert('JSON válido.');
@@ -1055,7 +1300,7 @@ const validate = () => {
 
     const data = JSON.parse(editor.value);
     if (currentFile === 'data/config.json') {
-      const result = validateConfig(data);
+      const result = validateConfig(data, getClassPresetSourceFromDraft());
       if (result.errors.length) {
         console.error('[EDITOR] Errors:', result.errors);
         alert('JSON inválido. Ver console.');
@@ -1064,15 +1309,23 @@ const validate = () => {
       if (result.warn.length) {
         console.warn('[EDITOR] Warnings:', result.warn);
       }
+    } else if (currentFile === CLASS_KEYS_FILE) {
+      const classTree = normalizeClassPresetTree(data);
+      if (!classTree) {
+        console.error('[EDITOR] Errors:', [`${CLASS_KEYS_FILE}: invalid class keys payload`]);
+        alert('JSON inválido. Ver console.');
+        return;
+      }
     } else {
-      const errors = [];
-      if (!data || typeof data !== 'object') errors.push('Strings file is not an object');
-      if (!data.lang) errors.push('Missing lang');
-      if (!data.strings || typeof data.strings !== 'object') errors.push('Missing strings object');
+      const config = getDraftJson('data/config.json');
+      const { errors, warns } = validateLanguageBundle(data, config, currentFile);
       if (errors.length) {
         console.error('[EDITOR] Errors:', errors);
         alert('JSON inválido. Ver console.');
         return;
+      }
+      if (warns.length) {
+        console.warn('[EDITOR] Warnings:', warns);
       }
     }
     alert('JSON válido.');

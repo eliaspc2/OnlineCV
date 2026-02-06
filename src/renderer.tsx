@@ -58,15 +58,26 @@ const resolveNodeRef = (
   return mergeNode(resolvedTarget, def);
 };
 
-const resolveI18nBaseKey = (def: NodeDef) => {
-  if (def.i18nKey) return def.i18nKey;
-  if (def.id) return `obj.${def.id}`;
-  return '';
-};
-
 const fromStrings = (strings: Record<string, string> | undefined, key?: string) => {
   if (!strings || !key) return undefined;
   return strings[key];
+};
+
+const resolveI18nCandidates = (def: NodeDef) => {
+  if (!def.id) return [];
+  return [`obj.${def.id}`];
+};
+
+const resolveI18nValue = (
+  strings: Record<string, string> | undefined,
+  keys: string[],
+  suffix: string
+) => {
+  for (const base of keys) {
+    const value = fromStrings(strings, `${base}.${suffix}`);
+    if (value !== undefined) return value;
+  }
+  return undefined;
 };
 
 export function renderNode(
@@ -79,7 +90,7 @@ export function renderNode(
   const resolved = resolveNodeRef(def, objects);
   const tag = resolved.tag || 'div';
   const Tag = tag as React.ElementType;
-  const i18nBase = resolveI18nBaseKey(resolved);
+  const i18nBases = resolveI18nCandidates(resolved);
 
   const props: Record<string, unknown> = {};
   if (key !== undefined) props.key = key;
@@ -89,8 +100,7 @@ export function renderNode(
   if (resolved.attrs) {
     Object.entries(resolved.attrs).forEach(([k, v]) => {
       if (k === 'class' || k === 'className') return;
-      const attrKey = i18nBase ? `${i18nBase}.attrs.${k}` : '';
-      const translated = fromStrings(strings, attrKey);
+      const translated = resolveI18nValue(strings, i18nBases, `attrs.${k}`);
       props[k] = translated ?? v;
     });
   }
@@ -121,7 +131,7 @@ export function renderNode(
   if (resolved.textKey && strings) {
     children.push(strings[resolved.textKey] ?? '');
   } else {
-    const textByObject = fromStrings(strings, i18nBase ? `${i18nBase}.text` : undefined);
+    const textByObject = resolveI18nValue(strings, i18nBases, 'text');
     if (textByObject !== undefined) {
       children.push(textByObject);
     } else if (resolved.text !== undefined) {

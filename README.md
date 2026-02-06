@@ -2,6 +2,8 @@
 
 Este site é **100% controlado por JSON**. O frontend (React + Vite) **não tem lógica do conteúdo** — apenas lê o JSON e renderiza a árvore de nós.
 
+Contrato oficial de modelação/manipulação: `CONTRACT.md`.
+
 ## Estrutura
 
 ```
@@ -9,6 +11,7 @@ json-site/
   public/
     data/
       config.json
+      class-keys.json
       pt-pt.json
       es-es.json
       fr-fr.json
@@ -30,6 +33,7 @@ json-site/
 - `json-site/src/` — renderer genérico (lê `public/data/config.json`)
 - `json-site/public/data/` — **fontes de verdade (JSON)**
   - `config.json` — layout/estética + chaves de texto
+  - `class-keys.json` — catálogo mestre de `classKey -> classes CSS`
   - `pt-pt.json`, `es-es.json`, `fr-fr.json`, `uk-en.json` — strings por idioma
 - `json-site/public/assets/images/` — **imagens** (inclui `icons/`, `flags/`, `brand/`)
 - `json-site/public/assets/docs/` — **documentos** (PDFs)
@@ -38,41 +42,24 @@ json-site/
 
 ## Como funciona o renderer
 
-O renderer React carrega `public/data/config.json`, aplica o tema e **cria cada nó** definido em `pages[].sections[].nodes[]`.
+O renderer React carrega `public/data/config.json`, `public/data/class-keys.json` e o ficheiro de idioma ativo.
 
-Cada nó é um objeto com:
-
-```
-{
-  "tag": "div",
-  "class": "card",
-  "textKey": "t.pages.i0.sections.i0.nodes.i0.text",
-  "attrs": { "href": "...", "src": "..." },
-  "attrsI18n": { "aria-label": "t.pages.i0.sections.i0.nodes.i0.attrs.aria-label" },
-  "styles": { "color": "#fff" },
-  "children": [ ...outros nós... ]
-}
-```
-
-Campos:
-- `tag`: elemento HTML
-- `class`: classes CSS
-- `textKey`: chave para ir buscar texto no ficheiro de strings
-- `attrs`: atributos HTML
-- `attrsI18n`: atributos HTML que vêm das strings
-- `styles`: estilos inline
-- `children`: nós filhos
+Modelo:
+- `objects.<key>`: definição visual (tem `tag` + `classKey`).
+- `layout/pages`: deploy por instância (tem `id` + `ref` para `objects.<key>`).
+- `idioma.references[]`: strings por instância em `ref = obj.<id>`.
 
 ## Configuração global
 
 `config.meta` define o tema e metadados (strings ficam nas chaves):
 
 ```
-"meta": {
+  "meta": {
   "titleKey": "meta.title",
   "descriptionKey": "meta.description",
   "lang": "en-GB",
   "defaultLanguage": "en-GB",
+  "classPresetsFile": "data/class-keys.json",
   "theme": {
     "bg": "#fcfcfd",
     "text": "#0f172a",
@@ -106,19 +93,51 @@ Campos:
 }
 ```
 
+## Catálogo de class keys
+
+As classes visuais ficam no ficheiro dedicado `public/data/class-keys.json`.
+
+Formato:
+
+```json
+{
+  "version": 1,
+  "classPresets": {
+    "parts": {
+      "ctaPrimary": "btn-primary flex items-center gap-2"
+    },
+    "visual": {
+      "hero": {
+        "title": "text-4xl font-bold"
+      }
+    }
+  }
+}
+```
+
+No `config.json`, cada nó deployado (`layout`/`pages`) deve ter `classKey` (ou `ref` para um objeto que tenha `classKey`).
+O validador verifica esta regra.
+
 O tema é aplicado via CSS variables.
 
 ## Strings por idioma
 
-Cada ficheiro de idioma tem este formato:
+Cada ficheiro de idioma usa `globals` + `references`:
 
-```
+```json
 {
   "lang": "pt-PT",
-  "strings": {
-    "meta.title": "André Câmara — Currículo",
-    "t.pages.i0.sections.i0.nodes.i0.text": "Exemplo de texto"
-  }
+  "globals": {
+    "meta.title": "Andre Camara"
+  },
+  "references": [
+    {
+      "ref": "obj.heroCtaPrimary",
+      "strings": {
+        "text": "Vamos Conversar?"
+      }
+    }
+  ]
 }
 ```
 
@@ -220,7 +239,7 @@ Qualquer editor pode gerar o `public/data/config.json`. Se criares uma app exter
 
 1. Respeitar a estrutura de nós
 2. Referenciar imagens em `assets/images/...` e documentos em `assets/docs/...`
-3. Manter classes e estilos no JSON
+3. Manter `classKey` nos nós e classes no catálogo `data/class-keys.json`
 
 ## Dicas
 
@@ -266,3 +285,4 @@ Abre `json-site/public/editor.html`:
 - O editor abre no separador **Agregado** por defeito.
 
 O editor guarda rascunho em `localStorage`.
+    "classPresetsFile": "data/class-keys.json",

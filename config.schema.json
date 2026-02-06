@@ -7,7 +7,7 @@
   "properties": {
     "meta": {
       "type": "object",
-      "required": ["lang", "theme"],
+      "required": ["lang", "theme", "classPresetsFile"],
       "properties": {
         "title": {"type": "string"},
         "titleKey": {"type": "string"},
@@ -15,6 +15,7 @@
         "description": {"type": "string"},
         "descriptionKey": {"type": "string"},
         "defaultLanguage": {"type": "string"},
+        "classPresetsFile": {"type": "string"},
         "theme": {
           "type": "object",
           "required": ["bg", "text", "muted", "accent"],
@@ -28,7 +29,8 @@
         },
         "classPresets": {
           "type": "object",
-          "additionalProperties": {"$ref": "#/definitions/classPresetValue"}
+          "additionalProperties": {"$ref": "#/definitions/classPresetValue"},
+          "description": "Deprecated. Use meta.classPresetsFile and data/class-keys.json."
         },
         "styles": {
           "type": "object",
@@ -115,12 +117,16 @@
       },
       "additionalProperties": true
     },
+    "objects": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/objectNode" }
+    },
     "layout": {
       "type": "object",
       "properties": {
-        "header": {"type": "array", "items": {"$ref": "#/definitions/node"}},
-        "footer": {"type": "array", "items": {"$ref": "#/definitions/node"}},
-        "floating": {"type": "array", "items": {"$ref": "#/definitions/node"}}
+        "header": {"type": "array", "items": {"$ref": "#/definitions/deployedNode"}},
+        "footer": {"type": "array", "items": {"$ref": "#/definitions/deployedNode"}},
+        "floating": {"type": "array", "items": {"$ref": "#/definitions/deployedNode"}}
       },
       "additionalProperties": true
     },
@@ -139,7 +145,7 @@
               "required": ["id", "nodes"],
               "properties": {
                 "id": {"type": "string"},
-                "nodes": {"type": "array", "items": {"$ref": "#/definitions/node"}}
+                "nodes": {"type": "array", "items": {"$ref": "#/definitions/deployedNode"}}
               },
               "additionalProperties": true
             }
@@ -177,10 +183,13 @@
         }
       ]
     },
-    "node": {
+    "objectNode": {
       "type": "object",
-      "required": ["tag"],
+      "required": ["tag", "classKey"],
       "properties": {
+        "id": {"type": "string"},
+        "ref": {"type": "string"},
+        "i18nKey": {"type": "string"},
         "tag": {"type": "string"},
         "class": {"type": "string"},
         "classKey": {"type": "string"},
@@ -189,9 +198,24 @@
         "attrs": {"type": "object", "additionalProperties": {"type": "string"}},
         "attrsI18n": {"type": "object", "additionalProperties": {"type": "string"}},
         "styles": {"type": "object", "additionalProperties": {"type": "string"}},
-        "children": {"type": "array", "items": {"$ref": "#/definitions/node"}}
+        "children": {"type": "array", "items": {"$ref": "#/definitions/objectNode"}}
       },
       "additionalProperties": true
+    },
+    "deployedNode": {
+      "type": "object",
+      "required": ["id", "ref"],
+      "properties": {
+        "id": {"type": "string"},
+        "ref": {"type": "string"},
+        "attrs": {"type": "object", "additionalProperties": {"type": "string"}},
+        "styles": {"type": "object", "additionalProperties": {"type": "string"}},
+        "children": {"type": "array", "items": {"$ref": "#/definitions/deployedNode"}}
+      },
+      "anyOf": [
+        {"required": ["id", "ref"]}
+      ],
+      "additionalProperties": false
     }
   }
 }

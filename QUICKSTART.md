@@ -1,5 +1,7 @@
 # Guia Rápido — Editar o JSON
 
+Contrato oficial de modelação/manipulação: `CONTRACT.md`.
+
 ## 1) Mudar título, descrição e cores
 
 `public/data/config.json` → `meta` (chaves), e depois editar `public/data/uk-en.json` / `public/data/pt-pt.json` / `public/data/es-es.json` / `public/data/fr-fr.json`:
@@ -18,6 +20,35 @@
   }
 }
 ```
+
+## 1b) Editar classes visuais (class keys)
+
+As classes deixaram de estar no `config.json`. Agora ficam em:
+
+- `public/data/class-keys.json`
+
+Exemplo:
+
+```json
+{
+  "version": 1,
+  "classPresets": {
+    "parts": {
+      "ctaPrimary": "btn-primary flex items-center gap-2"
+    }
+  }
+}
+```
+
+No `public/data/config.json`, aponta para o catálogo:
+
+```json
+"meta": {
+  "classPresetsFile": "data/class-keys.json"
+}
+```
+
+Regra: nós deployados em `layout` e `pages` devem ter `classKey` (ou `ref` para objeto com `classKey`).
 
 ## 2) Alterar textos no Hero
 
@@ -113,7 +144,7 @@ Em `pages[0].sections`, adiciona um novo bloco:
 ## 5) Criar botão
 
 ```json
-{ "tag": "a", "class": "btn primary", "attrs": { "href": "#contact" }, "text": "Falar" }
+{ "tag": "a", "classKey": "parts.ctaPrimary", "attrs": { "href": "#contact" }, "text": "Falar" }
 ```
 
 ## 6) Mudar ordem das secções

@@ -1,578 +1,6210 @@
 {
   "lang": "pt-PT",
-  "strings": {
+  "globals": {
     "meta.description": "Currículo digital de André Câmara. Engenharia de software orientada à estabilidade, automação e sistemas críticos.",
     "meta.pwa.description": "Currículo digital de André Câmara. Engenharia de software orientada à estabilidade, automação e sistemas críticos.",
     "meta.pwa.name": "André Câmara — Currículo",
     "meta.pwa.shortName": "André CV",
     "meta.title": "André Câmara — Currículo",
-    "obj.lang.pt.attrs.title": "PT",
-    "obj.lang.pt.flag.attrs.alt": "PT",
-    "obj.lang.es.attrs.title": "ES",
-    "obj.lang.es.flag.attrs.alt": "ES",
-    "obj.lang.fr.attrs.title": "FR",
-    "obj.lang.fr.flag.attrs.alt": "FR",
-    "obj.lang.uk.attrs.title": "UK",
-    "obj.lang.uk.flag.attrs.alt": "UK",
     "ui.viewer.title": "Documento",
     "ui.viewer.download": "Descarregar",
-    "ui.viewer.close": "Fechar",
-    "obj.n_81c20550.attrs.alt": "Code",
-    "obj.n_3b47f950.text": "Abrindo Painel...",
-    "obj.n_3847f498.text": "A entrar no modo de administração",
-    "obj.n_1cf6d14e.attrs.aria-label": "Abrir editor",
-    "obj.n_21902598.attrs.alt": "Code",
-    "obj.n_2e9124f6.text": "André",
-    "obj.n_2f912688.text": ".",
-    "obj.n_2c9121d0.text": "Câmara",
-    "obj.n_953165a8.text": "",
-    "obj.nav.desktop.hero.text": "Início",
-    "obj.nav.desktop.experience.text": "Fundação",
-    "obj.nav.desktop.skills.text": "Engenharia",
-    "obj.nav.desktop.mindset.text": "Mentalidade",
-    "obj.nav.desktop.summary.text": "Resumo",
-    "obj.nav.desktop.now.text": "Agora",
-    "obj.nav.desktop.contact.text": "Contacto",
-    "obj.n_1af6ce28.attrs.aria-label": "Toggle menu",
-    "obj.n_94ccda84.attrs.alt": "Menu",
-    "obj.n_95ccdc17.attrs.alt": "Fechar",
-    "obj.nav.mobile.hero.text": "Início",
-    "obj.nav.mobile.experience.text": "Fundação",
-    "obj.nav.mobile.skills.text": "Engenharia",
-    "obj.nav.mobile.mindset.text": "Mentalidade",
-    "obj.nav.mobile.summary.text": "Resumo",
-    "obj.nav.mobile.now.text": "Agora",
-    "obj.nav.mobile.contact.text": "Contacto",
-    "obj.n_1dba6797.attrs.alt": "Code",
-    "obj.n_b3439630.text": "André",
-    "obj.n_b44397c3.text": ".",
-    "obj.n_b5439956.text": "Câmara",
-    "obj.n_a2ac0e34.text": "Engenharia de software orientada à estabilidade, automação e sistemas críticos.",
-    "obj.social.github.1.icon.attrs.alt": "GitHub",
-    "obj.social.linkedin.1.icon.attrs.alt": "LinkedIn",
-    "obj.social.email.1.icon.attrs.alt": "Email",
-    "obj.n_ca9ed3c0.text": "Links Rápidos",
-    "obj.footer.quick.about.text": "Identidade",
-    "obj.footer.quick.experience.text": "Fundação",
-    "obj.footer.quick.skills.text": "Engenharia",
-    "obj.footer.quick.mindset.text": "Mentalidade",
-    "obj.footer.quick.now.text": "Agora",
-    "obj.footer.quick.contact.text": "Contacto",
-    "obj.n_0428bd88.text": "Contacto",
-    "obj.footer.contact.email.link.text": "eliaspc2@gmail.com",
-    "obj.footer.contact.phone.link.text": "+351 928 308 015",
-    "obj.footer.contact.location.link.text": "Quintanilha, Bragança PT",
-    "obj.floating.action.top.attrs.aria-label": "Scroll to top",
-    "obj.floating.action.top.icon.attrs.alt": "Up",
-    "obj.floating.action.phone.attrs.title": "Ligar",
-    "obj.floating.action.phone.attrs.aria-label": "Ligar",
-    "obj.floating.action.phone.icon.attrs.alt": "Telefone",
-    "obj.floating.action.email.attrs.title": "Enviar email",
-    "obj.floating.action.email.attrs.aria-label": "Enviar email",
-    "obj.floating.action.email.icon.attrs.alt": "Email",
-    "obj.n_ef45bcfe.text": "André",
-    "obj.n_f045be90.text": " Câmara",
-    "obj.n_7fd47b4c.text": "Engenheiro de Software",
-    "obj.n_e5a277a0.text": "Focado em estabilidade, automação e sistemas existentes. Da infraestrutura crítica à engenharia de software.",
-    "obj.n_afe0381c.attrs.alt": "Email",
-    "obj.n_b0e039af.text": "eliaspc2@gmail.com",
-    "obj.n_d4b93452.attrs.alt": "Mapa",
-    "obj.n_d5b935e4.text": "Quintanilha, Bragança PT",
-    "obj.social.github.2.icon.attrs.alt": "GitHub",
-    "obj.social.linkedin.2.icon.attrs.alt": "LinkedIn",
-    "obj.social.email.2.icon.attrs.alt": "Email",
-    "obj.n_3e367e98.attrs.alt": "mail",
-    "obj.n_3f36802c.text": "Vamos Conversar?",
-    "obj.n_808175dc.attrs.alt": "descarregar",
-    "obj.n_81817770.text": "Descarregar CV",
-    "obj.n_b4cc86be.attrs.alt": "André Câmara",
-    "obj.n_3090af58.text": "Disponível",
-    "obj.n_3190b0eb.text": "Para Estágio",
-    "obj.n_4e37f628.attrs.aria-label": "Scroll down",
-    "obj.n_58bf91ac.attrs.alt": "Scroll",
-    "obj.n_4b47a0b0.text": "Fundação Técnica",
-    "obj.n_0c7c7840.text": "Duas décadas de evolução. Da infraestrutura crítica à ",
-    "obj.n_0d7c79d0.text": "engenharia de software",
-    "obj.n_0a7c7518.text": ".",
-    "obj.n_56404b22.text": "Experiência Principal",
-    "obj.n_57404cb5.text": "\"O auge da responsabilidade. Oito anos no coração financeiro onde a tolerância ao erro era zero.\"",
-    "obj.n_8d334798.text": "Especialista em Sistemas e Suporte",
-    "obj.n_8e33492c.text": "BNP Paribas (via Devoteam/CAS)",
-    "obj.n_87cbdac0.attrs.alt": "Calendar",
-    "obj.n_88cbdc54.text": "2016 – 2024",
-    "obj.n_d4447fc0.attrs.alt": "Map",
-    "obj.n_d5448154.text": "Lisboa & Madrid",
-    "obj.n_0c751258.text": "Assegurei a operação contínua de sistemas bancários core num ambiente 24/7. Automatizei operações em PowerShell para padronizar e escalar a gestão em milhares de servidores.",
-    "obj.n_3ead4658.text": "O Desafio",
-    "obj.n_3fad47eb.text": "Ambiente bancário 24/7. Zero tolerância a falhas.",
-    "obj.n_9c7fad40.text": "Aprendizagem",
-    "obj.n_9d7faed4.text": "Disciplina operacional: automação, observabilidade e controlo de mudanças em ambientes 24/7.",
-    "obj.n_03a0c9ee.text": "Impacto Hoje",
-    "obj.n_04a0cb80.text": "Levo essa disciplina operacional para o software: entregas previsíveis, mudanças seguras e fiabilidade no longo prazo.",
-    "obj.n_1ec2dc88.text": "PowerShell",
-    "obj.n_1fc2de18.text": "Automação",
-    "obj.n_1cc2d960.text": "Suporte VIP",
-    "obj.n_1dc2daf4.text": "Suporte Trading",
-    "obj.n_a0c1438e.text": "\"Robustez industrial. Cada sistema parado tinha um custo físico imediato e tangível.\"",
-    "obj.n_631ed684.text": "IT Support Technician",
-    "obj.n_641ed818.text": "CEPSA (via Tecnocom)",
-    "obj.n_81a37fdc.attrs.alt": "Calendar",
-    "obj.n_82a38170.text": "2014 – 2016",
-    "obj.n_6301c984.attrs.alt": "Map",
-    "obj.n_6401cb18.text": "Madrid",
-    "obj.n_fe74ad68.text": "Suporte de TI em ambiente industrial exigente, onde a indisponibilidade tinha impacto físico imediato. Redes, terminais e operações logísticas.",
-    "obj.n_758b41e6.text": "O Desafio",
-    "obj.n_768b4379.text": "Ambiente de refinaria e logística pesada. Pressão física por resolução rápida sob condições adversas.",
-    "obj.n_64c53fd0.text": "Aprendizagem",
-    "obj.n_65c54164.text": "Robustez primeiro: desenhar para falha e recuperação, não para o caminho feliz.",
-    "obj.n_67453a68.text": "Impacto Hoje",
-    "obj.n_68453bfb.text": "Essa mentalidade de resiliência traduz-se em software que degrada com elegância e é fácil de manter.",
-    "obj.n_d53ca70e.text": "Suporte a Utilizadores",
-    "obj.n_d63ca8a1.text": "Suporte VIP",
-    "obj.n_d33ca3e8.text": "Escritórios CEPSA",
-    "obj.n_d43ca57b.text": "Ambiente Industrial",
-    "obj.n_7e2190f4.text": "\"A era da escala. Onde aprendi que as grandes infraestruturas são construídas com camadas de abstração.\"",
-    "obj.n_23f06078.text": "Cloud Computing Support",
-    "obj.n_24f0620c.text": "Telefónica (via Anadat)",
-    "obj.n_d086143c.attrs.alt": "Calendar",
-    "obj.n_d18615d0.text": "2013 – 2014",
-    "obj.n_89db6070.attrs.alt": "Map",
-    "obj.n_8adb6200.text": "Madrid",
-    "obj.n_9e3cfaec.text": "Suporte a cloud e virtualização em escala — transição entre infraestrutura física e camadas lógicas.",
-    "obj.n_5f4e35a8.text": "O Desafio",
-    "obj.n_604e3738.text": "Gerir complexidade em escala. Entender como instâncias virtuais interagem sem conflitos físicos.",
-    "obj.n_3793cf18.text": "Aprendizagem",
-    "obj.n_3893d0ab.text": "Pensamento sistémico: compreender a arquitetura antes de atuar em componentes isolados.",
-    "obj.n_4be410d0.text": "Impacto Hoje",
-    "obj.n_4ce41264.text": "Aplico esta visão sistémica para construir software modular e escalável.",
-    "obj.n_dd6713b0.text": "Cloud",
-    "obj.n_de671540.text": "Virtualização",
-    "obj.n_db671088.text": "Infraestrutura Corporativa",
-    "obj.n_d723cd48.text": "\"A fundação humana. Entre a técnica inicial e a gestão multicultural em Oslo, aprendi o valor da comunicação.\"",
-    "obj.n_6fc83448.text": "Fundamentos de TI e Crescimento Profissional",
-    "obj.n_70c835dc.text": "Reconfiguração e Percurso Inicial",
-    "obj.n_c6b39ddc.attrs.alt": "Calendar",
-    "obj.n_c7b39f70.text": "1999 – 2012",
-    "obj.n_499a692e.attrs.alt": "Map",
-    "obj.n_4a9a6ac0.text": "Portugal & Noruega",
-    "obj.n_7b4df670.text": "Início em 1999 como técnico IT. Seguiu-se uma pausa deliberada e enriquecedora no sector do Turismo e Customer Success em Oslo.",
-    "obj.n_129d59a0.text": "O Desafio",
-    "obj.n_139d5b30.text": "Ambientes multiculturais de alta rotatividade. Gestão de expectativas e diagnóstico rápido de problemas sob pressão social.",
-    "obj.n_c9b67f40.text": "Aprendizagem",
-    "obj.n_cab680d4.text": "Empatia como Diagnóstico. Entender a dor do utilizador é metade da solução técnica.",
-    "obj.n_87e3713c.text": "Impacto Hoje",
-    "obj.n_88e372cf.text": "Traduzo necessidades de negócio complexas em código que resolve problemas reais.",
-    "obj.n_c0bd3910.text": "Suporte Técnico",
-    "obj.n_c1bd3aa3.text": "Operações IT",
-    "obj.n_c2bd3c36.text": "Customer Success",
-    "obj.n_5dc40aea.text": "Engenharia de Software",
-    "obj.n_ad7792a8.text": "Foco em Python e na arte de ",
-    "obj.n_ae77943b.text": "simplificar o complexo",
-    "obj.n_5bc407c4.text": "Para mim, código é uma ferramenta de estabilidade. Indicadores de domínio técnico, revistos continuamente com base em prática real, formação formal e projetos ativos.",
-    "obj.n_2cc9e7e4.attrs.alt": "CPU",
-    "obj.n_2dc9e978.text": "Linguagens de Programação",
-    "obj.n_aa066b7c.text": "Python",
-    "obj.n_ac066ea2.text": "85%",
-    "obj.n_362da06c.text": "C/C++",
-    "obj.n_382da392.text": "65%",
-    "obj.n_f4ac55b0.text": "C#",
-    "obj.n_f6ac58d8.text": "55%",
-    "obj.n_2a4ef480.text": "Java",
-    "obj.n_2c4ef7a6.text": "60%",
-    "obj.n_b9413358.text": "SQL",
-    "obj.n_bb41367e.text": "70%",
-    "obj.n_99bc59c0.attrs.alt": "Ecossistema Python",
-    "obj.n_da98a894.text": "Ecossistema Python",
-    "obj.n_f065ba80.attrs.alt": "Status",
-    "obj.n_f165bc14.text": "CONCLUÍDO",
-    "obj.n_f8dcfbd4.text": "Programação I & II – Universidade de Helsínquia",
-    "obj.n_079b3128.text": "270h",
-    "obj.n_089b32b8.attrs.alt": "Up",
-    "obj.n_059b2e00.attrs.alt": "Down",
-    "obj.n_f9a06f5c.attrs.alt": "Link",
-    "obj.n_faa070f0.text": "Curso oficial",
-    "obj.n_b3755e80.attrs.alt": "Cert",
-    "obj.n_b4756013.text": "Certificado I",
-    "obj.n_7617ecae.attrs.alt": "Cert",
-    "obj.n_7717ee41.text": "Certificado II",
-    "obj.n_18768be0.text": "Formação estruturada e exigente. Domínio de algoritmos, estruturas de dados e POO com Python.",
-    "obj.n_aafb9508.text": "Contexto",
-    "obj.n_abfb969c.text": "Transitei do suporte técnico para a computação programática. Onde outros vêm um script, eu vejo um sistema de automação resiliente.",
-    "obj.n_41a8ebc0.text": "Valor para RH",
-    "obj.n_42a8ed53.text": "Capaz de trabalhar de forma autónoma em backend e automação, com atenção a robustez e manutenção.",
-    "obj.n_50fb9a18.text": "Competências Técnicas",
-    "obj.n_239fd220.text": "Algoritmos fundamentais",
-    "obj.n_249fd3b4.text": "80%",
-    "obj.n_65f00f88.text": "Estruturas de dados",
-    "obj.n_66f01118.text": "78%",
-    "obj.n_e70323bc.text": "Programação POO",
-    "obj.n_e8032550.text": "78%",
-    "obj.n_593f4176.text": "Automação com Python",
-    "obj.n_5a3f4308.text": "80%",
-    "obj.n_e95e8d88.text": "Boas práticas de código",
-    "obj.n_ea5e8f18.text": "80%",
-    "obj.n_bbf2de8c.text": "Competências Relevantes",
-    "obj.n_2ea2dfd0.text": "Algoritmos fundamentais",
-    "obj.n_2fa2e163.text": "Estruturas de dados",
-    "obj.n_30a2e2f6.text": "Programação orientada a objetos (POO)",
-    "obj.n_31a2e489.text": "Resolução sistemática de problemas",
-    "obj.n_32a2e61c.text": "Automação com Python",
-    "obj.n_33a2e7af.text": "Boas práticas de código e manutenção",
-    "obj.n_b12773d8.attrs.alt": "EFA Programador/a de Informática",
-    "obj.n_ccc2ce80.text": "EFA Programador/a de Informática",
-    "obj.n_0e06a478.attrs.alt": "Status",
-    "obj.n_0f06a60c.text": "EM CURSO",
-    "obj.n_67e646d8.attrs.alt": "Estágio",
-    "obj.n_68e6486b.text": "Estágio: Junho 2026",
-    "obj.n_4731275b.text": "Tecnisign",
-    "obj.n_ec3abbc4.text": "1.416h",
-    "obj.n_ed3abd58.attrs.alt": "Up",
-    "obj.n_ee3abee8.attrs.alt": "Down",
-    "obj.n_71ab74ee.attrs.alt": "Link",
-    "obj.n_72ab7681.text": "Entidade formadora",
-    "obj.n_bcecf4d4.attrs.alt": "Descarregar",
-    "obj.n_bdecf668.text": "Conteúdo Programático",
-    "obj.n_5e754bc8.text": "Consolidação formal de bases já aplicadas em contexto real. Nível EQF 4. Inclui estágio curricular (FCT) de 210h.",
-    "obj.n_be9814f8.text": "Contexto",
-    "obj.n_bf98168b.text": "Reforça fundamentos de arquitetura e disciplina de entrega para aplicações robustas e escaláveis.",
-    "obj.n_4244d188.text": "Valor para RH",
-    "obj.n_4344d31c.text": "Contributo fullstack com foco em qualidade e manutenção.",
-    "obj.n_f88712d8.text": "Competências Técnicas",
-    "obj.n_b63e03ae.text": "C/C++",
-    "obj.n_b73e0541.text": "65%",
-    "obj.n_d44f8c68.text": "SQL",
-    "obj.n_d54f8dfc.text": "70%",
-    "obj.n_f631fdb8.text": "Java",
-    "obj.n_f731ff4b.text": "60%",
-    "obj.n_64237c40.text": "C# / ASP.NET Core",
-    "obj.n_65237dd3.text": "55%",
-    "obj.n_0a330570.text": "Redes & SO",
-    "obj.n_0b330704.text": "85%",
-    "obj.n_bfb8154c.text": "Competências Relevantes",
-    "obj.n_58137354.text": "Fundamentos de programação",
-    "obj.n_591374e8.text": "Desenvolvimento web frontend e backend",
-    "obj.n_5a13767a.text": "Bases de dados relacionais",
-    "obj.n_5b13780c.text": "Estruturas de aplicações web",
-    "obj.n_54136d08.text": "Boas práticas de engenharia de software",
-    "obj.n_55136e9c.text": "Manutenção e evolução de aplicações",
-    "obj.n_d64a5604.attrs.alt": "CET Técnico/a Especialista em Cibersegurança",
-    "obj.n_712dd790.text": "CET Técnico/a Especialista em Cibersegurança",
-    "obj.n_2f672b90.attrs.alt": "Status",
-    "obj.n_30672d24.text": "EM CURSO",
-    "obj.n_d2003b88.attrs.alt": "Estágio",
-    "obj.n_d3003d1c.text": "Estágio: Abril de 2017 (aprox.)",
-    "obj.n_5f151f50.text": "Multiformactiva",
-    "obj.n_d0ef9dac.text": "1.510h",
-    "obj.n_d1ef9f40.attrs.alt": "Up",
-    "obj.n_d2efa0d2.attrs.alt": "Down",
-    "obj.n_a2b270d0.attrs.alt": "Link",
-    "obj.n_a3b27264.text": "Entidade formadora",
-    "obj.n_92111de6.attrs.alt": "Descarregar",
-    "obj.n_93111f78.text": "Conteúdo Programático",
-    "obj.n_177113cc.text": "Curso de especialização tecnológica (nível 5) em cibersegurança alinhado com o referencial oficial, com forte componente prática e estágio (485h). O estágio do CET começa por volta de abril de 2017 (aprox.).",
-    "obj.n_f1e1134e.text": "Contexto",
-    "obj.n_f2e114e0.text": "Reforço técnico em segurança e conformidade sobre uma base sólida em sistemas críticos. Indicadores em evolução contínua ao longo do CET, à medida que módulos e projetos avançam.",
-    "obj.n_cf2e09da.text": "Valor para RH",
-    "obj.n_d02e0b6c.text": "Reforço técnico em cibersegurança e conformidade sobre uma base sólida em sistemas críticos.",
-    "obj.n_3b8e2f98.text": "Competências Técnicas",
-    "obj.n_eb5ea660.text": "Segurança de Sistemas",
-    "obj.n_ec5ea7f3.text": "45%",
-    "obj.n_1e8fe848.text": "Gestão de Risco",
-    "obj.n_1f8fe9dc.text": "40%",
-    "obj.n_67114fd0.text": "Controlo de Acessos",
-    "obj.n_68115164.text": "45%",
-    "obj.n_baa8d0a8.text": "Ambientes Regulados",
-    "obj.n_bba8d23c.text": "50%",
-    "obj.n_77d4ec90.text": "Competências Relevantes",
-    "obj.n_41bf5924.text": "Análise de risco e impacto em sistemas",
-    "obj.n_42bf5ab8.text": "Aplicação de princípios de segurança em ambientes operacionais",
-    "obj.n_43bf5c48.text": "Compreensão de requisitos de conformidade e boas práticas",
-    "obj.n_44bf5ddc.text": "Proteção de sistemas e informação em contextos críticos",
-    "obj.n_3dbf52d8.text": "Integração da segurança no ciclo operacional e de desenvolvimento",
-    "obj.n_20bc3ecc.text": "Tecnologias Utilizadas",
-    "obj.n_983b7374.attrs.alt": "Git",
-    "obj.n_993b7508.text": "Git",
-    "obj.n_e62fe1b0.attrs.alt": "VS Code",
-    "obj.n_e72fe340.text": "VS Code",
-    "obj.n_e0d0ce30.attrs.alt": "Linux",
-    "obj.n_e1d0cfc4.text": "Linux",
-    "obj.n_97d92898.attrs.alt": "Networks",
-    "obj.n_98d92a2c.text": "Networks",
-    "obj.n_ea49a734.attrs.alt": "Databases",
-    "obj.n_eb49a8c7.text": "Databases",
-    "obj.n_32b7e466.attrs.alt": "PowerShell",
-    "obj.n_33b7e5f8.text": "PowerShell",
-    "obj.n_734c5e78.text": "Mentalidade & Lógica Humana",
-    "obj.n_fdc73a40.text": "A paciência do pão, a ",
-    "obj.n_fec73bd4.text": "precisão do código",
-    "obj.n_754c61a0.text": "O meu raciocínio é determinístico. Acredito no processo, no tempo certo de cada etapa e na isolação absoluta das variáveis para resolver qualquer problema.",
-    "obj.n_e52a1f60.attrs.alt": "Light",
-    "obj.n_46a86bd8.text": "\"A minha vida familiar estruturada e estes hobbies reais alimentam a minha forma de trabalhar: disciplina no processo, atenção ao detalhe e consistência.\"",
-    "obj.n_6ad21528.attrs.alt": "Responsabilidade Estrutural",
-    "obj.n_e93e9f28.text": "Responsabilidade Estrutural",
-    "obj.n_ea3ea0b8.text": "Estabilidade e Processo",
-    "obj.n_87b5aaa8.attrs.alt": "Chevron",
-    "obj.n_ee94c104.attrs.alt": "Pão & Dependências",
-    "obj.n_17e4f1d0.text": "Pão & Dependências",
-    "obj.n_18e4f360.text": "Fermentação Lenta",
-    "obj.n_f19f9458.attrs.alt": "Chevron",
-    "obj.n_813d87a8.attrs.alt": "Pizza & Iteração",
-    "obj.n_6d1fdcd0.text": "Pizza & Iteração",
-    "obj.n_6e1fde64.text": "Feedback Incremental",
-    "obj.n_6b1d2360.attrs.alt": "Chevron",
-    "obj.n_a4d7afac.attrs.alt": "Manutenção & Prevenção",
-    "obj.n_18946afe.text": "Manutenção & Prevenção",
-    "obj.n_19946c91.text": "Cuidado Preventivo",
-    "obj.n_b59f7b08.attrs.alt": "Chevron",
-    "obj.n_2f08c354.attrs.alt": "Marketing & Consciência de Produto",
-    "obj.n_d1c65010.text": "Marketing & Consciência de Produto",
-    "obj.n_d2c651a4.text": "Valor Antes da Tecnologia",
-    "obj.n_2b587a30.attrs.alt": "Chevron",
-    "obj.n_a9c68810.attrs.alt": "Leis & Sistemas",
-    "obj.n_e3bc8044.text": "Leis & Sistemas",
-    "obj.n_e4bc81d8.text": "Sistemas Determinísticos",
-    "obj.n_8e28dfe8.attrs.alt": "Chevron",
-    "obj.n_0ac5cb4c.attrs.alt": "Responsabilidade Estrutural",
-    "obj.n_647cf33c.attrs.alt": "Responsabilidade Estrutural",
-    "obj.n_bf7c1226.text": "Responsabilidade Estrutural",
-    "obj.n_c07c13b8.text": "Estabilidade e Processo",
-    "obj.n_8f3701e0.attrs.alt": "Heart",
-    "obj.n_90370370.text": "A Experiência Pessoal",
-    "obj.n_4d894d60.text": "Sou casado e tenho um filho de 13 anos. A adoção foi um processo longo, estruturado, exigente e regulado, que exige paciência, previsibilidade, estabilidade emocional e consistência de rotinas.",
-    "obj.n_4b7bfa94.attrs.alt": "Compass",
-    "obj.n_4c7bfc27.text": "Lógica Humana & Engenharia",
-    "obj.n_f4b2efaf.text": "Este percurso reforçou competências críticas para projetos longos: consistência, previsibilidade e compromisso com processos.",
-    "obj.n_ff414770.attrs.alt": "Pão & Dependências",
-    "obj.n_2fa0701e.attrs.alt": "Pão & Dependências",
-    "obj.n_a1029a08.text": "Pão & Dependências",
-    "obj.n_a2029b9c.text": "Fermentação Lenta",
-    "obj.n_e9b5a8f0.attrs.alt": "Heart",
-    "obj.n_eab5aa84.text": "A Experiência Pessoal",
-    "obj.n_e32d0720.text": "Fazer pão é um hobby regular meu. No pão artesanal, saltar etapas é destruir o resultado. O tempo de fermentação é uma dependência que não pode ser apressada sem comprometer a estrutura.",
-    "obj.n_e346cdb8.attrs.alt": "Compass",
-    "obj.n_e446cf48.text": "Lógica Humana & Engenharia",
-    "obj.n_b9d796a8.text": "Em software, arquitecturas robustas requerem o tempo certo de design e validação. Respeitar as dependências e o tempo de maturação do código evita dívida técnica catastrófica.",
-    "obj.n_3b0a7068.attrs.alt": "Pizza & Iteração",
-    "obj.n_759d560c.attrs.alt": "Pizza & Iteração",
-    "obj.n_22695320.text": "Pizza & Iteração",
-    "obj.n_236954b3.text": "Feedback Incremental",
-    "obj.n_17a223c8.attrs.alt": "Heart",
-    "obj.n_18a2255c.text": "A Experiência Pessoal",
-    "obj.n_1da7ebe8.text": "Fazer pizza em casa é um hobby meu. Uma pizza perfeita é o resultado de pequenos ajustes em cada fornada. Temperatura, hidratação, tempo — cada detalhe é afinado com base no resultado anterior.",
-    "obj.n_e19c10fe.attrs.alt": "Compass",
-    "obj.n_e29c1291.text": "Lógica Humana & Engenharia",
-    "obj.n_9d3f6ed8.text": "Programar é iterar. Prefiro entregas pequenas e frequentes que permitam ajustar a rota rapidamente, garantindo que o produto final está alinhado com a realidade.",
-    "obj.n_ba9b2fcc.attrs.alt": "Manutenção & Prevenção",
-    "obj.n_ba402690.attrs.alt": "Manutenção & Prevenção",
-    "obj.n_17f884b0.text": "Manutenção & Prevenção",
-    "obj.n_18f88644.text": "Cuidado Preventivo",
-    "obj.n_6c07ad68.attrs.alt": "Heart",
-    "obj.n_6d07aefc.text": "A Experiência Pessoal",
-    "obj.n_ea6a42af.text": "A manutenção de unhas de gel é um hobby manual meu. Ensinou-me que prevenir é mais barato do que reparar. Pequenos cuidados frequentes evitam falhas maiores e preservam a integridade.",
-    "obj.n_ca48f1d0.attrs.alt": "Compass",
-    "obj.n_cb48f364.text": "Lógica Humana & Engenharia",
-    "obj.n_1814b584.text": "Em software, prevenção é refactoring constante, testes regulares e atenção diária ao detalhe. A mesma lógica evita falhas silenciosas e mantém sistemas confiáveis ao longo dos anos.",
-    "obj.n_18e30924.attrs.alt": "Marketing & Consciência de Produto",
-    "obj.n_9cc5fdac.attrs.alt": "Marketing & Consciência de Produto",
-    "obj.n_88a69680.text": "Marketing & Consciência de Produto",
-    "obj.n_89a69814.text": "Valor Antes da Tecnologia",
-    "obj.n_1cb4f9e0.attrs.alt": "Heart",
-    "obj.n_1db4fb70.text": "A Experiência Pessoal",
-    "obj.n_98b8531c.text": "O contacto inicial com marketing digital não foi planeado. Surgiu durante a formação em unhas de gel: a maioria das manicures trabalha sozinha, por isso o curso incluía noções de marketing. A exposição contínua ao tema levou-me ao estudo autónomo.",
-    "obj.n_02b3ad3e.attrs.alt": "Compass",
-    "obj.n_03b3aed0.text": "Lógica Humana & Engenharia",
-    "obj.n_ef28c5cc.text": "Para mim, marketing não é carreira paralela — é consciência de produto. Traduz-se em três pilares: pensar no utilizador final, comunicar com clareza e entregar valor antes da tecnologia.",
-    "obj.n_dbe2599b.attrs.alt": "Leis & Sistemas",
-    "obj.n_9f38dca4.attrs.alt": "Leis & Sistemas",
-    "obj.n_d27a9878.text": "Leis & Sistemas",
-    "obj.n_d37a9a08.text": "Sistemas Determinísticos",
-    "obj.n_cf67cbf0.attrs.alt": "Heart",
-    "obj.n_d067cd80.text": "A Experiência Pessoal",
-    "obj.n_ed730b68.text": "Acompanho leis e sistemas eleitorais como interesse pessoal e estrutural, não político. É fascínio por regras explícitas, precisão processual e integridade de sistemas.",
-    "obj.n_592dcefc.attrs.alt": "Compass",
-    "obj.n_5a2dd090.text": "Lógica Humana & Engenharia",
-    "obj.n_1399b6a0.text": "Vejo isto como um exercício cognitivo estruturado, semelhante a uma auditoria de sistemas: dados íntegros, transições auditáveis e regras claras em cada etapa.",
-    "obj.n_42d01578.text": "Isso mostra que valorizo o tempo certo, a prevenção e o cuidado contínuo — e aplico essa lógica todos os dias no software.",
-    "obj.n_7b9734a4.text": "Resumo",
-    "obj.n_f60b024c.text": "Quem eu sou revela-se na forma como ",
-    "obj.n_f70b03df.text": "construo",
-    "obj.n_e172b908.attrs.alt": "André Câmara",
-    "obj.n_358d4cb8.text": "André Câmara",
-    "obj.n_368d4e4c.text": "Engenharia de Software | Bragança, Portugal",
-    "obj.n_a7269434.text": "Trabalho com tecnologia desde o final dos anos 90, com uma base sólida em sistemas críticos, automação e infraestrutura 24/7. Reentrei no desenvolvimento de software com foco na continuidade, previsibilidade e qualidade técnica.",
-    "obj.n_a82695c8.text": "Sou casado e tenho um filho de 13 anos; essa estabilidade familiar traduz-se em foco, previsibilidade e fiabilidade técnica no trabalho. Trago para o código a disciplina de ambientes onde falhar não era opção.",
-    "obj.n_a9269758.text": "Para além da vertente técnica, tenho formação orientada à comunicação de valor, métricas e consciência de produto — útil para alinhar decisões, linguagem e impacto com o utilizador final.",
-    "obj.n_aae41e6c.attrs.alt": "CPU",
-    "obj.n_abe41fff.text": "Linguagens de Programação",
-    "obj.n_72cd9d68.text": "Python",
-    "obj.n_72cd9d68.attrs.title": "Avançado",
-    "obj.n_73cd9efc.text": "C/C++",
-    "obj.n_73cd9efc.attrs.title": "Intermédio",
-    "obj.n_74cda090.text": "C#",
-    "obj.n_74cda090.attrs.title": "Intermédio",
-    "obj.n_75cda220.text": "Java",
-    "obj.n_75cda220.attrs.title": "Intermédio",
-    "obj.n_76cda3b4.text": "SQL",
-    "obj.n_76cda3b4.attrs.title": "Avançado",
-    "obj.n_4c34e96e.attrs.alt": "Globe",
-    "obj.n_4d34eb00.text": "Idiomas",
-    "obj.n_37ba6858.attrs.title": "Nativo",
-    "obj.n_54c30cc8.text": "🇵🇹",
-    "obj.n_55c30e5c.text": "Português",
-    "obj.n_38ba69ec.attrs.title": "Fluente",
-    "obj.n_4f401b08.text": "🇪🇸",
-    "obj.n_50401c98.text": "Espanhol",
-    "obj.n_35ba6534.attrs.title": "Fluente",
-    "obj.n_e6e3fc98.text": "🇬🇧",
-    "obj.n_e7e3fe28.text": "Inglês",
-    "obj.n_36ba66c8.attrs.title": "Funcional",
-    "obj.n_1aae24c8.text": "🇫🇷",
-    "obj.n_1bae265c.text": "Francês",
-    "obj.n_27c8a958.attrs.alt": "Target",
-    "obj.n_28c8aae8.text": "Formação",
-    "obj.n_56dc4a8c.text": "12.º ano concluído",
-    "obj.n_e67b8148.text": "EFA – Programador Informático (Nível 4, 1.416h, em curso)",
-    "obj.n_ff7d94fc.text": "CET Técnico/a Especialista em Cibersegurança (Nível 5, 1.510h, em curso)",
-    "obj.n_a4fa1aa0.text": "Destaques Profissionais",
-    "obj.n_e763fbfe.attrs.alt": "10+ Anos em Sistemas Críticos",
-    "obj.n_84466ae8.text": "10+ anos em sistemas críticos",
-    "obj.n_85466c7b.text": "Infraestrutura bancária 24/7 com tolerância zero a falhas",
-    "obj.n_158a9ed4.attrs.alt": "Expandir",
-    "obj.n_168aa068.attrs.alt": "Recolher",
-    "obj.n_acd94320.text": "BNP Paribas, CEPSA, Telefónica — ambientes onde a estabilidade era absoluta.",
-    "obj.n_eccca34c.attrs.alt": "",
-    "obj.n_132bef78.text": "Transição para Programação",
-    "obj.n_142bf10b.text": "1.686h de formação intensiva em desenvolvimento de software",
-    "obj.n_ce4ab078.attrs.alt": "Expandir",
-    "obj.n_cf4ab20b.attrs.alt": "Recolher",
-    "obj.n_e40d6abc.text": "Universidade de Helsínquia (270h) + EFA Programador Informático (1.416h). C/C++, C#, Java, Python, SQL.",
-    "obj.n_a4d7e662.attrs.alt": "Mentalidade Zero Downtime",
-    "obj.n_0808d0bc.text": "Mentalidade Zero Downtime",
-    "obj.n_0908d250.text": "Rigor absoluto e estabilidade como processo contínuo",
-    "obj.n_65bbb346.attrs.alt": "Expandir",
-    "obj.n_66bbb4d8.attrs.alt": "Recolher",
-    "obj.n_241fb9f8.text": "A mentalidade construída em ambientes críticos aplica-se agora ao desenvolvimento de software.",
-    "obj.n_b1bc0c54.attrs.alt": "Multilíngue",
-    "obj.n_21f275dc.text": "Multilíngue",
-    "obj.n_22f27770.text": "PT (nativo), ES, EN (fluente), FR (funcional)",
-    "obj.n_e7d32e88.attrs.alt": "Expandir",
-    "obj.n_e8d3301b.attrs.alt": "Recolher",
-    "obj.n_a8584a78.text": "Capacidade de trabalhar em equipas internacionais e comunicar com stakeholders globais.",
-    "obj.n_71dd8d6c.attrs.alt": "Estabilidade Pessoal",
-    "obj.n_70b193a8.text": "Estabilidade Pessoal",
-    "obj.n_71b19538.text": "Casado, pai de um filho de 13 anos — foco e previsibilidade",
-    "obj.n_73d8a998.attrs.alt": "Expandir",
-    "obj.n_74d8ab2c.attrs.alt": "Recolher",
-    "obj.n_7d1d07b0.text": "Essa estabilidade familiar traduz-se em fiabilidade técnica e compromisso de longo prazo.",
-    "obj.n_5284b720.attrs.alt": "Marketing Digital",
-    "obj.n_b1eadd40.text": "Marketing Digital",
-    "obj.n_b2eaded4.text": "Comunicação de valor, métricas e consciência de produto",
-    "obj.n_9eb84b40.attrs.alt": "Expandir",
-    "obj.n_9fb84cd4.attrs.alt": "Recolher",
-    "obj.n_353d9d4c.text": "Formação complementar que ajuda a pensar no utilizador final e a comunicar com clareza.",
-    "obj.n_417363cc.text": "Recursos Disponíveis",
-    "obj.n_42736560.text": "Acede aos meus documentos profissionais e certificações.",
-    "obj.n_c1dcca80.attrs.alt": "Descarregar",
-    "obj.n_c2dccc10.text": "CV Padrão",
-    "obj.n_4b9d7ea4.attrs.alt": "Descarregar",
-    "obj.n_4c9d8038.text": "CV Estendido",
-    "obj.n_e4d6d248.attrs.alt": "Ligação",
-    "obj.n_e5d6d3dc.text": "Programa EFA",
-    "obj.n_f6b8ae1c.text": "10+",
-    "obj.n_f7b8afb0.text": "Anos em TI",
-    "obj.n_7363d526.text": "1.686",
-    "obj.n_7463d6b8.text": "Horas de Formação",
-    "obj.n_1269b758.text": "4",
-    "obj.n_1369b8ec.text": "Idiomas",
-    "obj.n_91e68efd.text": "Agora",
-    "obj.n_9d485980.text": "O que procuro neste ",
-    "obj.n_9e485b14.text": "momento",
-    "obj.n_2dec040e.attrs.alt": "André Câmara",
-    "obj.n_dd9d9d18.text": "Disponível para Estágio",
-    "obj.n_de9d9ea8.text": "EFA – Programador Informático",
-    "obj.n_292678e0.text": "210 horas curriculares",
-    "obj.n_82ec4bb0.text": "Disponível para estágio curricular (210h) em contexto real de desenvolvimento ou sistemas, com capacidade de contributo efetivo desde o início.",
-    "obj.n_ac524574.text": "Competências Técnicas",
-    "obj.n_ea7c5d8c.text": "Python",
-    "obj.n_eb7c5f1f.text": " (Avançado)",
-    "obj.n_4771c8da.text": "C/C++",
-    "obj.n_4871ca6d.text": " (Intermédio)",
-    "obj.n_50e736f8.text": "C#",
-    "obj.n_51e7388c.text": " (Intermédio)",
-    "obj.n_e8e03950.text": "Java",
-    "obj.n_e9e03ae0.text": " (Intermédio)",
-    "obj.n_be137184.text": "SQL",
-    "obj.n_bf137318.text": " (Avançado)",
-    "obj.n_f3db3826.attrs.alt": "Quando",
-    "obj.n_f4db39b9.text": "Quando",
-    "obj.n_638fe72c.text": "A componente teórica termina no final de junho e o estágio pode iniciar a partir de junho de 2026.",
-    "obj.n_b8c00eae.attrs.alt": "Onde",
-    "obj.n_b9c01040.text": "Onde",
-    "obj.n_e1237988.text": "Preferência por remoto (todo o país) e alternativa híbrida na zona de Bragança.",
-    "obj.n_ba8d4290.attrs.alt": "Contexto",
-    "obj.n_bb8d4424.text": "Contexto",
-    "obj.n_bcdc387c.text": "O estágio é acompanhado pela entidade formadora, com plano individual e objetivos definidos.",
-    "obj.n_c23202c0.attrs.alt": "Experiência",
-    "obj.n_c3320454.text": "Experiência",
-    "obj.n_b1064db4.text": "Não requer formação básica — já estou habituado a contextos reais de trabalho e sistemas com histórico.",
-    "obj.n_0de48d77.text": "210h",
-    "obj.n_0ce48be4.text": "Estágio",
-    "obj.n_1c807ade.text": "1.686h",
-    "obj.n_1d807c70.text": "Formação",
-    "obj.n_06b7a7d0.text": "10+",
-    "obj.n_07b7a964.text": "Anos TI",
-    "obj.n_49968c4c.text": "Recursos Profissionais",
-    "obj.n_3f329520.text": "Conteúdo Programático (EFA)",
-    "obj.n_403296b4.text": "Programador Informático – Nível 4 (1.416h)",
-    "obj.n_3735e5f8.text": "Conteúdo Programático (CET)",
-    "obj.n_3835e78c.text": "CET Cibersegurança – Nível 5 (1.510h)",
-    "obj.n_6d3f82f0.text": "Certificado Python I",
-    "obj.n_6e3f8484.text": "Universidade de Helsínquia (135h, 5 ECTS)",
-    "obj.n_063b26e6.text": "Certificado Python II",
-    "obj.n_073b2878.text": "Universidade de Helsínquia (135h, 5 ECTS)",
-    "obj.n_e7c6d9ee.text": "Disponível para oportunidades",
-    "obj.n_e8c6db80.text": "Estágio ou posição júnior",
-    "obj.n_edbe928c.text": "Remoto",
-    "obj.n_e26c7d50.text": "Bragança (híbrido)",
-    "obj.n_50fbc818.text": "A partir de Junho 2026",
-    "obj.n_c457d4a0.text": "Interessado em colaborar?",
-    "obj.n_c557d630.text": "O contacto serve para alinharmos expectativas e enquadramento.",
-    "obj.n_31de5f88.text": "Vamos Conversar?",
-    "obj.n_a179f03c.text": "Contacto",
-    "obj.n_ad9fa488.text": "Vamos ",
-    "obj.n_ae9fa618.text": "falar?",
-    "obj.n_a379f362.text": "Disponível para projetos onde a maturidade técnica e o compromisso humano fazem a diferença.",
-    "obj.n_0d07e0b0.text": "Contacto",
-    "obj.n_57d02740.attrs.alt": "Email",
-    "obj.n_0d1e3140.text": "Email",
-    "obj.n_0e1e32d4.text": "eliaspc2@gmail.com",
-    "obj.n_f50cad50.attrs.title": "Copiar",
-    "obj.n_e9360290.attrs.alt": "Copiar",
-    "obj.n_ea360420.attrs.alt": "Copiado",
-    "obj.n_7c4ab5d6.attrs.alt": "Telefone",
-    "obj.n_6feddc90.text": "Telefone",
-    "obj.n_70edde24.text": "+351 928 308 015",
-    "obj.n_57da2e50.attrs.title": "Copiar",
-    "obj.n_afa23e88.attrs.alt": "Copiar",
-    "obj.n_b0a2401c.attrs.alt": "Copiado",
-    "obj.n_4ee7d4e4.attrs.alt": "Localização",
-    "obj.n_e57634a0.text": "Localização",
-    "obj.n_e6763634.text": "Quintanilha, Bragança PT",
-    "obj.n_008f1268.text": "Redes Sociais",
-    "obj.social.github.3.icon.attrs.alt": "GitHub",
-    "obj.social.linkedin.3.icon.attrs.alt": "LinkedIn",
-    "obj.social.email.3.icon.attrs.alt": "Email",
-    "obj.n_0c792d48.text": "Recursos Profissionais",
-    "obj.n_704dca38.text": "CV Padrão",
-    "obj.n_714dcbcc.text": "Versão condensada (2 páginas)",
-    "obj.n_908effdc.text": "CV Estendido",
-    "obj.n_918f016f.text": "Versão completa detalhada",
-    "obj.n_825a2b14.text": "Certificações Estruturadas",
-    "obj.n_1549cad4.text": "Python I (Helsínquia)",
-    "obj.n_1649cc66.text": "MOOC de Programação 2025 (5 ECTS)",
-    "obj.n_45394ab0.text": "Python II (Helsínquia)",
-    "obj.n_423945f8.text": "Programação Avançada (5 ECTS)",
-    "obj.n_02a020bc.text": "Marketing Digital",
-    "obj.n_03a0224e.text": "Ferramentas de comunicação de valor, métricas e posicionamento (19/20)"
-  }
+    "ui.viewer.close": "Fechar"
+  },
+  "references": [
+    {
+      "ref": "obj.n_cceb9fdc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7df95dac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3a47f7c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_81c20550",
+      "strings": {
+        "attrs": {
+          "alt": "Code"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3b47f950",
+      "strings": {
+        "text": "Abrindo Painel..."
+      }
+    },
+    {
+      "ref": "obj.n_3847f498",
+      "strings": {
+        "text": "A entrar no modo de administração"
+      }
+    },
+    {
+      "ref": "obj.n_cdeba170",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f0b29cb0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f79eee5c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1cf6d14e",
+      "strings": {
+        "attrs": {
+          "aria-label": "Abrir editor"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_93316284",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_21902598",
+      "strings": {
+        "attrs": {
+          "alt": "Code"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_94316418",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2e9124f6",
+      "strings": {
+        "text": "André"
+      }
+    },
+    {
+      "ref": "obj.n_2f912688",
+      "strings": {
+        "text": "."
+      }
+    },
+    {
+      "ref": "obj.n_2c9121d0",
+      "strings": {
+        "text": "Câmara"
+      }
+    },
+    {
+      "ref": "obj.n_953165a8",
+      "strings": {
+        "text": ""
+      }
+    },
+    {
+      "ref": "obj.n_1df6d2e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.nav.desktop.hero",
+      "strings": {
+        "text": "Início"
+      }
+    },
+    {
+      "ref": "obj.nav.desktop.experience",
+      "strings": {
+        "text": "Fundação"
+      }
+    },
+    {
+      "ref": "obj.nav.desktop.skills",
+      "strings": {
+        "text": "Engenharia"
+      }
+    },
+    {
+      "ref": "obj.nav.desktop.mindset",
+      "strings": {
+        "text": "Mentalidade"
+      }
+    },
+    {
+      "ref": "obj.nav.desktop.summary",
+      "strings": {
+        "text": "Resumo"
+      }
+    },
+    {
+      "ref": "obj.nav.desktop.now",
+      "strings": {
+        "text": "Agora"
+      }
+    },
+    {
+      "ref": "obj.nav.desktop.contact",
+      "strings": {
+        "text": "Contacto"
+      }
+    },
+    {
+      "ref": "obj.n_1af6ce28",
+      "strings": {
+        "attrs": {
+          "aria-label": "Toggle menu"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_94ccda84",
+      "strings": {
+        "attrs": {
+          "alt": "Menu"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_95ccdc17",
+      "strings": {
+        "attrs": {
+          "alt": "Fechar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ceeba300",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c0809990",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c1809b24",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_233278f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.nav.mobile.hero",
+      "strings": {
+        "text": "Início"
+      }
+    },
+    {
+      "ref": "obj.nav.mobile.experience",
+      "strings": {
+        "text": "Fundação"
+      }
+    },
+    {
+      "ref": "obj.nav.mobile.skills",
+      "strings": {
+        "text": "Engenharia"
+      }
+    },
+    {
+      "ref": "obj.nav.mobile.mindset",
+      "strings": {
+        "text": "Mentalidade"
+      }
+    },
+    {
+      "ref": "obj.nav.mobile.summary",
+      "strings": {
+        "text": "Resumo"
+      }
+    },
+    {
+      "ref": "obj.nav.mobile.now",
+      "strings": {
+        "text": "Agora"
+      }
+    },
+    {
+      "ref": "obj.nav.mobile.contact",
+      "strings": {
+        "text": "Contacto"
+      }
+    },
+    {
+      "ref": "obj.n_b5ca1f50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_cc67d4b8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0583c168",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c9ee8c86",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a1ac0ca0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6170aa1c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1dba6797",
+      "strings": {
+        "attrs": {
+          "alt": "Code"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6270abb0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b3439630",
+      "strings": {
+        "text": "André"
+      }
+    },
+    {
+      "ref": "obj.n_b44397c3",
+      "strings": {
+        "text": "."
+      }
+    },
+    {
+      "ref": "obj.n_b5439956",
+      "strings": {
+        "text": "Câmara"
+      }
+    },
+    {
+      "ref": "obj.n_a2ac0e34",
+      "strings": {
+        "text": "Engenharia de software orientada à estabilidade, automação e sistemas críticos."
+      }
+    },
+    {
+      "ref": "obj.n_a3ac0fc8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.github.1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.github.1.icon",
+      "strings": {
+        "attrs": {
+          "alt": "GitHub"
+        }
+      }
+    },
+    {
+      "ref": "obj.social.linkedin.1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.linkedin.1.icon",
+      "strings": {
+        "attrs": {
+          "alt": "LinkedIn"
+        }
+      }
+    },
+    {
+      "ref": "obj.social.email.1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.email.1.icon",
+      "strings": {
+        "attrs": {
+          "alt": "Email"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_caee8e19",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ca9ed3c0",
+      "strings": {
+        "text": "Links Rápidos"
+      }
+    },
+    {
+      "ref": "obj.n_cb9ed554",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c9063e58",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.quick.about",
+      "strings": {
+        "text": "Identidade"
+      }
+    },
+    {
+      "ref": "obj.n_ca063fec",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.quick.experience",
+      "strings": {
+        "text": "Fundação"
+      }
+    },
+    {
+      "ref": "obj.n_cb064180",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.quick.skills",
+      "strings": {
+        "text": "Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_cc064310",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.quick.mindset",
+      "strings": {
+        "text": "Mentalidade"
+      }
+    },
+    {
+      "ref": "obj.n_cd0644a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.quick.now",
+      "strings": {
+        "text": "Agora"
+      }
+    },
+    {
+      "ref": "obj.n_ce064638",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.quick.contact",
+      "strings": {
+        "text": "Contacto"
+      }
+    },
+    {
+      "ref": "obj.n_c7ee8960",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0428bd88",
+      "strings": {
+        "text": "Contacto"
+      }
+    },
+    {
+      "ref": "obj.n_0528bf1b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a7a85458",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.contact.email.link",
+      "strings": {
+        "text": "eliaspc2@gmail.com"
+      }
+    },
+    {
+      "ref": "obj.n_a8a855e8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.contact.phone.link",
+      "strings": {
+        "text": "+351 928 308 015"
+      }
+    },
+    {
+      "ref": "obj.n_a5a85130",
+      "strings": {}
+    },
+    {
+      "ref": "obj.footer.contact.location.link",
+      "strings": {
+        "text": "Quintanilha, Bragança PT"
+      }
+    },
+    {
+      "ref": "obj.floating.action.top",
+      "strings": {
+        "attrs": {
+          "aria-label": "Scroll to top"
+        }
+      }
+    },
+    {
+      "ref": "obj.floating.action.top.icon",
+      "strings": {
+        "attrs": {
+          "alt": "Up"
+        }
+      }
+    },
+    {
+      "ref": "obj.floating.action.phone",
+      "strings": {
+        "attrs": {
+          "title": "Ligar",
+          "aria-label": "Ligar"
+        }
+      }
+    },
+    {
+      "ref": "obj.floating.action.phone.icon",
+      "strings": {
+        "attrs": {
+          "alt": "Telefone"
+        }
+      }
+    },
+    {
+      "ref": "obj.floating.action.email",
+      "strings": {
+        "attrs": {
+          "title": "Enviar email",
+          "aria-label": "Enviar email"
+        }
+      }
+    },
+    {
+      "ref": "obj.floating.action.email.icon",
+      "strings": {
+        "attrs": {
+          "alt": "Email"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_cc1b68d4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.lang.pt",
+      "strings": {
+        "attrs": {
+          "title": "PT"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.pt.flag",
+      "strings": {
+        "attrs": {
+          "alt": "PT"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.es",
+      "strings": {
+        "attrs": {
+          "title": "ES"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.es.flag",
+      "strings": {
+        "attrs": {
+          "alt": "ES"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.fr",
+      "strings": {
+        "attrs": {
+          "title": "FR"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.fr.flag",
+      "strings": {
+        "attrs": {
+          "alt": "FR"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.uk",
+      "strings": {
+        "attrs": {
+          "title": "UK"
+        }
+      }
+    },
+    {
+      "ref": "obj.lang.uk.flag",
+      "strings": {
+        "attrs": {
+          "alt": "UK"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3fb15736",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5237fc74",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5337fe08",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8a941210",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8b9413a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8c941538",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5437ff98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5538012c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_610aae40",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9a089054",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_05b87ae0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fac600ec",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ef45bcfe",
+      "strings": {
+        "text": "André"
+      }
+    },
+    {
+      "ref": "obj.n_f045be90",
+      "strings": {
+        "text": " Câmara"
+      }
+    },
+    {
+      "ref": "obj.n_06b87c74",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7fd47b4c",
+      "strings": {
+        "text": "Engenheiro de Software"
+      }
+    },
+    {
+      "ref": "obj.n_07b87e08",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e5a277a0",
+      "strings": {
+        "text": "Focado em estabilidade, automação e sistemas existentes. Da infraestrutura crítica à engenharia de software."
+      }
+    },
+    {
+      "ref": "obj.n_08b87f98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_24492f94",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_afe0381c",
+      "strings": {
+        "attrs": {
+          "alt": "Email"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b0e039af",
+      "strings": {
+        "text": "eliaspc2@gmail.com"
+      }
+    },
+    {
+      "ref": "obj.n_25493127",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d4b93452",
+      "strings": {
+        "attrs": {
+          "alt": "Mapa"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d5b935e4",
+      "strings": {
+        "text": "Quintanilha, Bragança PT"
+      }
+    },
+    {
+      "ref": "obj.n_09b8812c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.github.2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.github.2.icon",
+      "strings": {
+        "attrs": {
+          "alt": "GitHub"
+        }
+      }
+    },
+    {
+      "ref": "obj.social.linkedin.2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.linkedin.2.icon",
+      "strings": {
+        "attrs": {
+          "alt": "LinkedIn"
+        }
+      }
+    },
+    {
+      "ref": "obj.social.email.2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.email.2.icon",
+      "strings": {
+        "attrs": {
+          "alt": "Email"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0ab882c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f1e7d360",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3e367e98",
+      "strings": {
+        "attrs": {
+          "alt": "mail"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3f36802c",
+      "strings": {
+        "text": "Vamos Conversar?"
+      }
+    },
+    {
+      "ref": "obj.n_f2e7d4f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_808175dc",
+      "strings": {
+        "attrs": {
+          "alt": "descarregar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_81817770",
+      "strings": {
+        "text": "Descarregar CV"
+      }
+    },
+    {
+      "ref": "obj.n_9b0891e7",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_46cfe730",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9c11f864",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9d11f9f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9e11fb88",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b4cc86be",
+      "strings": {
+        "attrs": {
+          "alt": "André Câmara"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_9f11fd1c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_319d9090",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9a64ed7c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_329d9220",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3090af58",
+      "strings": {
+        "text": "Disponível"
+      }
+    },
+    {
+      "ref": "obj.n_3190b0eb",
+      "strings": {
+        "text": "Para Estágio"
+      }
+    },
+    {
+      "ref": "obj.n_4e37f628",
+      "strings": {
+        "attrs": {
+          "aria-label": "Scroll down"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_58bf91ac",
+      "strings": {
+        "attrs": {
+          "alt": "Scroll"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e8cb54f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3af09320",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c0d01c90",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8e184528",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8f1846bb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_21aed588",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4b47a0b0",
+      "strings": {
+        "text": "Fundação Técnica"
+      }
+    },
+    {
+      "ref": "obj.n_4c47a243",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0c7c7840",
+      "strings": {
+        "text": "Duas décadas de evolução. Da infraestrutura crítica à "
+      }
+    },
+    {
+      "ref": "obj.n_0d7c79d0",
+      "strings": {
+        "text": "engenharia de software"
+      }
+    },
+    {
+      "ref": "obj.n_0a7c7518",
+      "strings": {
+        "text": "."
+      }
+    },
+    {
+      "ref": "obj.n_22aed718",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2ab83a10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a0c5a5fc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a1c5a790",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a388fe50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b072c2c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fc7c4820",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b172c454",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_56404b22",
+      "strings": {
+        "text": "Experiência Principal"
+      }
+    },
+    {
+      "ref": "obj.n_57404cb5",
+      "strings": {
+        "text": "\"O auge da responsabilidade. Oito anos no coração financeiro onde a tolerância ao erro era zero.\""
+      }
+    },
+    {
+      "ref": "obj.n_544047fc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b603bcf8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8d334798",
+      "strings": {
+        "text": "Especialista em Sistemas e Suporte"
+      }
+    },
+    {
+      "ref": "obj.n_8e33492c",
+      "strings": {
+        "text": "BNP Paribas (via Devoteam/CAS)"
+      }
+    },
+    {
+      "ref": "obj.n_b703be88",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7c8ff20c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_87cbdac0",
+      "strings": {
+        "attrs": {
+          "alt": "Calendar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_88cbdc54",
+      "strings": {
+        "text": "2016 – 2024"
+      }
+    },
+    {
+      "ref": "obj.n_7d8ff3a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d4447fc0",
+      "strings": {
+        "attrs": {
+          "alt": "Map"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d5448154",
+      "strings": {
+        "text": "Lisboa & Madrid"
+      }
+    },
+    {
+      "ref": "obj.n_b403b9d0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3eede184",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3fede317",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5540498f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0c751258",
+      "strings": {
+        "text": "Assegurei a operação contínua de sistemas bancários core num ambiente 24/7. Automatizei operações em PowerShell para padronizar e escalar a gestão em milhares de servidores."
+      }
+    },
+    {
+      "ref": "obj.n_0d7513eb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_481736c6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3ead4658",
+      "strings": {
+        "text": "O Desafio"
+      }
+    },
+    {
+      "ref": "obj.n_3fad47eb",
+      "strings": {
+        "text": "Ambiente bancário 24/7. Zero tolerância a falhas."
+      }
+    },
+    {
+      "ref": "obj.n_49173858",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9c7fad40",
+      "strings": {
+        "text": "Aprendizagem"
+      }
+    },
+    {
+      "ref": "obj.n_9d7faed4",
+      "strings": {
+        "text": "Disciplina operacional: automação, observabilidade e controlo de mudanças em ambientes 24/7."
+      }
+    },
+    {
+      "ref": "obj.n_461733a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_03a0c9ee",
+      "strings": {
+        "text": "Impacto Hoje"
+      }
+    },
+    {
+      "ref": "obj.n_04a0cb80",
+      "strings": {
+        "text": "Levo essa disciplina operacional para o software: entregas previsíveis, mudanças seguras e fiabilidade no longo prazo."
+      }
+    },
+    {
+      "ref": "obj.n_0e75157e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1ec2dc88",
+      "strings": {
+        "text": "PowerShell"
+      }
+    },
+    {
+      "ref": "obj.n_1fc2de18",
+      "strings": {
+        "text": "Automação"
+      }
+    },
+    {
+      "ref": "obj.n_1cc2d960",
+      "strings": {
+        "text": "Suporte VIP"
+      }
+    },
+    {
+      "ref": "obj.n_1dc2daf4",
+      "strings": {
+        "text": "Suporte Trading"
+      }
+    },
+    {
+      "ref": "obj.n_a488ffe3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b2d96fe4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_17d641a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b3d97178",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a0c1438e",
+      "strings": {
+        "text": "\"Robustez industrial. Cada sistema parado tinha um custo físico imediato e tangível.\""
+      }
+    },
+    {
+      "ref": "obj.n_a1c14520",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b430bc6c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_631ed684",
+      "strings": {
+        "text": "IT Support Technician"
+      }
+    },
+    {
+      "ref": "obj.n_641ed818",
+      "strings": {
+        "text": "CEPSA (via Tecnocom)"
+      }
+    },
+    {
+      "ref": "obj.n_b530be00",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d177d5d4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_81a37fdc",
+      "strings": {
+        "attrs": {
+          "alt": "Calendar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_82a38170",
+      "strings": {
+        "text": "2014 – 2016"
+      }
+    },
+    {
+      "ref": "obj.n_d277d768",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6301c984",
+      "strings": {
+        "attrs": {
+          "alt": "Map"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6401cb18",
+      "strings": {
+        "text": "Madrid"
+      }
+    },
+    {
+      "ref": "obj.n_b630bf92",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ee384414",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ef3845a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9ec14068",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fe74ad68",
+      "strings": {
+        "text": "Suporte de TI em ambiente industrial exigente, onde a indisponibilidade tinha impacto físico imediato. Redes, terminais e operações logísticas."
+      }
+    },
+    {
+      "ref": "obj.n_ff74aefc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4df18d74",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_758b41e6",
+      "strings": {
+        "text": "O Desafio"
+      }
+    },
+    {
+      "ref": "obj.n_768b4379",
+      "strings": {
+        "text": "Ambiente de refinaria e logística pesada. Pressão física por resolução rápida sob condições adversas."
+      }
+    },
+    {
+      "ref": "obj.n_4cf18be2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_64c53fd0",
+      "strings": {
+        "text": "Aprendizagem"
+      }
+    },
+    {
+      "ref": "obj.n_65c54164",
+      "strings": {
+        "text": "Robustez primeiro: desenhar para falha e recuperação, não para o caminho feliz."
+      }
+    },
+    {
+      "ref": "obj.n_4bf18a50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_67453a68",
+      "strings": {
+        "text": "Impacto Hoje"
+      }
+    },
+    {
+      "ref": "obj.n_68453bfb",
+      "strings": {
+        "text": "Essa mentalidade de resiliência traduz-se em software que degrada com elegância e é fácil de manter."
+      }
+    },
+    {
+      "ref": "obj.n_0074b090",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d53ca70e",
+      "strings": {
+        "text": "Suporte a Utilizadores"
+      }
+    },
+    {
+      "ref": "obj.n_d63ca8a1",
+      "strings": {
+        "text": "Suporte VIP"
+      }
+    },
+    {
+      "ref": "obj.n_d33ca3e8",
+      "strings": {
+        "text": "Escritórios CEPSA"
+      }
+    },
+    {
+      "ref": "obj.n_d43ca57b",
+      "strings": {
+        "text": "Ambiente Industrial"
+      }
+    },
+    {
+      "ref": "obj.n_a5890176",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_834b56dc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_455057f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_844b586f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7e2190f4",
+      "strings": {
+        "text": "\"A era da escala. Onde aprendi que as grandes infraestruturas são construídas com camadas de abstração.\""
+      }
+    },
+    {
+      "ref": "obj.n_7f219288",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ba9d9a10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_23f06078",
+      "strings": {
+        "text": "Cloud Computing Support"
+      }
+    },
+    {
+      "ref": "obj.n_24f0620c",
+      "strings": {
+        "text": "Telefónica (via Anadat)"
+      }
+    },
+    {
+      "ref": "obj.n_bb9d9ba3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4a69c938",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d086143c",
+      "strings": {
+        "attrs": {
+          "alt": "Calendar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d18615d0",
+      "strings": {
+        "text": "2013 – 2014"
+      }
+    },
+    {
+      "ref": "obj.n_4b69cacc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_89db6070",
+      "strings": {
+        "attrs": {
+          "alt": "Map"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_8adb6200",
+      "strings": {
+        "text": "Madrid"
+      }
+    },
+    {
+      "ref": "obj.n_bc9d9d36",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_cdc1a708",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_cec1a89c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8021941a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9e3cfaec",
+      "strings": {
+        "text": "Suporte a cloud e virtualização em escala — transição entre infraestrutura física e camadas lógicas."
+      }
+    },
+    {
+      "ref": "obj.n_9f3cfc80",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ba295be8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5f4e35a8",
+      "strings": {
+        "text": "O Desafio"
+      }
+    },
+    {
+      "ref": "obj.n_604e3738",
+      "strings": {
+        "text": "Gerir complexidade em escala. Entender como instâncias virtuais interagem sem conflitos físicos."
+      }
+    },
+    {
+      "ref": "obj.n_bb295d7c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3793cf18",
+      "strings": {
+        "text": "Aprendizagem"
+      }
+    },
+    {
+      "ref": "obj.n_3893d0ab",
+      "strings": {
+        "text": "Pensamento sistémico: compreender a arquitetura antes de atuar em componentes isolados."
+      }
+    },
+    {
+      "ref": "obj.n_bc295f10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4be410d0",
+      "strings": {
+        "text": "Impacto Hoje"
+      }
+    },
+    {
+      "ref": "obj.n_4ce41264",
+      "strings": {
+        "text": "Aplico esta visão sistémica para construir software modular e escalável."
+      }
+    },
+    {
+      "ref": "obj.n_a03cfe12",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dd6713b0",
+      "strings": {
+        "text": "Cloud"
+      }
+    },
+    {
+      "ref": "obj.n_de671540",
+      "strings": {
+        "text": "Virtualização"
+      }
+    },
+    {
+      "ref": "obj.n_db671088",
+      "strings": {
+        "text": "Infraestrutura Corporativa"
+      }
+    },
+    {
+      "ref": "obj.n_a6890309",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_72a48310",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0e578504",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_73a484a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d723cd48",
+      "strings": {
+        "text": "\"A fundação humana. Entre a técnica inicial e a gestão multicultural em Oslo, aprendi o valor da comunicação.\""
+      }
+    },
+    {
+      "ref": "obj.n_d823cedc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ea6caf14",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6fc83448",
+      "strings": {
+        "text": "Fundamentos de TI e Crescimento Profissional"
+      }
+    },
+    {
+      "ref": "obj.n_70c835dc",
+      "strings": {
+        "text": "Reconfiguração e Percurso Inicial"
+      }
+    },
+    {
+      "ref": "obj.n_eb6cb0a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_85c5a604",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c6b39ddc",
+      "strings": {
+        "attrs": {
+          "alt": "Calendar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_c7b39f70",
+      "strings": {
+        "text": "1999 – 2012"
+      }
+    },
+    {
+      "ref": "obj.n_86c5a798",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_499a692e",
+      "strings": {
+        "attrs": {
+          "alt": "Map"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4a9a6ac0",
+      "strings": {
+        "text": "Portugal & Noruega"
+      }
+    },
+    {
+      "ref": "obj.n_ec6cb238",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_44cbbf7c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_45cbc110",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d923d06e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7b4df670",
+      "strings": {
+        "text": "Início em 1999 como técnico IT. Seguiu-se uma pausa deliberada e enriquecedora no sector do Turismo e Customer Success em Oslo."
+      }
+    },
+    {
+      "ref": "obj.n_7c4df804",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_146adba8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_129d59a0",
+      "strings": {
+        "text": "O Desafio"
+      }
+    },
+    {
+      "ref": "obj.n_139d5b30",
+      "strings": {
+        "text": "Ambientes multiculturais de alta rotatividade. Gestão de expectativas e diagnóstico rápido de problemas sob pressão social."
+      }
+    },
+    {
+      "ref": "obj.n_156add3c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c9b67f40",
+      "strings": {
+        "text": "Aprendizagem"
+      }
+    },
+    {
+      "ref": "obj.n_cab680d4",
+      "strings": {
+        "text": "Empatia como Diagnóstico. Entender a dor do utilizador é metade da solução técnica."
+      }
+    },
+    {
+      "ref": "obj.n_166aded0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_87e3713c",
+      "strings": {
+        "text": "Impacto Hoje"
+      }
+    },
+    {
+      "ref": "obj.n_88e372cf",
+      "strings": {
+        "text": "Traduzo necessidades de negócio complexas em código que resolve problemas reais."
+      }
+    },
+    {
+      "ref": "obj.n_7d4df998",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c0bd3910",
+      "strings": {
+        "text": "Suporte Técnico"
+      }
+    },
+    {
+      "ref": "obj.n_c1bd3aa3",
+      "strings": {
+        "text": "Operações IT"
+      }
+    },
+    {
+      "ref": "obj.n_c2bd3c36",
+      "strings": {
+        "text": "Customer Success"
+      }
+    },
+    {
+      "ref": "obj.n_250446b8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5e6dace8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5f6dae7c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_606db010",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_616db1a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1ef7f0f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5dc40aea",
+      "strings": {
+        "text": "Engenharia de Software"
+      }
+    },
+    {
+      "ref": "obj.n_5ec40c7d",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ad7792a8",
+      "strings": {
+        "text": "Foco em Python e na arte de "
+      }
+    },
+    {
+      "ref": "obj.n_ae77943b",
+      "strings": {
+        "text": "simplificar o complexo"
+      }
+    },
+    {
+      "ref": "obj.n_5bc407c4",
+      "strings": {
+        "text": "Para mim, código é uma ferramenta de estabilidade. Indicadores de domínio técnico, revistos continuamente com base em prática real, formação formal e projetos ativos."
+      }
+    },
+    {
+      "ref": "obj.n_1ff7f28c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_edfd0ff4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dae2597c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2cc9e7e4",
+      "strings": {
+        "attrs": {
+          "alt": "CPU"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_2dc9e978",
+      "strings": {
+        "text": "Linguagens de Programação"
+      }
+    },
+    {
+      "ref": "obj.n_dbe25b10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dd000a90",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_aa066b7c",
+      "strings": {
+        "text": "Python"
+      }
+    },
+    {
+      "ref": "obj.n_ab066d10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_29b546c4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ac066ea2",
+      "strings": {
+        "text": "85%"
+      }
+    },
+    {
+      "ref": "obj.n_de000c20",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_362da06c",
+      "strings": {
+        "text": "C/C++"
+      }
+    },
+    {
+      "ref": "obj.n_372da1ff",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_58cfd498",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_382da392",
+      "strings": {
+        "text": "65%"
+      }
+    },
+    {
+      "ref": "obj.n_db000768",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f4ac55b0",
+      "strings": {
+        "text": "C#"
+      }
+    },
+    {
+      "ref": "obj.n_f5ac5744",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4aeead98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f6ac58d8",
+      "strings": {
+        "text": "55%"
+      }
+    },
+    {
+      "ref": "obj.n_dc0008fc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2a4ef480",
+      "strings": {
+        "text": "Java"
+      }
+    },
+    {
+      "ref": "obj.n_2b4ef613",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e644eab4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2c4ef7a6",
+      "strings": {
+        "text": "60%"
+      }
+    },
+    {
+      "ref": "obj.n_e10010d8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b9413358",
+      "strings": {
+        "text": "SQL"
+      }
+    },
+    {
+      "ref": "obj.n_ba4134eb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_574289f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bb41367e",
+      "strings": {
+        "text": "70%"
+      }
+    },
+    {
+      "ref": "obj.n_20f7f41e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_eeff0c06",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5e4d4378",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_aa7c5120",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_99bc59c0",
+      "strings": {
+        "attrs": {
+          "alt": "Ecossistema Python"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ab7c52b4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f7dcfa40",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_da98a894",
+      "strings": {
+        "text": "Ecossistema Python"
+      }
+    },
+    {
+      "ref": "obj.n_db98aa28",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f065ba80",
+      "strings": {
+        "attrs": {
+          "alt": "Status"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f165bc14",
+      "strings": {
+        "text": "CONCLUÍDO"
+      }
+    },
+    {
+      "ref": "obj.n_f8dcfbd4",
+      "strings": {
+        "text": "Programação I & II – Universidade de Helsínquia"
+      }
+    },
+    {
+      "ref": "obj.n_ac7c5448",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_079b3128",
+      "strings": {
+        "text": "270h"
+      }
+    },
+    {
+      "ref": "obj.n_089b32b8",
+      "strings": {
+        "attrs": {
+          "alt": "Up"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_059b2e00",
+      "strings": {
+        "attrs": {
+          "alt": "Down"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_5f4d450c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_252da974",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_17768a4c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0d6b9498",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f9a06f5c",
+      "strings": {
+        "attrs": {
+          "alt": "Link"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_faa070f0",
+      "strings": {
+        "text": "Curso oficial"
+      }
+    },
+    {
+      "ref": "obj.n_0e6b9628",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b3755e80",
+      "strings": {
+        "attrs": {
+          "alt": "Cert"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b4756013",
+      "strings": {
+        "text": "Certificado I"
+      }
+    },
+    {
+      "ref": "obj.n_0b6b9170",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7617ecae",
+      "strings": {
+        "attrs": {
+          "alt": "Cert"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_7717ee41",
+      "strings": {
+        "text": "Certificado II"
+      }
+    },
+    {
+      "ref": "obj.n_18768be0",
+      "strings": {
+        "text": "Formação estruturada e exigente. Domínio de algoritmos, estruturas de dados e POO com Python."
+      }
+    },
+    {
+      "ref": "obj.n_19768d70",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c88213f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_aafb9508",
+      "strings": {
+        "text": "Contexto"
+      }
+    },
+    {
+      "ref": "obj.n_abfb969c",
+      "strings": {
+        "text": "Transitei do suporte técnico para a computação programática. Onde outros vêm um script, eu vejo um sistema de automação resiliente."
+      }
+    },
+    {
+      "ref": "obj.n_c9821584",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_41a8ebc0",
+      "strings": {
+        "text": "Valor para RH"
+      }
+    },
+    {
+      "ref": "obj.n_42a8ed53",
+      "strings": {
+        "text": "Capaz de trabalhar de forma autónoma em backend e automação, com atenção a robustez e manutenção."
+      }
+    },
+    {
+      "ref": "obj.n_1a768f04",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_50fb9a18",
+      "strings": {
+        "text": "Competências Técnicas"
+      }
+    },
+    {
+      "ref": "obj.n_51fb9bac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8ca21d14",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2289b2ac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_239fd220",
+      "strings": {
+        "text": "Algoritmos fundamentais"
+      }
+    },
+    {
+      "ref": "obj.n_249fd3b4",
+      "strings": {
+        "text": "80%"
+      }
+    },
+    {
+      "ref": "obj.n_2389b43f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_cb903e40",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8da21ea7",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3dcf215c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_65f00f88",
+      "strings": {
+        "text": "Estruturas de dados"
+      }
+    },
+    {
+      "ref": "obj.n_66f01118",
+      "strings": {
+        "text": "78%"
+      }
+    },
+    {
+      "ref": "obj.n_3ecf22f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_94708fdc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8ea2203a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_88ff9040",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e70323bc",
+      "strings": {
+        "text": "Programação POO"
+      }
+    },
+    {
+      "ref": "obj.n_e8032550",
+      "strings": {
+        "text": "78%"
+      }
+    },
+    {
+      "ref": "obj.n_89ff91d0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_92e5cd10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8fa221cd",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7eb2d7fc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_593f4176",
+      "strings": {
+        "text": "Automação com Python"
+      }
+    },
+    {
+      "ref": "obj.n_5a3f4308",
+      "strings": {
+        "text": "80%"
+      }
+    },
+    {
+      "ref": "obj.n_7fb2d98f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_be04f1c8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_88a216c8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b816f044",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e95e8d88",
+      "strings": {
+        "text": "Boas práticas de código"
+      }
+    },
+    {
+      "ref": "obj.n_ea5e8f18",
+      "strings": {
+        "text": "80%"
+      }
+    },
+    {
+      "ref": "obj.n_b716eeb0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d3655730",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_13768400",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bbf2de8c",
+      "strings": {
+        "text": "Competências Relevantes"
+      }
+    },
+    {
+      "ref": "obj.n_bcf2e01f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2ea2dfd0",
+      "strings": {
+        "text": "Algoritmos fundamentais"
+      }
+    },
+    {
+      "ref": "obj.n_2fa2e163",
+      "strings": {
+        "text": "Estruturas de dados"
+      }
+    },
+    {
+      "ref": "obj.n_30a2e2f6",
+      "strings": {
+        "text": "Programação orientada a objetos (POO)"
+      }
+    },
+    {
+      "ref": "obj.n_31a2e489",
+      "strings": {
+        "text": "Resolução sistemática de problemas"
+      }
+    },
+    {
+      "ref": "obj.n_32a2e61c",
+      "strings": {
+        "text": "Automação com Python"
+      }
+    },
+    {
+      "ref": "obj.n_33a2e7af",
+      "strings": {
+        "text": "Boas práticas de código e manutenção"
+      }
+    },
+    {
+      "ref": "obj.n_efff0d99",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e47cb590",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_846621bc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b12773d8",
+      "strings": {
+        "attrs": {
+          "alt": "EFA Programador/a de Informática"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_85662350",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_463125c8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ccc2ce80",
+      "strings": {
+        "text": "EFA Programador/a de Informática"
+      }
+    },
+    {
+      "ref": "obj.n_cdc2d010",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0e06a478",
+      "strings": {
+        "attrs": {
+          "alt": "Status"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0f06a60c",
+      "strings": {
+        "text": "EM CURSO"
+      }
+    },
+    {
+      "ref": "obj.n_cac2cb58",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_67e646d8",
+      "strings": {
+        "attrs": {
+          "alt": "Estágio"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_68e6486b",
+      "strings": {
+        "text": "Estágio: Junho 2026"
+      }
+    },
+    {
+      "ref": "obj.n_4731275b",
+      "strings": {
+        "text": "Tecnisign"
+      }
+    },
+    {
+      "ref": "obj.n_866624e2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ec3abbc4",
+      "strings": {
+        "text": "1.416h"
+      }
+    },
+    {
+      "ref": "obj.n_ed3abd58",
+      "strings": {
+        "attrs": {
+          "alt": "Up"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ee3abee8",
+      "strings": {
+        "attrs": {
+          "alt": "Down"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e57cb720",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f740a1ac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5d754a36",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a7e2ab26",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_71ab74ee",
+      "strings": {
+        "attrs": {
+          "alt": "Link"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_72ab7681",
+      "strings": {
+        "text": "Entidade formadora"
+      }
+    },
+    {
+      "ref": "obj.n_a8e2acb9",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bcecf4d4",
+      "strings": {
+        "attrs": {
+          "alt": "Descarregar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_bdecf668",
+      "strings": {
+        "text": "Conteúdo Programático"
+      }
+    },
+    {
+      "ref": "obj.n_5e754bc8",
+      "strings": {
+        "text": "Consolidação formal de bases já aplicadas em contexto real. Nível EQF 4. Inclui estágio curricular (FCT) de 210h."
+      }
+    },
+    {
+      "ref": "obj.n_5b754710",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ab000bf6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_be9814f8",
+      "strings": {
+        "text": "Contexto"
+      }
+    },
+    {
+      "ref": "obj.n_bf98168b",
+      "strings": {
+        "text": "Reforça fundamentos de arquitetura e disciplina de entrega para aplicações robustas e escaláveis."
+      }
+    },
+    {
+      "ref": "obj.n_ac000d88",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4244d188",
+      "strings": {
+        "text": "Valor para RH"
+      }
+    },
+    {
+      "ref": "obj.n_4344d31c",
+      "strings": {
+        "text": "Contributo fullstack com foco em qualidade e manutenção."
+      }
+    },
+    {
+      "ref": "obj.n_5c7548a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f88712d8",
+      "strings": {
+        "text": "Competências Técnicas"
+      }
+    },
+    {
+      "ref": "obj.n_f987146c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fbfb3e54",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_beb104d2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b63e03ae",
+      "strings": {
+        "text": "C/C++"
+      }
+    },
+    {
+      "ref": "obj.n_b73e0541",
+      "strings": {
+        "text": "65%"
+      }
+    },
+    {
+      "ref": "obj.n_bfb10665",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_83b213f4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fcfb3fe8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_60cf1870",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d44f8c68",
+      "strings": {
+        "text": "SQL"
+      }
+    },
+    {
+      "ref": "obj.n_d54f8dfc",
+      "strings": {
+        "text": "70%"
+      }
+    },
+    {
+      "ref": "obj.n_61cf1a04",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c4a934f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fdfb4178",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4f0214f4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f631fdb8",
+      "strings": {
+        "text": "Java"
+      }
+    },
+    {
+      "ref": "obj.n_f731ff4b",
+      "strings": {
+        "text": "60%"
+      }
+    },
+    {
+      "ref": "obj.n_50021688",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9fc80c58",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fefb430c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5f1438a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_64237c40",
+      "strings": {
+        "text": "C# / ASP.NET Core"
+      }
+    },
+    {
+      "ref": "obj.n_65237dd3",
+      "strings": {
+        "text": "55%"
+      }
+    },
+    {
+      "ref": "obj.n_60143a34",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_af239330",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f7fb3808",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1107ec30",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0a330570",
+      "strings": {
+        "text": "Redes & SO"
+      }
+    },
+    {
+      "ref": "obj.n_0b330704",
+      "strings": {
+        "text": "85%"
+      }
+    },
+    {
+      "ref": "obj.n_1207edc4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e0c62508",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_61755082",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bfb8154c",
+      "strings": {
+        "text": "Competências Relevantes"
+      }
+    },
+    {
+      "ref": "obj.n_c0b816e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_58137354",
+      "strings": {
+        "text": "Fundamentos de programação"
+      }
+    },
+    {
+      "ref": "obj.n_591374e8",
+      "strings": {
+        "text": "Desenvolvimento web frontend e backend"
+      }
+    },
+    {
+      "ref": "obj.n_5a13767a",
+      "strings": {
+        "text": "Bases de dados relacionais"
+      }
+    },
+    {
+      "ref": "obj.n_5b13780c",
+      "strings": {
+        "text": "Estruturas de aplicações web"
+      }
+    },
+    {
+      "ref": "obj.n_54136d08",
+      "strings": {
+        "text": "Boas práticas de engenharia de software"
+      }
+    },
+    {
+      "ref": "obj.n_55136e9c",
+      "strings": {
+        "text": "Manutenção e evolução de aplicações"
+      }
+    },
+    {
+      "ref": "obj.n_ecff08e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_aa2d3e10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d585a7fc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d64a5604",
+      "strings": {
+        "attrs": {
+          "alt": "CET Técnico/a Especialista em Cibersegurança"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d685a990",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5e151dbc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_712dd790",
+      "strings": {
+        "text": "CET Técnico/a Especialista em Cibersegurança"
+      }
+    },
+    {
+      "ref": "obj.n_722dd924",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2f672b90",
+      "strings": {
+        "attrs": {
+          "alt": "Status"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_30672d24",
+      "strings": {
+        "text": "EM CURSO"
+      }
+    },
+    {
+      "ref": "obj.n_732ddab6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d2003b88",
+      "strings": {
+        "attrs": {
+          "alt": "Estágio"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d3003d1c",
+      "strings": {
+        "text": "Estágio: Abril de 2017 (aprox.)"
+      }
+    },
+    {
+      "ref": "obj.n_5f151f50",
+      "strings": {
+        "text": "Multiformactiva"
+      }
+    },
+    {
+      "ref": "obj.n_d785ab20",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d0ef9dac",
+      "strings": {
+        "text": "1.510h"
+      }
+    },
+    {
+      "ref": "obj.n_d1ef9f40",
+      "strings": {
+        "attrs": {
+          "alt": "Up"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d2efa0d2",
+      "strings": {
+        "attrs": {
+          "alt": "Down"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ab2d3fa4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ef4a4fe4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_16711238",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e96b1510",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a2b270d0",
+      "strings": {
+        "attrs": {
+          "alt": "Link"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_a3b27264",
+      "strings": {
+        "text": "Entidade formadora"
+      }
+    },
+    {
+      "ref": "obj.n_ea6b16a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_92111de6",
+      "strings": {
+        "attrs": {
+          "alt": "Descarregar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_93111f78",
+      "strings": {
+        "text": "Conteúdo Programático"
+      }
+    },
+    {
+      "ref": "obj.n_177113cc",
+      "strings": {
+        "text": "Curso de especialização tecnológica (nível 5) em cibersegurança alinhado com o referencial oficial, com forte componente prática e estágio (485h). O estágio do CET começa por volta de abril de 2017 (aprox.)."
+      }
+    },
+    {
+      "ref": "obj.n_18711560",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9069372c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f1e1134e",
+      "strings": {
+        "text": "Contexto"
+      }
+    },
+    {
+      "ref": "obj.n_f2e114e0",
+      "strings": {
+        "text": "Reforço técnico em segurança e conformidade sobre uma base sólida em sistemas críticos. Indicadores em evolução contínua ao longo do CET, à medida que módulos e projetos avançam."
+      }
+    },
+    {
+      "ref": "obj.n_916938bf",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_cf2e09da",
+      "strings": {
+        "text": "Valor para RH"
+      }
+    },
+    {
+      "ref": "obj.n_d02e0b6c",
+      "strings": {
+        "text": "Reforço técnico em cibersegurança e conformidade sobre uma base sólida em sistemas críticos."
+      }
+    },
+    {
+      "ref": "obj.n_197116f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3b8e2f98",
+      "strings": {
+        "text": "Competências Técnicas"
+      }
+    },
+    {
+      "ref": "obj.n_3c8e312c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4d02f144",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d07624b0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_eb5ea660",
+      "strings": {
+        "text": "Segurança de Sistemas"
+      }
+    },
+    {
+      "ref": "obj.n_ec5ea7f3",
+      "strings": {
+        "text": "45%"
+      }
+    },
+    {
+      "ref": "obj.n_d1762644",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_669af298",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4e02f2d8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_34bc5eee",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1e8fe848",
+      "strings": {
+        "text": "Gestão de Risco"
+      }
+    },
+    {
+      "ref": "obj.n_1f8fe9dc",
+      "strings": {
+        "text": "40%"
+      }
+    },
+    {
+      "ref": "obj.n_35bc6081",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1d115da2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4f02f468",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7d379326",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_67114fd0",
+      "strings": {
+        "text": "Controlo de Acessos"
+      }
+    },
+    {
+      "ref": "obj.n_68115164",
+      "strings": {
+        "text": "45%"
+      }
+    },
+    {
+      "ref": "obj.n_7e3794b9",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_88908e10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5002f5fc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3bcd3f10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_baa8d0a8",
+      "strings": {
+        "text": "Ambientes Regulados"
+      }
+    },
+    {
+      "ref": "obj.n_bba8d23c",
+      "strings": {
+        "text": "50%"
+      }
+    },
+    {
+      "ref": "obj.n_3ccd40a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d6de626c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1a711884",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_77d4ec90",
+      "strings": {
+        "text": "Competências Relevantes"
+      }
+    },
+    {
+      "ref": "obj.n_78d4ee23",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_41bf5924",
+      "strings": {
+        "text": "Análise de risco e impacto em sistemas"
+      }
+    },
+    {
+      "ref": "obj.n_42bf5ab8",
+      "strings": {
+        "text": "Aplicação de princípios de segurança em ambientes operacionais"
+      }
+    },
+    {
+      "ref": "obj.n_43bf5c48",
+      "strings": {
+        "text": "Compreensão de requisitos de conformidade e boas práticas"
+      }
+    },
+    {
+      "ref": "obj.n_44bf5ddc",
+      "strings": {
+        "text": "Proteção de sistemas e informação em contextos críticos"
+      }
+    },
+    {
+      "ref": "obj.n_3dbf52d8",
+      "strings": {
+        "text": "Integração da segurança no ciclo operacional e de desenvolvimento"
+      }
+    },
+    {
+      "ref": "obj.n_21f7f5b0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f5b07d80",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_20bc3ecc",
+      "strings": {
+        "text": "Tecnologias Utilizadas"
+      }
+    },
+    {
+      "ref": "obj.n_f6b07f14",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f057c472",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_983b7374",
+      "strings": {
+        "attrs": {
+          "alt": "Git"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_993b7508",
+      "strings": {
+        "text": "Git"
+      }
+    },
+    {
+      "ref": "obj.n_f157c604",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e62fe1b0",
+      "strings": {
+        "attrs": {
+          "alt": "VS Code"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e72fe340",
+      "strings": {
+        "text": "VS Code"
+      }
+    },
+    {
+      "ref": "obj.n_ee57c14c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e0d0ce30",
+      "strings": {
+        "attrs": {
+          "alt": "Linux"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e1d0cfc4",
+      "strings": {
+        "text": "Linux"
+      }
+    },
+    {
+      "ref": "obj.n_ef57c2e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_97d92898",
+      "strings": {
+        "attrs": {
+          "alt": "Networks"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_98d92a2c",
+      "strings": {
+        "text": "Networks"
+      }
+    },
+    {
+      "ref": "obj.n_ec57be26",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ea49a734",
+      "strings": {
+        "attrs": {
+          "alt": "Databases"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_eb49a8c7",
+      "strings": {
+        "text": "Databases"
+      }
+    },
+    {
+      "ref": "obj.n_ed57bfb8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_32b7e466",
+      "strings": {
+        "attrs": {
+          "alt": "PowerShell"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_33b7e5f8",
+      "strings": {
+        "text": "PowerShell"
+      }
+    },
+    {
+      "ref": "obj.n_8a243df6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4e4a3738",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4f4a38cc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ec9489b4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_734c5e78",
+      "strings": {
+        "text": "Mentalidade & Lógica Humana"
+      }
+    },
+    {
+      "ref": "obj.n_744c600c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fdc73a40",
+      "strings": {
+        "text": "A paciência do pão, a "
+      }
+    },
+    {
+      "ref": "obj.n_fec73bd4",
+      "strings": {
+        "text": "precisão do código"
+      }
+    },
+    {
+      "ref": "obj.n_754c61a0",
+      "strings": {
+        "text": "O meu raciocínio é determinístico. Acredito no processo, no tempo certo de cada etapa e na isolação absoluta das variáveis para resolver qualquer problema."
+      }
+    },
+    {
+      "ref": "obj.n_ed948b47",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d750293c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_69a51138",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_45a86a46",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e52a1f60",
+      "strings": {
+        "attrs": {
+          "alt": "Light"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_46a86bd8",
+      "strings": {
+        "text": "\"A minha vida familiar estruturada e estes hobbies reais alimentam a minha forma de trabalhar: disciplina no processo, atenção ao detalhe e consistência.\""
+      }
+    },
+    {
+      "ref": "obj.n_ee948cda",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e7d0c89e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_717166e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ddf19400",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_89b5adce",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6ad21528",
+      "strings": {
+        "attrs": {
+          "alt": "Responsabilidade Estrutural"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_8ab5af60",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e93e9f28",
+      "strings": {
+        "text": "Responsabilidade Estrutural"
+      }
+    },
+    {
+      "ref": "obj.n_ea3ea0b8",
+      "strings": {
+        "text": "Estabilidade e Processo"
+      }
+    },
+    {
+      "ref": "obj.n_87b5aaa8",
+      "strings": {
+        "attrs": {
+          "alt": "Chevron"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_72716874",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f12f4120",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f39f9780",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ee94c104",
+      "strings": {
+        "attrs": {
+          "alt": "Pão & Dependências"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f49f9910",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_17e4f1d0",
+      "strings": {
+        "text": "Pão & Dependências"
+      }
+    },
+    {
+      "ref": "obj.n_18e4f360",
+      "strings": {
+        "text": "Fermentação Lenta"
+      }
+    },
+    {
+      "ref": "obj.n_f19f9458",
+      "strings": {
+        "attrs": {
+          "alt": "Chevron"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_73716a06",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e467a0cc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_691d2038",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_813d87a8",
+      "strings": {
+        "attrs": {
+          "alt": "Pizza & Iteração"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6a1d21cc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6d1fdcd0",
+      "strings": {
+        "text": "Pizza & Iteração"
+      }
+    },
+    {
+      "ref": "obj.n_6e1fde64",
+      "strings": {
+        "text": "Feedback Incremental"
+      }
+    },
+    {
+      "ref": "obj.n_6b1d2360",
+      "strings": {
+        "attrs": {
+          "alt": "Chevron"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_74716b98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_afb8bd0c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b79f7e2e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a4d7afac",
+      "strings": {
+        "attrs": {
+          "alt": "Manutenção & Prevenção"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b89f7fc1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_18946afe",
+      "strings": {
+        "text": "Manutenção & Prevenção"
+      }
+    },
+    {
+      "ref": "obj.n_19946c91",
+      "strings": {
+        "text": "Cuidado Preventivo"
+      }
+    },
+    {
+      "ref": "obj.n_b59f7b08",
+      "strings": {
+        "attrs": {
+          "alt": "Chevron"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_75716d2c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_53fdd698",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2d587d56",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2f08c354",
+      "strings": {
+        "attrs": {
+          "alt": "Marketing & Consciência de Produto"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_2e587ee8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d1c65010",
+      "strings": {
+        "text": "Marketing & Consciência de Produto"
+      }
+    },
+    {
+      "ref": "obj.n_d2c651a4",
+      "strings": {
+        "text": "Valor Antes da Tecnologia"
+      }
+    },
+    {
+      "ref": "obj.n_2b587a30",
+      "strings": {
+        "attrs": {
+          "alt": "Chevron"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_76716ec0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_64e8cd06",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9028e310",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a9c68810",
+      "strings": {
+        "attrs": {
+          "alt": "Leis & Sistemas"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_9128e4a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e3bc8044",
+      "strings": {
+        "text": "Leis & Sistemas"
+      }
+    },
+    {
+      "ref": "obj.n_e4bc81d8",
+      "strings": {
+        "text": "Sistemas Determinísticos"
+      }
+    },
+    {
+      "ref": "obj.n_8e28dfe8",
+      "strings": {
+        "attrs": {
+          "alt": "Chevron"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e8d0ca30",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_30ad949a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a1eb7ef8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c48e6186",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_09c5c9b8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0ac5cb4c",
+      "strings": {
+        "attrs": {
+          "alt": "Responsabilidade Estrutural"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0bc5cce0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0cc5ce70",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_40cbabae",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_eab964d0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_647cf33c",
+      "strings": {
+        "attrs": {
+          "alt": "Responsabilidade Estrutural"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ebb96660",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bf7c1226",
+      "strings": {
+        "text": "Responsabilidade Estrutural"
+      }
+    },
+    {
+      "ref": "obj.n_c07c13b8",
+      "strings": {
+        "text": "Estabilidade e Processo"
+      }
+    },
+    {
+      "ref": "obj.n_c58e6319",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_702b9634",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4c894bcc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8f3701e0",
+      "strings": {
+        "attrs": {
+          "alt": "Heart"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_90370370",
+      "strings": {
+        "text": "A Experiência Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_4d894d60",
+      "strings": {
+        "text": "Sou casado e tenho um filho de 13 anos. A adoção foi um processo longo, estruturado, exigente e regulado, que exige paciência, previsibilidade, estabilidade emocional e consistência de rotinas."
+      }
+    },
+    {
+      "ref": "obj.n_712b97c8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f3b2ee1c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4b7bfa94",
+      "strings": {
+        "attrs": {
+          "alt": "Compass"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4c7bfc27",
+      "strings": {
+        "text": "Lógica Humana & Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_f4b2efaf",
+      "strings": {
+        "text": "Este percurso reforçou competências críticas para projetos longos: consistência, previsibilidade e compromisso com processos."
+      }
+    },
+    {
+      "ref": "obj.n_31ad962d",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_146008e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a65dceee",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fe4145dc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ff414770",
+      "strings": {
+        "attrs": {
+          "alt": "Pão & Dependências"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_00414900",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_01414a94",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d1d8461c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a41bc474",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2fa0701e",
+      "strings": {
+        "attrs": {
+          "alt": "Pão & Dependências"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_a51bc608",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a1029a08",
+      "strings": {
+        "text": "Pão & Dependências"
+      }
+    },
+    {
+      "ref": "obj.n_a2029b9c",
+      "strings": {
+        "text": "Fermentação Lenta"
+      }
+    },
+    {
+      "ref": "obj.n_a75dd081",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_11a8b118",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e22d058c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e9b5a8f0",
+      "strings": {
+        "attrs": {
+          "alt": "Heart"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_eab5aa84",
+      "strings": {
+        "text": "A Experiência Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_e32d0720",
+      "strings": {
+        "text": "Fazer pão é um hobby regular meu. No pão artesanal, saltar etapas é destruir o resultado. O tempo de fermentação é uma dependência que não pode ser apressada sem comprometer a estrutura."
+      }
+    },
+    {
+      "ref": "obj.n_12a8b2ac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b8d79514",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e346cdb8",
+      "strings": {
+        "attrs": {
+          "alt": "Compass"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e446cf48",
+      "strings": {
+        "text": "Lógica Humana & Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_b9d796a8",
+      "strings": {
+        "text": "Em software, arquitecturas robustas requerem o tempo certo de design e validação. Respeitar as dependências e o tempo de maturação do código evita dívida técnica catastrófica."
+      }
+    },
+    {
+      "ref": "obj.n_2ead9174",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_22e20c50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8c003e00",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3a0a6ed4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3b0a7068",
+      "strings": {
+        "attrs": {
+          "alt": "Pizza & Iteração"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3c0a71f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3d0a738c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e7453424",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6da7f85c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_759d560c",
+      "strings": {
+        "attrs": {
+          "alt": "Pizza & Iteração"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6ea7f9f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_22695320",
+      "strings": {
+        "text": "Pizza & Iteração"
+      }
+    },
+    {
+      "ref": "obj.n_236954b3",
+      "strings": {
+        "text": "Feedback Incremental"
+      }
+    },
+    {
+      "ref": "obj.n_8d003f94",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3a184ad8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1ca7ea54",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_17a223c8",
+      "strings": {
+        "attrs": {
+          "alt": "Heart"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_18a2255c",
+      "strings": {
+        "text": "A Experiência Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_1da7ebe8",
+      "strings": {
+        "text": "Fazer pizza em casa é um hobby meu. Uma pizza perfeita é o resultado de pequenos ajustes em cada fornada. Temperatura, hidratação, tempo — cada detalhe é afinado com base no resultado anterior."
+      }
+    },
+    {
+      "ref": "obj.n_3b184c6b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9c3f6d48",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e19c10fe",
+      "strings": {
+        "attrs": {
+          "alt": "Compass"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e29c1291",
+      "strings": {
+        "text": "Lógica Humana & Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_9d3f6ed8",
+      "strings": {
+        "text": "Programar é iterar. Prefiro entregas pequenas e frequentes que permitam ajustar a rota rapidamente, garantindo que o produto final está alinhado com a realidade."
+      }
+    },
+    {
+      "ref": "obj.n_2fad9307",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4264887c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3ef34f50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b99b2e3a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ba9b2fcc",
+      "strings": {
+        "attrs": {
+          "alt": "Manutenção & Prevenção"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b79b2b14",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b89b2ca8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ccc61978",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ece16e20",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ba402690",
+      "strings": {
+        "attrs": {
+          "alt": "Manutenção & Prevenção"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ede16fb3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_17f884b0",
+      "strings": {
+        "text": "Manutenção & Prevenção"
+      }
+    },
+    {
+      "ref": "obj.n_18f88644",
+      "strings": {
+        "text": "Cuidado Preventivo"
+      }
+    },
+    {
+      "ref": "obj.n_3ff350e4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1394bef0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e96a411c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6c07ad68",
+      "strings": {
+        "attrs": {
+          "alt": "Heart"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6d07aefc",
+      "strings": {
+        "text": "A Experiência Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_ea6a42af",
+      "strings": {
+        "text": "A manutenção de unhas de gel é um hobby manual meu. Ensinou-me que prevenir é mais barato do que reparar. Pequenos cuidados frequentes evitam falhas maiores e preservam a integridade."
+      }
+    },
+    {
+      "ref": "obj.n_1494c084",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1714b3f2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ca48f1d0",
+      "strings": {
+        "attrs": {
+          "alt": "Compass"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_cb48f364",
+      "strings": {
+        "text": "Lógica Humana & Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_1814b584",
+      "strings": {
+        "text": "Em software, prevenção é refactoring constante, testes regulares e atenção diária ao detalhe. A mesma lógica evita falhas silenciosas e mantém sistemas confiáveis ao longo dos anos."
+      }
+    },
+    {
+      "ref": "obj.n_2cad8e4e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6cb83116",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_60fe4540",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_17e30790",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_18e30924",
+      "strings": {
+        "attrs": {
+          "alt": "Marketing & Consciência de Produto"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_19e30ab6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1ae30c48",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a8e24ea8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2e5a875e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9cc5fdac",
+      "strings": {
+        "attrs": {
+          "alt": "Marketing & Consciência de Produto"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_2f5a88f1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_88a69680",
+      "strings": {
+        "text": "Marketing & Consciência de Produto"
+      }
+    },
+    {
+      "ref": "obj.n_89a69814",
+      "strings": {
+        "text": "Valor Antes da Tecnologia"
+      }
+    },
+    {
+      "ref": "obj.n_5ffe43ac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e8905514",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_97b85188",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1cb4f9e0",
+      "strings": {
+        "attrs": {
+          "alt": "Heart"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_1db4fb70",
+      "strings": {
+        "text": "A Experiência Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_98b8531c",
+      "strings": {
+        "text": "O contacto inicial com marketing digital não foi planeado. Surgiu durante a formação em unhas de gel: a maioria das manicures trabalha sozinha, por isso o curso incluía noções de marketing. A exposição contínua ao tema levou-me ao estudo autónomo."
+      }
+    },
+    {
+      "ref": "obj.n_e99056a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f028c760",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_02b3ad3e",
+      "strings": {
+        "attrs": {
+          "alt": "Compass"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_03b3aed0",
+      "strings": {
+        "text": "Lógica Humana & Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_ef28c5cc",
+      "strings": {
+        "text": "Para mim, marketing não é carreira paralela — é consciência de produto. Traduz-se em três pilares: pensar no utilizador final, comunicar com clareza e entregar valor antes da tecnologia."
+      }
+    },
+    {
+      "ref": "obj.n_2dad8fe1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_54831e38",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_40bf6228",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dae25808",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dbe2599b",
+      "strings": {
+        "attrs": {
+          "alt": "Leis & Sistemas"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_dce25b2e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dde25cc1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_64fab854",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_91213d06",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9f38dca4",
+      "strings": {
+        "attrs": {
+          "alt": "Leis & Sistemas"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_92213e98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d27a9878",
+      "strings": {
+        "text": "Leis & Sistemas"
+      }
+    },
+    {
+      "ref": "obj.n_d37a9a08",
+      "strings": {
+        "text": "Sistemas Determinísticos"
+      }
+    },
+    {
+      "ref": "obj.n_41bf63bc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_88e3fcec",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ec7309d4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_cf67cbf0",
+      "strings": {
+        "attrs": {
+          "alt": "Heart"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_d067cd80",
+      "strings": {
+        "text": "A Experiência Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_ed730b68",
+      "strings": {
+        "text": "Acompanho leis e sistemas eleitorais como interesse pessoal e estrutural, não político. É fascínio por regras explícitas, precisão processual e integridade de sistemas."
+      }
+    },
+    {
+      "ref": "obj.n_89e3fe80",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1299b510",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_592dcefc",
+      "strings": {
+        "attrs": {
+          "alt": "Compass"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_5a2dd090",
+      "strings": {
+        "text": "Lógica Humana & Engenharia"
+      }
+    },
+    {
+      "ref": "obj.n_1399b6a0",
+      "strings": {
+        "text": "Vejo isto como um exercício cognitivo estruturado, semelhante a uma auditoria de sistemas: dados íntegros, transições auditáveis e regras claras em cada etapa."
+      }
+    },
+    {
+      "ref": "obj.n_ef948e6d",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_42d01578",
+      "strings": {
+        "text": "Isso mostra que valorizo o tempo certo, a prevenção e o cuidado contínuo — e aplico essa lógica todos os dias no software."
+      }
+    },
+    {
+      "ref": "obj.n_2556b108",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_050e831c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_060e84b0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_070e8640",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6783d30c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7b9734a4",
+      "strings": {
+        "text": "Resumo"
+      }
+    },
+    {
+      "ref": "obj.n_7c973637",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f60b024c",
+      "strings": {
+        "text": "Quem eu sou revela-se na forma como "
+      }
+    },
+    {
+      "ref": "obj.n_f70b03df",
+      "strings": {
+        "text": "construo"
+      }
+    },
+    {
+      "ref": "obj.n_6883d4a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e0dfcf08",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a62692a0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e172b908",
+      "strings": {
+        "attrs": {
+          "alt": "André Câmara"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e272ba9c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e372bc30",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_358d4cb8",
+      "strings": {
+        "text": "André Câmara"
+      }
+    },
+    {
+      "ref": "obj.n_368d4e4c",
+      "strings": {
+        "text": "Engenharia de Software | Bragança, Portugal"
+      }
+    },
+    {
+      "ref": "obj.n_a7269434",
+      "strings": {
+        "text": "Trabalho com tecnologia desde o final dos anos 90, com uma base sólida em sistemas críticos, automação e infraestrutura 24/7. Reentrei no desenvolvimento de software com foco na continuidade, previsibilidade e qualidade técnica."
+      }
+    },
+    {
+      "ref": "obj.n_a82695c8",
+      "strings": {
+        "text": "Sou casado e tenho um filho de 13 anos; essa estabilidade familiar traduz-se em foco, previsibilidade e fiabilidade técnica no trabalho. Trago para o código a disciplina de ambientes onde falhar não era opção."
+      }
+    },
+    {
+      "ref": "obj.n_a9269758",
+      "strings": {
+        "text": "Para além da vertente técnica, tenho formação orientada à comunicação de valor, métricas e consciência de produto — útil para alinhar decisões, linguagem e impacto com o utilizador final."
+      }
+    },
+    {
+      "ref": "obj.n_aa2698ec",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_06e11b7e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_aae41e6c",
+      "strings": {
+        "attrs": {
+          "alt": "CPU"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_abe41fff",
+      "strings": {
+        "text": "Linguagens de Programação"
+      }
+    },
+    {
+      "ref": "obj.n_07e11d10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_72cd9d68",
+      "strings": {
+        "text": "Python",
+        "attrs": {
+          "title": "Avançado"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_73cd9efc",
+      "strings": {
+        "text": "C/C++",
+        "attrs": {
+          "title": "Intermédio"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_74cda090",
+      "strings": {
+        "text": "C#",
+        "attrs": {
+          "title": "Intermédio"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_75cda220",
+      "strings": {
+        "text": "Java",
+        "attrs": {
+          "title": "Intermédio"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_76cda3b4",
+      "strings": {
+        "text": "SQL",
+        "attrs": {
+          "title": "Avançado"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ab269a80",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1945a8e4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f01e8538",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4c34e96e",
+      "strings": {
+        "attrs": {
+          "alt": "Globe"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4d34eb00",
+      "strings": {
+        "text": "Idiomas"
+      }
+    },
+    {
+      "ref": "obj.n_f11e86cc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_37ba6858",
+      "strings": {
+        "attrs": {
+          "title": "Nativo"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_54c30cc8",
+      "strings": {
+        "text": "🇵🇹"
+      }
+    },
+    {
+      "ref": "obj.n_55c30e5c",
+      "strings": {
+        "text": "Português"
+      }
+    },
+    {
+      "ref": "obj.n_38ba69ec",
+      "strings": {
+        "attrs": {
+          "title": "Fluente"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4f401b08",
+      "strings": {
+        "text": "🇪🇸"
+      }
+    },
+    {
+      "ref": "obj.n_50401c98",
+      "strings": {
+        "text": "Espanhol"
+      }
+    },
+    {
+      "ref": "obj.n_35ba6534",
+      "strings": {
+        "attrs": {
+          "title": "Fluente"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e6e3fc98",
+      "strings": {
+        "text": "🇬🇧"
+      }
+    },
+    {
+      "ref": "obj.n_e7e3fe28",
+      "strings": {
+        "text": "Inglês"
+      }
+    },
+    {
+      "ref": "obj.n_36ba66c8",
+      "strings": {
+        "attrs": {
+          "title": "Funcional"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_1aae24c8",
+      "strings": {
+        "text": "🇫🇷"
+      }
+    },
+    {
+      "ref": "obj.n_1bae265c",
+      "strings": {
+        "text": "Francês"
+      }
+    },
+    {
+      "ref": "obj.n_1a45aa77",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_22fe92d8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_27c8a958",
+      "strings": {
+        "attrs": {
+          "alt": "Target"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_28c8aae8",
+      "strings": {
+        "text": "Formação"
+      }
+    },
+    {
+      "ref": "obj.n_23fe9468",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dfe6fbe8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_55dc48f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_56dc4a8c",
+      "strings": {
+        "text": "12.º ano concluído"
+      }
+    },
+    {
+      "ref": "obj.n_e0e6fd7c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e57b7fb4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e67b8148",
+      "strings": {
+        "text": "EFA – Programador Informático (Nível 4, 1.416h, em curso)"
+      }
+    },
+    {
+      "ref": "obj.n_e1e6ff10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fe7d9368",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ff7d94fc",
+      "strings": {
+        "text": "CET Técnico/a Especialista em Cibersegurança (Nível 5, 1.510h, em curso)"
+      }
+    },
+    {
+      "ref": "obj.n_e1dfd09c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a4fa1aa0",
+      "strings": {
+        "text": "Destaques Profissionais"
+      }
+    },
+    {
+      "ref": "obj.n_a5fa1c34",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_53a82438",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a9206428",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_78b215d8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e763fbfe",
+      "strings": {
+        "attrs": {
+          "alt": "10+ Anos em Sistemas Críticos"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_79b2176c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_84466ae8",
+      "strings": {
+        "text": "10+ anos em sistemas críticos"
+      }
+    },
+    {
+      "ref": "obj.n_85466c7b",
+      "strings": {
+        "text": "Infraestrutura bancária 24/7 com tolerância zero a falhas"
+      }
+    },
+    {
+      "ref": "obj.n_7ab21900",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_158a9ed4",
+      "strings": {
+        "attrs": {
+          "alt": "Expandir"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_168aa068",
+      "strings": {
+        "attrs": {
+          "alt": "Recolher"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_aa2065bc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_653a3700",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_acd94320",
+      "strings": {
+        "text": "BNP Paribas, CEPSA, Telefónica — ambientes onde a estabilidade era absoluta."
+      }
+    },
+    {
+      "ref": "obj.n_54a825cb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_00919d1c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dc177e28",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_eccca34c",
+      "strings": {
+        "attrs": {
+          "alt": ""
+        }
+      }
+    },
+    {
+      "ref": "obj.n_dd177fbc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_132bef78",
+      "strings": {
+        "text": "Transição para Programação"
+      }
+    },
+    {
+      "ref": "obj.n_142bf10b",
+      "strings": {
+        "text": "1.686h de formação intensiva em desenvolvimento de software"
+      }
+    },
+    {
+      "ref": "obj.n_de178150",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ce4ab078",
+      "strings": {
+        "attrs": {
+          "alt": "Expandir"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_cf4ab20b",
+      "strings": {
+        "attrs": {
+          "alt": "Recolher"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_01919eb0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4be56540",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e40d6abc",
+      "strings": {
+        "text": "Universidade de Helsínquia (270h) + EFA Programador Informático (1.416h). C/C++, C#, Java, Python, SQL."
+      }
+    },
+    {
+      "ref": "obj.n_55a8275e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_fd446dc0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3d98cc5e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a4d7e662",
+      "strings": {
+        "attrs": {
+          "alt": "Mentalidade Zero Downtime"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3e98cdf1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0808d0bc",
+      "strings": {
+        "text": "Mentalidade Zero Downtime"
+      }
+    },
+    {
+      "ref": "obj.n_0908d250",
+      "strings": {
+        "text": "Rigor absoluto e estabilidade como processo contínuo"
+      }
+    },
+    {
+      "ref": "obj.n_3b98c938",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_65bbb346",
+      "strings": {
+        "attrs": {
+          "alt": "Expandir"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_66bbb4d8",
+      "strings": {
+        "attrs": {
+          "alt": "Recolher"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_fe446f50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_63113efc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_241fb9f8",
+      "strings": {
+        "text": "A mentalidade construída em ambientes críticos aplica-se agora ao desenvolvimento de software."
+      }
+    },
+    {
+      "ref": "obj.n_56a828f1",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7eccbb8e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dcf4b19c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b1bc0c54",
+      "strings": {
+        "attrs": {
+          "alt": "Multilíngue"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ddf4b330",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_21f275dc",
+      "strings": {
+        "text": "Multilíngue"
+      }
+    },
+    {
+      "ref": "obj.n_22f27770",
+      "strings": {
+        "text": "PT (nativo), ES, EN (fluente), FR (funcional)"
+      }
+    },
+    {
+      "ref": "obj.n_def4b4c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e7d32e88",
+      "strings": {
+        "attrs": {
+          "alt": "Expandir"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e8d3301b",
+      "strings": {
+        "attrs": {
+          "alt": "Recolher"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_7fccbd20",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5de0dcf4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a8584a78",
+      "strings": {
+        "text": "Capacidade de trabalhar em equipas internacionais e comunicar com stakeholders globais."
+      }
+    },
+    {
+      "ref": "obj.n_57a82a84",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1cadce48",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_19f3e182",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_71dd8d6c",
+      "strings": {
+        "attrs": {
+          "alt": "Estabilidade Pessoal"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_1af3e314",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_70b193a8",
+      "strings": {
+        "text": "Estabilidade Pessoal"
+      }
+    },
+    {
+      "ref": "obj.n_71b19538",
+      "strings": {
+        "text": "Casado, pai de um filho de 13 anos — foco e previsibilidade"
+      }
+    },
+    {
+      "ref": "obj.n_17f3de5c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_73d8a998",
+      "strings": {
+        "attrs": {
+          "alt": "Expandir"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_74d8ab2c",
+      "strings": {
+        "attrs": {
+          "alt": "Recolher"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_1dadcfd8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2b49cf86",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7d1d07b0",
+      "strings": {
+        "text": "Essa estabilidade familiar traduz-se em fiabilidade técnica e compromisso de longo prazo."
+      }
+    },
+    {
+      "ref": "obj.n_58a82c17",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0ce9dcb0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0c65f5a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5284b720",
+      "strings": {
+        "attrs": {
+          "alt": "Marketing Digital"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0d65f73c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b1eadd40",
+      "strings": {
+        "text": "Marketing Digital"
+      }
+    },
+    {
+      "ref": "obj.n_b2eaded4",
+      "strings": {
+        "text": "Comunicação de valor, métricas e consciência de produto"
+      }
+    },
+    {
+      "ref": "obj.n_0a65f284",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9eb84b40",
+      "strings": {
+        "attrs": {
+          "alt": "Expandir"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_9fb84cd4",
+      "strings": {
+        "attrs": {
+          "alt": "Recolher"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0de9de44",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_db3d12fe",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_353d9d4c",
+      "strings": {
+        "text": "Formação complementar que ajuda a pensar no utilizador final e a comunicar com clareza."
+      }
+    },
+    {
+      "ref": "obj.n_a6fa1dc8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_417363cc",
+      "strings": {
+        "text": "Recursos Disponíveis"
+      }
+    },
+    {
+      "ref": "obj.n_42736560",
+      "strings": {
+        "text": "Acede aos meus documentos profissionais e certificações."
+      }
+    },
+    {
+      "ref": "obj.n_437366f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_757b19c8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c1dcca80",
+      "strings": {
+        "attrs": {
+          "alt": "Descarregar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_c2dccc10",
+      "strings": {
+        "text": "CV Padrão"
+      }
+    },
+    {
+      "ref": "obj.n_767b1b5b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4b9d7ea4",
+      "strings": {
+        "attrs": {
+          "alt": "Descarregar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4c9d8038",
+      "strings": {
+        "text": "CV Estendido"
+      }
+    },
+    {
+      "ref": "obj.n_777b1cee",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e4d6d248",
+      "strings": {
+        "attrs": {
+          "alt": "Ligação"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e5d6d3dc",
+      "strings": {
+        "text": "Programa EFA"
+      }
+    },
+    {
+      "ref": "obj.n_a7fa1f58",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_43121464",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f6b8ae1c",
+      "strings": {
+        "text": "10+"
+      }
+    },
+    {
+      "ref": "obj.n_f7b8afb0",
+      "strings": {
+        "text": "Anos em TI"
+      }
+    },
+    {
+      "ref": "obj.n_441215f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7363d526",
+      "strings": {
+        "text": "1.686"
+      }
+    },
+    {
+      "ref": "obj.n_7463d6b8",
+      "strings": {
+        "text": "Horas de Formação"
+      }
+    },
+    {
+      "ref": "obj.n_45121788",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1269b758",
+      "strings": {
+        "text": "4"
+      }
+    },
+    {
+      "ref": "obj.n_1369b8ec",
+      "strings": {
+        "text": "Idiomas"
+      }
+    },
+    {
+      "ref": "obj.n_bdbbaade",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_095189c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0a518b54",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0751869c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8bfc5814",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_91e68efd",
+      "strings": {
+        "text": "Agora"
+      }
+    },
+    {
+      "ref": "obj.n_90e68d6a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_9d485980",
+      "strings": {
+        "text": "O que procuro neste "
+      }
+    },
+    {
+      "ref": "obj.n_9e485b14",
+      "strings": {
+        "text": "momento"
+      }
+    },
+    {
+      "ref": "obj.n_8cfc59a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7cb8056c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_be4a64e8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_81ec4a1e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f3d8a2ec",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_24f031d0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2dec040e",
+      "strings": {
+        "attrs": {
+          "alt": "André Câmara"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_25f03364",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_53c51c56",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f4d8a480",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dd9d9d18",
+      "strings": {
+        "text": "Disponível para Estágio"
+      }
+    },
+    {
+      "ref": "obj.n_de9d9ea8",
+      "strings": {
+        "text": "EFA – Programador Informático"
+      }
+    },
+    {
+      "ref": "obj.n_db9d99f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_28267750",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_292678e0",
+      "strings": {
+        "text": "210 horas curriculares"
+      }
+    },
+    {
+      "ref": "obj.n_82ec4bb0",
+      "strings": {
+        "text": "Disponível para estágio curricular (210h) em contexto real de desenvolvimento ou sistemas, com capacidade de contributo efetivo desde o início."
+      }
+    },
+    {
+      "ref": "obj.n_7fec46f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_dbdde5b0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ab5243e0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ac524574",
+      "strings": {
+        "text": "Competências Técnicas"
+      }
+    },
+    {
+      "ref": "obj.n_dcdde744",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e4755104",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ea7c5d8c",
+      "strings": {
+        "text": "Python"
+      }
+    },
+    {
+      "ref": "obj.n_eb7c5f1f",
+      "strings": {
+        "text": " (Avançado)"
+      }
+    },
+    {
+      "ref": "obj.n_e5755298",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4771c8da",
+      "strings": {
+        "text": "C/C++"
+      }
+    },
+    {
+      "ref": "obj.n_4871ca6d",
+      "strings": {
+        "text": " (Intermédio)"
+      }
+    },
+    {
+      "ref": "obj.n_e6755428",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_50e736f8",
+      "strings": {
+        "text": "C#"
+      }
+    },
+    {
+      "ref": "obj.n_51e7388c",
+      "strings": {
+        "text": " (Intermédio)"
+      }
+    },
+    {
+      "ref": "obj.n_e77555bc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e8e03950",
+      "strings": {
+        "text": "Java"
+      }
+    },
+    {
+      "ref": "obj.n_e9e03ae0",
+      "strings": {
+        "text": " (Intermédio)"
+      }
+    },
+    {
+      "ref": "obj.n_e0754ab8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_be137184",
+      "strings": {
+        "text": "SQL"
+      }
+    },
+    {
+      "ref": "obj.n_bf137318",
+      "strings": {
+        "text": " (Avançado)"
+      }
+    },
+    {
+      "ref": "obj.n_80ec488c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_203866f4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_628fe598",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f3db3826",
+      "strings": {
+        "attrs": {
+          "alt": "Quando"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f4db39b9",
+      "strings": {
+        "text": "Quando"
+      }
+    },
+    {
+      "ref": "obj.n_638fe72c",
+      "strings": {
+        "text": "A componente teórica termina no final de junho e o estágio pode iniciar a partir de junho de 2026."
+      }
+    },
+    {
+      "ref": "obj.n_21386888",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e02377f6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b8c00eae",
+      "strings": {
+        "attrs": {
+          "alt": "Onde"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b9c01040",
+      "strings": {
+        "text": "Onde"
+      }
+    },
+    {
+      "ref": "obj.n_e1237988",
+      "strings": {
+        "text": "Preferência por remoto (todo o país) e alternativa híbrida na zona de Bragança."
+      }
+    },
+    {
+      "ref": "obj.n_22386a18",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bbdc36e8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ba8d4290",
+      "strings": {
+        "attrs": {
+          "alt": "Contexto"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_bb8d4424",
+      "strings": {
+        "text": "Contexto"
+      }
+    },
+    {
+      "ref": "obj.n_bcdc387c",
+      "strings": {
+        "text": "O estágio é acompanhado pela entidade formadora, com plano individual e objetivos definidos."
+      }
+    },
+    {
+      "ref": "obj.n_23386bac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b0064c20",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c23202c0",
+      "strings": {
+        "attrs": {
+          "alt": "Experiência"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_c3320454",
+      "strings": {
+        "text": "Experiência"
+      }
+    },
+    {
+      "ref": "obj.n_b1064db4",
+      "strings": {
+        "text": "Não requer formação básica — já estou habituado a contextos reais de trabalho e sistemas com histórico."
+      }
+    },
+    {
+      "ref": "obj.n_bf4a667c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4dd02590",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0de48d77",
+      "strings": {
+        "text": "210h"
+      }
+    },
+    {
+      "ref": "obj.n_0ce48be4",
+      "strings": {
+        "text": "Estágio"
+      }
+    },
+    {
+      "ref": "obj.n_4ed02723",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1c807ade",
+      "strings": {
+        "text": "1.686h"
+      }
+    },
+    {
+      "ref": "obj.n_1d807c70",
+      "strings": {
+        "text": "Formação"
+      }
+    },
+    {
+      "ref": "obj.n_4fd028b6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_06b7a7d0",
+      "strings": {
+        "text": "10+"
+      }
+    },
+    {
+      "ref": "obj.n_07b7a964",
+      "strings": {
+        "text": "Anos TI"
+      }
+    },
+    {
+      "ref": "obj.n_7db806ff",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_91adce68",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_48968ab8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_49968c4c",
+      "strings": {
+        "text": "Recursos Profissionais"
+      }
+    },
+    {
+      "ref": "obj.n_92adcffc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7b26dd10",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a971e6ac",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6c39dd60",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_aa71e83f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3f329520",
+      "strings": {
+        "text": "Conteúdo Programático (EFA)"
+      }
+    },
+    {
+      "ref": "obj.n_403296b4",
+      "strings": {
+        "text": "Programador Informático – Nível 4 (1.416h)"
+      }
+    },
+    {
+      "ref": "obj.n_ab71e9d2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7c26dea3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a462e8c8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_82b87640",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a562ea5c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3735e5f8",
+      "strings": {
+        "text": "Conteúdo Programático (CET)"
+      }
+    },
+    {
+      "ref": "obj.n_3835e78c",
+      "strings": {
+        "text": "CET Cibersegurança – Nível 5 (1.510h)"
+      }
+    },
+    {
+      "ref": "obj.n_a262e5a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7d26e036",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_56597e38",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_af589078",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_57597fcc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6d3f82f0",
+      "strings": {
+        "text": "Certificado Python I"
+      }
+    },
+    {
+      "ref": "obj.n_6e3f8484",
+      "strings": {
+        "text": "Universidade de Helsínquia (135h, 5 ECTS)"
+      }
+    },
+    {
+      "ref": "obj.n_58598160",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7e26e1c9",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_86a6cb78",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_62c47718",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_87a6cd0c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_063b26e6",
+      "strings": {
+        "text": "Certificado Python II"
+      }
+    },
+    {
+      "ref": "obj.n_073b2878",
+      "strings": {
+        "text": "Universidade de Helsínquia (135h, 5 ECTS)"
+      }
+    },
+    {
+      "ref": "obj.n_88a6cea0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_93add190",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_346218be",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_15d42620",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4ae140f0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_16d427b4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e7c6d9ee",
+      "strings": {
+        "text": "Disponível para oportunidades"
+      }
+    },
+    {
+      "ref": "obj.n_e8c6db80",
+      "strings": {
+        "text": "Estágio ou posição júnior"
+      }
+    },
+    {
+      "ref": "obj.n_35621a50",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3de2d18e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ecbe90f8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_edbe928c",
+      "strings": {
+        "text": "Remoto"
+      }
+    },
+    {
+      "ref": "obj.n_3ee2d320",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e16c7bbc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e26c7d50",
+      "strings": {
+        "text": "Bragança (híbrido)"
+      }
+    },
+    {
+      "ref": "obj.n_3be2ce68",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4ffbc684",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_50fbc818",
+      "strings": {
+        "text": "A partir de Junho 2026"
+      }
+    },
+    {
+      "ref": "obj.n_94add320",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c457d4a0",
+      "strings": {
+        "text": "Interessado em colaborar?"
+      }
+    },
+    {
+      "ref": "obj.n_c557d630",
+      "strings": {
+        "text": "O contacto serve para alinharmos expectativas e enquadramento."
+      }
+    },
+    {
+      "ref": "obj.n_c257d178",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_30de5df4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_31de5f88",
+      "strings": {
+        "text": "Vamos Conversar?"
+      }
+    },
+    {
+      "ref": "obj.n_b5b6a6c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ac5f2dfc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c72d5bd0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a179f03c",
+      "strings": {
+        "text": "Contacto"
+      }
+    },
+    {
+      "ref": "obj.n_a279f1cf",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ad9fa488",
+      "strings": {
+        "text": "Vamos "
+      }
+    },
+    {
+      "ref": "obj.n_ae9fa618",
+      "strings": {
+        "text": "falar?"
+      }
+    },
+    {
+      "ref": "obj.n_a379f362",
+      "strings": {
+        "text": "Disponível para projetos onde a maturidade técnica e o compromisso humano fazem a diferença."
+      }
+    },
+    {
+      "ref": "obj.n_c82d5d64",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_86df4b78",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ceec7b08",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0d07e0b0",
+      "strings": {
+        "text": "Contacto"
+      }
+    },
+    {
+      "ref": "obj.n_0e07e244",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4def8698",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f70cb076",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_57d02740",
+      "strings": {
+        "attrs": {
+          "alt": "Email"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f80cb209",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0d1e3140",
+      "strings": {
+        "text": "Email"
+      }
+    },
+    {
+      "ref": "obj.n_0e1e32d4",
+      "strings": {
+        "text": "eliaspc2@gmail.com"
+      }
+    },
+    {
+      "ref": "obj.n_f50cad50",
+      "strings": {
+        "attrs": {
+          "title": "Copiar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_e9360290",
+      "strings": {
+        "attrs": {
+          "alt": "Copiar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_ea360420",
+      "strings": {
+        "attrs": {
+          "alt": "Copiado"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4eef882c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_55da2b28",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7c4ab5d6",
+      "strings": {
+        "attrs": {
+          "alt": "Telefone"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_56da2cbc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_6feddc90",
+      "strings": {
+        "text": "Telefone"
+      }
+    },
+    {
+      "ref": "obj.n_70edde24",
+      "strings": {
+        "text": "+351 928 308 015"
+      }
+    },
+    {
+      "ref": "obj.n_57da2e50",
+      "strings": {
+        "attrs": {
+          "title": "Copiar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_afa23e88",
+      "strings": {
+        "attrs": {
+          "alt": "Copiar"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b0a2401c",
+      "strings": {
+        "attrs": {
+          "alt": "Copiado"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_4fef89c0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f38fd608",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4ee7d4e4",
+      "strings": {
+        "attrs": {
+          "alt": "Localização"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f48fd798",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e57634a0",
+      "strings": {
+        "text": "Localização"
+      }
+    },
+    {
+      "ref": "obj.n_e6763634",
+      "strings": {
+        "text": "Quintanilha, Bragança PT"
+      }
+    },
+    {
+      "ref": "obj.n_cfec7c98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_008f1268",
+      "strings": {
+        "text": "Redes Sociais"
+      }
+    },
+    {
+      "ref": "obj.n_018f13fb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.github.3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.github.3.icon",
+      "strings": {
+        "attrs": {
+          "alt": "GitHub"
+        }
+      }
+    },
+    {
+      "ref": "obj.social.linkedin.3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.linkedin.3.icon",
+      "strings": {
+        "attrs": {
+          "alt": "LinkedIn"
+        }
+      }
+    },
+    {
+      "ref": "obj.social.email.3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.social.email.3.icon",
+      "strings": {
+        "attrs": {
+          "alt": "Email"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_87df4d0c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_443d2dee",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0c792d48",
+      "strings": {
+        "text": "Recursos Profissionais"
+      }
+    },
+    {
+      "ref": "obj.n_0d792edc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0f376cd4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e39099b8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_4f345866",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e4909b4b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_704dca38",
+      "strings": {
+        "text": "CV Padrão"
+      }
+    },
+    {
+      "ref": "obj.n_714dcbcc",
+      "strings": {
+        "text": "Versão condensada (2 páginas)"
+      }
+    },
+    {
+      "ref": "obj.n_e5909cde",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_10376e68",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3b27cdb8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_bddae0b4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3c27cf48",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_908effdc",
+      "strings": {
+        "text": "CV Estendido"
+      }
+    },
+    {
+      "ref": "obj.n_918f016f",
+      "strings": {
+        "text": "Versão completa detalhada"
+      }
+    },
+    {
+      "ref": "obj.n_3927ca90",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_453d2f80",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_825a2b14",
+      "strings": {
+        "text": "Certificações Estruturadas"
+      }
+    },
+    {
+      "ref": "obj.n_835a2ca8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_086477cc",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1449c940",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_054b114c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_1549cad4",
+      "strings": {
+        "text": "Python I (Helsínquia)"
+      }
+    },
+    {
+      "ref": "obj.n_1649cc66",
+      "strings": {
+        "text": "MOOC de Programação 2025 (5 ECTS)"
+      }
+    },
+    {
+      "ref": "obj.n_0964795f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_44394920",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2e92ae90",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_45394ab0",
+      "strings": {
+        "text": "Python II (Helsínquia)"
+      }
+    },
+    {
+      "ref": "obj.n_423945f8",
+      "strings": {
+        "text": "Programação Avançada (5 ECTS)"
+      }
+    },
+    {
+      "ref": "obj.n_0a647af2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_01a01f28",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_272c1990",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_02a020bc",
+      "strings": {
+        "text": "Marketing Digital"
+      }
+    },
+    {
+      "ref": "obj.n_03a0224e",
+      "strings": {
+        "text": "Ferramentas de comunicação de valor, métricas e posicionamento (19/20)"
+      }
+    }
+  ]
 }
