@@ -7327,7 +7327,11 @@
                     },
                     {
                       "styles": {
-                        "animationDelay": "0.6s"
+                        "animationDelay": "0.6s",
+                        "marginTop": "20px",
+                        "marginBottom": "8px",
+                        "paddingLeft": "6px",
+                        "paddingRight": "6px"
                       },
                       "children": [
                         {
@@ -7482,8 +7486,10 @@
                           "id": "n_e82dbd5b",
                           "ref": "auto.singleton.div.visual_skills_flex_flex_wrap_justify_center_gap_4",
                           "styles": {
-                            "paddingLeft": "8px",
-                            "paddingRight": "8px"
+                            "paddingLeft": "6px",
+                            "paddingRight": "6px",
+                            "rowGap": "10px",
+                            "columnGap": "14px"
                           }
                         }
                       ],
@@ -7492,7 +7498,8 @@
                     },
                     {
                       "styles": {
-                        "animationDelay": "0.8s"
+                        "animationDelay": "0.8s",
+                        "marginTop": "22px"
                       },
                       "children": [
                         {
