@@ -4431,6 +4431,41 @@
                                               ],
                                               "id": "n_88a216c8",
                                               "ref": "common.div.plain"
+                                            },
+                                            {
+                                              "id": "n_893dbab0",
+                                              "ref": "common.div.plain",
+                                              "children": [
+                                                {
+                                                  "id": "n_e7dfaf30",
+                                                  "ref": "skills.row.header",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_276d24a5",
+                                                      "ref": "text.sm.muted.span"
+                                                    },
+                                                    {
+                                                      "id": "n_f60872c6",
+                                                      "ref": "skills.value"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "id": "n_996b79ee",
+                                                  "ref": "skills.row.bar",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_8032adfc",
+                                                      "ref": "skills.row.fill",
+                                                      "attrs": {
+                                                        "data-skill-bar": "true",
+                                                        "data-level": "75",
+                                                        "data-delay": "500"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             }
                                           ],
                                           "id": "n_51fb9bac",
@@ -4470,6 +4505,22 @@
                                             },
                                             {
                                               "id": "n_33a2e7af",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_ea97b5e6",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_4aaeee3f",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_81a7d242",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_ad3950cb",
                                               "ref": "skills.pill"
                                             }
                                           ],
@@ -4881,6 +4932,41 @@
                                               ],
                                               "id": "n_f7fb3808",
                                               "ref": "common.div.plain"
+                                            },
+                                            {
+                                              "id": "n_e1cf19a4",
+                                              "ref": "common.div.plain",
+                                              "children": [
+                                                {
+                                                  "id": "n_584f5fe8",
+                                                  "ref": "skills.row.header",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_7e4f94a5",
+                                                      "ref": "text.sm.muted.span"
+                                                    },
+                                                    {
+                                                      "id": "n_4df7653c",
+                                                      "ref": "skills.value"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "id": "n_1ae29346",
+                                                  "ref": "skills.row.bar",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_01987c86",
+                                                      "ref": "skills.row.fill",
+                                                      "attrs": {
+                                                        "data-skill-bar": "true",
+                                                        "data-level": "60",
+                                                        "data-delay": "500"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             }
                                           ],
                                           "id": "n_f987146c",
@@ -4920,6 +5006,22 @@
                                             },
                                             {
                                               "id": "n_55136e9c",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_0888ea27",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_53369cb3",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_5724d818",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_004cbc08",
                                               "ref": "skills.pill"
                                             }
                                           ],
@@ -5178,7 +5280,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "45",
+                                                        "data-level": "55",
                                                         "data-delay": "0"
                                                       },
                                                       "id": "n_669af298",
@@ -5213,7 +5315,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "40",
+                                                        "data-level": "50",
                                                         "data-delay": "100"
                                                       },
                                                       "id": "n_1d115da2",
@@ -5283,7 +5385,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "50",
+                                                        "data-level": "40",
                                                         "data-delay": "300"
                                                       },
                                                       "id": "n_d6de626c",
@@ -5296,6 +5398,76 @@
                                               ],
                                               "id": "n_5002f5fc",
                                               "ref": "common.div.plain"
+                                            },
+                                            {
+                                              "id": "n_3cad4609",
+                                              "ref": "common.div.plain",
+                                              "children": [
+                                                {
+                                                  "id": "n_77da6ef8",
+                                                  "ref": "skills.row.header",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_0e9588b3",
+                                                      "ref": "text.sm.muted.span"
+                                                    },
+                                                    {
+                                                      "id": "n_37310a73",
+                                                      "ref": "skills.value"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "id": "n_398c6ae5",
+                                                  "ref": "skills.row.bar",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_05a12097",
+                                                      "ref": "skills.row.fill",
+                                                      "attrs": {
+                                                        "data-skill-bar": "true",
+                                                        "data-level": "50",
+                                                        "data-delay": "400"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "n_543812bb",
+                                              "ref": "common.div.plain",
+                                              "children": [
+                                                {
+                                                  "id": "n_8c5ccac3",
+                                                  "ref": "skills.row.header",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_b3970d1e",
+                                                      "ref": "text.sm.muted.span"
+                                                    },
+                                                    {
+                                                      "id": "n_ba422218",
+                                                      "ref": "skills.value"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "id": "n_838842b7",
+                                                  "ref": "skills.row.bar",
+                                                  "children": [
+                                                    {
+                                                      "id": "n_153e1235",
+                                                      "ref": "skills.row.fill",
+                                                      "attrs": {
+                                                        "data-skill-bar": "true",
+                                                        "data-level": "48",
+                                                        "data-delay": "500"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                             }
                                           ],
                                           "id": "n_3c8e312c",
@@ -5331,6 +5503,26 @@
                                             },
                                             {
                                               "id": "n_3dbf52d8",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_78e845dc",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_f4442d32",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_99c6182a",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_80f845da",
+                                              "ref": "skills.pill"
+                                            },
+                                            {
+                                              "id": "n_40dffab3",
                                               "ref": "skills.pill"
                                             }
                                           ],
@@ -5475,6 +5667,244 @@
                               ],
                               "id": "n_ed57bfb8",
                               "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/server.svg"
+                                  },
+                                  "id": "n_60c0aab3",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_a19f32b8",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_6a9ee883",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/network.svg"
+                                  },
+                                  "id": "n_f2d58528",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_302b1870",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_81b59469",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/database.svg"
+                                  },
+                                  "id": "n_2c98b610",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_0858c0c1",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_6432aad4",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/code.svg"
+                                  },
+                                  "id": "n_24c9466c",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_fe142aed",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_50a5947b",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/code.svg"
+                                  },
+                                  "id": "n_ebe721e6",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_f13812d4",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_379df59e",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/code.svg"
+                                  },
+                                  "id": "n_20d83ea8",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_87182f32",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_78d71c96",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/code.svg"
+                                  },
+                                  "id": "n_68fca269",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_be575d17",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_dcf991b2",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/code.svg"
+                                  },
+                                  "id": "n_5f0fadfe",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_39a59cd5",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_11fb7fad",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/globe.svg"
+                                  },
+                                  "id": "n_492a3a6b",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_95ba170e",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_4d364d96",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/shield.svg"
+                                  },
+                                  "id": "n_5870b0da",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_3568a686",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_055b5b36",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/terminal.svg"
+                                  },
+                                  "id": "n_a1fdc12e",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_02c39430",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_be0a53f6",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/shield.svg"
+                                  },
+                                  "id": "n_c7ae761b",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_66b87462",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_951e3b43",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/shield.svg"
+                                  },
+                                  "id": "n_86d9dc25",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_b8f956c6",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_cb6d472a",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/shield.svg"
+                                  },
+                                  "id": "n_314192c4",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_42971d07",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_4c8dbcb4",
+                              "ref": "chip.no_motion"
                             }
                           ],
                           "id": "n_f6b07f14",
@@ -5577,6 +6007,167 @@
                       ],
                       "id": "n_ed948b47",
                       "ref": "auto.div.visual_shared_reveal_opacity_0_mb_12"
+                    },
+                    {
+                      "styles": {
+                        "animationDelay": "0.3s"
+                      },
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "id": "n_7d0797fa",
+                              "ref": "text.gradient"
+                            }
+                          ],
+                          "id": "n_754ba802",
+                          "ref": "auto.singleton.h3.visual_skills_text_xl_font_bold_text_0f172a_mb_6_text_center"
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/target.svg"
+                                  },
+                                  "id": "n_97119f84",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_9626f0c3",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_2d311c98",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/list-checks.svg"
+                                  },
+                                  "id": "n_8cfe9ba3",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_00ae6d13",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_1525bcc4",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/megaphone.svg"
+                                  },
+                                  "id": "n_0c606380",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_6aa7db48",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_a2acf296",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/compass.svg"
+                                  },
+                                  "id": "n_793a4a76",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_649e49d7",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_1b3027f9",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/clock.svg"
+                                  },
+                                  "id": "n_5a6a4920",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_64514afc",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_cfa13b8d",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/lightbulb.svg"
+                                  },
+                                  "id": "n_8a718bf6",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_96eb8961",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_36c25976",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/shield.svg"
+                                  },
+                                  "id": "n_09d75917",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_da360e0c",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_0c31e00e",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/users.svg"
+                                  },
+                                  "id": "n_001b0354",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_2f75bb96",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_227353a8",
+                              "ref": "chip.no_motion"
+                            }
+                          ],
+                          "id": "n_e82dbd5b",
+                          "ref": "auto.singleton.div.visual_skills_flex_flex_wrap_justify_center_gap_4"
+                        }
+                      ],
+                      "id": "n_d2acb54f",
+                      "ref": "reveal.base"
                     },
                     {
                       "styles": {

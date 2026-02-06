@@ -2190,6 +2190,34 @@
       "strings": {}
     },
     {
+      "ref": "obj.n_893dbab0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e7dfaf30",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_276d24a5",
+      "strings": {
+        "text": "Testes e Debugging"
+      }
+    },
+    {
+      "ref": "obj.n_f60872c6",
+      "strings": {
+        "text": "75%"
+      }
+    },
+    {
+      "ref": "obj.n_996b79ee",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8032adfc",
+      "strings": {}
+    },
+    {
       "ref": "obj.n_13768400",
       "strings": {}
     },
@@ -2237,6 +2265,30 @@
       "ref": "obj.n_33a2e7af",
       "strings": {
         "text": "Boas práticas de código e manutenção"
+      }
+    },
+    {
+      "ref": "obj.n_ea97b5e6",
+      "strings": {
+        "text": "Manipulação de ficheiros e dados"
+      }
+    },
+    {
+      "ref": "obj.n_4aaeee3f",
+      "strings": {
+        "text": "Modularização e reutilização de código"
+      }
+    },
+    {
+      "ref": "obj.n_81a7d242",
+      "strings": {
+        "text": "Integração com APIs e serviços externos"
+      }
+    },
+    {
+      "ref": "obj.n_ad3950cb",
+      "strings": {
+        "text": "Diagnóstico e correção de erros"
       }
     },
     {
@@ -2586,6 +2638,34 @@
       "strings": {}
     },
     {
+      "ref": "obj.n_e1cf19a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_584f5fe8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7e4f94a5",
+      "strings": {
+        "text": "Modelação e Estruturação de Sistemas"
+      }
+    },
+    {
+      "ref": "obj.n_4df7653c",
+      "strings": {
+        "text": "60%"
+      }
+    },
+    {
+      "ref": "obj.n_1ae29346",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_01987c86",
+      "strings": {}
+    },
+    {
       "ref": "obj.n_61755082",
       "strings": {}
     },
@@ -2633,6 +2713,30 @@
       "ref": "obj.n_55136e9c",
       "strings": {
         "text": "Manutenção e evolução de aplicações"
+      }
+    },
+    {
+      "ref": "obj.n_0888ea27",
+      "strings": {
+        "text": "Análise de requisitos e decomposição funcional"
+      }
+    },
+    {
+      "ref": "obj.n_53369cb3",
+      "strings": {
+        "text": "Integração entre frontend, backend e base de dados"
+      }
+    },
+    {
+      "ref": "obj.n_5724d818",
+      "strings": {
+        "text": "Estruturação de código orientado a manutenção"
+      }
+    },
+    {
+      "ref": "obj.n_004cbc08",
+      "strings": {
+        "text": "Colaboração técnica em contexto de equipa"
       }
     },
     {
@@ -2808,7 +2912,7 @@
     {
       "ref": "obj.n_f2e114e0",
       "strings": {
-        "text": "Reforço técnico em segurança e conformidade sobre uma base sólida em sistemas críticos. Indicadores em evolução contínua ao longo do CET, à medida que módulos e projetos avançam."
+        "text": "A formação CET expande e aprofunda a base construída no EFA, combinando fundamentos de programação, redes e sistemas com práticas avançadas de cibersegurança, monitorização e resposta a incidentes."
       }
     },
     {
@@ -2824,7 +2928,7 @@
     {
       "ref": "obj.n_d02e0b6c",
       "strings": {
-        "text": "Reforço técnico em cibersegurança e conformidade sobre uma base sólida em sistemas críticos."
+        "text": "Perfil técnico cumulativo (EFA + CET): base sólida de software e operação reforçada com competências práticas de cibersegurança, conformidade e defesa operacional."
       }
     },
     {
@@ -2936,7 +3040,7 @@
     {
       "ref": "obj.n_baa8d0a8",
       "strings": {
-        "text": "Governação, Conformidade e Criptografia"
+        "text": "Segurança Aplicada ao Desenvolvimento e Dados"
       }
     },
     {
@@ -2951,6 +3055,62 @@
     },
     {
       "ref": "obj.n_d6de626c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3cad4609",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_77da6ef8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0e9588b3",
+      "strings": {
+        "text": "Análise de Vulnerabilidades e Pentesting"
+      }
+    },
+    {
+      "ref": "obj.n_37310a73",
+      "strings": {
+        "text": "50%"
+      }
+    },
+    {
+      "ref": "obj.n_398c6ae5",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_05a12097",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_543812bb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8c5ccac3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b3970d1e",
+      "strings": {
+        "text": "SIEM, Logs e IDS"
+      }
+    },
+    {
+      "ref": "obj.n_ba422218",
+      "strings": {
+        "text": "48%"
+      }
+    },
+    {
+      "ref": "obj.n_838842b7",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_153e1235",
       "strings": {}
     },
     {
@@ -2982,7 +3142,7 @@
     {
       "ref": "obj.n_43bf5c48",
       "strings": {
-        "text": "Automação de tarefas de hardening e monitorização com scripts"
+        "text": "Automação de hardening e monitorização com scripts"
       }
     },
     {
@@ -2994,7 +3154,37 @@
     {
       "ref": "obj.n_3dbf52d8",
       "strings": {
-        "text": "Aplicação de legislação, políticas e normas de segurança em contexto operacional"
+        "text": "Aplicação de algoritmos, programação estruturada e bases de dados no contexto de segurança"
+      }
+    },
+    {
+      "ref": "obj.n_78e845dc",
+      "strings": {
+        "text": "Implementação de políticas de segurança e controlo de acessos"
+      }
+    },
+    {
+      "ref": "obj.n_f4442d32",
+      "strings": {
+        "text": "Configuração e hardening de sistemas cliente e servidor"
+      }
+    },
+    {
+      "ref": "obj.n_99c6182a",
+      "strings": {
+        "text": "Simulação de cenários de ciberdefesa (wargaming)"
+      }
+    },
+    {
+      "ref": "obj.n_80f845da",
+      "strings": {
+        "text": "Documentação técnica e comunicação operacional em contexto de incidente"
+      }
+    },
+    {
+      "ref": "obj.n_40dffab3",
+      "strings": {
+        "text": "Integração entre segurança, desenvolvimento e operação (mentalidade DevSecOps)"
       }
     },
     {
@@ -6204,6 +6394,420 @@
       "ref": "obj.n_03a0224e",
       "strings": {
         "text": "Ferramentas de comunicação de valor, métricas e posicionamento (19/20)"
+      }
+    },
+    {
+      "ref": "obj.n_6a9ee883",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_60c0aab3",
+      "strings": {
+        "attrs": {
+          "alt": "Windows Server"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_a19f32b8",
+      "strings": {
+        "text": "Windows Server"
+      }
+    },
+    {
+      "ref": "obj.n_81b59469",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f2d58528",
+      "strings": {
+        "attrs": {
+          "alt": "Serviços de Rede"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_302b1870",
+      "strings": {
+        "text": "Serviços de Rede"
+      }
+    },
+    {
+      "ref": "obj.n_6432aad4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2c98b610",
+      "strings": {
+        "attrs": {
+          "alt": "SQL"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0858c0c1",
+      "strings": {
+        "text": "SQL"
+      }
+    },
+    {
+      "ref": "obj.n_50a5947b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_24c9466c",
+      "strings": {
+        "attrs": {
+          "alt": "Python"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_fe142aed",
+      "strings": {
+        "text": "Python"
+      }
+    },
+    {
+      "ref": "obj.n_379df59e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ebe721e6",
+      "strings": {
+        "attrs": {
+          "alt": "C/C++"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f13812d4",
+      "strings": {
+        "text": "C/C++"
+      }
+    },
+    {
+      "ref": "obj.n_78d71c96",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_20d83ea8",
+      "strings": {
+        "attrs": {
+          "alt": "Java"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_87182f32",
+      "strings": {
+        "text": "Java"
+      }
+    },
+    {
+      "ref": "obj.n_dcf991b2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_68fca269",
+      "strings": {
+        "attrs": {
+          "alt": "C#"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_be575d17",
+      "strings": {
+        "text": "C#"
+      }
+    },
+    {
+      "ref": "obj.n_11fb7fad",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5f0fadfe",
+      "strings": {
+        "attrs": {
+          "alt": "ASP.NET Core MVC"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_39a59cd5",
+      "strings": {
+        "text": "ASP.NET Core MVC"
+      }
+    },
+    {
+      "ref": "obj.n_4d364d96",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_492a3a6b",
+      "strings": {
+        "attrs": {
+          "alt": "Servidores Web"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_95ba170e",
+      "strings": {
+        "text": "Servidores Web"
+      }
+    },
+    {
+      "ref": "obj.n_055b5b36",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5870b0da",
+      "strings": {
+        "attrs": {
+          "alt": "IDS"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3568a686",
+      "strings": {
+        "text": "IDS"
+      }
+    },
+    {
+      "ref": "obj.n_be0a53f6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a1fdc12e",
+      "strings": {
+        "attrs": {
+          "alt": "Análise de Logs"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_02c39430",
+      "strings": {
+        "text": "Análise de Logs"
+      }
+    },
+    {
+      "ref": "obj.n_951e3b43",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c7ae761b",
+      "strings": {
+        "attrs": {
+          "alt": "Criptografia"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_66b87462",
+      "strings": {
+        "text": "Criptografia"
+      }
+    },
+    {
+      "ref": "obj.n_cb6d472a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_86d9dc25",
+      "strings": {
+        "attrs": {
+          "alt": "Hacking Etico"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b8f956c6",
+      "strings": {
+        "text": "Hacking Etico"
+      }
+    },
+    {
+      "ref": "obj.n_4c8dbcb4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_314192c4",
+      "strings": {
+        "attrs": {
+          "alt": "Analise Forense Digital"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_42971d07",
+      "strings": {
+        "text": "Analise Forense Digital"
+      }
+    },
+    {
+      "ref": "obj.n_754ba802",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e82dbd5b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d2acb54f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7d0797fa",
+      "strings": {
+        "text": "Diferenciais Executivos para RH"
+      }
+    },
+    {
+      "ref": "obj.n_2d311c98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_97119f84",
+      "strings": {
+        "attrs": {
+          "alt": "Estabilidade sob pressao"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_9626f0c3",
+      "strings": {
+        "text": "Estabilidade sob pressao"
+      }
+    },
+    {
+      "ref": "obj.n_1525bcc4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8cfe9ba3",
+      "strings": {
+        "attrs": {
+          "alt": "Rigor de processo"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_00ae6d13",
+      "strings": {
+        "text": "Rigor de processo"
+      }
+    },
+    {
+      "ref": "obj.n_a2acf296",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0c606380",
+      "strings": {
+        "attrs": {
+          "alt": "Comunicacao clara com negocio"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6aa7db48",
+      "strings": {
+        "text": "Comunicacao clara com negocio"
+      }
+    },
+    {
+      "ref": "obj.n_1b3027f9",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_793a4a76",
+      "strings": {
+        "attrs": {
+          "alt": "Autonomia com responsabilidade"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_649e49d7",
+      "strings": {
+        "text": "Autonomia com responsabilidade"
+      }
+    },
+    {
+      "ref": "obj.n_cfa13b8d",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5a6a4920",
+      "strings": {
+        "attrs": {
+          "alt": "Previsibilidade de entrega"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_64514afc",
+      "strings": {
+        "text": "Previsibilidade de entrega"
+      }
+    },
+    {
+      "ref": "obj.n_36c25976",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8a718bf6",
+      "strings": {
+        "attrs": {
+          "alt": "Mentalidade de melhoria continua"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_96eb8961",
+      "strings": {
+        "text": "Mentalidade de melhoria continua"
+      }
+    },
+    {
+      "ref": "obj.n_0c31e00e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_09d75917",
+      "strings": {
+        "attrs": {
+          "alt": "Foco em prevencao e risco"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_da360e0c",
+      "strings": {
+        "text": "Foco em prevencao e risco"
+      }
+    },
+    {
+      "ref": "obj.n_227353a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_001b0354",
+      "strings": {
+        "attrs": {
+          "alt": "Colaboracao transversal"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_2f75bb96",
+      "strings": {
+        "text": "Colaboracao transversal"
       }
     }
   ]

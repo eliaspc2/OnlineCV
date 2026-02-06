@@ -2116,7 +2116,7 @@
     {
       "ref": "obj.n_e70323bc",
       "strings": {
-        "text": "Programmation orientée objet (POO)"
+        "text": "Programmation POO"
       }
     },
     {
@@ -2190,6 +2190,34 @@
       "strings": {}
     },
     {
+      "ref": "obj.n_893dbab0",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e7dfaf30",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_276d24a5",
+      "strings": {
+        "text": "Tests et Débogage"
+      }
+    },
+    {
+      "ref": "obj.n_f60872c6",
+      "strings": {
+        "text": "75%"
+      }
+    },
+    {
+      "ref": "obj.n_996b79ee",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8032adfc",
+      "strings": {}
+    },
+    {
       "ref": "obj.n_13768400",
       "strings": {}
     },
@@ -2236,7 +2264,31 @@
     {
       "ref": "obj.n_33a2e7af",
       "strings": {
-        "text": "Bonnes pratiques de code et de maintenance"
+        "text": "Bonnes pratiques de code et maintenance"
+      }
+    },
+    {
+      "ref": "obj.n_ea97b5e6",
+      "strings": {
+        "text": "Manipulation de fichiers et de données"
+      }
+    },
+    {
+      "ref": "obj.n_4aaeee3f",
+      "strings": {
+        "text": "Modularisation et réutilisation du code"
+      }
+    },
+    {
+      "ref": "obj.n_81a7d242",
+      "strings": {
+        "text": "Intégration avec des API et services externes"
+      }
+    },
+    {
+      "ref": "obj.n_ad3950cb",
+      "strings": {
+        "text": "Diagnostic et correction des erreurs"
       }
     },
     {
@@ -2568,7 +2620,7 @@
     {
       "ref": "obj.n_0a330570",
       "strings": {
-        "text": "Réseaux & OS"
+        "text": "Réseaux et OS"
       }
     },
     {
@@ -2583,6 +2635,34 @@
     },
     {
       "ref": "obj.n_e0c62508",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e1cf19a4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_584f5fe8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7e4f94a5",
+      "strings": {
+        "text": "Modélisation et Structuration des Systèmes"
+      }
+    },
+    {
+      "ref": "obj.n_4df7653c",
+      "strings": {
+        "text": "60%"
+      }
+    },
+    {
+      "ref": "obj.n_1ae29346",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_01987c86",
       "strings": {}
     },
     {
@@ -2602,7 +2682,7 @@
     {
       "ref": "obj.n_58137354",
       "strings": {
-        "text": "Fondamentaux de programmation"
+        "text": "Fondements de programmation"
       }
     },
     {
@@ -2633,6 +2713,30 @@
       "ref": "obj.n_55136e9c",
       "strings": {
         "text": "Maintenance et évolution des applications"
+      }
+    },
+    {
+      "ref": "obj.n_0888ea27",
+      "strings": {
+        "text": "Analyse des exigences et décomposition fonctionnelle"
+      }
+    },
+    {
+      "ref": "obj.n_53369cb3",
+      "strings": {
+        "text": "Intégration entre frontend, backend et base de données"
+      }
+    },
+    {
+      "ref": "obj.n_5724d818",
+      "strings": {
+        "text": "Structuration du code orientée maintenance"
+      }
+    },
+    {
+      "ref": "obj.n_004cbc08",
+      "strings": {
+        "text": "Collaboration technique en contexte d'équipe"
       }
     },
     {
@@ -2808,7 +2912,7 @@
     {
       "ref": "obj.n_f2e114e0",
       "strings": {
-        "text": "Renforcement technique en sécurité et conformité sur une base solide en systèmes critiques. Indicateurs en évolution continue pendant le CET, au fil des modules et projets."
+        "text": "La formation CET élargit et approfondit la base construite avec l’EFA, en combinant les fondamentaux de programmation, réseaux et systèmes avec des pratiques avancées de cybersécurité, de supervision et de réponse aux incidents."
       }
     },
     {
@@ -2824,7 +2928,7 @@
     {
       "ref": "obj.n_d02e0b6c",
       "strings": {
-        "text": "Renforcement en cybersécurité et conformité sur une base éprouvée en systèmes critiques."
+        "text": "Profil technique cumulatif (EFA + CET) : base solide en logiciel et exploitation, renforcée par des compétences pratiques en cybersécurité, conformité et défense opérationnelle."
       }
     },
     {
@@ -2936,7 +3040,7 @@
     {
       "ref": "obj.n_baa8d0a8",
       "strings": {
-        "text": "Gouvernance, Conformité et Cryptographie"
+        "text": "Sécurité Appliquée au Développement et aux Données"
       }
     },
     {
@@ -2951,6 +3055,62 @@
     },
     {
       "ref": "obj.n_d6de626c",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_3cad4609",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_77da6ef8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0e9588b3",
+      "strings": {
+        "text": "Analyse de Vulnérabilités et Pentesting"
+      }
+    },
+    {
+      "ref": "obj.n_37310a73",
+      "strings": {
+        "text": "50%"
+      }
+    },
+    {
+      "ref": "obj.n_398c6ae5",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_05a12097",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_543812bb",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8c5ccac3",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_b3970d1e",
+      "strings": {
+        "text": "SIEM, Logs et IDS"
+      }
+    },
+    {
+      "ref": "obj.n_ba422218",
+      "strings": {
+        "text": "48%"
+      }
+    },
+    {
+      "ref": "obj.n_838842b7",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_153e1235",
       "strings": {}
     },
     {
@@ -2982,7 +3142,7 @@
     {
       "ref": "obj.n_43bf5c48",
       "strings": {
-        "text": "Automatisation des tâches de durcissement et de supervision par scripts"
+        "text": "Automatisation du hardening et de la supervision avec des scripts"
       }
     },
     {
@@ -2994,7 +3154,37 @@
     {
       "ref": "obj.n_3dbf52d8",
       "strings": {
-        "text": "Application de la législation, des politiques et des normes de sécurité en contexte opérationnel"
+        "text": "Application d’algorithmes, de programmation structurée et de bases de données en contexte de sécurité"
+      }
+    },
+    {
+      "ref": "obj.n_78e845dc",
+      "strings": {
+        "text": "Mise en œuvre de politiques de sécurité et de contrôle d’accès"
+      }
+    },
+    {
+      "ref": "obj.n_f4442d32",
+      "strings": {
+        "text": "Configuration et hardening des systèmes client et serveur"
+      }
+    },
+    {
+      "ref": "obj.n_99c6182a",
+      "strings": {
+        "text": "Simulation de scénarios de cyberdéfense (wargaming)"
+      }
+    },
+    {
+      "ref": "obj.n_80f845da",
+      "strings": {
+        "text": "Documentation technique et communication opérationnelle en contexte d’incident"
+      }
+    },
+    {
+      "ref": "obj.n_40dffab3",
+      "strings": {
+        "text": "Intégration entre sécurité, développement et exploitation (mentalité DevSecOps)"
       }
     },
     {
@@ -6204,6 +6394,420 @@
       "ref": "obj.n_03a0224e",
       "strings": {
         "text": "Outils de communication de valeur, métriques et positionnement (19/20)"
+      }
+    },
+    {
+      "ref": "obj.n_6a9ee883",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_60c0aab3",
+      "strings": {
+        "attrs": {
+          "alt": "Windows Server"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_a19f32b8",
+      "strings": {
+        "text": "Windows Server"
+      }
+    },
+    {
+      "ref": "obj.n_81b59469",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_f2d58528",
+      "strings": {
+        "attrs": {
+          "alt": "Services Reseau"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_302b1870",
+      "strings": {
+        "text": "Services Reseau"
+      }
+    },
+    {
+      "ref": "obj.n_6432aad4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_2c98b610",
+      "strings": {
+        "attrs": {
+          "alt": "SQL"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_0858c0c1",
+      "strings": {
+        "text": "SQL"
+      }
+    },
+    {
+      "ref": "obj.n_50a5947b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_24c9466c",
+      "strings": {
+        "attrs": {
+          "alt": "Python"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_fe142aed",
+      "strings": {
+        "text": "Python"
+      }
+    },
+    {
+      "ref": "obj.n_379df59e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_ebe721e6",
+      "strings": {
+        "attrs": {
+          "alt": "C/C++"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_f13812d4",
+      "strings": {
+        "text": "C/C++"
+      }
+    },
+    {
+      "ref": "obj.n_78d71c96",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_20d83ea8",
+      "strings": {
+        "attrs": {
+          "alt": "Java"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_87182f32",
+      "strings": {
+        "text": "Java"
+      }
+    },
+    {
+      "ref": "obj.n_dcf991b2",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_68fca269",
+      "strings": {
+        "attrs": {
+          "alt": "C#"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_be575d17",
+      "strings": {
+        "text": "C#"
+      }
+    },
+    {
+      "ref": "obj.n_11fb7fad",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5f0fadfe",
+      "strings": {
+        "attrs": {
+          "alt": "ASP.NET Core MVC"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_39a59cd5",
+      "strings": {
+        "text": "ASP.NET Core MVC"
+      }
+    },
+    {
+      "ref": "obj.n_4d364d96",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_492a3a6b",
+      "strings": {
+        "attrs": {
+          "alt": "Serveurs Web"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_95ba170e",
+      "strings": {
+        "text": "Serveurs Web"
+      }
+    },
+    {
+      "ref": "obj.n_055b5b36",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5870b0da",
+      "strings": {
+        "attrs": {
+          "alt": "IDS"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_3568a686",
+      "strings": {
+        "text": "IDS"
+      }
+    },
+    {
+      "ref": "obj.n_be0a53f6",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_a1fdc12e",
+      "strings": {
+        "attrs": {
+          "alt": "Analyse de Logs"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_02c39430",
+      "strings": {
+        "text": "Analyse de Logs"
+      }
+    },
+    {
+      "ref": "obj.n_951e3b43",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_c7ae761b",
+      "strings": {
+        "attrs": {
+          "alt": "Cryptographie"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_66b87462",
+      "strings": {
+        "text": "Cryptographie"
+      }
+    },
+    {
+      "ref": "obj.n_cb6d472a",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_86d9dc25",
+      "strings": {
+        "attrs": {
+          "alt": "Hacking Ethique"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_b8f956c6",
+      "strings": {
+        "text": "Hacking Ethique"
+      }
+    },
+    {
+      "ref": "obj.n_4c8dbcb4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_314192c4",
+      "strings": {
+        "attrs": {
+          "alt": "Analyse Forensique Numerique"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_42971d07",
+      "strings": {
+        "text": "Analyse Forensique Numerique"
+      }
+    },
+    {
+      "ref": "obj.n_754ba802",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_e82dbd5b",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_d2acb54f",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_7d0797fa",
+      "strings": {
+        "text": "Differenciateurs Executifs pour RH"
+      }
+    },
+    {
+      "ref": "obj.n_2d311c98",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_97119f84",
+      "strings": {
+        "attrs": {
+          "alt": "Stabilite sous pression"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_9626f0c3",
+      "strings": {
+        "text": "Stabilite sous pression"
+      }
+    },
+    {
+      "ref": "obj.n_1525bcc4",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8cfe9ba3",
+      "strings": {
+        "attrs": {
+          "alt": "Rigueur de processus"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_00ae6d13",
+      "strings": {
+        "text": "Rigueur de processus"
+      }
+    },
+    {
+      "ref": "obj.n_a2acf296",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_0c606380",
+      "strings": {
+        "attrs": {
+          "alt": "Communication claire avec le metier"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_6aa7db48",
+      "strings": {
+        "text": "Communication claire avec le metier"
+      }
+    },
+    {
+      "ref": "obj.n_1b3027f9",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_793a4a76",
+      "strings": {
+        "attrs": {
+          "alt": "Autonomie avec responsabilite"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_649e49d7",
+      "strings": {
+        "text": "Autonomie avec responsabilite"
+      }
+    },
+    {
+      "ref": "obj.n_cfa13b8d",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_5a6a4920",
+      "strings": {
+        "attrs": {
+          "alt": "Previsibilite de livraison"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_64514afc",
+      "strings": {
+        "text": "Previsibilite de livraison"
+      }
+    },
+    {
+      "ref": "obj.n_36c25976",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_8a718bf6",
+      "strings": {
+        "attrs": {
+          "alt": "Mentalite d amelioration continue"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_96eb8961",
+      "strings": {
+        "text": "Mentalite d amelioration continue"
+      }
+    },
+    {
+      "ref": "obj.n_0c31e00e",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_09d75917",
+      "strings": {
+        "attrs": {
+          "alt": "Orientation prevention et gestion du risque"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_da360e0c",
+      "strings": {
+        "text": "Orientation prevention et gestion du risque"
+      }
+    },
+    {
+      "ref": "obj.n_227353a8",
+      "strings": {}
+    },
+    {
+      "ref": "obj.n_001b0354",
+      "strings": {
+        "attrs": {
+          "alt": "Collaboration transversale"
+        }
+      }
+    },
+    {
+      "ref": "obj.n_2f75bb96",
+      "strings": {
+        "text": "Collaboration transversale"
       }
     }
   ]
