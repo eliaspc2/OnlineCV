@@ -263,30 +263,9 @@ const applyMeta = (
   }
 
   if (pwa?.enabled) {
-    const pwaName = getString(pwa.nameKey, pwa.name);
-    const pwaShort = getString(pwa.shortNameKey, pwa.shortName);
-    const pwaDesc = getString(pwa.descriptionKey, pwa.description);
-    const manifest = {
-      name: pwaName || meta?.title || 'JSON Site',
-      short_name: pwaShort || meta?.title || 'JSON Site',
-      description: pwaDesc || description || meta?.description,
-      start_url: pwa.startUrl || './',
-      scope: pwa.scope || './',
-      display: pwa.display || 'standalone',
-      orientation: pwa.orientation,
-      theme_color: pwa.themeColor,
-      background_color: pwa.backgroundColor,
-      icons: (pwa.icons || []).map((icon) => ({
-        src: toPublicUrlIfRelative(icon.src),
-        sizes: icon.sizes || 'any',
-        type: icon.type,
-        purpose: icon.purpose
-      }))
-    };
-    const blob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' });
-    const url = URL.createObjectURL(blob);
-    manifestUrlRef.current = url;
-    createHeadEl('link', { rel: 'manifest', href: url });
+    if (!head.querySelector('link[rel=\"manifest\"]')) {
+      createHeadEl('link', { rel: 'manifest', href: toPublicUrl('manifest.webmanifest?v=8') });
+    }
   }
 };
 
