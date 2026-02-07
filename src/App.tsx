@@ -387,6 +387,55 @@ export default function App() {
 
     skillBars.forEach((bar) => skillObserver.observe(bar));
 
+    const syncFooterQuickLinksFromHeader = () => {
+      const headerLinks = Array.from(
+        document.querySelectorAll('#site-header [data-nav-link]')
+      ) as HTMLElement[];
+      if (!headerLinks.length) return;
+
+      const seen = new Set<string>();
+      const orderedLinks: Array<{ section: string; link: HTMLElement }> = [];
+      headerLinks.forEach((link) => {
+        const section = (link.getAttribute('data-nav-link') || '').trim();
+        if (!section || seen.has(section)) return;
+        if (!document.getElementById(section)) return;
+        seen.add(section);
+        orderedLinks.push({ section, link });
+      });
+      if (!orderedLinks.length) return;
+
+      const footerQuickAnchors = Array.from(
+        document.querySelectorAll('#site-footer a[id^="footer.quick."]')
+      ) as HTMLAnchorElement[];
+      if (!footerQuickAnchors.length) return;
+      const footerList = footerQuickAnchors[0].closest('ul');
+      if (!footerList) return;
+
+      const listItemClass =
+        (footerQuickAnchors[0].closest('li') as HTMLElement | null)?.className || '';
+      const linkClass = footerQuickAnchors[0].className || '';
+
+      footerList.innerHTML = '';
+      orderedLinks.forEach(({ section, link }, idx) => {
+        const li = document.createElement('li');
+        if (listItemClass) li.className = listItemClass;
+
+        const anchor = document.createElement('a');
+        anchor.id = `footer.quick.nav.${section || idx}`;
+        if (linkClass) anchor.className = linkClass;
+
+        const href = link.getAttribute('href') || `#${section}`;
+        anchor.setAttribute('href', href);
+        anchor.setAttribute('data-scroll-to', section);
+        anchor.textContent = (link.textContent || '').trim();
+
+        li.appendChild(anchor);
+        footerList.appendChild(li);
+      });
+    };
+
+    syncFooterQuickLinksFromHeader();
+
     const handleScroll = () => {
       const sections = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
       for (const section of sections) {
