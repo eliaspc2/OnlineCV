@@ -161,8 +161,8 @@ Usa o schema:
 
 ```json
 "favicon": {
-  "icon": "assets/images/brand/favicon.svg",
-  "appleTouchIcon": "assets/images/brand/pwa-icon.svg"
+  "icon": "assets/images/brand/favicon.png",
+  "appleTouchIcon": "assets/images/brand/apple-touch-icon.png"
 },
 "pwa": {
   "enabled": true,
@@ -174,7 +174,8 @@ Usa o schema:
   "themeColor": "#f8fafc",
   "backgroundColor": "#f8fafc",
   "icons": [
-    { "src": "assets/images/brand/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    { "src": "assets/images/brand/pwa-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/images/brand/pwa-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
 ```
