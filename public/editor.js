@@ -9,8 +9,23 @@ const exitBtn = document.getElementById('exitBtn');
 const aggregateView = document.getElementById('aggregateView');
 const aggregateTree = document.getElementById('aggregateTree');
 const aggregateDetail = document.getElementById('aggregateDetail');
+const classKeyBuilderView = document.getElementById('classKeyBuilderView');
+const ckSearch = document.getElementById('ckSearch');
+const ckGroupFilter = document.getElementById('ckGroupFilter');
+const ckLibrary = document.getElementById('ckLibrary');
+const ckDropZone = document.getElementById('ckDropZone');
+const ckSelection = document.getElementById('ckSelection');
+const ckManualTokens = document.getElementById('ckManualTokens');
+const ckPreview = document.getElementById('ckPreview');
+const ckExisting = document.getElementById('ckExisting');
+const ckTargetGroup = document.getElementById('ckTargetGroup');
+const ckTargetKey = document.getElementById('ckTargetKey');
+const ckSaveBtn = document.getElementById('ckSaveBtn');
+const ckClearBtn = document.getElementById('ckClearBtn');
+const ckStatus = document.getElementById('ckStatus');
 
 const AGGREGATE_FILE = '__aggregate__';
+const CLASS_KEYS_VISUAL_FILE = '__classkeys_visual__';
 const CLASS_KEYS_FILE = 'data/class-keys.json';
 const FILES = [
   'data/config.json',
@@ -30,6 +45,8 @@ const STORAGE_PREFIX = 'json_site_draft:';
 let currentFile = AGGREGATE_FILE;
 let aggregateSelectedPath = 'meta';
 const aggregateExpanded = new Set(['meta', 'objects', 'layout', 'pages']);
+let classKeyBuilderState = null;
+let classKeyBuilderEventsBound = false;
 
 const getDraftKey = (file) => `${STORAGE_PREFIX}${file}`;
 
@@ -43,8 +60,10 @@ const setActiveTab = () => {
 
 const setViewMode = () => {
   const isAggregate = currentFile === AGGREGATE_FILE;
+  const isClassKeysVisual = currentFile === CLASS_KEYS_VISUAL_FILE;
   if (aggregateView) aggregateView.classList.toggle('hidden', !isAggregate);
-  editor.classList.toggle('hidden', isAggregate);
+  if (classKeyBuilderView) classKeyBuilderView.classList.toggle('hidden', !isClassKeysVisual);
+  editor.classList.toggle('hidden', isAggregate || isClassKeysVisual);
 };
 
 const loadFile = async (file, preferDraft = true) => {
@@ -257,6 +276,450 @@ const validateLanguageBundle = (data, config, fileLabel = 'strings') => {
 };
 
 const getDraftJson = (file) => parseJsonSafe(localStorage.getItem(getDraftKey(file)) || '');
+
+const splitClassTokens = (value) =>
+  String(value || '')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+const normalizeClassKeysPayload = (raw) => {
+  if (isObject(raw) && isObject(raw.classPresets)) {
+    return { ...raw, classPresets: { ...raw.classPresets } };
+  }
+  if (isObject(raw)) {
+    return { version: 1, classPresets: { ...raw } };
+  }
+  return { version: 1, classPresets: {} };
+};
+
+const getClassKeysPayloadFromDraft = () => {
+  const raw = getDraftJson(CLASS_KEYS_FILE);
+  return normalizeClassKeysPayload(raw);
+};
+
+const persistClassKeysPayload = (payload) => {
+  localStorage.setItem(getDraftKey(CLASS_KEYS_FILE), JSON.stringify(payload, null, 2));
+};
+
+const flattenClassPresetEntries = (node, path = [], out = []) => {
+  if (typeof node === 'string') {
+    const key = path[path.length - 1] || '';
+    const group = path.slice(0, -1).join('.');
+    out.push({
+      path: path.join('.'),
+      group,
+      key,
+      value: node
+    });
+    return out;
+  }
+  if (!isObject(node)) return out;
+  Object.entries(node).forEach(([key, value]) => {
+    flattenClassPresetEntries(value, [...path, key], out);
+  });
+  return out;
+};
+
+const ensureObjectPath = (obj, dottedPath) => {
+  if (!dottedPath) return obj;
+  const parts = dottedPath.split('.').map((p) => p.trim()).filter(Boolean);
+  let cursor = obj;
+  parts.forEach((part) => {
+    if (!isObject(cursor[part])) cursor[part] = {};
+    cursor = cursor[part];
+  });
+  return cursor;
+};
+
+const composeClassKeyValue = (state) => {
+  const ordered = [];
+  const seen = new Set();
+  const pushToken = (token) => {
+    if (seen.has(token)) return;
+    seen.add(token);
+    ordered.push(token);
+  };
+  (state.selectedPieces || []).forEach((piece) => {
+    splitClassTokens(piece.value).forEach(pushToken);
+  });
+  splitClassTokens(state.manualTokens).forEach(pushToken);
+  return ordered.join(' ');
+};
+
+const setClassKeyBuilderStatus = (message, type = 'info') => {
+  if (!ckStatus) return;
+  ckStatus.textContent = message || '';
+  ckStatus.classList.toggle('error', type === 'error');
+};
+
+const moveClassKeyPiece = (fromIndex, toIndex) => {
+  const pieces = classKeyBuilderState?.selectedPieces;
+  if (!Array.isArray(pieces)) return;
+  if (fromIndex === toIndex) return;
+  if (fromIndex < 0 || fromIndex >= pieces.length) return;
+  if (toIndex < 0 || toIndex >= pieces.length) return;
+  const [item] = pieces.splice(fromIndex, 1);
+  pieces.splice(toIndex, 0, item);
+};
+
+const renderClassKeyBuilder = () => {
+  if (!classKeyBuilderView || !classKeyBuilderState) return;
+  const state = classKeyBuilderState;
+
+  const entryMap = new Map(state.entries.map((entry) => [entry.path, entry]));
+  const groupValues = [...new Set(state.entries.map((entry) => entry.group).filter(Boolean))].sort();
+  const preview = composeClassKeyValue(state);
+
+  if (ckSearch) ckSearch.value = state.search || '';
+  if (ckTargetGroup) ckTargetGroup.value = state.targetGroup || '';
+  if (ckTargetKey) ckTargetKey.value = state.targetKey || '';
+  if (ckManualTokens) ckManualTokens.value = state.manualTokens || '';
+  if (ckPreview) ckPreview.value = preview;
+
+  if (ckGroupFilter) {
+    const selected = state.groupFilter || '__all__';
+    ckGroupFilter.innerHTML = '';
+    const allOption = document.createElement('option');
+    allOption.value = '__all__';
+    allOption.textContent = 'Todos os grupos';
+    ckGroupFilter.appendChild(allOption);
+    groupValues.forEach((group) => {
+      const option = document.createElement('option');
+      option.value = group;
+      option.textContent = group;
+      ckGroupFilter.appendChild(option);
+    });
+    ckGroupFilter.value = groupValues.includes(selected) ? selected : '__all__';
+    state.groupFilter = ckGroupFilter.value;
+  }
+
+  if (ckExisting) {
+    const previous = state.existingPath || '';
+    ckExisting.innerHTML = '';
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = 'Selecionar class key...';
+    ckExisting.appendChild(placeholder);
+    state.entries
+      .slice()
+      .sort((a, b) => a.path.localeCompare(b.path))
+      .forEach((entry) => {
+        const option = document.createElement('option');
+        option.value = entry.path;
+        option.textContent = entry.path;
+        ckExisting.appendChild(option);
+      });
+    ckExisting.value = entryMap.has(previous) ? previous : '';
+    state.existingPath = ckExisting.value;
+  }
+
+  if (ckLibrary) {
+    ckLibrary.innerHTML = '';
+    const search = (state.search || '').trim().toLowerCase();
+    const filtered = state.entries.filter((entry) => {
+      if (state.groupFilter && state.groupFilter !== '__all__' && entry.group !== state.groupFilter) return false;
+      if (!search) return true;
+      return entry.path.toLowerCase().includes(search) || entry.value.toLowerCase().includes(search);
+    });
+
+    if (!filtered.length) {
+      const empty = document.createElement('div');
+      empty.className = 'classkey-library-value';
+      empty.textContent = 'Sem resultados para os filtros atuais.';
+      ckLibrary.appendChild(empty);
+    } else {
+      filtered.forEach((entry) => {
+        const item = document.createElement('div');
+        item.className = 'classkey-library-item';
+        item.draggable = true;
+        item.dataset.path = entry.path;
+
+        const path = document.createElement('div');
+        path.className = 'classkey-library-path';
+        path.textContent = entry.path;
+
+        const value = document.createElement('div');
+        value.className = 'classkey-library-value';
+        value.textContent = entry.value;
+
+        item.appendChild(path);
+        item.appendChild(value);
+        ckLibrary.appendChild(item);
+      });
+    }
+  }
+
+  if (ckSelection) {
+    ckSelection.innerHTML = '';
+    state.selectedPieces.forEach((piece, index) => {
+      const row = document.createElement('div');
+      row.className = 'classkey-piece';
+      row.draggable = true;
+      row.dataset.index = String(index);
+
+      const meta = document.createElement('div');
+      meta.className = 'classkey-piece-meta';
+
+      const path = document.createElement('div');
+      path.className = 'classkey-piece-path';
+      path.textContent = piece.sourcePath;
+
+      const actions = document.createElement('div');
+      actions.className = 'classkey-piece-actions';
+
+      const up = document.createElement('button');
+      up.type = 'button';
+      up.textContent = '↑';
+      up.disabled = index === 0;
+      up.addEventListener('click', () => {
+        moveClassKeyPiece(index, index - 1);
+        renderClassKeyBuilder();
+      });
+
+      const down = document.createElement('button');
+      down.type = 'button';
+      down.textContent = '↓';
+      down.disabled = index === state.selectedPieces.length - 1;
+      down.addEventListener('click', () => {
+        moveClassKeyPiece(index, index + 1);
+        renderClassKeyBuilder();
+      });
+
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.textContent = 'Remover';
+      remove.addEventListener('click', () => {
+        state.selectedPieces.splice(index, 1);
+        renderClassKeyBuilder();
+      });
+
+      actions.appendChild(up);
+      actions.appendChild(down);
+      actions.appendChild(remove);
+      meta.appendChild(path);
+      meta.appendChild(actions);
+
+      const value = document.createElement('div');
+      value.className = 'classkey-piece-value';
+      value.textContent = piece.value;
+
+      row.appendChild(meta);
+      row.appendChild(value);
+      ckSelection.appendChild(row);
+    });
+  }
+};
+
+const buildClassKeyBuilderState = () => {
+  const payload = getClassKeysPayloadFromDraft();
+  const entries = flattenClassPresetEntries(payload.classPresets);
+  const previous = classKeyBuilderState || {};
+  classKeyBuilderState = {
+    payload,
+    entries,
+    selectedPieces: Array.isArray(previous.selectedPieces) ? previous.selectedPieces : [],
+    manualTokens: previous.manualTokens || '',
+    targetGroup: previous.targetGroup || 'visual.shared',
+    targetKey: previous.targetKey || '',
+    existingPath: previous.existingPath || '',
+    search: previous.search || '',
+    groupFilter: previous.groupFilter || '__all__'
+  };
+  renderClassKeyBuilder();
+};
+
+const bindClassKeyBuilderEvents = () => {
+  if (classKeyBuilderEventsBound) return;
+  if (!classKeyBuilderView) return;
+  classKeyBuilderEventsBound = true;
+
+  const addPieceByPath = (sourcePath, insertIndex = null) => {
+    const state = classKeyBuilderState;
+    if (!state) return;
+    const entry = state.entries.find((item) => item.path === sourcePath);
+    if (!entry) return;
+    const piece = {
+      id: `${Date.now()}-${Math.random()}`,
+      sourcePath: entry.path,
+      value: entry.value
+    };
+    if (typeof insertIndex === 'number' && insertIndex >= 0 && insertIndex <= state.selectedPieces.length) {
+      state.selectedPieces.splice(insertIndex, 0, piece);
+    } else {
+      state.selectedPieces.push(piece);
+    }
+    renderClassKeyBuilder();
+  };
+
+  if (ckSearch) {
+    ckSearch.addEventListener('input', (event) => {
+      classKeyBuilderState.search = event.target.value || '';
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckGroupFilter) {
+    ckGroupFilter.addEventListener('change', (event) => {
+      classKeyBuilderState.groupFilter = event.target.value || '__all__';
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckLibrary) {
+    ckLibrary.addEventListener('click', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const item = targetEl ? targetEl.closest('.classkey-library-item') : null;
+      if (!item || !item.dataset.path) return;
+      addPieceByPath(item.dataset.path);
+    });
+    ckLibrary.addEventListener('dragstart', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const item = targetEl ? targetEl.closest('.classkey-library-item') : null;
+      if (!item || !item.dataset.path) return;
+      event.dataTransfer.effectAllowed = 'copy';
+      event.dataTransfer.setData('text/classkey-piece', item.dataset.path);
+    });
+  }
+
+  if (ckDropZone) {
+    ckDropZone.addEventListener('dragover', (event) => {
+      event.preventDefault();
+      ckDropZone.classList.add('over');
+      event.dataTransfer.dropEffect = 'copy';
+    });
+    ckDropZone.addEventListener('dragleave', () => {
+      ckDropZone.classList.remove('over');
+    });
+    ckDropZone.addEventListener('drop', (event) => {
+      event.preventDefault();
+      ckDropZone.classList.remove('over');
+      const sourcePath = event.dataTransfer.getData('text/classkey-piece');
+      if (sourcePath) addPieceByPath(sourcePath);
+    });
+  }
+
+  if (ckSelection) {
+    ckSelection.addEventListener('dragstart', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const row = targetEl ? targetEl.closest('.classkey-piece') : null;
+      if (!row || row.dataset.index === undefined) return;
+      row.classList.add('is-dragging');
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/classkey-selected-index', row.dataset.index);
+    });
+    ckSelection.addEventListener('dragend', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const row = targetEl ? targetEl.closest('.classkey-piece') : null;
+      if (row) row.classList.remove('is-dragging');
+    });
+    ckSelection.addEventListener('dragover', (event) => {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+    });
+    ckSelection.addEventListener('drop', (event) => {
+      event.preventDefault();
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const target = targetEl ? targetEl.closest('.classkey-piece') : null;
+      const sourcePath = event.dataTransfer.getData('text/classkey-piece');
+      const fromIndexRaw = event.dataTransfer.getData('text/classkey-selected-index');
+      const targetIndex = target?.dataset.index !== undefined ? Number(target.dataset.index) : null;
+
+      if (sourcePath) {
+        addPieceByPath(sourcePath, targetIndex === null ? null : targetIndex);
+        return;
+      }
+
+      if (fromIndexRaw === '') return;
+      const fromIndex = Number(fromIndexRaw);
+      if (!Number.isFinite(fromIndex)) return;
+      if (targetIndex === null) return;
+      moveClassKeyPiece(fromIndex, targetIndex);
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckManualTokens) {
+    ckManualTokens.addEventListener('input', (event) => {
+      classKeyBuilderState.manualTokens = event.target.value || '';
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckTargetGroup) {
+    ckTargetGroup.addEventListener('input', (event) => {
+      classKeyBuilderState.targetGroup = event.target.value || '';
+    });
+  }
+
+  if (ckTargetKey) {
+    ckTargetKey.addEventListener('input', (event) => {
+      classKeyBuilderState.targetKey = event.target.value || '';
+    });
+  }
+
+  if (ckExisting) {
+    ckExisting.addEventListener('change', (event) => {
+      const selectedPath = event.target.value || '';
+      classKeyBuilderState.existingPath = selectedPath;
+      if (!selectedPath) return;
+      const entry = classKeyBuilderState.entries.find((item) => item.path === selectedPath);
+      if (!entry) return;
+      classKeyBuilderState.targetGroup = entry.group;
+      classKeyBuilderState.targetKey = entry.key;
+      classKeyBuilderState.selectedPieces = [];
+      classKeyBuilderState.manualTokens = entry.value;
+      setClassKeyBuilderStatus(`Carregado: ${selectedPath}`);
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckClearBtn) {
+    ckClearBtn.addEventListener('click', () => {
+      classKeyBuilderState.selectedPieces = [];
+      classKeyBuilderState.manualTokens = '';
+      setClassKeyBuilderStatus('Composição limpa.');
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckSaveBtn) {
+    ckSaveBtn.addEventListener('click', () => {
+      const state = classKeyBuilderState;
+      const group = (state.targetGroup || '').trim();
+      const key = (state.targetKey || '').trim();
+      if (!group) {
+        setClassKeyBuilderStatus('Grupo alvo é obrigatório.', 'error');
+        return;
+      }
+      if (!key) {
+        setClassKeyBuilderStatus('Nome da class key é obrigatório.', 'error');
+        return;
+      }
+      const value = composeClassKeyValue(state);
+      if (!value) {
+        setClassKeyBuilderStatus('Classe final está vazia.', 'error');
+        return;
+      }
+
+      const root = ensureObjectPath(state.payload.classPresets, group);
+      root[key] = value;
+      persistClassKeysPayload(state.payload);
+
+      state.entries = flattenClassPresetEntries(state.payload.classPresets);
+      state.existingPath = `${group}.${key}`;
+      setClassKeyBuilderStatus(`Guardado em ${state.existingPath}`);
+      buildAggregateView();
+      renderClassKeyBuilder();
+    });
+  }
+};
+
+const initClassKeyBuilder = () => {
+  if (!classKeyBuilderView) return;
+  bindClassKeyBuilderEvents();
+  buildClassKeyBuilderState();
+};
 
 const buildAggregateView = () => {
   if (!aggregateTree || !aggregateDetail) return;
@@ -1298,6 +1761,18 @@ const validate = () => {
       return;
     }
 
+    if (currentFile === CLASS_KEYS_VISUAL_FILE) {
+      const payload = getClassKeysPayloadFromDraft();
+      const classTree = normalizeClassPresetTree(payload);
+      if (!classTree) {
+        console.error('[EDITOR] Errors:', [`${CLASS_KEYS_FILE}: invalid class keys payload`]);
+        alert('JSON inválido. Ver console.');
+        return;
+      }
+      alert('JSON válido.');
+      return;
+    }
+
     const data = JSON.parse(editor.value);
     if (currentFile === 'data/config.json') {
       const result = validateConfig(data, getClassPresetSourceFromDraft());
@@ -1340,17 +1815,22 @@ const download = () => {
     alert('Seleciona um ficheiro para fazer download.');
     return;
   }
-  const blob = new Blob([editor.value], { type: 'application/json' });
+  const content =
+    currentFile === CLASS_KEYS_VISUAL_FILE
+      ? localStorage.getItem(getDraftKey(CLASS_KEYS_FILE)) || JSON.stringify(getClassKeysPayloadFromDraft(), null, 2)
+      : editor.value;
+  const fileName = currentFile === CLASS_KEYS_VISUAL_FILE ? 'class-keys.json' : currentFile.split('/').pop() || currentFile;
+  const blob = new Blob([content], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = currentFile.split('/').pop() || currentFile;
+  a.download = fileName;
   a.click();
   URL.revokeObjectURL(url);
 };
 
 editor.addEventListener('input', () => {
-  if (currentFile === AGGREGATE_FILE) return;
+  if (currentFile === AGGREGATE_FILE || currentFile === CLASS_KEYS_VISUAL_FILE) return;
   localStorage.setItem(getDraftKey(currentFile), editor.value);
   buildAggregateView();
 });
@@ -1364,14 +1844,16 @@ const loadAll = async () => {
       localStorage.setItem(getDraftKey(file), text);
     })
   );
-  if (currentFile !== AGGREGATE_FILE) {
+  if (currentFile !== AGGREGATE_FILE && currentFile !== CLASS_KEYS_VISUAL_FILE) {
     await loadFile(currentFile, true);
+  } else if (currentFile === CLASS_KEYS_VISUAL_FILE) {
+    initClassKeyBuilder();
   }
 };
 
 const switchFile = async (file) => {
   if (file === currentFile) return;
-  if (currentFile !== AGGREGATE_FILE) {
+  if (currentFile !== AGGREGATE_FILE && currentFile !== CLASS_KEYS_VISUAL_FILE) {
     localStorage.setItem(getDraftKey(currentFile), editor.value);
   }
   currentFile = file;
@@ -1379,6 +1861,12 @@ const switchFile = async (file) => {
     setActiveTab();
     buildAggregateView();
     setViewMode();
+    return;
+  }
+  if (currentFile === CLASS_KEYS_VISUAL_FILE) {
+    setActiveTab();
+    setViewMode();
+    initClassKeyBuilder();
     return;
   }
   await loadFile(currentFile, true);
@@ -1393,6 +1881,13 @@ if (fileTabs) {
   aggBtn.textContent = 'Agregado';
   aggBtn.addEventListener('click', () => switchFile(AGGREGATE_FILE));
   fileTabs.appendChild(aggBtn);
+
+  const visualClassBtn = document.createElement('button');
+  visualClassBtn.type = 'button';
+  visualClassBtn.dataset.file = CLASS_KEYS_VISUAL_FILE;
+  visualClassBtn.textContent = 'Class Keys Visual';
+  visualClassBtn.addEventListener('click', () => switchFile(CLASS_KEYS_VISUAL_FILE));
+  fileTabs.appendChild(visualClassBtn);
 
   FILES.forEach((file) => {
     const btn = document.createElement('button');

@@ -35,6 +35,51 @@
             <div class="detail-list" id="aggregateDetail"></div>
           </div>
         </div>
+        <div class="classkey-builder hidden" id="classKeyBuilderView">
+          <div class="classkey-library-pane">
+            <div class="panel-title">Objetos</div>
+            <div class="classkey-toolbar">
+              <input id="ckSearch" type="text" placeholder="Pesquisar class key..." />
+              <select id="ckGroupFilter"></select>
+            </div>
+            <div class="classkey-library-list" id="ckLibrary"></div>
+          </div>
+          <div class="classkey-canvas-pane">
+            <div class="panel-title">Composição</div>
+            <div class="classkey-dropzone" id="ckDropZone">
+              Arraste peças para aqui ou clique numa peça na barra lateral.
+            </div>
+            <div class="classkey-selection" id="ckSelection"></div>
+            <div class="classkey-field">
+              <label for="ckManualTokens">Tokens extra</label>
+              <textarea id="ckManualTokens" spellcheck="false"></textarea>
+            </div>
+            <div class="classkey-field">
+              <label for="ckPreview">Classe final</label>
+              <textarea id="ckPreview" spellcheck="false" readonly></textarea>
+            </div>
+          </div>
+          <div class="classkey-config-pane">
+            <div class="panel-title">Definição</div>
+            <div class="classkey-field">
+              <label for="ckExisting">Carregar class key existente</label>
+              <select id="ckExisting"></select>
+            </div>
+            <div class="classkey-field">
+              <label for="ckTargetGroup">Grupo alvo</label>
+              <input id="ckTargetGroup" type="text" placeholder="visual.hero" />
+            </div>
+            <div class="classkey-field">
+              <label for="ckTargetKey">Nome da class key</label>
+              <input id="ckTargetKey" type="text" placeholder="reveal_opacity_0" />
+            </div>
+            <div class="classkey-actions">
+              <button id="ckSaveBtn" type="button">Guardar class key</button>
+              <button id="ckClearBtn" type="button">Limpar composição</button>
+            </div>
+            <div class="classkey-status" id="ckStatus"></div>
+          </div>
+        </div>
         <textarea id="editor" spellcheck="false"></textarea>
       </div>
       <aside class="side">
@@ -46,6 +91,7 @@
         <p><strong>Download</strong> gera o ficheiro que está selecionado.</p>
         <p>O conteúdo também fica em <code>localStorage</code> como rascunho.</p>
         <p><strong>Agregado</strong> mostra uma árvore (estilo regedit) e um painel JSON filtrado pela seleção.</p>
+        <p><strong>Class Keys Visual</strong> permite combinar peças visuais e gravar no <code>class-keys.json</code>.</p>
         <p>O editor abre no <strong>Agregado</strong> por defeito.</p>
       </aside>
     </main>
