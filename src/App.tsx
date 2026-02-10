@@ -641,7 +641,7 @@ export default function App() {
         if (clickIndicator) clickIndicator.classList.add('hidden');
         if (adminOverlay) adminOverlay.classList.remove('hidden');
         setTimeout(() => {
-          window.location.href = toPublicUrl('editor.html');
+          window.location.href = toPublicUrl('editor.html?view=classkeys');
         }, 500);
         return;
       }

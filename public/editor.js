@@ -42,7 +42,23 @@ const LANGUAGE_FILES = [
   'data/fr-fr.json'
 ];
 const STORAGE_PREFIX = 'json_site_draft:';
-let currentFile = AGGREGATE_FILE;
+const getInitialFile = () => {
+  const params = new URLSearchParams(window.location.search);
+  const rawView = (params.get('view') || params.get('tab') || '').trim().toLowerCase();
+  if (['classkeys', 'class-keys', 'class_keys', 'classkeys_visual'].includes(rawView)) {
+    return CLASS_KEYS_VISUAL_FILE;
+  }
+  if (rawView === 'aggregate') return AGGREGATE_FILE;
+  const rawFile = (params.get('file') || '').trim();
+  if (rawFile) {
+    let candidate = rawFile.replace(/^\//, '');
+    if (!candidate.endsWith('.json')) candidate = `${candidate}.json`;
+    if (!candidate.startsWith('data/')) candidate = `data/${candidate}`;
+    if (FILES.includes(candidate)) return candidate;
+  }
+  return AGGREGATE_FILE;
+};
+let currentFile = getInitialFile();
 let aggregateSelectedPath = 'meta';
 const aggregateExpanded = new Set(['meta', 'objects', 'layout', 'pages']);
 let classKeyBuilderState = null;
