@@ -13,6 +13,13 @@ const classKeyBuilderView = document.getElementById('classKeyBuilderView');
 const ckSearch = document.getElementById('ckSearch');
 const ckGroupFilter = document.getElementById('ckGroupFilter');
 const ckLibrary = document.getElementById('ckLibrary');
+const ckObjectSelect = document.getElementById('ckObjectSelect');
+const ckSnap = document.getElementById('ckSnap');
+const ckAddObjectBtn = document.getElementById('ckAddObjectBtn');
+const ckStage = document.getElementById('ckStage');
+const ckPositionInfo = document.getElementById('ckPositionInfo');
+const ckResetPositionBtn = document.getElementById('ckResetPositionBtn');
+const ckRemoveObjectBtn = document.getElementById('ckRemoveObjectBtn');
 const ckDropZone = document.getElementById('ckDropZone');
 const ckSelection = document.getElementById('ckSelection');
 const ckManualTokens = document.getElementById('ckManualTokens');
@@ -63,6 +70,7 @@ let aggregateSelectedPath = 'meta';
 const aggregateExpanded = new Set(['meta', 'objects', 'layout', 'pages']);
 let classKeyBuilderState = null;
 let classKeyBuilderEventsBound = false;
+let classKeyStageDrag = null;
 
 const getDraftKey = (file) => `${STORAGE_PREFIX}${file}`;
 
@@ -337,6 +345,152 @@ const flattenClassPresetEntries = (node, path = [], out = []) => {
   return out;
 };
 
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+const collectRenderableObjects = (config) => {
+  if (!isObject(config)) return [];
+  const objects = isObject(config.objects) ? config.objects : {};
+  const out = [];
+  const MAX_STAGE_OBJECTS = 800;
+
+  const getResolved = (node) => {
+    const ref = typeof node.ref === 'string' ? node.ref : '';
+    const base = ref && isObject(objects[ref]) ? objects[ref] : null;
+    return {
+      ref,
+      tag:
+        typeof node.tag === 'string'
+          ? node.tag
+          : typeof base?.tag === 'string'
+            ? base.tag
+            : 'div',
+      classKey:
+        typeof node.classKey === 'string'
+          ? node.classKey
+          : typeof base?.classKey === 'string'
+            ? base.classKey
+            : '',
+      text:
+        typeof node.text === 'string'
+          ? node.text
+          : typeof base?.text === 'string'
+            ? base.text
+            : ''
+    };
+  };
+
+  const pushNode = (node, location) => {
+    if (!isObject(node) || out.length >= MAX_STAGE_OBJECTS) return;
+    const resolved = getResolved(node);
+    const nodeId = typeof node.id === 'string' ? node.id.trim() : '';
+    const label = nodeId || resolved.ref || location;
+    out.push({
+      id: `render-${out.length + 1}`,
+      label,
+      tag: resolved.tag,
+      ref: resolved.ref,
+      nodeId,
+      classKey: resolved.classKey,
+      text: resolved.text,
+      location
+    });
+    if (Array.isArray(node.children)) {
+      node.children.forEach((child, idx) => {
+        pushNode(child, `${location}.children[${idx}]`);
+      });
+    }
+  };
+
+  if (isObject(config.layout)) {
+    Object.entries(config.layout).forEach(([group, nodes]) => {
+      if (!Array.isArray(nodes)) return;
+      nodes.forEach((node, idx) => pushNode(node, `layout.${group}[${idx}]`));
+    });
+  }
+
+  if (Array.isArray(config.pages)) {
+    config.pages.forEach((page, pageIdx) => {
+      (page.sections || []).forEach((section, sectionIdx) => {
+        (section.nodes || []).forEach((node, nodeIdx) => {
+          pushNode(node, `pages[${pageIdx}].sections[${sectionIdx}].nodes[${nodeIdx}]`);
+        });
+      });
+    });
+  }
+
+  return out;
+};
+
+const parseVisualPositionTokens = (value) => {
+  const tokens = splitClassTokens(value);
+  let x = null;
+  let y = null;
+  const keep = [];
+
+  tokens.forEach((token) => {
+    const leftMatch = token.match(/^left-\[(-?\d+)px\]$/);
+    if (leftMatch) {
+      x = Number(leftMatch[1]);
+      return;
+    }
+    const topMatch = token.match(/^top-\[(-?\d+)px\]$/);
+    if (topMatch) {
+      y = Number(topMatch[1]);
+      return;
+    }
+    keep.push(token);
+  });
+
+  if (x !== null && y !== null) {
+    const absoluteIdx = keep.indexOf('absolute');
+    if (absoluteIdx >= 0) keep.splice(absoluteIdx, 1);
+    return { x, y, remaining: keep.join(' ') };
+  }
+  return { x: null, y: null, remaining: tokens.join(' ') };
+};
+
+const guessStageItemSize = (tag) => {
+  if (tag === 'img') return { width: 160, height: 120 };
+  if (tag === 'button') return { width: 150, height: 56 };
+  if (tag === 'a') return { width: 180, height: 56 };
+  if (tag === 'section') return { width: 220, height: 108 };
+  return { width: 180, height: 80 };
+};
+
+const makeStageItemFromObject = (objectNode, snap = 8, index = 0) => {
+  const size = guessStageItemSize(objectNode.tag);
+  const baseX = 12 + (index % 6) * 22;
+  const baseY = 12 + Math.floor(index / 6) * 22;
+  const snappedX = snap > 1 ? Math.round(baseX / snap) * snap : baseX;
+  const snappedY = snap > 1 ? Math.round(baseY / snap) * snap : baseY;
+  return {
+    id: `stage-${Date.now()}-${Math.random()}`,
+    objectId: objectNode.id,
+    label: objectNode.label,
+    tag: objectNode.tag,
+    ref: objectNode.ref,
+    classKey: objectNode.classKey,
+    x: snappedX,
+    y: snappedY,
+    width: size.width,
+    height: size.height
+  };
+};
+
+const getActiveStageItem = (state) =>
+  state.stageItems.find((item) => item.id === state.activeStageItemId) || null;
+
+const syncVisualTokensFromStage = (state) => {
+  const active = getActiveStageItem(state);
+  if (!active) {
+    state.visualTokens = '';
+    return;
+  }
+  const x = Math.round(active.x);
+  const y = Math.round(active.y);
+  state.visualTokens = `absolute left-[${x}px] top-[${y}px]`;
+};
+
 const ensureObjectPath = (obj, dottedPath) => {
   if (!dottedPath) return obj;
   const parts = dottedPath.split('.').map((p) => p.trim()).filter(Boolean);
@@ -359,6 +513,7 @@ const composeClassKeyValue = (state) => {
   (state.selectedPieces || []).forEach((piece) => {
     splitClassTokens(piece.value).forEach(pushToken);
   });
+  splitClassTokens(state.visualTokens).forEach(pushToken);
   splitClassTokens(state.manualTokens).forEach(pushToken);
   return ordered.join(' ');
 };
@@ -382,16 +537,89 @@ const moveClassKeyPiece = (fromIndex, toIndex) => {
 const renderClassKeyBuilder = () => {
   if (!classKeyBuilderView || !classKeyBuilderState) return;
   const state = classKeyBuilderState;
+  syncVisualTokensFromStage(state);
 
   const entryMap = new Map(state.entries.map((entry) => [entry.path, entry]));
   const groupValues = [...new Set(state.entries.map((entry) => entry.group).filter(Boolean))].sort();
   const preview = composeClassKeyValue(state);
+  const activeStage = getActiveStageItem(state);
 
   if (ckSearch) ckSearch.value = state.search || '';
   if (ckTargetGroup) ckTargetGroup.value = state.targetGroup || '';
   if (ckTargetKey) ckTargetKey.value = state.targetKey || '';
   if (ckManualTokens) ckManualTokens.value = state.manualTokens || '';
   if (ckPreview) ckPreview.value = preview;
+  if (ckSnap) ckSnap.value = String(state.snap || 8);
+
+  if (ckObjectSelect) {
+    const previous = state.selectedObjectId || '';
+    ckObjectSelect.innerHTML = '';
+    if (!state.visualObjects.length) {
+      const emptyOption = document.createElement('option');
+      emptyOption.value = '';
+      emptyOption.textContent = 'Sem objetos disponíveis no config';
+      ckObjectSelect.appendChild(emptyOption);
+      state.selectedObjectId = '';
+    } else {
+      state.visualObjects.forEach((objectNode) => {
+        const option = document.createElement('option');
+        option.value = objectNode.id;
+        option.textContent = `${objectNode.label} (${objectNode.tag})`;
+        ckObjectSelect.appendChild(option);
+      });
+      state.selectedObjectId = state.visualObjects.some((item) => item.id === previous)
+        ? previous
+        : state.visualObjects[0].id;
+    }
+    ckObjectSelect.value = state.selectedObjectId || '';
+  }
+
+  if (ckStage) {
+    ckStage.innerHTML = '';
+    if (!state.stageItems.length) {
+      const empty = document.createElement('div');
+      empty.className = 'classkey-stage-empty';
+      empty.textContent = 'Sem objetos no palco. Escolhe um objeto e adiciona.';
+      ckStage.appendChild(empty);
+    } else {
+      state.stageItems.forEach((item) => {
+        const el = document.createElement('div');
+        el.className = 'classkey-stage-item';
+        if (item.id === state.activeStageItemId) el.classList.add('active');
+        el.dataset.stageId = item.id;
+        el.style.left = `${Math.round(item.x)}px`;
+        el.style.top = `${Math.round(item.y)}px`;
+        el.style.width = `${Math.round(item.width)}px`;
+
+        const tag = document.createElement('div');
+        tag.className = 'classkey-stage-item-tag';
+        tag.textContent = `<${item.tag}>`;
+
+        const label = document.createElement('div');
+        label.className = 'classkey-stage-item-label';
+        label.textContent = item.label;
+
+        const pos = document.createElement('div');
+        pos.className = 'classkey-stage-item-pos';
+        pos.textContent = `x:${Math.round(item.x)} y:${Math.round(item.y)}`;
+
+        el.appendChild(tag);
+        el.appendChild(label);
+        el.appendChild(pos);
+        ckStage.appendChild(el);
+      });
+    }
+  }
+
+  if (ckPositionInfo) {
+    if (!activeStage) {
+      ckPositionInfo.textContent = 'Sem objeto selecionado.';
+    } else {
+      ckPositionInfo.textContent = `${activeStage.label} -> ${state.visualTokens}`;
+    }
+  }
+  if (ckResetPositionBtn) ckResetPositionBtn.disabled = !activeStage;
+  if (ckRemoveObjectBtn) ckRemoveObjectBtn.disabled = !activeStage;
 
   if (ckGroupFilter) {
     const selected = state.groupFilter || '__all__';
@@ -530,10 +758,27 @@ const renderClassKeyBuilder = () => {
 const buildClassKeyBuilderState = () => {
   const payload = getClassKeysPayloadFromDraft();
   const entries = flattenClassPresetEntries(payload.classPresets);
+  const config = getDraftJson('data/config.json');
+  const visualObjects = collectRenderableObjects(config);
   const previous = classKeyBuilderState || {};
+  const snap = Number(previous.snap);
+  const normalizedSnap = Number.isFinite(snap) ? clamp(Math.round(snap), 1, 64) : 8;
+  const stageItems = Array.isArray(previous.stageItems) ? previous.stageItems : [];
+  const activeStageItemId =
+    typeof previous.activeStageItemId === 'string' ? previous.activeStageItemId : '';
+  const selectedObjectId =
+    typeof previous.selectedObjectId === 'string'
+      ? previous.selectedObjectId
+      : visualObjects[0]?.id || '';
   classKeyBuilderState = {
     payload,
     entries,
+    visualObjects,
+    stageItems,
+    activeStageItemId,
+    visualTokens: typeof previous.visualTokens === 'string' ? previous.visualTokens : '',
+    selectedObjectId,
+    snap: normalizedSnap,
     selectedPieces: Array.isArray(previous.selectedPieces) ? previous.selectedPieces : [],
     manualTokens: previous.manualTokens || '',
     targetGroup: previous.targetGroup || 'visual.shared',
@@ -542,6 +787,7 @@ const buildClassKeyBuilderState = () => {
     search: previous.search || '',
     groupFilter: previous.groupFilter || '__all__'
   };
+  syncVisualTokensFromStage(classKeyBuilderState);
   renderClassKeyBuilder();
 };
 
@@ -567,6 +813,169 @@ const bindClassKeyBuilderEvents = () => {
     }
     renderClassKeyBuilder();
   };
+
+  const addStageObject = () => {
+    const state = classKeyBuilderState;
+    if (!state) return;
+    const selected =
+      state.visualObjects.find((item) => item.id === state.selectedObjectId) || state.visualObjects[0];
+    if (!selected) {
+      setClassKeyBuilderStatus('Sem objetos no config para renderizar.', 'error');
+      return;
+    }
+    const stageItem = makeStageItemFromObject(selected, state.snap, state.stageItems.length);
+    state.stageItems.push(stageItem);
+    state.activeStageItemId = stageItem.id;
+    syncVisualTokensFromStage(state);
+    setClassKeyBuilderStatus(`Objeto adicionado ao palco: ${selected.label}`);
+    renderClassKeyBuilder();
+  };
+
+  const removeActiveStageObject = () => {
+    const state = classKeyBuilderState;
+    if (!state) return;
+    const active = getActiveStageItem(state);
+    if (!active) return;
+    state.stageItems = state.stageItems.filter((item) => item.id !== active.id);
+    state.activeStageItemId = state.stageItems[0]?.id || '';
+    syncVisualTokensFromStage(state);
+    setClassKeyBuilderStatus('Objeto removido do palco.');
+    renderClassKeyBuilder();
+  };
+
+  const updateStageDrag = (event, finalize = false) => {
+    const state = classKeyBuilderState;
+    if (!state || !classKeyStageDrag || !ckStage) return;
+    const item = state.stageItems.find((entry) => entry.id === classKeyStageDrag.stageItemId);
+    if (!item) return;
+
+    const stageRect = ckStage.getBoundingClientRect();
+    const itemEl = ckStage.querySelector(`[data-stage-id="${item.id}"]`);
+    const width = itemEl ? itemEl.offsetWidth : item.width;
+    const height = itemEl ? itemEl.offsetHeight : item.height;
+    item.width = width;
+    item.height = height;
+
+    let nextX = event.clientX - stageRect.left - classKeyStageDrag.offsetX;
+    let nextY = event.clientY - stageRect.top - classKeyStageDrag.offsetY;
+    const snap = clamp(Number(state.snap) || 8, 1, 64);
+    if (snap > 1) {
+      nextX = Math.round(nextX / snap) * snap;
+      nextY = Math.round(nextY / snap) * snap;
+    }
+
+    nextX = clamp(nextX, 0, Math.max(0, stageRect.width - width));
+    nextY = clamp(nextY, 0, Math.max(0, stageRect.height - height));
+    item.x = nextX;
+    item.y = nextY;
+    syncVisualTokensFromStage(state);
+
+    if (itemEl) {
+      itemEl.style.left = `${Math.round(nextX)}px`;
+      itemEl.style.top = `${Math.round(nextY)}px`;
+      const posEl = itemEl.querySelector('.classkey-stage-item-pos');
+      if (posEl) posEl.textContent = `x:${Math.round(nextX)} y:${Math.round(nextY)}`;
+    }
+    if (ckPositionInfo) ckPositionInfo.textContent = `${item.label} -> ${state.visualTokens}`;
+    if (ckPreview) ckPreview.value = composeClassKeyValue(state);
+    if (finalize) renderClassKeyBuilder();
+  };
+
+  if (ckObjectSelect) {
+    ckObjectSelect.addEventListener('change', (event) => {
+      classKeyBuilderState.selectedObjectId = event.target.value || '';
+    });
+  }
+
+  if (ckSnap) {
+    ckSnap.addEventListener('input', (event) => {
+      const raw = Number(event.target.value);
+      const snap = Number.isFinite(raw) ? clamp(Math.round(raw), 1, 64) : 8;
+      classKeyBuilderState.snap = snap;
+      event.target.value = String(snap);
+    });
+  }
+
+  if (ckAddObjectBtn) {
+    ckAddObjectBtn.addEventListener('click', () => {
+      addStageObject();
+    });
+  }
+
+  if (ckRemoveObjectBtn) {
+    ckRemoveObjectBtn.addEventListener('click', () => {
+      removeActiveStageObject();
+    });
+  }
+
+  if (ckResetPositionBtn) {
+    ckResetPositionBtn.addEventListener('click', () => {
+      const state = classKeyBuilderState;
+      const active = state ? getActiveStageItem(state) : null;
+      if (!active) return;
+      active.x = 0;
+      active.y = 0;
+      syncVisualTokensFromStage(state);
+      setClassKeyBuilderStatus('Posição do objeto reiniciada.');
+      renderClassKeyBuilder();
+    });
+  }
+
+  if (ckStage) {
+    ckStage.addEventListener('click', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const stageItem = targetEl ? targetEl.closest('.classkey-stage-item') : null;
+      if (!stageItem) return;
+      classKeyBuilderState.activeStageItemId = stageItem.dataset.stageId || '';
+      syncVisualTokensFromStage(classKeyBuilderState);
+      renderClassKeyBuilder();
+    });
+
+    ckStage.addEventListener('pointerdown', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const stageItem = targetEl ? targetEl.closest('.classkey-stage-item') : null;
+      if (!stageItem || !stageItem.dataset.stageId) return;
+      event.preventDefault();
+      classKeyBuilderState.activeStageItemId = stageItem.dataset.stageId;
+      const rect = stageItem.getBoundingClientRect();
+      classKeyStageDrag = {
+        stageItemId: stageItem.dataset.stageId,
+        pointerId: event.pointerId,
+        offsetX: event.clientX - rect.left,
+        offsetY: event.clientY - rect.top
+      };
+      if (stageItem.setPointerCapture) {
+        stageItem.setPointerCapture(event.pointerId);
+      }
+      syncVisualTokensFromStage(classKeyBuilderState);
+      ckStage
+        .querySelectorAll('.classkey-stage-item')
+        .forEach((el) => el.classList.toggle('active', el.dataset.stageId === stageItem.dataset.stageId));
+      if (ckPreview) ckPreview.value = composeClassKeyValue(classKeyBuilderState);
+      if (ckPositionInfo) {
+        const active = getActiveStageItem(classKeyBuilderState);
+        ckPositionInfo.textContent = active
+          ? `${active.label} -> ${classKeyBuilderState.visualTokens}`
+          : 'Sem objeto selecionado.';
+      }
+    });
+
+    ckStage.addEventListener('pointermove', (event) => {
+      if (!classKeyStageDrag || event.pointerId !== classKeyStageDrag.pointerId) return;
+      event.preventDefault();
+      updateStageDrag(event, false);
+    });
+
+    const finishStageDrag = (event) => {
+      if (!classKeyStageDrag || event.pointerId !== classKeyStageDrag.pointerId) return;
+      updateStageDrag(event, true);
+      classKeyStageDrag = null;
+    };
+
+    ckStage.addEventListener('pointerup', finishStageDrag);
+    ckStage.addEventListener('pointercancel', finishStageDrag);
+    ckStage.addEventListener('pointerleave', finishStageDrag);
+  }
 
   if (ckSearch) {
     ckSearch.addEventListener('input', (event) => {
@@ -681,10 +1090,33 @@ const bindClassKeyBuilderEvents = () => {
       if (!selectedPath) return;
       const entry = classKeyBuilderState.entries.find((item) => item.path === selectedPath);
       if (!entry) return;
+      const parsed = parseVisualPositionTokens(entry.value);
       classKeyBuilderState.targetGroup = entry.group;
       classKeyBuilderState.targetKey = entry.key;
       classKeyBuilderState.selectedPieces = [];
-      classKeyBuilderState.manualTokens = entry.value;
+      classKeyBuilderState.manualTokens = parsed.remaining;
+      if (parsed.x !== null && parsed.y !== null) {
+        if (!classKeyBuilderState.stageItems.length) {
+          const selected =
+            classKeyBuilderState.visualObjects.find(
+              (item) => item.id === classKeyBuilderState.selectedObjectId
+            ) || classKeyBuilderState.visualObjects[0];
+          if (selected) {
+            const stageItem = makeStageItemFromObject(selected, classKeyBuilderState.snap, 0);
+            classKeyBuilderState.stageItems.push(stageItem);
+            classKeyBuilderState.activeStageItemId = stageItem.id;
+          }
+        }
+        const active = getActiveStageItem(classKeyBuilderState) || classKeyBuilderState.stageItems[0];
+        if (active) {
+          active.x = parsed.x;
+          active.y = parsed.y;
+          classKeyBuilderState.activeStageItemId = active.id;
+        }
+      } else {
+        classKeyBuilderState.activeStageItemId = '';
+      }
+      syncVisualTokensFromStage(classKeyBuilderState);
       setClassKeyBuilderStatus(`Carregado: ${selectedPath}`);
       renderClassKeyBuilder();
     });
@@ -694,6 +1126,9 @@ const bindClassKeyBuilderEvents = () => {
     ckClearBtn.addEventListener('click', () => {
       classKeyBuilderState.selectedPieces = [];
       classKeyBuilderState.manualTokens = '';
+      classKeyBuilderState.stageItems = [];
+      classKeyBuilderState.activeStageItemId = '';
+      classKeyBuilderState.visualTokens = '';
       setClassKeyBuilderStatus('Composição limpa.');
       renderClassKeyBuilder();
     });
