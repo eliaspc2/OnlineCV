@@ -37,7 +37,12 @@
         </div>
         <div class="classkey-builder hidden" id="classKeyBuilderView">
           <div class="classkey-library-pane">
-            <div class="panel-title">Biblioteca de classes</div>
+            <div class="panel-title">Objetos standard</div>
+            <div class="classkey-toolbar">
+              <input id="ckObjectSearch" type="text" placeholder="Pesquisar objeto..." />
+            </div>
+            <div class="classkey-objects-list" id="ckObjectsList"></div>
+            <div class="panel-title classkey-subtitle">Biblioteca de classes</div>
             <div class="classkey-toolbar">
               <input id="ckSearch" type="text" placeholder="Pesquisar classe..." />
               <select id="ckGroupFilter"></select>
@@ -47,12 +52,11 @@
           <div class="classkey-canvas-pane">
             <div class="panel-title">Composição</div>
             <div class="classkey-stage-toolbar">
-              <select id="ckObjectSelect"></select>
+              <label for="ckSnap">Snap (px)</label>
               <input id="ckSnap" type="number" min="1" max="64" step="1" value="8" />
-              <button id="ckAddObjectBtn" type="button">Adicionar ao palco</button>
             </div>
             <div class="classkey-stage-hint">
-              Arrasta os objetos no palco para definir posição. O editor gera <code>left/top</code> automaticamente.
+              Arrasta objetos da lista para o palco e move-os para definir posição. O editor gera <code>left/top</code> automaticamente.
             </div>
             <div class="classkey-stage" id="ckStage"></div>
             <div class="classkey-stage-meta">

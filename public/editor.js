@@ -10,12 +10,12 @@ const aggregateView = document.getElementById('aggregateView');
 const aggregateTree = document.getElementById('aggregateTree');
 const aggregateDetail = document.getElementById('aggregateDetail');
 const classKeyBuilderView = document.getElementById('classKeyBuilderView');
+const ckObjectSearch = document.getElementById('ckObjectSearch');
+const ckObjectsList = document.getElementById('ckObjectsList');
 const ckSearch = document.getElementById('ckSearch');
 const ckGroupFilter = document.getElementById('ckGroupFilter');
 const ckLibrary = document.getElementById('ckLibrary');
-const ckObjectSelect = document.getElementById('ckObjectSelect');
 const ckSnap = document.getElementById('ckSnap');
-const ckAddObjectBtn = document.getElementById('ckAddObjectBtn');
 const ckStage = document.getElementById('ckStage');
 const ckPositionInfo = document.getElementById('ckPositionInfo');
 const ckResetPositionBtn = document.getElementById('ckResetPositionBtn');
@@ -347,76 +347,75 @@ const flattenClassPresetEntries = (node, path = [], out = []) => {
 
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
+const mergeObjectNode = (base, override) => {
+  const merged = { ...(base || {}), ...(override || {}) };
+  if (isObject(base?.attrs) || isObject(override?.attrs)) {
+    merged.attrs = { ...(base?.attrs || {}), ...(override?.attrs || {}) };
+  }
+  if (isObject(base?.styles) || isObject(override?.styles)) {
+    merged.styles = { ...(base?.styles || {}), ...(override?.styles || {}) };
+  }
+  if (Array.isArray(override?.children)) {
+    merged.children = override.children;
+  } else if (Array.isArray(base?.children)) {
+    merged.children = base.children;
+  }
+  return merged;
+};
+
+const resolveObjectDef = (key, objects, stack = new Set()) => {
+  const current = objects?.[key];
+  if (!isObject(current)) return null;
+  const ref = typeof current.ref === 'string' ? current.ref : '';
+  if (!ref || !isObject(objects?.[ref])) return current;
+  if (stack.has(key)) return { ...current, ref: undefined };
+  stack.add(key);
+  const resolvedRef = resolveObjectDef(ref, objects, stack) || objects[ref];
+  stack.delete(key);
+  return mergeObjectNode(resolvedRef, current);
+};
+
 const collectRenderableObjects = (config) => {
   if (!isObject(config)) return [];
   const objects = isObject(config.objects) ? config.objects : {};
   const out = [];
   const MAX_STAGE_OBJECTS = 800;
 
-  const getResolved = (node) => {
-    const ref = typeof node.ref === 'string' ? node.ref : '';
-    const base = ref && isObject(objects[ref]) ? objects[ref] : null;
-    return {
-      ref,
-      tag:
-        typeof node.tag === 'string'
-          ? node.tag
-          : typeof base?.tag === 'string'
-            ? base.tag
-            : 'div',
-      classKey:
-        typeof node.classKey === 'string'
-          ? node.classKey
-          : typeof base?.classKey === 'string'
-            ? base.classKey
-            : '',
-      text:
-        typeof node.text === 'string'
-          ? node.text
-          : typeof base?.text === 'string'
-            ? base.text
-            : ''
-    };
-  };
-
-  const pushNode = (node, location) => {
-    if (!isObject(node) || out.length >= MAX_STAGE_OBJECTS) return;
-    const resolved = getResolved(node);
-    const nodeId = typeof node.id === 'string' ? node.id.trim() : '';
-    const label = nodeId || resolved.ref || location;
+  const objectKeys = Object.keys(objects).sort((a, b) => {
+    const aAuto = a.startsWith('auto.');
+    const bAuto = b.startsWith('auto.');
+    if (aAuto !== bAuto) return aAuto ? 1 : -1;
+    return a.localeCompare(b);
+  });
+  objectKeys.forEach((objectKey) => {
+    if (out.length >= MAX_STAGE_OBJECTS) return;
+    const resolved = resolveObjectDef(objectKey, objects);
+    if (!isObject(resolved)) return;
+    const tag = typeof resolved.tag === 'string' && resolved.tag.trim() ? resolved.tag.trim() : 'div';
+    const attrs = isObject(resolved.attrs) ? resolved.attrs : {};
+    const styles = isObject(resolved.styles) ? resolved.styles : {};
+    const text = typeof resolved.text === 'string' ? resolved.text : '';
+    const className = typeof resolved.class === 'string' ? resolved.class : '';
+    const classKey = typeof resolved.classKey === 'string' ? resolved.classKey : '';
+    const hint =
+      text ||
+      (typeof attrs.alt === 'string' && attrs.alt) ||
+      (typeof attrs.placeholder === 'string' && attrs.placeholder) ||
+      '';
     out.push({
-      id: `render-${out.length + 1}`,
-      label,
-      tag: resolved.tag,
-      ref: resolved.ref,
-      nodeId,
-      classKey: resolved.classKey,
-      text: resolved.text,
-      location
+      id: objectKey,
+      key: objectKey,
+      label: objectKey,
+      tag,
+      ref: typeof resolved.ref === 'string' ? resolved.ref : '',
+      classKey,
+      className,
+      text,
+      hint,
+      attrs,
+      styles
     });
-    if (Array.isArray(node.children)) {
-      node.children.forEach((child, idx) => {
-        pushNode(child, `${location}.children[${idx}]`);
-      });
-    }
-  };
-
-  if (isObject(config.layout)) {
-    Object.entries(config.layout).forEach(([group, nodes]) => {
-      if (!Array.isArray(nodes)) return;
-      nodes.forEach((node, idx) => pushNode(node, `layout.${group}[${idx}]`));
-    });
-  }
-
-  if (Array.isArray(config.pages)) {
-    config.pages.forEach((page, pageIdx) => {
-      (page.sections || []).forEach((section, sectionIdx) => {
-        (section.nodes || []).forEach((node, nodeIdx) => {
-          pushNode(node, `pages[${pageIdx}].sections[${sectionIdx}].nodes[${nodeIdx}]`);
-        });
-      });
-    });
-  }
+  });
 
   return out;
 };
@@ -470,6 +469,11 @@ const makeStageItemFromObject = (objectNode, snap = 8, index = 0) => {
     tag: objectNode.tag,
     ref: objectNode.ref,
     classKey: objectNode.classKey,
+    className: objectNode.className || '',
+    text: objectNode.text || '',
+    hint: objectNode.hint || '',
+    attrs: objectNode.attrs || {},
+    styles: objectNode.styles || {},
     x: snappedX,
     y: snappedY,
     width: size.width,
@@ -489,6 +493,171 @@ const syncVisualTokensFromStage = (state) => {
   const x = Math.round(active.x);
   const y = Math.round(active.y);
   state.visualTokens = `absolute left-[${x}px] top-[${y}px]`;
+};
+
+const resolveObjectClassValue = (state, objectNode) => {
+  if (!objectNode) return '';
+  const fromKey = objectNode.classKey ? state.classValueMap?.[objectNode.classKey] || '' : '';
+  return [fromKey, objectNode.className || ''].filter(Boolean).join(' ').trim();
+};
+
+const getObjectPreviewLabel = (objectNode) => {
+  if (!objectNode) return '';
+  if (typeof objectNode.text === 'string' && objectNode.text.trim()) return objectNode.text.trim();
+  if (objectNode.hint) return objectNode.hint;
+  const tag = String(objectNode.tag || 'div').toLowerCase();
+  if (tag === 'img') return 'Imagem';
+  if (tag === 'button') return 'Botao';
+  if (tag === 'input') return 'Campo';
+  if (tag === 'a') return 'Link';
+  return `<${tag}>`;
+};
+
+const getPreviewTag = (tag, classValue) => {
+  const normalized = String(tag || 'div').toLowerCase();
+  if (/\brounded-full\b/.test(classValue)) return 'mask';
+  if (['img', 'button', 'a', 'input'].includes(normalized)) return normalized;
+  return 'block';
+};
+
+const pxFromTailwindScale = (tokenNumber) => {
+  const value = Number(tokenNumber);
+  if (!Number.isFinite(value)) return null;
+  return `${value * 4}px`;
+};
+
+const parseHexToRgba = (hexColor, opacity = null) => {
+  const raw = String(hexColor || '').replace('#', '').trim();
+  if (![3, 6, 8].includes(raw.length)) return null;
+  let normalized = raw;
+  if (raw.length === 3) {
+    normalized = raw
+      .split('')
+      .map((ch) => `${ch}${ch}`)
+      .join('');
+  }
+  const hasAlpha = normalized.length === 8;
+  const r = parseInt(normalized.slice(0, 2), 16);
+  const g = parseInt(normalized.slice(2, 4), 16);
+  const b = parseInt(normalized.slice(4, 6), 16);
+  const a = hasAlpha ? parseInt(normalized.slice(6, 8), 16) / 255 : 1;
+  const alpha = opacity === null ? a : opacity;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+const applyTailwindLikePreviewStyles = (node, classValue) => {
+  if (!node || !classValue) return;
+  splitClassTokens(classValue).forEach((token) => {
+    if (token === 'rounded-full') node.style.borderRadius = '9999px';
+    if (token === 'rounded-lg') node.style.borderRadius = '12px';
+    if (token === 'rounded-xl') node.style.borderRadius = '16px';
+    if (token === 'border') node.style.border = '1px solid rgba(148, 163, 184, 0.45)';
+    if (token === 'w-full') node.style.width = '100%';
+    if (token === 'h-full') node.style.height = '100%';
+
+    const widthPx = token.match(/^w-\[(\d+)px\]$/);
+    if (widthPx) node.style.width = `${widthPx[1]}px`;
+
+    const heightPx = token.match(/^h-\[(\d+)px\]$/);
+    if (heightPx) node.style.height = `${heightPx[1]}px`;
+
+    const widthScale = token.match(/^w-(\d+)$/);
+    if (widthScale) node.style.width = pxFromTailwindScale(widthScale[1]) || node.style.width;
+
+    const heightScale = token.match(/^h-(\d+)$/);
+    if (heightScale) node.style.height = pxFromTailwindScale(heightScale[1]) || node.style.height;
+
+    const opacityMatch = token.match(/^opacity-(\d{1,3})$/);
+    if (opacityMatch) node.style.opacity = String(clamp(Number(opacityMatch[1]) / 100, 0, 1));
+
+    const bgMatch = token.match(/^bg-\[(#[0-9a-fA-F]{3,8})\](?:\/(\d{1,3}))?$/);
+    if (bgMatch) {
+      const opacity = bgMatch[2] ? clamp(Number(bgMatch[2]) / 100, 0, 1) : null;
+      const rgba = parseHexToRgba(bgMatch[1], opacity);
+      if (rgba) node.style.background = rgba;
+    }
+
+    const borderMatch = token.match(/^border-\[(#[0-9a-fA-F]{3,8})\]$/);
+    if (borderMatch) {
+      const rgba = parseHexToRgba(borderMatch[1], null);
+      if (rgba) node.style.borderColor = rgba;
+    }
+  });
+};
+
+const applyInlinePreviewStyles = (node, styles) => {
+  if (!node || !isObject(styles)) return;
+  const allowed = new Set([
+    'width',
+    'height',
+    'minWidth',
+    'minHeight',
+    'maxWidth',
+    'maxHeight',
+    'borderRadius',
+    'border',
+    'borderColor',
+    'background',
+    'backgroundColor',
+    'color',
+    'opacity',
+    'padding',
+    'margin'
+  ]);
+  Object.entries(styles).forEach(([key, value]) => {
+    if (!allowed.has(key)) return;
+    if (typeof value !== 'string' && typeof value !== 'number') return;
+    node.style[key] = String(value);
+  });
+};
+
+const createObjectPreviewNode = (objectNode, classValue, compact = false) => {
+  const preview = document.createElement('div');
+  preview.className = `classkey-object-preview${compact ? ' compact' : ''}`;
+  const previewTag = getPreviewTag(objectNode?.tag, classValue || '');
+  const attrs = isObject(objectNode?.attrs) ? objectNode.attrs : {};
+  let node;
+
+  if (previewTag === 'img') {
+    node = document.createElement('img');
+    node.src = typeof attrs.src === 'string' ? attrs.src : '';
+    node.alt = typeof attrs.alt === 'string' ? attrs.alt : 'preview';
+    node.loading = 'lazy';
+    node.className = 'classkey-object-preview-node';
+    node.dataset.previewTag = 'img';
+    node.style.objectFit = 'cover';
+    node.style.width = '88px';
+    node.style.height = '56px';
+  } else if (previewTag === 'input') {
+    node = document.createElement('input');
+    node.disabled = true;
+    node.placeholder = typeof attrs.placeholder === 'string' ? attrs.placeholder : 'input';
+    node.className = 'classkey-object-preview-node';
+    node.dataset.previewTag = 'input';
+  } else if (previewTag === 'button') {
+    node = document.createElement('button');
+    node.type = 'button';
+    node.className = 'classkey-object-preview-node';
+    node.dataset.previewTag = 'button';
+    node.textContent = getObjectPreviewLabel(objectNode);
+  } else if (previewTag === 'a') {
+    node = document.createElement('a');
+    node.href = 'javascript:void(0)';
+    node.className = 'classkey-object-preview-node';
+    node.dataset.previewTag = 'a';
+    node.textContent = getObjectPreviewLabel(objectNode);
+  } else {
+    node = document.createElement('div');
+    node.className = 'classkey-object-preview-node';
+    node.dataset.previewTag = previewTag;
+    node.textContent = getObjectPreviewLabel(objectNode);
+  }
+
+  applyTailwindLikePreviewStyles(node, classValue);
+  applyInlinePreviewStyles(node, objectNode?.styles || {});
+
+  preview.appendChild(node);
+  return preview;
 };
 
 const ensureObjectPath = (obj, dottedPath) => {
@@ -549,29 +718,80 @@ const renderClassKeyBuilder = () => {
   if (ckTargetKey) ckTargetKey.value = state.targetKey || '';
   if (ckManualTokens) ckManualTokens.value = state.manualTokens || '';
   if (ckPreview) ckPreview.value = preview;
+  if (ckObjectSearch) ckObjectSearch.value = state.objectSearch || '';
   if (ckSnap) ckSnap.value = String(state.snap || 8);
 
-  if (ckObjectSelect) {
-    const previous = state.selectedObjectId || '';
-    ckObjectSelect.innerHTML = '';
-    if (!state.visualObjects.length) {
-      const emptyOption = document.createElement('option');
-      emptyOption.value = '';
-      emptyOption.textContent = 'Sem objetos disponíveis no config';
-      ckObjectSelect.appendChild(emptyOption);
+  if (ckObjectsList) {
+    if (
+      state.selectedObjectId &&
+      !state.visualObjects.some((item) => item.id === state.selectedObjectId)
+    ) {
       state.selectedObjectId = '';
-    } else {
-      state.visualObjects.forEach((objectNode) => {
-        const option = document.createElement('option');
-        option.value = objectNode.id;
-        option.textContent = `${objectNode.label} (${objectNode.tag})`;
-        ckObjectSelect.appendChild(option);
-      });
-      state.selectedObjectId = state.visualObjects.some((item) => item.id === previous)
-        ? previous
-        : state.visualObjects[0].id;
     }
-    ckObjectSelect.value = state.selectedObjectId || '';
+    if (!state.selectedObjectId && state.visualObjects.length) {
+      state.selectedObjectId = state.visualObjects[0].id;
+    }
+
+    ckObjectsList.innerHTML = '';
+    const search = (state.objectSearch || '').trim().toLowerCase();
+    const filtered = state.visualObjects.filter((objectNode) => {
+      if (!search) return true;
+      const classValue = resolveObjectClassValue(state, objectNode).toLowerCase();
+      return (
+        objectNode.label.toLowerCase().includes(search) ||
+        String(objectNode.tag || '').toLowerCase().includes(search) ||
+        String(objectNode.classKey || '').toLowerCase().includes(search) ||
+        classValue.includes(search)
+      );
+    });
+
+    if (!filtered.length) {
+      const empty = document.createElement('div');
+      empty.className = 'classkey-library-value';
+      empty.textContent = 'Sem objetos para os filtros atuais.';
+      ckObjectsList.appendChild(empty);
+    } else {
+      filtered.forEach((objectNode) => {
+        const card = document.createElement('div');
+        card.className = 'classkey-object-item';
+        if (objectNode.id === state.selectedObjectId) card.classList.add('active');
+        card.draggable = true;
+        card.dataset.objectId = objectNode.id;
+
+        const header = document.createElement('div');
+        header.className = 'classkey-object-head';
+
+        const textWrap = document.createElement('div');
+        textWrap.className = 'classkey-object-text';
+
+        const title = document.createElement('div');
+        title.className = 'classkey-object-title';
+        title.textContent = objectNode.label;
+
+        const meta = document.createElement('div');
+        meta.className = 'classkey-object-meta';
+        meta.textContent = `<${objectNode.tag}>${objectNode.classKey ? ` • ${objectNode.classKey}` : ''}`;
+
+        textWrap.appendChild(title);
+        textWrap.appendChild(meta);
+
+        const addBtn = document.createElement('button');
+        addBtn.type = 'button';
+        addBtn.className = 'classkey-object-add';
+        addBtn.dataset.objectId = objectNode.id;
+        addBtn.textContent = 'Adicionar';
+
+        header.appendChild(textWrap);
+        header.appendChild(addBtn);
+
+        const classValue = resolveObjectClassValue(state, objectNode);
+        const previewEl = createObjectPreviewNode(objectNode, classValue);
+
+        card.appendChild(header);
+        card.appendChild(previewEl);
+        ckObjectsList.appendChild(card);
+      });
+    }
   }
 
   if (ckStage) {
@@ -579,7 +799,7 @@ const renderClassKeyBuilder = () => {
     if (!state.stageItems.length) {
       const empty = document.createElement('div');
       empty.className = 'classkey-stage-empty';
-      empty.textContent = 'Sem objetos no palco. Escolhe um objeto e adiciona.';
+      empty.textContent = 'Sem objetos no palco. Arrasta da lista de objetos.';
       ckStage.appendChild(empty);
     } else {
       state.stageItems.forEach((item) => {
@@ -603,9 +823,12 @@ const renderClassKeyBuilder = () => {
         pos.className = 'classkey-stage-item-pos';
         pos.textContent = `x:${Math.round(item.x)} y:${Math.round(item.y)}`;
 
+        const previewEl = createObjectPreviewNode(item, resolveObjectClassValue(state, item), true);
+
         el.appendChild(tag);
         el.appendChild(label);
         el.appendChild(pos);
+        el.appendChild(previewEl);
         ckStage.appendChild(el);
       });
     }
@@ -758,6 +981,10 @@ const renderClassKeyBuilder = () => {
 const buildClassKeyBuilderState = () => {
   const payload = getClassKeysPayloadFromDraft();
   const entries = flattenClassPresetEntries(payload.classPresets);
+  const classValueMap = entries.reduce((acc, entry) => {
+    acc[entry.path] = entry.value;
+    return acc;
+  }, {});
   const config = getDraftJson('data/config.json');
   const visualObjects = collectRenderableObjects(config);
   const previous = classKeyBuilderState || {};
@@ -773,11 +1000,13 @@ const buildClassKeyBuilderState = () => {
   classKeyBuilderState = {
     payload,
     entries,
+    classValueMap,
     visualObjects,
     stageItems,
     activeStageItemId,
     visualTokens: typeof previous.visualTokens === 'string' ? previous.visualTokens : '',
     selectedObjectId,
+    objectSearch: previous.objectSearch || '',
     snap: normalizedSnap,
     selectedPieces: Array.isArray(previous.selectedPieces) ? previous.selectedPieces : [],
     manualTokens: previous.manualTokens || '',
@@ -814,18 +1043,33 @@ const bindClassKeyBuilderEvents = () => {
     renderClassKeyBuilder();
   };
 
-  const addStageObject = () => {
+  const addStageObject = (objectId, dropPosition = null) => {
     const state = classKeyBuilderState;
     if (!state) return;
     const selected =
-      state.visualObjects.find((item) => item.id === state.selectedObjectId) || state.visualObjects[0];
+      state.visualObjects.find((item) => item.id === objectId) ||
+      state.visualObjects.find((item) => item.id === state.selectedObjectId) ||
+      state.visualObjects[0];
     if (!selected) {
       setClassKeyBuilderStatus('Sem objetos no config para renderizar.', 'error');
       return;
     }
     const stageItem = makeStageItemFromObject(selected, state.snap, state.stageItems.length);
+    if (dropPosition && ckStage) {
+      const stageRect = ckStage.getBoundingClientRect();
+      const snap = clamp(Number(state.snap) || 8, 1, 64);
+      let nextX = dropPosition.clientX - stageRect.left - stageItem.width / 2;
+      let nextY = dropPosition.clientY - stageRect.top - stageItem.height / 2;
+      if (snap > 1) {
+        nextX = Math.round(nextX / snap) * snap;
+        nextY = Math.round(nextY / snap) * snap;
+      }
+      stageItem.x = clamp(nextX, 0, Math.max(0, stageRect.width - stageItem.width));
+      stageItem.y = clamp(nextY, 0, Math.max(0, stageRect.height - stageItem.height));
+    }
     state.stageItems.push(stageItem);
     state.activeStageItemId = stageItem.id;
+    state.selectedObjectId = selected.id;
     syncVisualTokensFromStage(state);
     setClassKeyBuilderStatus(`Objeto adicionado ao palco: ${selected.label}`);
     renderClassKeyBuilder();
@@ -881,9 +1125,10 @@ const bindClassKeyBuilderEvents = () => {
     if (finalize) renderClassKeyBuilder();
   };
 
-  if (ckObjectSelect) {
-    ckObjectSelect.addEventListener('change', (event) => {
-      classKeyBuilderState.selectedObjectId = event.target.value || '';
+  if (ckObjectSearch) {
+    ckObjectSearch.addEventListener('input', (event) => {
+      classKeyBuilderState.objectSearch = event.target.value || '';
+      renderClassKeyBuilder();
     });
   }
 
@@ -896,9 +1141,33 @@ const bindClassKeyBuilderEvents = () => {
     });
   }
 
-  if (ckAddObjectBtn) {
-    ckAddObjectBtn.addEventListener('click', () => {
-      addStageObject();
+  if (ckObjectsList) {
+    ckObjectsList.addEventListener('click', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const addBtn = targetEl ? targetEl.closest('.classkey-object-add') : null;
+      if (addBtn && addBtn.dataset.objectId) {
+        event.preventDefault();
+        event.stopPropagation();
+        addStageObject(addBtn.dataset.objectId);
+        return;
+      }
+      const card = targetEl ? targetEl.closest('.classkey-object-item') : null;
+      if (!card || !card.dataset.objectId) return;
+      classKeyBuilderState.selectedObjectId = card.dataset.objectId;
+      renderClassKeyBuilder();
+    });
+    ckObjectsList.addEventListener('dblclick', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const card = targetEl ? targetEl.closest('.classkey-object-item') : null;
+      if (!card || !card.dataset.objectId) return;
+      addStageObject(card.dataset.objectId);
+    });
+    ckObjectsList.addEventListener('dragstart', (event) => {
+      const targetEl = event.target instanceof Element ? event.target : null;
+      const card = targetEl ? targetEl.closest('.classkey-object-item') : null;
+      if (!card || !card.dataset.objectId) return;
+      event.dataTransfer.effectAllowed = 'copy';
+      event.dataTransfer.setData('text/classkey-object-id', card.dataset.objectId);
     });
   }
 
@@ -922,6 +1191,25 @@ const bindClassKeyBuilderEvents = () => {
   }
 
   if (ckStage) {
+    ckStage.addEventListener('dragover', (event) => {
+      const types = Array.from(event.dataTransfer?.types || []);
+      const hasObject = types.includes('text/classkey-object-id');
+      if (!hasObject) return;
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'copy';
+      ckStage.classList.add('over');
+    });
+    ckStage.addEventListener('dragleave', () => {
+      ckStage.classList.remove('over');
+    });
+    ckStage.addEventListener('drop', (event) => {
+      const objectId = event.dataTransfer.getData('text/classkey-object-id');
+      ckStage.classList.remove('over');
+      if (!objectId) return;
+      event.preventDefault();
+      addStageObject(objectId, { clientX: event.clientX, clientY: event.clientY });
+    });
+
     ckStage.addEventListener('click', (event) => {
       const targetEl = event.target instanceof Element ? event.target : null;
       const stageItem = targetEl ? targetEl.closest('.classkey-stage-item') : null;
@@ -1158,6 +1446,10 @@ const bindClassKeyBuilderEvents = () => {
       persistClassKeysPayload(state.payload);
 
       state.entries = flattenClassPresetEntries(state.payload.classPresets);
+      state.classValueMap = state.entries.reduce((acc, entry) => {
+        acc[entry.path] = entry.value;
+        return acc;
+      }, {});
       state.existingPath = `${group}.${key}`;
       setClassKeyBuilderStatus(`Guardado em ${state.existingPath}`);
       buildAggregateView();
