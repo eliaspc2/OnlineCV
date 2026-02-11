@@ -38,45 +38,24 @@
         <div class="classkey-builder hidden" id="classKeyBuilderView">
           <div class="classkey-library-pane">
             <div class="panel-title">Objetos</div>
-            <div class="classkey-toolbar">
-              <input id="ckObjectSearch" type="text" placeholder="Pesquisar objeto..." />
-            </div>
             <div class="classkey-objects-list" id="ckObjectsList"></div>
           </div>
           <div class="classkey-canvas-pane">
-            <div class="panel-title">Composição</div>
-            <div class="classkey-stage-toolbar">
-              <label for="ckSnap">Snap (px)</label>
-              <input id="ckSnap" type="number" min="1" max="64" step="1" value="8" />
-            </div>
-            <div class="classkey-stage-hint">
-              Arrasta e posiciona visualmente.
-            </div>
+            <div class="panel-title">Palco</div>
             <div class="classkey-stage" id="ckStage"></div>
-            <div class="classkey-stage-meta">
-              <div id="ckPositionInfo">Seleciona um objeto no palco.</div>
-              <div class="classkey-stage-actions">
-                <button id="ckSaveBtn" type="button">Guardar</button>
-                <button id="ckResetPositionBtn" type="button">Reset posição</button>
-                <button id="ckRemoveObjectBtn" type="button">Remover objeto</button>
-              </div>
+            <div class="classkey-stage-actions">
+              <button id="ckSaveBtn" type="button">Guardar</button>
+              <button id="ckRemoveObjectBtn" type="button">Remover</button>
             </div>
-            <div class="classkey-status" id="ckStatus"></div>
           </div>
         </div>
         <textarea id="editor" spellcheck="false"></textarea>
       </div>
       <aside class="side">
         <h3>Ajuda</h3>
-        <p>Edite o <code>public/data/config.json</code> (objetos + deploy) e <code>public/data/class-keys.json</code> (estilos).</p>
-        <p>As strings ficam em <code>public/data/pt-pt.json</code>, <code>public/data/es-es.json</code>, <code>public/data/fr-fr.json</code> e <code>public/data/uk-en.json</code>.</p>
-        <p>Contrato: deploy usa <code>id + ref</code>; texto vai para idiomas em <code>obj.&lt;id&gt;</code>.</p>
-        <p><strong>Carregar ficheiros</strong> puxa e guarda os JSONs centrais.</p>
-        <p><strong>Download</strong> gera o ficheiro que está selecionado.</p>
-        <p>O conteúdo também fica em <code>localStorage</code> como rascunho.</p>
-        <p><strong>Agregado</strong> mostra uma árvore (estilo regedit) e um painel JSON filtrado pela seleção.</p>
-        <p><strong>Class Keys Visual</strong> permite renderizar objetos, arrastar no palco e gravar classes no <code>class-keys.json</code>.</p>
-        <p>O editor abre no <strong>Agregado</strong> por defeito.</p>
+        <p>No editor visual, arrasta objetos para o palco e posiciona-os livremente.</p>
+        <p>Quando estiver como queres, carrega em <strong>Guardar</strong>.</p>
+        <p>Podes remover o objeto selecionado com <strong>Remover</strong>.</p>
       </aside>
     </main>
   </div>

@@ -10,12 +10,9 @@ const aggregateView = document.getElementById('aggregateView');
 const aggregateTree = document.getElementById('aggregateTree');
 const aggregateDetail = document.getElementById('aggregateDetail');
 const classKeyBuilderView = document.getElementById('classKeyBuilderView');
-const ckObjectSearch = document.getElementById('ckObjectSearch');
 const ckObjectsList = document.getElementById('ckObjectsList');
 const ckSnap = document.getElementById('ckSnap');
 const ckStage = document.getElementById('ckStage');
-const ckPositionInfo = document.getElementById('ckPositionInfo');
-const ckResetPositionBtn = document.getElementById('ckResetPositionBtn');
 const ckRemoveObjectBtn = document.getElementById('ckRemoveObjectBtn');
 const ckSaveBtn = document.getElementById('ckSaveBtn');
 const ckStatus = document.getElementById('ckStatus');
@@ -579,6 +576,7 @@ const makeStageItemFromObject = (objectNode, classValue, snap = 8, index = 0) =>
     styles: objectNode.styles || {},
     x: snappedX,
     y: snappedY,
+    z: index + 1,
     width: size.width,
     height: size.height,
     accentStroke: accent.stroke,
@@ -589,6 +587,19 @@ const makeStageItemFromObject = (objectNode, classValue, snap = 8, index = 0) =>
 
 const getActiveStageItem = (state) =>
   state.stageItems.find((item) => item.id === state.activeStageItemId) || null;
+
+const getStageMaxZ = (state) =>
+  (state.stageItems || []).reduce((maxZ, item) => {
+    const value = Number(item?.z);
+    return Number.isFinite(value) ? Math.max(maxZ, value) : maxZ;
+  }, 0);
+
+const bringStageItemToFront = (state, itemId) => {
+  if (!state || !itemId) return;
+  const target = state.stageItems.find((item) => item.id === itemId);
+  if (!target) return;
+  target.z = getStageMaxZ(state) + 1;
+};
 
 const syncVisualTokensFromStage = (state) => {
   const active = getActiveStageItem(state);
@@ -823,7 +834,6 @@ const renderClassKeyBuilder = () => {
 
   const activeStage = getActiveStageItem(state);
 
-  if (ckObjectSearch) ckObjectSearch.value = state.objectSearch || '';
   if (ckSnap) ckSnap.value = String(state.snap || 8);
 
   if (ckObjectsList) {
@@ -838,17 +848,7 @@ const renderClassKeyBuilder = () => {
     }
 
     ckObjectsList.innerHTML = '';
-    const search = (state.objectSearch || '').trim().toLowerCase();
-    const filtered = state.visualObjects.filter((objectNode) => {
-      if (!search) return true;
-      const classValue = resolveObjectClassValue(state, objectNode).toLowerCase();
-      return (
-        objectNode.label.toLowerCase().includes(search) ||
-        String(objectNode.tag || '').toLowerCase().includes(search) ||
-        String(objectNode.classKey || '').toLowerCase().includes(search) ||
-        classValue.includes(search)
-      );
-    });
+    const filtered = state.visualObjects;
 
     if (!filtered.length) {
       const empty = document.createElement('div');
@@ -873,7 +873,7 @@ const renderClassKeyBuilder = () => {
           details.className = 'classkey-object-group';
           details.dataset.group = category;
           const remembered = state.objectGroupOpen?.[category];
-          details.open = search ? true : typeof remembered === 'boolean' ? remembered : idx < 2;
+          details.open = typeof remembered === 'boolean' ? remembered : idx < 2;
 
           const summary = document.createElement('summary');
           summary.textContent = `${category} (${groups[category].length})`;
@@ -947,7 +947,7 @@ const renderClassKeyBuilder = () => {
           el.style.setProperty('--ck-item-fill', item.accentFill || 'rgba(59, 130, 246, 0.16)');
           el.style.setProperty('--ck-item-chip', item.accentChip || 'rgba(148, 163, 184, 0.2)');
         }
-        el.style.zIndex = item.id === state.activeStageItemId ? '30' : '10';
+        el.style.zIndex = String(Number.isFinite(Number(item.z)) ? Number(item.z) : 1);
         el.style.left = `${Math.round(item.x)}px`;
         el.style.top = `${Math.round(item.y)}px`;
         el.style.width = `${Math.round(item.width)}px`;
@@ -966,14 +966,6 @@ const renderClassKeyBuilder = () => {
     }
   }
 
-  if (ckPositionInfo) {
-    if (!activeStage) {
-      ckPositionInfo.textContent = 'Seleciona um objeto no palco.';
-    } else {
-      ckPositionInfo.textContent = `${activeStage.label}  x:${Math.round(activeStage.x)} y:${Math.round(activeStage.y)}`;
-    }
-  }
-  if (ckResetPositionBtn) ckResetPositionBtn.disabled = !activeStage;
   if (ckRemoveObjectBtn) ckRemoveObjectBtn.disabled = !activeStage;
 };
 
@@ -1005,6 +997,7 @@ const buildClassKeyBuilderState = () => {
       ...item,
       width,
       height,
+      z: Number.isFinite(Number(item?.z)) ? Number(item.z) : 1,
       accentStroke: item?.accentStroke || accent.stroke,
       accentFill: item?.accentFill || accent.fill,
       accentChip: item?.accentChip || accent.chip
@@ -1025,7 +1018,6 @@ const buildClassKeyBuilderState = () => {
     activeStageItemId,
     visualTokens: typeof previous.visualTokens === 'string' ? previous.visualTokens : '',
     selectedObjectId,
-    objectSearch: previous.objectSearch || '',
     objectGroupOpen: isObject(previous.objectGroupOpen) ? { ...previous.objectGroupOpen } : {},
     snap: normalizedSnap
   };
@@ -1063,6 +1055,7 @@ const bindClassKeyBuilderEvents = () => {
       stageItem.x = clamp(nextX, 0, Math.max(0, stageRect.width - stageItem.width));
       stageItem.y = clamp(nextY, 0, Math.max(0, stageRect.height - stageItem.height));
     }
+    stageItem.z = getStageMaxZ(state) + 1;
     state.stageItems.push(stageItem);
     state.activeStageItemId = stageItem.id;
     state.selectedObjectId = selected.id;
@@ -1077,7 +1070,10 @@ const bindClassKeyBuilderEvents = () => {
     const active = getActiveStageItem(state);
     if (!active) return;
     state.stageItems = state.stageItems.filter((item) => item.id !== active.id);
-    state.activeStageItemId = state.stageItems[0]?.id || '';
+    const topAfterRemove = state.stageItems
+      .slice()
+      .sort((a, b) => (Number(b.z) || 0) - (Number(a.z) || 0))[0];
+    state.activeStageItemId = topAfterRemove?.id || '';
     syncVisualTokensFromStage(state);
     setClassKeyBuilderStatus('Objeto removido do palco.');
     renderClassKeyBuilder();
@@ -1114,18 +1110,8 @@ const bindClassKeyBuilderEvents = () => {
       itemEl.style.left = `${Math.round(nextX)}px`;
       itemEl.style.top = `${Math.round(nextY)}px`;
     }
-    if (ckPositionInfo) {
-      ckPositionInfo.textContent = `${item.label}  x:${Math.round(nextX)} y:${Math.round(nextY)}`;
-    }
     if (finalize) renderClassKeyBuilder();
   };
-
-  if (ckObjectSearch) {
-    ckObjectSearch.addEventListener('input', (event) => {
-      classKeyBuilderState.objectSearch = event.target.value || '';
-      renderClassKeyBuilder();
-    });
-  }
 
   if (ckSnap) {
     ckSnap.addEventListener('input', (event) => {
@@ -1185,19 +1171,6 @@ const bindClassKeyBuilderEvents = () => {
     });
   }
 
-  if (ckResetPositionBtn) {
-    ckResetPositionBtn.addEventListener('click', () => {
-      const state = classKeyBuilderState;
-      const active = state ? getActiveStageItem(state) : null;
-      if (!active) return;
-      active.x = 0;
-      active.y = 0;
-      syncVisualTokensFromStage(state);
-      setClassKeyBuilderStatus('Posição do objeto reiniciada.');
-      renderClassKeyBuilder();
-    });
-  }
-
   if (ckStage) {
     ckStage.addEventListener('dragover', (event) => {
       const types = Array.from(event.dataTransfer?.types || []);
@@ -1223,6 +1196,7 @@ const bindClassKeyBuilderEvents = () => {
       const stageItem = targetEl ? targetEl.closest('.classkey-stage-item') : null;
       if (!stageItem) return;
       classKeyBuilderState.activeStageItemId = stageItem.dataset.stageId || '';
+      bringStageItemToFront(classKeyBuilderState, classKeyBuilderState.activeStageItemId);
       syncVisualTokensFromStage(classKeyBuilderState);
       renderClassKeyBuilder();
     });
@@ -1233,6 +1207,7 @@ const bindClassKeyBuilderEvents = () => {
       if (!stageItem || !stageItem.dataset.stageId) return;
       event.preventDefault();
       classKeyBuilderState.activeStageItemId = stageItem.dataset.stageId;
+      bringStageItemToFront(classKeyBuilderState, classKeyBuilderState.activeStageItemId);
       const rect = stageItem.getBoundingClientRect();
       classKeyStageDrag = {
         stageItemId: stageItem.dataset.stageId,
@@ -1247,12 +1222,6 @@ const bindClassKeyBuilderEvents = () => {
       ckStage
         .querySelectorAll('.classkey-stage-item')
         .forEach((el) => el.classList.toggle('active', el.dataset.stageId === stageItem.dataset.stageId));
-      if (ckPositionInfo) {
-        const active = getActiveStageItem(classKeyBuilderState);
-        ckPositionInfo.textContent = active
-          ? `${active.label}  x:${Math.round(active.x)} y:${Math.round(active.y)}`
-          : 'Seleciona um objeto no palco.';
-      }
     });
 
     ckStage.addEventListener('pointermove', (event) => {
