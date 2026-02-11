@@ -37,17 +37,11 @@
         </div>
         <div class="classkey-builder hidden" id="classKeyBuilderView">
           <div class="classkey-library-pane">
-            <div class="panel-title">Objetos standard</div>
+            <div class="panel-title">Objetos</div>
             <div class="classkey-toolbar">
               <input id="ckObjectSearch" type="text" placeholder="Pesquisar objeto..." />
             </div>
             <div class="classkey-objects-list" id="ckObjectsList"></div>
-            <div class="panel-title classkey-subtitle">Biblioteca de classes</div>
-            <div class="classkey-toolbar">
-              <input id="ckSearch" type="text" placeholder="Pesquisar classe..." />
-              <select id="ckGroupFilter"></select>
-            </div>
-            <div class="classkey-library-list" id="ckLibrary"></div>
           </div>
           <div class="classkey-canvas-pane">
             <div class="panel-title">Composição</div>
@@ -56,46 +50,16 @@
               <input id="ckSnap" type="number" min="1" max="64" step="1" value="8" />
             </div>
             <div class="classkey-stage-hint">
-              Arrasta objetos da lista para o palco e move-os para definir posição. O editor gera <code>left/top</code> automaticamente.
+              Arrasta e posiciona visualmente.
             </div>
             <div class="classkey-stage" id="ckStage"></div>
             <div class="classkey-stage-meta">
-              <div id="ckPositionInfo">Sem objeto selecionado.</div>
+              <div id="ckPositionInfo">Seleciona um objeto no palco.</div>
               <div class="classkey-stage-actions">
+                <button id="ckSaveBtn" type="button">Guardar</button>
                 <button id="ckResetPositionBtn" type="button">Reset posição</button>
                 <button id="ckRemoveObjectBtn" type="button">Remover objeto</button>
               </div>
-            </div>
-            <div class="classkey-dropzone" id="ckDropZone">
-              Arraste classes para aqui ou clique numa entrada na biblioteca.
-            </div>
-            <div class="classkey-selection" id="ckSelection"></div>
-            <div class="classkey-field">
-              <label for="ckManualTokens">Tokens extra</label>
-              <textarea id="ckManualTokens" spellcheck="false"></textarea>
-            </div>
-            <div class="classkey-field">
-              <label for="ckPreview">Classe final</label>
-              <textarea id="ckPreview" spellcheck="false" readonly></textarea>
-            </div>
-          </div>
-          <div class="classkey-config-pane">
-            <div class="panel-title">Definição</div>
-            <div class="classkey-field">
-              <label for="ckExisting">Carregar class key existente</label>
-              <select id="ckExisting"></select>
-            </div>
-            <div class="classkey-field">
-              <label for="ckTargetGroup">Grupo alvo</label>
-              <input id="ckTargetGroup" type="text" placeholder="visual.hero" />
-            </div>
-            <div class="classkey-field">
-              <label for="ckTargetKey">Nome da class key</label>
-              <input id="ckTargetKey" type="text" placeholder="reveal_opacity_0" />
-            </div>
-            <div class="classkey-actions">
-              <button id="ckSaveBtn" type="button">Guardar class key</button>
-              <button id="ckClearBtn" type="button">Limpar composição</button>
             </div>
             <div class="classkey-status" id="ckStatus"></div>
           </div>
