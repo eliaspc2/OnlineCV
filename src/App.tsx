@@ -404,7 +404,11 @@ export default function App() {
           const level = bar.getAttribute('data-level');
           const delay = bar.getAttribute('data-delay');
           if (delay) bar.style.transitionDelay = `${delay}ms`;
-          if (level) bar.style.width = `${level}%`;
+          if (level) {
+            const raw = Number(level);
+            const boosted = Number.isFinite(raw) ? Math.min(96, Math.max(0, raw + 8)) : raw;
+            bar.style.width = `${boosted}%`;
+          }
         });
       },
       { threshold: 0.3 }
