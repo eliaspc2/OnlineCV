@@ -75,42 +75,18 @@ const skillLevelLabel = (percentText: string, lang?: string) => {
   const value = Number(match[1]);
   const locale = (lang || '').toLowerCase();
 
-  const band = value >= 80 ? 'ready' : value >= 65 ? 'strong' : value >= 50 ? 'operational' : 'evolving';
+  const band = value >= 70 ? 'advanced' : value >= 55 ? 'solid' : 'operational';
 
   if (locale.startsWith('pt')) {
-    return band === 'ready'
-      ? 'Avançado'
-      : band === 'strong'
-        ? 'Sólido'
-        : band === 'operational'
-          ? 'Operacional'
-          : 'Em evolução';
+    return band === 'advanced' ? 'Avançado' : band === 'solid' ? 'Sólido' : 'Operacional';
   }
   if (locale.startsWith('es')) {
-    return band === 'ready'
-      ? 'Avanzado'
-      : band === 'strong'
-        ? 'Sólido'
-        : band === 'operational'
-          ? 'Operativo'
-          : 'En evolución';
+    return band === 'advanced' ? 'Avanzado' : band === 'solid' ? 'Sólido' : 'Operativo';
   }
   if (locale.startsWith('fr')) {
-    return band === 'ready'
-      ? 'Avancé'
-      : band === 'strong'
-        ? 'Solide'
-        : band === 'operational'
-          ? 'Opérationnel'
-          : 'En progression';
+    return band === 'advanced' ? 'Avancé' : band === 'solid' ? 'Solide' : 'Opérationnel';
   }
-  return band === 'ready'
-    ? 'Advanced'
-    : band === 'strong'
-      ? 'Strong'
-      : band === 'operational'
-        ? 'Operational'
-        : 'Evolving';
+  return band === 'advanced' ? 'Advanced' : band === 'solid' ? 'Strong' : 'Operational';
 };
 
 const normalizeStringsBundle = (raw: unknown): StringsBundle => {
