@@ -5582,40 +5582,6 @@
                               "children": [
                                 {
                                   "attrs": {
-                                    "src": "assets/images/icons/terminal.svg"
-                                  },
-                                  "id": "n_983b7374",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_993b7508",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_f057c472",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/code.svg"
-                                  },
-                                  "id": "n_e62fe1b0",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_e72fe340",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_f157c604",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
                                     "src": "assets/images/icons/monitor.svg"
                                   },
                                   "id": "n_e0d0ce30",
@@ -5678,6 +5644,40 @@
                                 }
                               ],
                               "id": "n_ed57bfb8",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/terminal.svg"
+                                  },
+                                  "id": "n_983b7374",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_993b7508",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_f057c472",
+                              "ref": "chip.no_motion"
+                            },
+                            {
+                              "children": [
+                                {
+                                  "attrs": {
+                                    "src": "assets/images/icons/code.svg"
+                                  },
+                                  "id": "n_e62fe1b0",
+                                  "ref": "icon.sm.accent"
+                                },
+                                {
+                                  "id": "n_e72fe340",
+                                  "ref": "text.sm.muted.span"
+                                }
+                              ],
+                              "id": "n_f157c604",
                               "ref": "chip.no_motion"
                             },
                             {
