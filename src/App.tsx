@@ -75,7 +75,7 @@ const skillLevelLabel = (percentText: string, lang?: string) => {
   const value = Number(match[1]);
   const locale = (lang || '').toLowerCase();
 
-  const band = value >= 70 ? 'advanced' : value >= 55 ? 'solid' : 'operational';
+  const band = value >= 60 ? 'advanced' : value >= 45 ? 'solid' : 'operational';
 
   if (locale.startsWith('pt')) {
     return band === 'advanced' ? 'Avançado' : band === 'solid' ? 'Sólido' : 'Operacional';
