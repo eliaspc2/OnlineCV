@@ -69,14 +69,35 @@ const flattenReferenceStrings = (
   });
 };
 
+const skillLevelLabel = (percentText: string, lang?: string) => {
+  const match = percentText.match(/^(\d{1,3})%$/);
+  if (!match) return percentText;
+  const value = Number(match[1]);
+  const locale = (lang || '').toLowerCase();
+
+  const band = value >= 85 ? 'expert' : value >= 70 ? 'advanced' : value >= 55 ? 'intermediate' : 'basic';
+
+  if (locale.startsWith('pt')) {
+    return band === 'expert' ? 'Especialista' : band === 'advanced' ? 'Avançado' : band === 'intermediate' ? 'Intermédio' : 'Base';
+  }
+  if (locale.startsWith('es')) {
+    return band === 'expert' ? 'Experto' : band === 'advanced' ? 'Avanzado' : band === 'intermediate' ? 'Intermedio' : 'Base';
+  }
+  if (locale.startsWith('fr')) {
+    return band === 'expert' ? 'Expert' : band === 'advanced' ? 'Avancé' : band === 'intermediate' ? 'Intermédiaire' : 'Base';
+  }
+  return band === 'expert' ? 'Expert' : band === 'advanced' ? 'Advanced' : band === 'intermediate' ? 'Intermediate' : 'Basic';
+};
+
 const normalizeStringsBundle = (raw: unknown): StringsBundle => {
   const out: Record<string, string> = {};
   const data = (isRecord(raw) ? raw : {}) as RawStringsBundle;
+  const lang = typeof data.lang === 'string' ? data.lang : undefined;
 
   const appendFlat = (obj?: Record<string, string>) => {
     if (!obj || typeof obj !== 'object') return;
     Object.entries(obj).forEach(([k, v]) => {
-      if (typeof v === 'string') out[k] = v;
+      if (typeof v === 'string') out[k] = skillLevelLabel(v, lang);
     });
   };
 
@@ -90,8 +111,12 @@ const normalizeStringsBundle = (raw: unknown): StringsBundle => {
     });
   }
 
+  Object.keys(out).forEach((key) => {
+    out[key] = skillLevelLabel(out[key], lang);
+  });
+
   return {
-    lang: typeof data.lang === 'string' ? data.lang : undefined,
+    lang,
     strings: out
   };
 };
@@ -535,7 +560,7 @@ export default function App() {
       const group = item?.getAttribute('data-accordion-group');
       const panel = document.querySelector(`[data-accordion-panel=\"${panelId}\"]`) as HTMLElement | null;
       if (!panel) return;
-      const isOpen = panel.classList.contains('max-h-40');
+      const isOpen = !panel.classList.contains('max-h-0');
       if (group) {
         document.querySelectorAll(`[data-accordion-group=\"${group}\"]`).forEach((el) => {
           const id = (el as HTMLElement).getAttribute('data-accordion-item');
