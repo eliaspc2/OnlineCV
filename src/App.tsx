@@ -75,18 +75,43 @@ const skillLevelLabel = (percentText: string, lang?: string) => {
   const value = Number(match[1]);
   const locale = (lang || '').toLowerCase();
 
-  const band = value >= 85 ? 'expert' : value >= 70 ? 'advanced' : value >= 55 ? 'intermediate' : 'basic';
+  // Escala orientada a estágio (projeção): ligeiramente otimista para posicionamento de candidatura.
+  const band = value >= 80 ? 'ready' : value >= 65 ? 'strong' : value >= 50 ? 'operational' : 'evolving';
 
   if (locale.startsWith('pt')) {
-    return band === 'expert' ? 'Especialista' : band === 'advanced' ? 'Avançado' : band === 'intermediate' ? 'Intermédio' : 'Base';
+    return band === 'ready'
+      ? 'Proj. Estágio — Pronto'
+      : band === 'strong'
+        ? 'Proj. Estágio — Forte'
+        : band === 'operational'
+          ? 'Proj. Estágio — Operacional'
+          : 'Proj. Estágio — Em evolução';
   }
   if (locale.startsWith('es')) {
-    return band === 'expert' ? 'Experto' : band === 'advanced' ? 'Avanzado' : band === 'intermediate' ? 'Intermedio' : 'Base';
+    return band === 'ready'
+      ? 'Proy. Prácticas — Listo'
+      : band === 'strong'
+        ? 'Proy. Prácticas — Fuerte'
+        : band === 'operational'
+          ? 'Proy. Prácticas — Operativo'
+          : 'Proy. Prácticas — En evolución';
   }
   if (locale.startsWith('fr')) {
-    return band === 'expert' ? 'Expert' : band === 'advanced' ? 'Avancé' : band === 'intermediate' ? 'Intermédiaire' : 'Base';
+    return band === 'ready'
+      ? 'Proj. Stage — Prêt'
+      : band === 'strong'
+        ? 'Proj. Stage — Solide'
+        : band === 'operational'
+          ? 'Proj. Stage — Opérationnel'
+          : 'Proj. Stage — En progression';
   }
-  return band === 'expert' ? 'Expert' : band === 'advanced' ? 'Advanced' : band === 'intermediate' ? 'Intermediate' : 'Basic';
+  return band === 'ready'
+    ? 'Internship Projection — Ready'
+    : band === 'strong'
+      ? 'Internship Projection — Strong'
+      : band === 'operational'
+        ? 'Internship Projection — Operational'
+        : 'Internship Projection — Evolving';
 };
 
 const normalizeStringsBundle = (raw: unknown): StringsBundle => {
