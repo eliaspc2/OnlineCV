@@ -75,43 +75,42 @@ const skillLevelLabel = (percentText: string, lang?: string) => {
   const value = Number(match[1]);
   const locale = (lang || '').toLowerCase();
 
-  // Escala orientada a estágio (projeção): ligeiramente otimista para posicionamento de candidatura.
   const band = value >= 80 ? 'ready' : value >= 65 ? 'strong' : value >= 50 ? 'operational' : 'evolving';
 
   if (locale.startsWith('pt')) {
     return band === 'ready'
-      ? 'Proj. Estágio — Pronto'
+      ? 'Avançado'
       : band === 'strong'
-        ? 'Proj. Estágio — Forte'
+        ? 'Sólido'
         : band === 'operational'
-          ? 'Proj. Estágio — Operacional'
-          : 'Proj. Estágio — Em evolução';
+          ? 'Operacional'
+          : 'Em evolução';
   }
   if (locale.startsWith('es')) {
     return band === 'ready'
-      ? 'Proy. Prácticas — Listo'
+      ? 'Avanzado'
       : band === 'strong'
-        ? 'Proy. Prácticas — Fuerte'
+        ? 'Sólido'
         : band === 'operational'
-          ? 'Proy. Prácticas — Operativo'
-          : 'Proy. Prácticas — En evolución';
+          ? 'Operativo'
+          : 'En evolución';
   }
   if (locale.startsWith('fr')) {
     return band === 'ready'
-      ? 'Proj. Stage — Prêt'
+      ? 'Avancé'
       : band === 'strong'
-        ? 'Proj. Stage — Solide'
+        ? 'Solide'
         : band === 'operational'
-          ? 'Proj. Stage — Opérationnel'
-          : 'Proj. Stage — En progression';
+          ? 'Opérationnel'
+          : 'En progression';
   }
   return band === 'ready'
-    ? 'Internship Projection — Ready'
+    ? 'Advanced'
     : band === 'strong'
-      ? 'Internship Projection — Strong'
+      ? 'Strong'
       : band === 'operational'
-        ? 'Internship Projection — Operational'
-        : 'Internship Projection — Evolving';
+        ? 'Operational'
+        : 'Evolving';
 };
 
 const normalizeStringsBundle = (raw: unknown): StringsBundle => {
