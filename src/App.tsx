@@ -549,6 +549,7 @@ export default function App() {
     let noteParallaxFrame = 0;
     let wheelSnapFrame = 0;
     let lastWheelSnapAt = 0;
+    let lastWheelSnapSection: SectionId | undefined;
     let noteSnapTimer: number | undefined;
     const triggerScrollNoteSnap = (section: SectionId) => {
       const cluster = document.querySelector(
@@ -565,7 +566,7 @@ export default function App() {
     };
     const getFocusedScrollNoteSection = () => {
       const viewportCenter = window.innerHeight / 2;
-      const visibilityRange = window.innerHeight * 0.28;
+      const visibilityRange = window.innerHeight * 0.336;
       let focusedSection: SectionId | undefined;
       let closestDistance = Number.POSITIVE_INFINITY;
       document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
@@ -584,12 +585,15 @@ export default function App() {
       noteParallaxFrame = window.requestAnimationFrame(() => {
         noteParallaxFrame = 0;
         const viewportCenter = window.innerHeight / 2;
-        const visibilityRange = window.innerHeight * 0.28;
+        const visibilityRange = window.innerHeight * 0.336;
+        const steadyRange = window.innerHeight * 0.14;
+        const fadeRange = visibilityRange - steadyRange;
         document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
           const rect = cluster.getBoundingClientRect();
           const distanceFromFocus = Math.abs(viewportCenter - rect.top);
           const drift = Math.max(-72, Math.min(72, (viewportCenter - rect.top) * 0.16));
-          const opacity = Math.max(0, Math.min(1, 1 - distanceFromFocus / visibilityRange));
+          const fadeDistance = Math.max(0, distanceFromFocus - steadyRange);
+          const opacity = Math.max(0, Math.min(1, 1 - fadeDistance / fadeRange));
           const clusterElement = cluster as HTMLElement;
           clusterElement.style.setProperty('--note-parallax', `${Math.round(drift)}px`);
           clusterElement.style.setProperty('--note-opacity', opacity.toFixed(3));
@@ -603,7 +607,12 @@ export default function App() {
         wheelSnapFrame = 0;
         const now = window.performance.now();
         const focusedSection = getFocusedScrollNoteSection();
-        if (focusedSection && now - lastWheelSnapAt > 120) {
+        if (!focusedSection) {
+          lastWheelSnapSection = undefined;
+          return;
+        }
+        if (focusedSection !== lastWheelSnapSection && now - lastWheelSnapAt > 120) {
+          lastWheelSnapSection = focusedSection;
           lastWheelSnapAt = now;
           triggerScrollNoteSnap(focusedSection);
         }
