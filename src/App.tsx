@@ -53,11 +53,7 @@ type SectionId = 'hero' | 'experience' | 'skills' | 'mindset' | 'summary' | 'now
 type SectionNotePosition = { section: SectionId; top: number };
 type ScrollNoteConfig = { key: string; side: 'left' | 'right'; offset?: number; connector?: 'short' | 'long' };
 
-const scrollNotes: Record<SectionId, ScrollNoteConfig[]> = {
-  hero: [
-    { key: 'notes.hero.left', side: 'left', offset: -36, connector: 'long' },
-    { key: 'notes.hero.right', side: 'right', offset: 18, connector: 'short' }
-  ],
+const scrollNotes: Partial<Record<SectionId, ScrollNoteConfig[]>> = {
   experience: [
     { key: 'notes.experience.left', side: 'left', offset: -80, connector: 'long' },
     { key: 'notes.experience.right', side: 'right', offset: 72, connector: 'short' }
@@ -91,7 +87,8 @@ const ScrollNotes = ({
   return (
     <aside className="scroll-notes" aria-label={strings['notes.aria'] || 'Section highlights'}>
       {positions.map(({ section, top }) => {
-        const notes = scrollNotes[section] || scrollNotes.hero;
+        const notes = scrollNotes[section];
+        if (!notes?.length) return null;
         return (
           <div
             className="scroll-note-cluster"
