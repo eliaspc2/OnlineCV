@@ -11,17 +11,7 @@
   left: 0;
   right: 0;
   opacity: var(--note-opacity, 0);
-  visibility: hidden;
-  transition:
-    opacity 90ms linear,
-    visibility 0s linear 90ms;
-}
-
-.scroll-note-cluster.is-note-visible {
-  visibility: visible;
-  transition:
-    opacity 90ms linear,
-    visibility 0s linear 0s;
+  transition: opacity 90ms linear;
 }
 
 .scroll-note-cluster.is-note-snapping .scroll-note {
@@ -41,7 +31,6 @@
   font-weight: 600;
   line-height: 1.45;
   padding: 0.85rem 1rem;
-  animation: scroll-note-enter 520ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-note-left {
@@ -92,15 +81,6 @@
   width: clamp(8rem, 12vw, 18rem);
 }
 
-@keyframes scroll-note-enter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes scroll-note-snap {
   0% {
     translate: 0 0;
@@ -114,10 +94,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-note {
-    animation: none;
-  }
-
   .scroll-note-cluster.is-note-snapping .scroll-note {
     animation: none;
   }
