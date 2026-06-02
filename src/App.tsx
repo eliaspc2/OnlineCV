@@ -50,54 +50,67 @@ type ClassKeysBundle = {
 };
 
 type SectionId = 'hero' | 'experience' | 'skills' | 'mindset' | 'summary' | 'now' | 'contact';
+type SectionNotePosition = { section: SectionId; top: number };
+type ScrollNoteConfig = { key: string; side: 'left' | 'right'; offset?: number; connector?: 'short' | 'long' };
 
-const scrollNotes: Record<SectionId, { left: string; right: string }> = {
-  hero: {
-    left: 'notes.hero.left',
-    right: 'notes.hero.right'
-  },
-  experience: {
-    left: 'notes.experience.left',
-    right: 'notes.experience.right'
-  },
-  skills: {
-    left: 'notes.skills.left',
-    right: 'notes.skills.right'
-  },
-  mindset: {
-    left: 'notes.mindset.left',
-    right: 'notes.mindset.right'
-  },
-  summary: {
-    left: 'notes.summary.left',
-    right: 'notes.summary.right'
-  },
-  now: {
-    left: 'notes.now.left',
-    right: 'notes.now.right'
-  },
-  contact: {
-    left: 'notes.contact.left',
-    right: 'notes.contact.right'
-  }
+const scrollNotes: Record<SectionId, ScrollNoteConfig[]> = {
+  hero: [
+    { key: 'notes.hero.left', side: 'left', offset: -36, connector: 'long' },
+    { key: 'notes.hero.right', side: 'right', offset: 18, connector: 'short' }
+  ],
+  experience: [
+    { key: 'notes.experience.left', side: 'left', offset: -80, connector: 'long' },
+    { key: 'notes.experience.right', side: 'right', offset: 72, connector: 'short' }
+  ],
+  skills: [
+    { key: 'notes.skills.right', side: 'right', offset: -40, connector: 'short' }
+  ],
+  mindset: [
+    { key: 'notes.mindset.left', side: 'left', offset: 20, connector: 'short' }
+  ],
+  summary: [
+    { key: 'notes.summary.right', side: 'right', offset: -24, connector: 'short' }
+  ],
+  now: [
+    { key: 'notes.now.left', side: 'left', offset: -36, connector: 'short' },
+    { key: 'notes.now.right', side: 'right', offset: 80, connector: 'short' }
+  ],
+  contact: [
+    { key: 'notes.contact.left', side: 'left', offset: -24, connector: 'short' },
+    { key: 'notes.contact.right', side: 'right', offset: 56, connector: 'short' }
+  ]
 };
 
 const ScrollNotes = ({
-  activeSection,
+  positions,
   strings
 }: {
-  activeSection: SectionId;
+  positions: SectionNotePosition[];
   strings: Record<string, string>;
 }) => {
-  const notes = scrollNotes[activeSection] || scrollNotes.hero;
   return (
     <aside className="scroll-notes" aria-label={strings['notes.aria'] || 'Section highlights'}>
-      <div className="scroll-note scroll-note-left" key={`${activeSection}-left`}>
-        {strings[notes.left]}
-      </div>
-      <div className="scroll-note scroll-note-right" key={`${activeSection}-right`}>
-        {strings[notes.right]}
-      </div>
+      {positions.map(({ section, top }) => {
+        const notes = scrollNotes[section] || scrollNotes.hero;
+        return (
+          <div
+            className="scroll-note-cluster"
+            key={section}
+            data-scroll-note-section={section}
+            style={{ top: `${top}px` }}
+          >
+            {notes.map((note) => (
+              <div
+                className={`scroll-note scroll-note-${note.side} scroll-note-connector-${note.connector || 'short'}`}
+                key={`${section}-${note.side}-${note.key}`}
+                style={{ '--note-offset': `${note.offset || 0}px` } as React.CSSProperties}
+              >
+                {strings[note.key]}
+              </div>
+            ))}
+          </div>
+        );
+      })}
     </aside>
   );
 };
@@ -354,7 +367,8 @@ export default function App() {
   const [stringsFile, setStringsFile] = useState(getInitialStringsFile());
   const [strings, setStrings] = useState<StringsBundle | null>(null);
   const [isLangTransition, setIsLangTransition] = useState(false);
-  const [activeSection, setActiveSection] = useState<SectionId>('hero');
+  const [sectionNotePositions, setSectionNotePositions] = useState<SectionNotePosition[]>([]);
+  const activeSectionRef = useRef<SectionId>('hero');
   const [docViewer, setDocViewer] = useState<{
     url: string;
     title: string;
@@ -518,15 +532,58 @@ export default function App() {
     };
 
     syncFooterQuickLinksFromHeader();
+    const sections: SectionId[] = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
+
+    const updateScrollNotePositions = () => {
+      const next = sections.flatMap((section) => {
+        const element = document.getElementById(section);
+        if (!element) return [];
+        const rect = element.getBoundingClientRect();
+        const sectionTop = rect.top + window.scrollY;
+        const viewportAnchor = window.innerHeight * 0.55;
+        const sectionAnchor = rect.height * 0.48;
+        return [{ section, top: Math.round(sectionTop + Math.min(viewportAnchor, sectionAnchor)) }];
+      });
+      setSectionNotePositions(next);
+    };
+    let noteParallaxFrame = 0;
+    let noteSnapTimer: number | undefined;
+    const triggerScrollNoteSnap = (section: SectionId) => {
+      const cluster = document.querySelector(
+        `[data-scroll-note-section="${section}"]`
+      ) as HTMLElement | null;
+      if (!cluster) return;
+      cluster.classList.remove('is-note-snapping');
+      void cluster.offsetWidth;
+      cluster.classList.add('is-note-snapping');
+      if (noteSnapTimer) window.clearTimeout(noteSnapTimer);
+      noteSnapTimer = window.setTimeout(() => {
+        cluster.classList.remove('is-note-snapping');
+      }, 380);
+    };
+    const updateScrollNoteParallax = () => {
+      if (noteParallaxFrame) return;
+      noteParallaxFrame = window.requestAnimationFrame(() => {
+        noteParallaxFrame = 0;
+        const viewportCenter = window.innerHeight / 2;
+        document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
+          const rect = cluster.getBoundingClientRect();
+          const drift = Math.max(-42, Math.min(42, (viewportCenter - rect.top) * 0.08));
+          (cluster as HTMLElement).style.setProperty('--note-parallax', `${Math.round(drift)}px`);
+        });
+      });
+    };
 
     const handleScroll = () => {
-      const sections: SectionId[] = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (!element) continue;
         const rect = element.getBoundingClientRect();
         if (rect.top <= 200 && rect.bottom >= 200) {
-          setActiveSection(section);
+          if (activeSectionRef.current !== section) {
+            activeSectionRef.current = section;
+            triggerScrollNoteSnap(section);
+          }
           document.querySelectorAll('[data-nav-link]').forEach((link) => {
             const el = link as HTMLElement;
             const base = el.getAttribute('data-base-class') || '';
@@ -537,10 +594,23 @@ export default function App() {
           break;
         }
       }
+      updateScrollNoteParallax();
+    };
+    const handleResize = () => {
+      updateScrollNotePositions();
+      updateScrollNoteParallax();
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleResize);
+    window.setTimeout(updateScrollNotePositions, 0);
+    window.setTimeout(() => {
+      updateScrollNotePositions();
+      updateScrollNoteParallax();
+    }, 600);
     handleScroll();
+    updateScrollNotePositions();
+    updateScrollNoteParallax();
 
     const scrollButtons = document.querySelectorAll('[data-scroll-to]');
     const mobileMenu = document.querySelector('[data-mobile-menu]') as HTMLElement | null;
@@ -822,6 +892,9 @@ export default function App() {
       revealObserver.disconnect();
       skillObserver.disconnect();
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+      if (noteParallaxFrame) window.cancelAnimationFrame(noteParallaxFrame);
+      if (noteSnapTimer) window.clearTimeout(noteSnapTimer);
       langButtons.forEach((btn) => btn.removeEventListener('click', onLangClick));
       copyButtons.forEach((btn) => btn.removeEventListener('click', onCopyClick));
       if (menuToggle) {
@@ -891,7 +964,7 @@ export default function App() {
           )
         )}
       </main>
-      <ScrollNotes activeSection={activeSection} strings={strings.strings} />
+      <ScrollNotes positions={sectionNotePositions} strings={strings.strings} />
       <footer id="site-footer">
         {(config.layout?.footer || []).map((node, idx) =>
           renderNode(node, getNodeKey(node, `footer-${idx}`), strings.strings, classPresets, objects)
