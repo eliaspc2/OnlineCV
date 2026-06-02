@@ -547,6 +547,8 @@ export default function App() {
       setSectionNotePositions(next);
     };
     let noteParallaxFrame = 0;
+    let wheelSnapFrame = 0;
+    let lastWheelSnapAt = 0;
     let noteSnapTimer: number | undefined;
     const triggerScrollNoteSnap = (section: SectionId) => {
       const cluster = document.querySelector(
@@ -561,6 +563,22 @@ export default function App() {
         cluster.classList.remove('is-note-snapping');
       }, 380);
     };
+    const getFocusedScrollNoteSection = () => {
+      const viewportCenter = window.innerHeight / 2;
+      const visibilityRange = window.innerHeight * 0.28;
+      let focusedSection: SectionId | undefined;
+      let closestDistance = Number.POSITIVE_INFINITY;
+      document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
+        const rect = cluster.getBoundingClientRect();
+        const distanceFromFocus = Math.abs(viewportCenter - rect.top);
+        const section = (cluster as HTMLElement).dataset.scrollNoteSection as SectionId | undefined;
+        if (section && distanceFromFocus <= visibilityRange && distanceFromFocus < closestDistance) {
+          focusedSection = section;
+          closestDistance = distanceFromFocus;
+        }
+      });
+      return focusedSection;
+    };
     const updateScrollNoteParallax = () => {
       if (noteParallaxFrame) return;
       noteParallaxFrame = window.requestAnimationFrame(() => {
@@ -571,10 +589,24 @@ export default function App() {
           const rect = cluster.getBoundingClientRect();
           const distanceFromFocus = Math.abs(viewportCenter - rect.top);
           const drift = Math.max(-72, Math.min(72, (viewportCenter - rect.top) * 0.16));
+          const opacity = Math.max(0, Math.min(1, 1 - distanceFromFocus / visibilityRange));
           const clusterElement = cluster as HTMLElement;
           clusterElement.style.setProperty('--note-parallax', `${Math.round(drift)}px`);
-          clusterElement.classList.toggle('is-note-visible', distanceFromFocus <= visibilityRange);
+          clusterElement.style.setProperty('--note-opacity', opacity.toFixed(3));
+          clusterElement.classList.toggle('is-note-visible', opacity > 0.02);
         });
+      });
+    };
+    const handleWheel = () => {
+      if (wheelSnapFrame) return;
+      wheelSnapFrame = window.requestAnimationFrame(() => {
+        wheelSnapFrame = 0;
+        const now = window.performance.now();
+        const focusedSection = getFocusedScrollNoteSection();
+        if (focusedSection && now - lastWheelSnapAt > 120) {
+          lastWheelSnapAt = now;
+          triggerScrollNoteSnap(focusedSection);
+        }
       });
     };
 
@@ -606,6 +638,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('wheel', handleWheel, { passive: true });
     window.addEventListener('resize', handleResize);
     window.setTimeout(updateScrollNotePositions, 0);
     window.setTimeout(() => {
@@ -896,8 +929,10 @@ export default function App() {
       revealObserver.disconnect();
       skillObserver.disconnect();
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('resize', handleResize);
       if (noteParallaxFrame) window.cancelAnimationFrame(noteParallaxFrame);
+      if (wheelSnapFrame) window.cancelAnimationFrame(wheelSnapFrame);
       if (noteSnapTimer) window.clearTimeout(noteSnapTimer);
       langButtons.forEach((btn) => btn.removeEventListener('click', onLangClick));
       copyButtons.forEach((btn) => btn.removeEventListener('click', onCopyClick));
