@@ -566,10 +566,14 @@ export default function App() {
       noteParallaxFrame = window.requestAnimationFrame(() => {
         noteParallaxFrame = 0;
         const viewportCenter = window.innerHeight / 2;
+        const visibilityRange = window.innerHeight * 0.28;
         document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
           const rect = cluster.getBoundingClientRect();
+          const distanceFromFocus = Math.abs(viewportCenter - rect.top);
           const drift = Math.max(-72, Math.min(72, (viewportCenter - rect.top) * 0.16));
-          (cluster as HTMLElement).style.setProperty('--note-parallax', `${Math.round(drift)}px`);
+          const clusterElement = cluster as HTMLElement;
+          clusterElement.style.setProperty('--note-parallax', `${Math.round(drift)}px`);
+          clusterElement.classList.toggle('is-note-visible', distanceFromFocus <= visibilityRange);
         });
       });
     };
