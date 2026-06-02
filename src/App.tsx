@@ -568,7 +568,7 @@ export default function App() {
         const viewportCenter = window.innerHeight / 2;
         document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
           const rect = cluster.getBoundingClientRect();
-          const drift = Math.max(-42, Math.min(42, (viewportCenter - rect.top) * 0.08));
+          const drift = Math.max(-72, Math.min(72, (viewportCenter - rect.top) * 0.16));
           (cluster as HTMLElement).style.setProperty('--note-parallax', `${Math.round(drift)}px`);
         });
       });
