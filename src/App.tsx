@@ -49,6 +49,59 @@ type ClassKeysBundle = {
   classPresets?: ClassPresetGroup;
 };
 
+type SectionId = 'hero' | 'experience' | 'skills' | 'mindset' | 'summary' | 'now' | 'contact';
+
+const scrollNotes: Record<SectionId, { left: string; right: string }> = {
+  hero: {
+    left: 'notes.hero.left',
+    right: 'notes.hero.right'
+  },
+  experience: {
+    left: 'notes.experience.left',
+    right: 'notes.experience.right'
+  },
+  skills: {
+    left: 'notes.skills.left',
+    right: 'notes.skills.right'
+  },
+  mindset: {
+    left: 'notes.mindset.left',
+    right: 'notes.mindset.right'
+  },
+  summary: {
+    left: 'notes.summary.left',
+    right: 'notes.summary.right'
+  },
+  now: {
+    left: 'notes.now.left',
+    right: 'notes.now.right'
+  },
+  contact: {
+    left: 'notes.contact.left',
+    right: 'notes.contact.right'
+  }
+};
+
+const ScrollNotes = ({
+  activeSection,
+  strings
+}: {
+  activeSection: SectionId;
+  strings: Record<string, string>;
+}) => {
+  const notes = scrollNotes[activeSection] || scrollNotes.hero;
+  return (
+    <aside className="scroll-notes" aria-label={strings['notes.aria'] || 'Section highlights'}>
+      <div className="scroll-note scroll-note-left" key={`${activeSection}-left`}>
+        {strings[notes.left]}
+      </div>
+      <div className="scroll-note scroll-note-right" key={`${activeSection}-right`}>
+        {strings[notes.right]}
+      </div>
+    </aside>
+  );
+};
+
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   !!value && typeof value === 'object' && !Array.isArray(value);
 
@@ -301,6 +354,7 @@ export default function App() {
   const [stringsFile, setStringsFile] = useState(getInitialStringsFile());
   const [strings, setStrings] = useState<StringsBundle | null>(null);
   const [isLangTransition, setIsLangTransition] = useState(false);
+  const [activeSection, setActiveSection] = useState<SectionId>('hero');
   const [docViewer, setDocViewer] = useState<{
     url: string;
     title: string;
@@ -466,12 +520,13 @@ export default function App() {
     syncFooterQuickLinksFromHeader();
 
     const handleScroll = () => {
-      const sections = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
+      const sections: SectionId[] = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (!element) continue;
         const rect = element.getBoundingClientRect();
         if (rect.top <= 200 && rect.bottom >= 200) {
+          setActiveSection(section);
           document.querySelectorAll('[data-nav-link]').forEach((link) => {
             const el = link as HTMLElement;
             const base = el.getAttribute('data-base-class') || '';
@@ -836,6 +891,7 @@ export default function App() {
           )
         )}
       </main>
+      <ScrollNotes activeSection={activeSection} strings={strings.strings} />
       <footer id="site-footer">
         {(config.layout?.footer || []).map((node, idx) =>
           renderNode(node, getNodeKey(node, `footer-${idx}`), strings.strings, classPresets, objects)
