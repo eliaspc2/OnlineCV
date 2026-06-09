@@ -1,0 +1,75 @@
+:is(#hero, #about, #experience, #skills, #mindset, #summary, #now, #contact) {
+  background-color: #fcfcfd;
+}
+
+:is(#hero, #about, #experience, #skills, #mindset, #summary, #now, #contact)
+  > .absolute:not(.inset-0) {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+}
+
+#hero > .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    #fcfcfd 0%,
+    #f4f8fe 14%,
+    #d8e6fb 50%,
+    #f4f8fe 86%,
+    #fcfcfd 100%
+  );
+}
+
+#experience > .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    #fcfcfd 0%,
+    #f2f6fb 18%,
+    #dfe8f3 50%,
+    #f2f6fb 82%,
+    #fcfcfd 100%
+  );
+}
+
+#skills > .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    #fcfcfd 0%,
+    #f2f7fd 14%,
+    #d4e4fa 50%,
+    #f2f7fd 86%,
+    #fcfcfd 100%
+  );
+}
+
+#mindset > .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    #fcfcfd 0%,
+    #f0f4f9 17%,
+    #dce5f0 50%,
+    #f0f4f9 83%,
+    #fcfcfd 100%
+  );
+}
+
+#summary > .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    #fcfcfd 0%,
+    #f0f6ff 16%,
+    #d7e7fb 52%,
+    #f0f6ff 84%,
+    #fcfcfd 100%
+  );
+}
+
+#now > .absolute.inset-0 {
+  background: linear-gradient(
+    180deg,
+    #fcfcfd 0%,
+    #f0f6ff 14%,
+    #d5e5fb 50%,
+    #f0f6ff 86%,
+    #fcfcfd 100%
+  );
+}
