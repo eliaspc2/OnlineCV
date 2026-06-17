@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-17.2';
+const APP_BUILD_VERSION = '2026-06-17.3';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v9'
+        serviceWorker: 'json-site-v10'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -573,8 +573,8 @@ export default function App() {
       | undefined;
     let noteSnapTimer: number | undefined;
     const snapLineOffset = 200;
-    const wheelBrakeTicks = 8;
-    const wheelBrakeDuration = 1800;
+    const wheelBrakeTicks = 2;
+    const wheelBrakeDuration = 520;
     const triggerScrollNoteSnap = (section: SectionId) => {
       const cluster = document.querySelector(
         `[data-scroll-note-section="${section}"]`
