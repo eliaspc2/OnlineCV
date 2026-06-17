@@ -9841,6 +9841,10 @@
                     }
                   ],
                   "id": "n_ac5f2dfc",
+                  "styles": {
+                    "paddingLeft": "30px",
+                    "paddingRight": "40px"
+                  },
                   "ref": "layout.container.relative"
                 }
               ],
