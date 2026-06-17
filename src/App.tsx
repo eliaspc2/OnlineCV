@@ -4,6 +4,8 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
+const APP_BUILD_VERSION = '2026-06-17.2';
+const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
   value.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(value);
@@ -19,6 +21,11 @@ const toPublicUrlIfRelative = (path?: string) => {
   if (!path) return path;
   if (isAbsoluteUrl(path)) return path;
   return toPublicUrl(path);
+};
+
+const withCacheVersion = (url: string, version = DATA_CACHE_KEY) => {
+  const separator = url.includes('?') ? '&' : '?';
+  return `${url}${separator}v=${encodeURIComponent(version)}`;
 };
 
 const parseBooleanAttr = (el: Element, attr: string, fallback: boolean) => {
@@ -49,7 +56,7 @@ type ClassKeysBundle = {
   classPresets?: ClassPresetGroup;
 };
 
-type SectionId = 'hero' | 'experience' | 'skills' | 'mindset' | 'summary' | 'now' | 'contact';
+type SectionId = 'hero' | 'about' | 'experience' | 'skills' | 'mindset' | 'summary' | 'now' | 'contact';
 type SectionNotePosition = { section: SectionId; top: number };
 type ScrollNoteConfig = { key: string; side: 'left' | 'right'; offset?: number };
 
@@ -382,19 +389,30 @@ export default function App() {
 
   useEffect(() => {
     const load = async () => {
-      const res = await fetch(toPublicUrl('data/config.json'));
+      const configUrl = withCacheVersion(toPublicUrl('data/config.json'));
+      const res = await fetch(configUrl, { cache: 'no-store' });
       if (!res.ok) throw new Error('Failed to load data/config.json');
       const data = (await res.json()) as Config;
       let classTree = data.meta?.classPresets;
       const classKeysFile = data.meta?.classPresetsFile;
       if (classKeysFile) {
+        const classKeysUrl = toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile);
         const classRes = await fetch(
-          toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile)
+          isAbsoluteUrl(classKeysUrl) ? classKeysUrl : withCacheVersion(classKeysUrl),
+          { cache: 'no-store' }
         );
         if (!classRes.ok) throw new Error(`Failed to load ${classKeysFile}`);
         const classData = (await classRes.json()) as ClassKeysBundle;
         classTree = normalizeClassPresetTree(classData);
       }
+      console.info(`[OnlineCV] page version build ${APP_BUILD_VERSION}`, {
+        build: APP_BUILD_VERSION,
+        config: configUrl,
+        classKeys: classKeysFile
+          ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
+          : 'inline',
+        serviceWorker: 'json-site-v9'
+      });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
       setConfig(data);
@@ -409,7 +427,10 @@ export default function App() {
     const controller = new AbortController();
     const load = async () => {
       try {
-        const res = await fetch(toPublicUrl(stringsFile), { signal: controller.signal });
+        const res = await fetch(withCacheVersion(toPublicUrl(stringsFile)), {
+          cache: 'no-store',
+          signal: controller.signal
+        });
         if (!res.ok) throw new Error(`Failed to load ${stringsFile}`);
         const data = normalizeStringsBundle(await res.json());
         if (active) setStrings(data);
@@ -529,7 +550,7 @@ export default function App() {
     };
 
     syncFooterQuickLinksFromHeader();
-    const sections: SectionId[] = ['hero', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
+    const sections: SectionId[] = ['hero', 'about', 'experience', 'skills', 'mindset', 'summary', 'now', 'contact'];
 
     const updateScrollNotePositions = () => {
       const next = sections.flatMap((section) => {
@@ -551,6 +572,9 @@ export default function App() {
       | { section: SectionId; direction: number; remaining: number; until: number }
       | undefined;
     let noteSnapTimer: number | undefined;
+    const snapLineOffset = 200;
+    const wheelBrakeTicks = 8;
+    const wheelBrakeDuration = 1800;
     const triggerScrollNoteSnap = (section: SectionId) => {
       const cluster = document.querySelector(
         `[data-scroll-note-section="${section}"]`
@@ -579,6 +603,45 @@ export default function App() {
         }
       });
       return focusedSection;
+    };
+    const armSectionWheelBrake = (section: SectionId, direction: number, now: number) => {
+      sectionWheelBrake = {
+        section,
+        direction,
+        remaining: wheelBrakeTicks,
+        until: now + wheelBrakeDuration
+      };
+      triggerScrollNoteSnap(section);
+    };
+    const catchSectionBoundaryWheel = (event: WheelEvent, now: number) => {
+      const direction = Math.sign(event.deltaY);
+      if (!direction) return false;
+      const snapLine = window.scrollY + snapLineOffset;
+      const reach = Math.max(280, Math.min(760, Math.abs(event.deltaY) * 3));
+      const sectionEntries = sections
+        .map((section) => {
+          const element = document.getElementById(section);
+          if (!element) return undefined;
+          return { section, top: Math.round(element.getBoundingClientRect().top + window.scrollY) };
+        })
+        .filter(Boolean) as Array<{ section: SectionId; top: number }>;
+
+      const target =
+        direction > 0
+          ? sectionEntries.find(({ top }) => top > snapLine + 2 && top - snapLine <= reach)
+          : sectionEntries
+              .slice()
+              .reverse()
+              .find(({ top }) => top < snapLine - 2 && snapLine - top <= reach);
+      if (!target) return false;
+
+      event.preventDefault();
+      window.scrollTo({ top: Math.max(0, target.top - snapLineOffset), left: 0, behavior: 'auto' });
+      activeSectionRef.current = target.section;
+      lastScrollY = window.scrollY;
+      armSectionWheelBrake(target.section, direction, now);
+      updateScrollNoteParallax();
+      return true;
     };
     const updateScrollNoteParallax = () => {
       if (noteParallaxFrame) return;
@@ -621,6 +684,7 @@ export default function App() {
       if (sectionWheelBrake && now >= sectionWheelBrake.until) {
         sectionWheelBrake = undefined;
       }
+      if (catchSectionBoundaryWheel(event, now)) return;
       if (now - lastWheelSnapAt <= 220) return;
       const focusedSection = getFocusedScrollNoteSection();
       if (!focusedSection) return;
@@ -640,12 +704,7 @@ export default function App() {
           if (activeSectionRef.current !== section) {
             activeSectionRef.current = section;
             if (scrollDirection && window.performance.now() - lastWheelEventAt < 420) {
-              sectionWheelBrake = {
-                section,
-                direction: scrollDirection,
-                remaining: 5,
-                until: window.performance.now() + 1200
-              };
+              armSectionWheelBrake(section, scrollDirection, window.performance.now());
             }
             triggerScrollNoteSnap(section);
           }

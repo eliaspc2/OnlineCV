@@ -1,4 +1,4 @@
-const CACHE_NAME = 'json-site-v8';
+const CACHE_NAME = 'json-site-v9';
 const scopeUrl = new URL(self.registration.scope);
 const BASE_PATH = scopeUrl.pathname.endsWith('/') ? scopeUrl.pathname : `${scopeUrl.pathname}/`;
 const INDEX_URL = new URL(`${BASE_PATH}index.html`, scopeUrl.origin).toString();
@@ -52,7 +52,7 @@ self.addEventListener('fetch', (event) => {
 
   if (isJson) {
     event.respondWith(
-      fetch(request)
+      fetch(request, { cache: 'no-store' })
         .then((response) => {
           const copy = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
