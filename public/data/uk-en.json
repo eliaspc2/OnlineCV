@@ -27,38 +27,6 @@
   },
   "references": [
     {
-      "ref": "obj.n_cceb9fdc",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_7df95dac",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_3a47f7c0",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_81c20550",
-      "strings": {
-        "attrs": {
-          "alt": "Code"
-        }
-      }
-    },
-    {
-      "ref": "obj.n_3b47f950",
-      "strings": {
-        "text": "Opening panel..."
-      }
-    },
-    {
-      "ref": "obj.n_3847f498",
-      "strings": {
-        "text": "Entering admin mode"
-      }
-    },
-    {
       "ref": "obj.n_cdeba170",
       "strings": {}
     },
@@ -69,14 +37,6 @@
     {
       "ref": "obj.n_f79eee5c",
       "strings": {}
-    },
-    {
-      "ref": "obj.n_1cf6d14e",
-      "strings": {
-        "attrs": {
-          "aria-label": "Abrir editor"
-        }
-      }
     },
     {
       "ref": "obj.n_93316284",

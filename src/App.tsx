@@ -823,46 +823,6 @@ export default function App() {
     };
     langButtons.forEach((btn) => btn.addEventListener('click', onLangClick));
 
-    const brandIcon = document.querySelector('[data-brand-button]');
-    let clicks = 0;
-    let timer: number | null = null;
-    const clickIndicator = document.querySelector('[data-brand-count]') as HTMLElement | null;
-    const brandBox = document.querySelector('[data-brand-box]') as HTMLElement | null;
-    const adminOverlay = document.querySelector('[data-admin-overlay]') as HTMLElement | null;
-
-    const onBrandClick = () => {
-      clicks += 1;
-      if (timer) window.clearTimeout(timer);
-      if (clicks >= 3) {
-        clicks = 0;
-        if (clickIndicator) clickIndicator.classList.add('hidden');
-        if (adminOverlay) adminOverlay.classList.remove('hidden');
-        setTimeout(() => {
-          window.location.href = toPublicUrl('editor.html?view=classkeys');
-        }, 500);
-        return;
-      }
-      if (clickIndicator) {
-        clickIndicator.textContent = String(clicks);
-        clickIndicator.classList.remove('hidden');
-        clickIndicator.classList.add('flex');
-      }
-      if (brandBox) {
-        brandBox.classList.add('bg-blue-600', 'scale-110');
-        brandBox.classList.remove('bg-[#3b82f6]/10');
-      }
-      timer = window.setTimeout(() => {
-        clicks = 0;
-        if (clickIndicator) clickIndicator.classList.add('hidden');
-        if (brandBox) {
-          brandBox.classList.remove('bg-blue-600', 'scale-110');
-          brandBox.classList.add('bg-[#3b82f6]/10');
-        }
-      }, 700);
-    };
-
-    if (brandIcon) brandIcon.addEventListener('click', onBrandClick);
-
     const copyButtons = document.querySelectorAll('[data-copy-value]');
     const copyTimeouts = new Map<Element, number>();
     const onCopyClick = async (evt: Event) => {
@@ -957,8 +917,6 @@ export default function App() {
       clickAnywhereAccordionItems.forEach((item) => {
         item.removeEventListener('click', () => undefined);
       });
-      if (brandIcon) brandIcon.removeEventListener('click', onBrandClick);
-      if (timer) window.clearTimeout(timer);
       if (langTimer.current) window.clearTimeout(langTimer.current);
       copyTimeouts.forEach((timeout) => window.clearTimeout(timeout));
       docLinks.forEach((link) => link.removeEventListener('click', onDocClick));

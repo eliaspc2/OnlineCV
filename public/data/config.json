@@ -1782,42 +1782,6 @@
   "layout": {
     "header": [
       {
-        "attrs": {
-          "data-admin-overlay": "true"
-        },
-        "children": [
-          {
-            "children": [
-              {
-                "children": [
-                  {
-                    "attrs": {
-                      "src": "assets/images/icons/code.svg"
-                    },
-                    "id": "n_81c20550",
-                    "ref": "auto.img.visual_shared_w_8_h_8"
-                  }
-                ],
-                "id": "n_3a47f7c0",
-                "ref": "auto.singleton.div.visual_nav_w_16_h_16_bg_blue_600_rounded_full_flex_items_center_j"
-              },
-              {
-                "id": "n_3b47f950",
-                "ref": "auto.singleton.h3.visual_nav_text_2xl_font_bold_text_gray_900_mb_2"
-              },
-              {
-                "id": "n_3847f498",
-                "ref": "auto.singleton.p.visual_nav_text_gray_500"
-              }
-            ],
-            "id": "n_7df95dac",
-            "ref": "auto.singleton.div.visual_shared_no_motion_bg_white_rounded_2xl_p_8_text_center_shadow_2xl"
-          }
-        ],
-        "id": "n_cceb9fdc",
-        "ref": "auto.singleton.div.visual_nav_fixed_inset_0_z_100_flex_items_center_justify_center_b"
-      },
-      {
         "children": [
           {
             "styles": {
@@ -1829,14 +1793,10 @@
                 "children": [
                   {
                     "attrs": {
-                      "type": "button",
-                      "data-brand-button": "true"
+                      "type": "button"
                     },
                     "children": [
                       {
-                        "attrs": {
-                          "data-brand-box": "true"
-                        },
                         "children": [
                           {
                             "attrs": {
@@ -1866,13 +1826,6 @@
                         ],
                         "id": "n_94316418",
                         "ref": "auto.singleton.span.visual_nav_text_base_sm_text_lg_font_bold_text_0f172a"
-                      },
-                      {
-                        "attrs": {
-                          "data-brand-count": "true"
-                        },
-                        "id": "n_953165a8",
-                        "ref": "auto.singleton.div.visual_shared_no_motion_absolute_top_1_right_1_w_5_h_5_bg_blue_600_text"
                       }
                     ],
                     "id": "n_1cf6d14e",

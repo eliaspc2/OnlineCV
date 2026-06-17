@@ -22,9 +22,6 @@ json-site/
         flags/
         brand/
       docs/
-    editor.html
-    editor.js
-    editor.css
     sw.js
   src/
 ```
@@ -37,7 +34,6 @@ json-site/
   - `pt-pt.json`, `es-es.json`, `fr-fr.json`, `uk-en.json` — strings por idioma
 - `json-site/public/assets/images/` — **imagens** (inclui `icons/`, `flags/`, `brand/`)
 - `json-site/public/assets/docs/` — **documentos** (PDFs)
-- `json-site/public/editor.html` — editor simples (carrega os JSONs centrais)
 - `json-site/public/sw.js` — service worker (PWA)
 
 ## Como funciona o renderer
@@ -236,7 +232,7 @@ Regras práticas:
 
 ## Como editar
 
-Qualquer editor pode gerar o `public/data/config.json`. Se criares uma app externa, tens de:
+Se criares uma ferramenta externa para gerar o `public/data/config.json`, ela tem de:
 
 1. Respeitar a estrutura de nós
 2. Referenciar imagens em `assets/images/...` e documentos em `assets/docs/...`
@@ -269,21 +265,10 @@ Para manter “apenas um aberto de cada vez”, todos os itens devem partilhar o
 - Warnings do `pdf.mjs`/cookies particionados podem aparecer ao embebedar PDFs no browser; são comuns e não bloqueiam a app.
 - Após deploy, se vires comportamento antigo, faz `Shift + Refresh` para limpar cache do service worker.
 
-Se precisares, posso gerar um **schema JSON** e um **editor visual**.
+Se precisares, posso gerar um **schema JSON**.
 
 ## Validação automática (console)
 
 O frontend (`src/App.tsx`) valida o `public/data/config.json` ao carregar. Em caso de erro ou aviso, verás mensagens no console do browser.
 
-## Editor simples
-
-Abre `json-site/public/editor.html`:
-
-- **Carregar ficheiros**: carrega `public/data/config.json` + ficheiros de strings
-- **Validar**: valida o JSON (erros no console)
-- **Download**: gera o ficheiro selecionado
-- **Agregado**: vista em árvore (estilo regedit) + painel JSON por seleção, sem chavetas; permite editar textos e configuração (classes/attrs/styles)
-- O editor abre no separador **Agregado** por defeito.
-
-O editor guarda rascunho em `localStorage`.
     "classPresetsFile": "data/class-keys.json",

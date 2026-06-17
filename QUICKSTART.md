@@ -197,21 +197,11 @@ E depois as strings:
 1. `npm run build`
 2. Faz deploy da pasta `dist/`
 
-## 10) Editor integrado
-
-Abre `json-site/public/editor.html`. O editor:
-
-- Carrega os JSONs centrais
-- Permite alternar entre ficheiros
-- Faz download do ficheiro selecionado
-- O separador **Agregado** mostra uma árvore (estilo regedit) e um painel JSON filtrado pela seleção
-- O editor abre no **Agregado** por defeito
-
-## 11) Se o site parecer desatualizado após deploy
+## 10) Se o site parecer desatualizado após deploy
 
 1. Faz `Shift + Refresh` no browser.
 2. Se necessário, abre DevTools e limpa o service worker/cache do domínio.
 
 ---
 
-Se precisares de um editor visual para gerar este JSON, posso criar.
+Se precisares de uma ferramenta externa para gerar este JSON, posso criar.
