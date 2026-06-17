@@ -325,9 +325,9 @@
       "strings": {}
     },
     {
-      "ref": "obj.footer.quick.about",
+      "ref": "obj.footer.quick.hero",
       "strings": {
-        "text": "Identidad"
+        "text": "Inicio"
       }
     },
     {

@@ -2195,10 +2195,10 @@
                             "children": [
                               {
                                 "attrs": {
-                                  "href": "#about",
-                                  "data-scroll-to": "about"
+                                  "href": "#hero",
+                                  "data-scroll-to": "hero"
                                 },
-                                "id": "footer.quick.about",
+                                "id": "footer.quick.hero",
                                 "ref": "footer.link.anchor"
                               }
                             ],

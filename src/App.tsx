@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-17.3';
+const APP_BUILD_VERSION = '2026-06-17.4';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v10'
+        serviceWorker: 'json-site-v11'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -565,84 +565,6 @@ export default function App() {
       setSectionNotePositions(next);
     };
     let noteParallaxFrame = 0;
-    let lastWheelSnapAt = 0;
-    let lastWheelEventAt = 0;
-    let lastScrollY = window.scrollY;
-    let sectionWheelBrake:
-      | { section: SectionId; direction: number; remaining: number; until: number }
-      | undefined;
-    let noteSnapTimer: number | undefined;
-    const snapLineOffset = 200;
-    const wheelBrakeTicks = 2;
-    const wheelBrakeDuration = 520;
-    const triggerScrollNoteSnap = (section: SectionId) => {
-      const cluster = document.querySelector(
-        `[data-scroll-note-section="${section}"]`
-      ) as HTMLElement | null;
-      if (!cluster) return;
-      cluster.classList.remove('is-note-snapping');
-      void cluster.offsetWidth;
-      cluster.classList.add('is-note-snapping');
-      if (noteSnapTimer) window.clearTimeout(noteSnapTimer);
-      noteSnapTimer = window.setTimeout(() => {
-        cluster.classList.remove('is-note-snapping');
-      }, 380);
-    };
-    const getFocusedScrollNoteSection = () => {
-      const viewportCenter = window.innerHeight / 2;
-      const visibilityRange = window.innerHeight * 0.336;
-      let focusedSection: SectionId | undefined;
-      let closestDistance = Number.POSITIVE_INFINITY;
-      document.querySelectorAll('.scroll-note-cluster').forEach((cluster) => {
-        const rect = cluster.getBoundingClientRect();
-        const distanceFromFocus = Math.abs(viewportCenter - rect.top);
-        const section = (cluster as HTMLElement).dataset.scrollNoteSection as SectionId | undefined;
-        if (section && distanceFromFocus <= visibilityRange && distanceFromFocus < closestDistance) {
-          focusedSection = section;
-          closestDistance = distanceFromFocus;
-        }
-      });
-      return focusedSection;
-    };
-    const armSectionWheelBrake = (section: SectionId, direction: number, now: number) => {
-      sectionWheelBrake = {
-        section,
-        direction,
-        remaining: wheelBrakeTicks,
-        until: now + wheelBrakeDuration
-      };
-      triggerScrollNoteSnap(section);
-    };
-    const catchSectionBoundaryWheel = (event: WheelEvent, now: number) => {
-      const direction = Math.sign(event.deltaY);
-      if (!direction) return false;
-      const snapLine = window.scrollY + snapLineOffset;
-      const reach = Math.max(280, Math.min(760, Math.abs(event.deltaY) * 3));
-      const sectionEntries = sections
-        .map((section) => {
-          const element = document.getElementById(section);
-          if (!element) return undefined;
-          return { section, top: Math.round(element.getBoundingClientRect().top + window.scrollY) };
-        })
-        .filter(Boolean) as Array<{ section: SectionId; top: number }>;
-
-      const target =
-        direction > 0
-          ? sectionEntries.find(({ top }) => top > snapLine + 2 && top - snapLine <= reach)
-          : sectionEntries
-              .slice()
-              .reverse()
-              .find(({ top }) => top < snapLine - 2 && snapLine - top <= reach);
-      if (!target) return false;
-
-      event.preventDefault();
-      window.scrollTo({ top: Math.max(0, target.top - snapLineOffset), left: 0, behavior: 'auto' });
-      activeSectionRef.current = target.section;
-      lastScrollY = window.scrollY;
-      armSectionWheelBrake(target.section, direction, now);
-      updateScrollNoteParallax();
-      return true;
-    };
     const updateScrollNoteParallax = () => {
       if (noteParallaxFrame) return;
       noteParallaxFrame = window.requestAnimationFrame(() => {
@@ -664,38 +586,8 @@ export default function App() {
         });
       });
     };
-    const handleWheel = (event: WheelEvent) => {
-      const now = window.performance.now();
-      lastWheelEventAt = now;
-      if (
-        sectionWheelBrake &&
-        now < sectionWheelBrake.until &&
-        Math.sign(event.deltaY) === sectionWheelBrake.direction &&
-        sectionWheelBrake.remaining > 0
-      ) {
-        event.preventDefault();
-        sectionWheelBrake.remaining -= 1;
-        if (sectionWheelBrake.remaining <= 0) {
-          sectionWheelBrake = undefined;
-        }
-        triggerScrollNoteSnap(sectionWheelBrake?.section || activeSectionRef.current);
-        return;
-      }
-      if (sectionWheelBrake && now >= sectionWheelBrake.until) {
-        sectionWheelBrake = undefined;
-      }
-      if (catchSectionBoundaryWheel(event, now)) return;
-      if (now - lastWheelSnapAt <= 220) return;
-      const focusedSection = getFocusedScrollNoteSection();
-      if (!focusedSection) return;
-      lastWheelSnapAt = now;
-      triggerScrollNoteSnap(focusedSection);
-    };
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const scrollDirection = Math.sign(currentScrollY - lastScrollY);
-      lastScrollY = currentScrollY;
       for (const section of sections) {
         const element = document.getElementById(section);
         if (!element) continue;
@@ -703,10 +595,6 @@ export default function App() {
         if (rect.top <= 200 && rect.bottom >= 200) {
           if (activeSectionRef.current !== section) {
             activeSectionRef.current = section;
-            if (scrollDirection && window.performance.now() - lastWheelEventAt < 420) {
-              armSectionWheelBrake(section, scrollDirection, window.performance.now());
-            }
-            triggerScrollNoteSnap(section);
           }
           document.querySelectorAll('[data-nav-link]').forEach((link) => {
             const el = link as HTMLElement;
@@ -726,7 +614,6 @@ export default function App() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('resize', handleResize);
     window.setTimeout(updateScrollNotePositions, 0);
     window.setTimeout(() => {
@@ -977,10 +864,8 @@ export default function App() {
       revealObserver.disconnect();
       skillObserver.disconnect();
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('resize', handleResize);
       if (noteParallaxFrame) window.cancelAnimationFrame(noteParallaxFrame);
-      if (noteSnapTimer) window.clearTimeout(noteSnapTimer);
       langButtons.forEach((btn) => btn.removeEventListener('click', onLangClick));
       copyButtons.forEach((btn) => btn.removeEventListener('click', onCopyClick));
       if (menuToggle) {
