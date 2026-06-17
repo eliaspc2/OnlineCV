@@ -35,6 +35,8 @@
 
 .scroll-note-left {
   left: clamp(1rem, 2.5vw, 3rem);
+  border-left: 0;
+  border-right: 2px solid rgba(59, 130, 246, 0.38);
   display: none;
 }
 
@@ -53,6 +55,11 @@
   border-radius: 999px;
   background: #3b82f6;
   box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.12);
+}
+
+.scroll-note-left::before {
+  left: auto;
+  right: -0.34rem;
 }
 
 @keyframes scroll-note-snap {
