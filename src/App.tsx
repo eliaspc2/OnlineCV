@@ -643,8 +643,8 @@ export default function App() {
               sectionWheelBrake = {
                 section,
                 direction: scrollDirection,
-                remaining: 1,
-                until: window.performance.now() + 280
+                remaining: 5,
+                until: window.performance.now() + 1200
               };
             }
             triggerScrollNoteSnap(section);

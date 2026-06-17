@@ -938,6 +938,11 @@
       "classKey": "visual.shared.reveal_opacity_0_mb_12",
       "i18nKey": "objdef.auto.div.visual_shared_reveal_opacity_0_mb_12"
     },
+    "auto.div.visual_shared_reveal_opacity_0_mt_12_text_center": {
+      "tag": "div",
+      "classKey": "visual.shared.reveal_opacity_0_mt_12_text_center",
+      "i18nKey": "objdef.auto.div.visual_shared_reveal_opacity_0_mt_12_text_center"
+    },
     "auto.div.visual_shared_flex_items_center_gap_3_mb_4": {
       "tag": "div",
       "classKey": "visual.shared.flex_items_center_gap_3_mb_4",
