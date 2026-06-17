@@ -15,7 +15,7 @@
 }
 
 .scroll-note-cluster.is-note-snapping .scroll-note {
-  animation: scroll-note-snap 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: scroll-note-snap 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .scroll-note {
@@ -66,8 +66,11 @@
   0% {
     translate: 0 0;
   }
-  35% {
-    translate: 0 -8px;
+  28% {
+    translate: 0 -16px;
+  }
+  62% {
+    translate: 0 4px;
   }
   100% {
     translate: 0 0;

@@ -544,9 +544,7 @@ export default function App() {
       setSectionNotePositions(next);
     };
     let noteParallaxFrame = 0;
-    let wheelSnapFrame = 0;
     let lastWheelSnapAt = 0;
-    let lastWheelSnapSection: SectionId | undefined;
     let noteSnapTimer: number | undefined;
     const triggerScrollNoteSnap = (section: SectionId) => {
       const cluster = document.querySelector(
@@ -599,21 +597,12 @@ export default function App() {
       });
     };
     const handleWheel = () => {
-      if (wheelSnapFrame) return;
-      wheelSnapFrame = window.requestAnimationFrame(() => {
-        wheelSnapFrame = 0;
-        const now = window.performance.now();
-        const focusedSection = getFocusedScrollNoteSection();
-        if (!focusedSection) {
-          lastWheelSnapSection = undefined;
-          return;
-        }
-        if (focusedSection !== lastWheelSnapSection && now - lastWheelSnapAt > 120) {
-          lastWheelSnapSection = focusedSection;
-          lastWheelSnapAt = now;
-          triggerScrollNoteSnap(focusedSection);
-        }
-      });
+      const now = window.performance.now();
+      if (now - lastWheelSnapAt <= 220) return;
+      const focusedSection = getFocusedScrollNoteSection();
+      if (!focusedSection) return;
+      lastWheelSnapAt = now;
+      triggerScrollNoteSnap(focusedSection);
     };
 
     const handleScroll = () => {
@@ -898,7 +887,6 @@ export default function App() {
       window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('resize', handleResize);
       if (noteParallaxFrame) window.cancelAnimationFrame(noteParallaxFrame);
-      if (wheelSnapFrame) window.cancelAnimationFrame(wheelSnapFrame);
       if (noteSnapTimer) window.clearTimeout(noteSnapTimer);
       langButtons.forEach((btn) => btn.removeEventListener('click', onLangClick));
       copyButtons.forEach((btn) => btn.removeEventListener('click', onCopyClick));
