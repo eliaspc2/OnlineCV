@@ -943,6 +943,11 @@
       "classKey": "visual.shared.reveal_opacity_0_mt_12_text_center",
       "i18nKey": "objdef.auto.div.visual_shared_reveal_opacity_0_mt_12_text_center"
     },
+    "auto.div.visual_shared_grid_lg_grid_cols_2_gap_12_items_start": {
+      "tag": "div",
+      "classKey": "visual.shared.grid_lg_grid_cols_2_gap_12_items_start",
+      "i18nKey": "objdef.auto.div.visual_shared_grid_lg_grid_cols_2_gap_12_items_start"
+    },
     "auto.div.visual_shared_flex_items_center_gap_3_mb_4": {
       "tag": "div",
       "classKey": "visual.shared.flex_items_center_gap_3_mb_4",
@@ -2546,10 +2551,6 @@
                   "ref": "auto.singleton.div.visual_hero_absolute_inset_0_opacity_0_03"
                 },
                 {
-                  "styles": {
-                    "paddingLeft": "30px",
-                    "paddingRight": "40px"
-                  },
                   "children": [
                     {
                       "children": [
@@ -2862,6 +2863,9 @@
               "attrs": {
                 "id": "about"
               },
+              "styles": {
+                "padding": "0"
+              },
               "children": [
                 {
                   "id": "n_3af09320",
@@ -2886,10 +2890,6 @@
                   "ref": "auto.div.visual_shared_absolute_inset_0_bg_gradient_to_b_from_fcfcfd_via_f1f5"
                 },
                 {
-                  "styles": {
-                    "paddingLeft": "30px",
-                    "paddingRight": "40px"
-                  },
                   "children": [
                     {
                       "children": [
@@ -9302,10 +9302,6 @@
               },
               "children": [
                 {
-                  "styles": {
-                    "paddingLeft": "30px",
-                    "paddingRight": "40px"
-                  },
                   "children": [
                     {
                       "children": [
@@ -9607,9 +9603,7 @@
                         },
                         {
                           "styles": {
-                            "animationDelay": "0.4s",
-                            "paddingLeft": "8px",
-                            "paddingRight": "8px"
+                            "animationDelay": "0.4s"
                           },
                           "children": [
                             {
@@ -9842,16 +9836,12 @@
                           "ref": "reveal.stack"
                         }
                       ],
-                      "styles": {
-                        "paddingLeft": "8px",
-                        "paddingRight": "8px"
-                      },
                       "id": "n_c82d5d64",
-                      "ref": "auto.singleton.div.visual_contact_grid_lg_grid_cols_2_gap_12_space_y_6"
+                      "ref": "auto.div.visual_shared_grid_lg_grid_cols_2_gap_12_items_start"
                     }
                   ],
                   "id": "n_ac5f2dfc",
-                  "ref": "auto.singleton.div.visual_contact_container_custom_relative_z_10_space_y_6"
+                  "ref": "layout.container.relative"
                 }
               ],
               "id": "n_b5b6a6c0",

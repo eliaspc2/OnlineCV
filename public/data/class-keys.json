@@ -294,6 +294,7 @@
         "font_semibold_mb_2": "font-semibold mb-2",
         "font_semibold_text_0f172a_group_hover_text_3b82f6_tran": "font-semibold text-[#0f172a] group-hover:text-[#3b82f6] transition-colors",
         "gradient_text": "gradient-text",
+        "grid_lg_grid_cols_2_gap_12_items_start": "grid lg:grid-cols-2 gap-12 items-start",
         "lg_col_span_2": "lg:col-span-2",
         "mb_6": "mb-6",
         "overflow_hidden_transition_all_duration_500_max_h_0_op": "overflow-hidden transition-all duration-500 max-h-0 opacity-0",
