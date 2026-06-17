@@ -545,6 +545,11 @@ export default function App() {
     };
     let noteParallaxFrame = 0;
     let lastWheelSnapAt = 0;
+    let lastWheelEventAt = 0;
+    let lastScrollY = window.scrollY;
+    let sectionWheelBrake:
+      | { section: SectionId; direction: number; remaining: number; until: number }
+      | undefined;
     let noteSnapTimer: number | undefined;
     const triggerScrollNoteSnap = (section: SectionId) => {
       const cluster = document.querySelector(
@@ -596,8 +601,26 @@ export default function App() {
         });
       });
     };
-    const handleWheel = () => {
+    const handleWheel = (event: WheelEvent) => {
       const now = window.performance.now();
+      lastWheelEventAt = now;
+      if (
+        sectionWheelBrake &&
+        now < sectionWheelBrake.until &&
+        Math.sign(event.deltaY) === sectionWheelBrake.direction &&
+        sectionWheelBrake.remaining > 0
+      ) {
+        event.preventDefault();
+        sectionWheelBrake.remaining -= 1;
+        if (sectionWheelBrake.remaining <= 0) {
+          sectionWheelBrake = undefined;
+        }
+        triggerScrollNoteSnap(sectionWheelBrake?.section || activeSectionRef.current);
+        return;
+      }
+      if (sectionWheelBrake && now >= sectionWheelBrake.until) {
+        sectionWheelBrake = undefined;
+      }
       if (now - lastWheelSnapAt <= 220) return;
       const focusedSection = getFocusedScrollNoteSection();
       if (!focusedSection) return;
@@ -606,6 +629,9 @@ export default function App() {
     };
 
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDirection = Math.sign(currentScrollY - lastScrollY);
+      lastScrollY = currentScrollY;
       for (const section of sections) {
         const element = document.getElementById(section);
         if (!element) continue;
@@ -613,6 +639,14 @@ export default function App() {
         if (rect.top <= 200 && rect.bottom >= 200) {
           if (activeSectionRef.current !== section) {
             activeSectionRef.current = section;
+            if (scrollDirection && window.performance.now() - lastWheelEventAt < 420) {
+              sectionWheelBrake = {
+                section,
+                direction: scrollDirection,
+                remaining: 1,
+                until: window.performance.now() + 280
+              };
+            }
             triggerScrollNoteSnap(section);
           }
           document.querySelectorAll('[data-nav-link]').forEach((link) => {
@@ -633,7 +667,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('wheel', handleWheel, { passive: true });
+    window.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('resize', handleResize);
     window.setTimeout(updateScrollNotePositions, 0);
     window.setTimeout(() => {
