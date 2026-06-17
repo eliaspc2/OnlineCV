@@ -1793,7 +1793,8 @@
                 "children": [
                   {
                     "attrs": {
-                      "type": "button"
+                      "type": "button",
+                      "data-scroll-to": "hero"
                     },
                     "children": [
                       {
