@@ -51,29 +51,29 @@ type ClassKeysBundle = {
 
 type SectionId = 'hero' | 'experience' | 'skills' | 'mindset' | 'summary' | 'now' | 'contact';
 type SectionNotePosition = { section: SectionId; top: number };
-type ScrollNoteConfig = { key: string; side: 'left' | 'right'; offset?: number; connector?: 'short' | 'long' };
+type ScrollNoteConfig = { key: string; side: 'left' | 'right'; offset?: number };
 
 const scrollNotes: Partial<Record<SectionId, ScrollNoteConfig[]>> = {
   experience: [
-    { key: 'notes.experience.left', side: 'left', offset: -80, connector: 'long' },
-    { key: 'notes.experience.right', side: 'right', offset: 72, connector: 'short' }
+    { key: 'notes.experience.left', side: 'left', offset: -80 },
+    { key: 'notes.experience.right', side: 'right', offset: 72 }
   ],
   skills: [
-    { key: 'notes.skills.right', side: 'right', offset: -40, connector: 'short' }
+    { key: 'notes.skills.right', side: 'right', offset: -40 }
   ],
   mindset: [
-    { key: 'notes.mindset.left', side: 'left', offset: 20, connector: 'short' }
+    { key: 'notes.mindset.left', side: 'left', offset: 20 }
   ],
   summary: [
-    { key: 'notes.summary.right', side: 'right', offset: -24, connector: 'short' }
+    { key: 'notes.summary.right', side: 'right', offset: -24 }
   ],
   now: [
-    { key: 'notes.now.left', side: 'left', offset: -36, connector: 'short' },
-    { key: 'notes.now.right', side: 'right', offset: 80, connector: 'short' }
+    { key: 'notes.now.left', side: 'left', offset: -36 },
+    { key: 'notes.now.right', side: 'right', offset: 80 }
   ],
   contact: [
-    { key: 'notes.contact.left', side: 'left', offset: -24, connector: 'short' },
-    { key: 'notes.contact.right', side: 'right', offset: 56, connector: 'short' }
+    { key: 'notes.contact.left', side: 'left', offset: -24 },
+    { key: 'notes.contact.right', side: 'right', offset: 56 }
   ]
 };
 
@@ -98,7 +98,7 @@ const ScrollNotes = ({
           >
             {notes.map((note) => (
               <div
-                className={`scroll-note scroll-note-${note.side} scroll-note-connector-${note.connector || 'short'}`}
+                className={`scroll-note scroll-note-${note.side}`}
                 key={`${section}-${note.side}-${note.key}`}
                 style={{ '--note-offset': `${note.offset || 0}px` } as React.CSSProperties}
               >
