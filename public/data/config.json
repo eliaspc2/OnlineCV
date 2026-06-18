@@ -2631,18 +2631,18 @@
                                 },
                                 {
                                   "attrs": {
-                                    "href": "mailto:eliaspc2@gmail.com"
+                                    "href": "tel:+351928308015"
                                   },
                                   "children": [
                                     {
                                       "attrs": {
-                                        "src": "assets/images/icons/mail.svg"
+                                        "src": "assets/images/icons/phone.svg"
                                       },
-                                      "id": "social.email.2.icon",
+                                      "id": "social.phone.2.icon",
                                       "ref": "icon.md"
                                     }
                                   ],
-                                  "id": "social.email.2",
+                                  "id": "social.phone.2",
                                   "ref": "link.social.button"
                                 }
                               ],
@@ -9520,24 +9520,6 @@
                                         }
                                       ],
                                       "id": "social.linkedin.3",
-                                      "ref": "link.social.button"
-                                    },
-                                    {
-                                      "attrs": {
-                                        "href": "mailto:eliaspc2@gmail.com",
-                                        "target": "_blank",
-                                        "rel": "noopener noreferrer"
-                                      },
-                                      "children": [
-                                        {
-                                          "attrs": {
-                                            "src": "assets/images/icons/mail.svg"
-                                          },
-                                          "id": "social.email.3.icon",
-                                          "ref": "icon.md"
-                                        }
-                                      ],
-                                      "id": "social.email.3",
                                       "ref": "link.social.button"
                                     }
                                   ],

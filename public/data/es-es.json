@@ -691,14 +691,14 @@
       }
     },
     {
-      "ref": "obj.social.email.2",
+      "ref": "obj.social.phone.2",
       "strings": {}
     },
     {
-      "ref": "obj.social.email.2.icon",
+      "ref": "obj.social.phone.2.icon",
       "strings": {
         "attrs": {
-          "alt": "Email"
+          "alt": "Teléfono"
         }
       }
     },
@@ -6188,18 +6188,6 @@
       "strings": {
         "attrs": {
           "alt": "LinkedIn"
-        }
-      }
-    },
-    {
-      "ref": "obj.social.email.3",
-      "strings": {}
-    },
-    {
-      "ref": "obj.social.email.3.icon",
-      "strings": {
-        "attrs": {
-          "alt": "Email"
         }
       }
     },
