@@ -4,8 +4,46 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-18.16';
+const APP_BUILD_VERSION = '2026-06-18.17';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
+
+const FOOTER_DOCUMENT_LINKS = [
+  {
+    label: 'CV Padrão',
+    href: 'assets/docs/cv-andre-camara.pdf',
+    download: 'cv-andre-camara.pdf'
+  },
+  {
+    label: 'CV Estendido',
+    href: 'assets/docs/cv-extended-andre-camara.pdf',
+    download: 'cv-extended-andre-camara.pdf'
+  },
+  {
+    label: 'Python I',
+    href: 'assets/docs/cert-python-intro-helsinki.png',
+    download: 'cert-python-intro-helsinki.png'
+  },
+  {
+    label: 'Python II',
+    href: 'assets/docs/cert-python-adv-helsinki.png',
+    download: 'cert-python-adv-helsinki.png'
+  },
+  {
+    label: 'Marketing',
+    href: 'assets/docs/cert-marketing-digital.pdf',
+    download: 'cert-marketing-digital.pdf'
+  },
+  {
+    label: 'EFA Programação',
+    href: 'assets/docs/efa-program-content.pdf',
+    download: 'efa-program-content.pdf'
+  },
+  {
+    label: 'CET Cibersegurança',
+    href: 'assets/docs/Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf',
+    download: 'Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf'
+  }
+];
 
 const isAbsoluteUrl = (value: string) =>
   value.startsWith('//') || /^[a-z][a-z0-9+.-]*:/i.test(value);
@@ -411,7 +449,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v31'
+        serviceWorker: 'json-site-v32'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -1019,6 +1057,18 @@ export default function App() {
         {(config.layout?.footer || []).map((node, idx) =>
           renderNode(node, getNodeKey(node, `footer-${idx}`), strings.strings, classPresets, objects)
         )}
+        <nav className="footer-doc-links" aria-label="Documentos profissionais">
+          {FOOTER_DOCUMENT_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              download={link.download}
+              data-open-inline="true"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </footer>
       <div className="floating">
         {(config.layout?.floating || []).map((node, idx) =>
