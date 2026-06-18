@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-18.6';
+const APP_BUILD_VERSION = '2026-06-18.7';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v21'
+        serviceWorker: 'json-site-v22'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -689,14 +689,6 @@ export default function App() {
       btn.addEventListener('click', onScrollButtonClick);
     });
 
-    const scrollTopButtons = document.querySelectorAll('[data-scroll-top]');
-    const onScrollTopClick = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    scrollTopButtons.forEach((btn) => {
-      btn.addEventListener('click', onScrollTopClick);
-    });
-
     const accordionToggles = document.querySelectorAll('[data-accordion-toggle]');
     const setAccordionState = (panelId: string, open: boolean) => {
       const panel = document.querySelector(`[data-accordion-panel=\"${panelId}\"]`) as HTMLElement | null;
@@ -908,9 +900,6 @@ export default function App() {
       scrollButtons.forEach((btn) => {
         const handler = scrollButtonHandlers.get(btn);
         if (handler) btn.removeEventListener('click', handler);
-      });
-      scrollTopButtons.forEach((btn) => {
-        btn.removeEventListener('click', onScrollTopClick);
       });
       accordionToggles.forEach((toggle) => {
         const handler = accordionToggleHandlers.get(toggle);

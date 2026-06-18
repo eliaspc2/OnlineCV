@@ -5,8 +5,7 @@
       "socialButton": "social-icon",
       "languageSwitchButton": "lang-btn",
       "ctaPrimary": "btn-primary flex items-center gap-2",
-      "ctaOutline": "btn-outline flex items-center gap-2",
-      "floatingActionButton": "floating-action-btn"
+      "ctaOutline": "btn-outline flex items-center gap-2"
     },
     "visual": {
       "nav": {
