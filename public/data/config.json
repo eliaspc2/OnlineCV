@@ -198,6 +198,14 @@
       "classKey": "parts.floatingActionButton",
       "i18nKey": "objdef.floating.action.link"
     },
+    "floating.socialDock": {
+      "tag": "div",
+      "class": "persistent-social-dock",
+      "attrs": {
+        "aria-label": "Contactos rápidos"
+      },
+      "i18nKey": "objdef.floating.socialDock"
+    },
     "list.item.plain": {
       "tag": "li",
       "classKey": "unstyled.li",
@@ -872,11 +880,13 @@
     "contact.card.row": {
       "tag": "div",
       "classKey": "visual.contact.card_hover_flex_items_center_gap_4_p_5_rounded_xl_bg_w",
+      "class": "contact-pulse-target",
       "i18nKey": "objdef.contact.card.row"
     },
     "contact.social.link": {
       "tag": "a",
       "classKey": "visual.contact.w_12_h_12_rounded_xl_bg_3b82f6_10_flex_items_center_ju_2",
+      "class": "contact-pulse-target",
       "i18nKey": "objdef.contact.social.link"
     },
     "contact.label": {
@@ -892,6 +902,7 @@
     "contact.doc.link": {
       "tag": "a",
       "classKey": "visual.contact.card_hover_p_4_rounded_xl_bg_white_border_border_e2e8f",
+      "class": "contact-pulse-target",
       "i18nKey": "objdef.contact.doc.link"
     },
     "contact.doc.title": {
@@ -2181,6 +2192,22 @@
                               }
                             ],
                             "id": "social.email.1",
+                            "ref": "link.social.button"
+                          },
+                          {
+                            "attrs": {
+                              "href": "tel:+351928308015"
+                            },
+                            "children": [
+                              {
+                                "attrs": {
+                                  "src": "assets/images/icons/phone.svg"
+                                },
+                                "id": "social.phone.1.icon",
+                                "ref": "icon.sm"
+                              }
+                            ],
+                            "id": "social.phone.1",
                             "ref": "link.social.button"
                           }
                         ],
@@ -5407,11 +5434,92 @@
                                                         "data-level": "50",
                                                         "data-delay": "400"
                                                       }
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
+          }
+        ]
+      },
+      {
+        "ref": "floating.socialDock",
+        "children": [
+          {
+            "attrs": {
+              "href": "https://github.com/eliaspc2",
+              "target": "_blank",
+              "rel": "noopener noreferrer",
+              "aria-label": "GitHub"
+            },
+            "class": "persistent-social-dock-button",
+            "children": [
+              {
+                "attrs": {
+                  "src": "assets/images/icons/github.svg"
+                },
+                "id": "floating.socialDock.github.icon",
+                "ref": "icon.sm"
+              }
+            ],
+            "id": "floating.socialDock.github",
+            "ref": "link.social.button"
+          },
+          {
+            "attrs": {
+              "href": "https://www.linkedin.com/in/eliaspc/",
+              "target": "_blank",
+              "rel": "noopener noreferrer",
+              "aria-label": "LinkedIn"
+            },
+            "class": "persistent-social-dock-button",
+            "children": [
+              {
+                "attrs": {
+                  "src": "assets/images/icons/linkedin.svg"
+                },
+                "id": "floating.socialDock.linkedin.icon",
+                "ref": "icon.sm"
+              }
+            ],
+            "id": "floating.socialDock.linkedin",
+            "ref": "link.social.button"
+          },
+          {
+            "attrs": {
+              "href": "mailto:eliaspc2@gmail.com",
+              "aria-label": "Email"
+            },
+            "class": "persistent-social-dock-button",
+            "children": [
+              {
+                "attrs": {
+                  "src": "assets/images/icons/mail.svg"
+                },
+                "id": "floating.socialDock.email.icon",
+                "ref": "icon.sm"
+              }
+            ],
+            "id": "floating.socialDock.email",
+            "ref": "link.social.button"
+          },
+          {
+            "attrs": {
+              "href": "tel:+351928308015",
+              "aria-label": "Telefone"
+            },
+            "class": "persistent-social-dock-button",
+            "children": [
+              {
+                "attrs": {
+                  "src": "assets/images/icons/phone.svg"
+                },
+                "id": "floating.socialDock.phone.icon",
+                "ref": "icon.sm"
+              }
+            ],
+            "id": "floating.socialDock.phone",
+            "ref": "link.social.button"
+          }
+        ]
+      }
+    ]
+  },
                                             {
                                               "id": "n_543812bb",
                                               "ref": "common.div.plain",
