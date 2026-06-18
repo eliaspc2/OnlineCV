@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-18.7';
+const APP_BUILD_VERSION = '2026-06-18.8';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v22'
+        serviceWorker: 'json-site-v23'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -587,6 +587,15 @@ export default function App() {
       });
     };
 
+    const footerElement = document.getElementById('site-footer');
+    const updateFooterDockState = () => {
+      if (!footerElement) return;
+      const scrollRoot = document.scrollingElement || document.documentElement;
+      const maxScroll = Math.max(1, scrollRoot.scrollHeight - window.innerHeight);
+      const remaining = maxScroll - window.scrollY;
+      document.body.classList.toggle('footer-dock-expanded', remaining < 220);
+    };
+
     const handleScroll = () => {
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -615,24 +624,15 @@ export default function App() {
       updateFooterDockState();
     };
 
-    const footerElement = document.getElementById('site-footer');
-    const updateFooterDockState = () => {
-      if (!footerElement) return;
-      const contactElement = document.getElementById('contact');
-      const contactRect = contactElement?.getBoundingClientRect();
-      const nearPageEnd =
-        document.documentElement.scrollHeight - window.scrollY - window.innerHeight < 260;
-      const contactInFocus = contactRect ? contactRect.top < window.innerHeight * 0.58 : false;
-      document.body.classList.toggle('footer-dock-expanded', nearPageEnd || contactInFocus);
-    };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleResize);
     window.setTimeout(updateScrollNotePositions, 0);
     window.setTimeout(() => {
       updateScrollNotePositions();
       updateScrollNoteParallax();
+      updateFooterDockState();
     }, 600);
+    const footerDockInterval = window.setInterval(updateFooterDockState, 120);
     handleScroll();
     updateFooterDockState();
     updateScrollNotePositions();
@@ -885,6 +885,7 @@ export default function App() {
     return () => {
       revealObserver.disconnect();
       skillObserver.disconnect();
+      window.clearInterval(footerDockInterval);
       document.body.classList.remove('footer-dock-expanded');
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
