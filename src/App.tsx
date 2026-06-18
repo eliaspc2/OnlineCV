@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-17.8';
+const APP_BUILD_VERSION = '2026-06-18.1';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v15'
+        serviceWorker: 'json-site-v16'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -653,27 +653,34 @@ export default function App() {
       }
     };
 
+    const onMenuToggleClick = () => setMenuState(!menuOpen);
+    const onMobileBackdropClick = () => setMenuState(false);
+
     if (menuToggle) {
-      menuToggle.addEventListener('click', () => setMenuState(!menuOpen));
+      menuToggle.addEventListener('click', onMenuToggleClick);
     }
     if (mobileBackdrop) {
-      mobileBackdrop.addEventListener('click', () => setMenuState(false));
+      mobileBackdrop.addEventListener('click', onMobileBackdropClick);
     }
+    const scrollButtonHandlers = new Map<Element, EventListener>();
     scrollButtons.forEach((btn) => {
-      btn.addEventListener('click', (event) => {
+      const onScrollButtonClick = (event: Event) => {
         event.preventDefault();
         const target = (btn as HTMLElement).getAttribute('data-scroll-to');
         if (!target) return;
         document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
         setMenuState(false);
-      });
+      };
+      scrollButtonHandlers.set(btn, onScrollButtonClick);
+      btn.addEventListener('click', onScrollButtonClick);
     });
 
     const scrollTopButtons = document.querySelectorAll('[data-scroll-top]');
+    const onScrollTopClick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     scrollTopButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      btn.addEventListener('click', onScrollTopClick);
     });
 
     const accordionToggles = document.querySelectorAll('[data-accordion-toggle]');
@@ -711,17 +718,21 @@ export default function App() {
       setAccordionState(panelId, !isOpen);
     };
 
+    const accordionToggleHandlers = new Map<Element, EventListener>();
     accordionToggles.forEach((toggle) => {
-      toggle.addEventListener('click', () => {
+      const onAccordionToggleClick = () => {
         const panelId = (toggle as HTMLElement).getAttribute('data-accordion-toggle');
         if (!panelId) return;
         toggleAccordionById(panelId, toggle as HTMLElement);
-      });
+      };
+      accordionToggleHandlers.set(toggle, onAccordionToggleClick);
+      toggle.addEventListener('click', onAccordionToggleClick);
     });
 
     const clickAnywhereAccordionItems = document.querySelectorAll('[data-accordion-item][data-accordion-click-anywhere=\"true\"]');
+    const clickAnywhereAccordionHandlers = new Map<Element, EventListener>();
     clickAnywhereAccordionItems.forEach((item) => {
-      item.addEventListener('click', (event) => {
+      const onClickAnywhereAccordionClick = (event: Event) => {
         const target = event.target as HTMLElement;
         if (!target) return;
         if (target.closest('[data-accordion-toggle]')) return;
@@ -730,7 +741,9 @@ export default function App() {
         const panelId = (item as HTMLElement).getAttribute('data-accordion-item');
         if (!panelId) return;
         toggleAccordionById(panelId, item as HTMLElement);
-      });
+      };
+      clickAnywhereAccordionHandlers.set(item, onClickAnywhereAccordionClick);
+      item.addEventListener('click', onClickAnywhereAccordionClick);
     });
 
     const tabTriggers = document.querySelectorAll('[data-tab-trigger]');
@@ -756,11 +769,14 @@ export default function App() {
       });
     };
 
+    const tabTriggerHandlers = new Map<Element, EventListener>();
     tabTriggers.forEach((trigger) => {
       const group = (trigger as HTMLElement).getAttribute('data-tab-group');
       const target = (trigger as HTMLElement).getAttribute('data-tab-trigger');
       if (!group || !target) return;
-      trigger.addEventListener('click', () => setTabActive(group, target));
+      const onTabTriggerClick = () => setTabActive(group, target);
+      tabTriggerHandlers.set(trigger, onTabTriggerClick);
+      trigger.addEventListener('click', onTabTriggerClick);
     });
 
     const tabGroups = new Set<string>();
@@ -869,19 +885,29 @@ export default function App() {
       langButtons.forEach((btn) => btn.removeEventListener('click', onLangClick));
       copyButtons.forEach((btn) => btn.removeEventListener('click', onCopyClick));
       if (menuToggle) {
-        menuToggle.removeEventListener('click', () => undefined);
+        menuToggle.removeEventListener('click', onMenuToggleClick);
       }
       if (mobileBackdrop) {
-        mobileBackdrop.removeEventListener('click', () => undefined);
+        mobileBackdrop.removeEventListener('click', onMobileBackdropClick);
       }
       scrollButtons.forEach((btn) => {
-        btn.removeEventListener('click', () => undefined);
+        const handler = scrollButtonHandlers.get(btn);
+        if (handler) btn.removeEventListener('click', handler);
       });
       scrollTopButtons.forEach((btn) => {
-        btn.removeEventListener('click', () => undefined);
+        btn.removeEventListener('click', onScrollTopClick);
+      });
+      accordionToggles.forEach((toggle) => {
+        const handler = accordionToggleHandlers.get(toggle);
+        if (handler) toggle.removeEventListener('click', handler);
       });
       clickAnywhereAccordionItems.forEach((item) => {
-        item.removeEventListener('click', () => undefined);
+        const handler = clickAnywhereAccordionHandlers.get(item);
+        if (handler) item.removeEventListener('click', handler);
+      });
+      tabTriggers.forEach((trigger) => {
+        const handler = tabTriggerHandlers.get(trigger);
+        if (handler) trigger.removeEventListener('click', handler);
       });
       if (langTimer.current) window.clearTimeout(langTimer.current);
       copyTimeouts.forEach((timeout) => window.clearTimeout(timeout));

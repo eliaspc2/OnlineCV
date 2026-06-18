@@ -9,5 +9,6 @@ yarn-error.log*
 pnpm-debug.log*
 *.local
 *.log
+*.tsbuildinfo
 /.idea
 /.vscode

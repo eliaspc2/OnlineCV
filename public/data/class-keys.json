@@ -11,9 +11,7 @@
     "visual": {
       "nav": {
         "absolute_inset_0_bg_0f172a_50_backdrop_blur_sm": "absolute inset-0 bg-[#0f172a]/50 backdrop-blur-sm",
-        "absolute_top_1_right_1_w_5_h_5_bg_blue_600_text_white": "absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white text-xs rounded-full items-center justify-center animate-bounce hidden",
         "absolute_top_20_left_4_right_4_bg_white_border_border": "absolute top-20 left-4 right-4 bg-white border border-[#e2e8f0] rounded-xl p-4 shadow-xl transition-all duration-300 -translate-y-4 opacity-0",
-        "bg_white_rounded_2xl_p_8_text_center_shadow_2xl_animat": "bg-white rounded-2xl p-8 text-center shadow-2xl animate-pulse",
         "brand_icon_box_w_10_h_10_rounded_lg_flex_items_center": "brand-icon-box w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 bg-[#3b82f6]/10 group-hover:bg-[#3b82f6]/20",
         "container_custom": "container-custom",
         "fixed_inset_0_z_100_flex_items_center_justify_center_b": "fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm hidden",
@@ -33,16 +31,13 @@
         "w_full_px_4_py_3_text_left_text_base_font_medium_round": "w-full px-4 py-3 text-left text-base font-medium rounded-lg transition-all duration-300 text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]"
       },
       "hero": {
-        "absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6_5_roun": "absolute bottom-20 right-10 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl animate-float",
         "absolute_bottom_2_right_2_bg_white_rounded_xl_shadow_l": "absolute -bottom-2 -right-2 bg-white rounded-xl shadow-lg p-3 flex items-center gap-2 floating-pill cursor-pointer",
         "absolute_bottom_8_left_1_2_translate_x_1_2_text_3b82f6": "absolute bottom-8 left-1/2 -translate-x-1/2 text-[#3b82f6] animate-bounce cursor-pointer",
         "absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#f8fafc] to-[#f1f5f9]",
-        "absolute_inset_0_m_4_rounded_full_border_2_border_3b82": "absolute inset-0 -m-4 rounded-full border-2 border-[#3b82f6]/20 animate-pulse",
         "absolute_inset_0_m_8_rounded_full_border_border_3b82f6": "absolute inset-0 -m-8 rounded-full border border-[#3b82f6]/10",
         "absolute_inset_0_opacity_0_03": "absolute inset-0 opacity-[0.03]",
         "absolute_inset_0_overflow_hidden": "absolute inset-0 overflow-hidden",
         "absolute_top_1_2_left_1_2_translate_x_1_2_translate_y": "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/5 rounded-full blur-3xl",
-        "absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_rounded": "absolute top-20 left-10 w-72 h-72 bg-[#3b82f6]/5 rounded-full blur-3xl animate-float",
         "flex_items_center_gap_2_text_64748b": "inline-contact-link flex items-center gap-2 text-[#64748b]",
         "flex_items_center_gap_2_text_64748b_hover_text_3b82f6": "inline-contact-link flex items-center gap-2 text-[#64748b]",
         "grid_lg_grid_cols_2_gap_12_items_center": "grid lg:grid-cols-2 gap-12 items-center",
@@ -59,7 +54,6 @@
         "text_sm": "text-sm",
         "text_xl_sm_text_2xl_md_text_3xl_text_64748b_mb_2": "text-xl sm:text-2xl md:text-3xl text-[#64748b] mb-2",
         "w_10_h_10_rounded_lg_bg_green_100_flex_items_center_ju": "w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center",
-        "w_3_h_3_bg_green_500_rounded_full_animate_pulse": "w-3 h-3 bg-green-500 rounded-full animate-pulse",
         "w_full_h_full_object_cover": "w-full h-full object-cover"
       },
       "about": {
@@ -96,7 +90,6 @@
         "absolute_bottom_20_right_10_w_80_h_80_bg_3b82f6_5_roun": "absolute bottom-20 right-10 w-80 h-80 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f_2": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#f8fafc] to-[#fcfcfd]",
         "absolute_top_20_left_10_w_64_h_64_bg_3b82f6_5_rounded": "absolute top-20 left-10 w-64 h-64 bg-[#3b82f6]/5 rounded-full blur-3xl",
-        "card_hover_flex_items_center_gap_3_px_5_py_3_rounded_f": "card-hover flex items-center gap-3 px-5 py-3 rounded-full bg-white border border-[#e2e8f0]",
         "card_hover_px_4_py_2_bg_white_rounded_lg_border_border": "card-hover px-4 py-2 bg-white rounded-lg border border-[#e2e8f0] text-sm font-medium text-[#64748b] flex items-center gap-2 transition-all duration-300",
         "card_hover_px_4_py_2_bg_white_rounded_lg_border_border_2": "card-hover px-4 py-2 bg-white rounded-lg border border-green-200 text-sm font-medium text-green-700 flex items-center gap-2 transition-all duration-300",
         "card_hover_px_4_py_2_bg_white_rounded_lg_border_border_3": "card-hover px-4 py-2 bg-white rounded-lg border border-[#bfdbfe] text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-all duration-300",
@@ -246,7 +239,6 @@
         "w_12_h_12_rounded_xl_bg_green_100_text_green_600_flex": "w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center",
         "w_12_h_12_rounded_xl_bg_purple_100_text_purple_600_fle": "w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center",
         "w_20_h_20_rounded_full_overflow_hidden_border_4_border": "w-20 h-20 rounded-full overflow-hidden border-4 border-[#3b82f6]/20",
-        "w_2_h_2_bg_white_rounded_full_animate_pulse": "w-2 h-2 bg-white rounded-full animate-pulse",
         "w_3_h_3": "w-3 h-3",
         "w_4_h_4_text_94a3b8_group_hover_text_3b82f6": "w-4 h-4 text-[#94a3b8] group-hover:text-[#3b82f6]",
         "w_5_h_5_text_green_600": "w-5 h-5 text-green-600",
@@ -272,7 +264,6 @@
       "footer": {
         "bg_white_border_t_border_e2e8f0_relative": "bg-white border-t border-[#e2e8f0] relative",
         "container_custom_py_12_md_py_16": "container-custom py-12 md:py-16 footer-no-motion",
-        "fixed_bottom_6_right_6_w_12_h_12_rounded_full_bg_3b82f": "fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#3b82f6] text-white flex items-center justify-center shadow-lg hover:bg-[#2563eb] transition-all duration-300 hover:scale-110 z-40",
         "flex_gap_3": "flex gap-3",
         "flex_items_center_gap_2_mb_4": "flex items-center gap-2 mb-4",
         "grid_md_grid_cols_2_lg_grid_cols_4_gap_8_md_gap_12": "grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12",
@@ -346,11 +337,8 @@
         "no_motion_absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6": "absolute bottom-20 right-10 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "no_motion_absolute_inset_0_m_4_rounded_full_border_2_borde": "absolute inset-0 -m-4 rounded-full border-2 border-[#3b82f6]/20",
         "no_motion_w_3_h_3_bg_green_500_rounded_full": "w-3 h-3 bg-green-500 rounded-full",
-        "no_motion_rounded_2xl_bg_white_border_border_e2e8f0_overfl": "rounded-2xl bg-white border border-[#e2e8f0] overflow-hidden",
         "no_motion_flex_items_center_gap_3_px_5_py_3_rounded_full_b": "flex items-center gap-3 px-5 py-3 rounded-full bg-white border border-[#e2e8f0]",
-        "no_motion_rounded_xl_bg_white_border_border_e2e8f0_overflo": "rounded-xl bg-white border border-[#e2e8f0] overflow-hidden",
-        "no_motion_w_2_h_2_bg_white_rounded_full": "w-2 h-2 bg-white rounded-full",
-        "no_motion_flex_items_center_gap_4_p_5_rounded_xl_bg_white": "flex items-center gap-4 p-5 rounded-xl bg-white border border-[#e2e8f0] group"
+        "no_motion_w_2_h_2_bg_white_rounded_full": "w-2 h-2 bg-white rounded-full"
       }
     },
     "unstyled": {
