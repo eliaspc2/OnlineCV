@@ -1,0 +1,110 @@
+.cta-attention-button,
+.btn-white-lift {
+  position: relative;
+  isolation: isolate;
+  animation: cta-attention-pulse 2.8s ease-in-out infinite;
+}
+
+.cta-attention-button::after,
+.btn-white-lift::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.26), transparent 68%);
+  animation: cta-attention-halo 2.8s ease-in-out infinite;
+}
+
+@keyframes cta-attention-pulse {
+  0%,
+  100% {
+    box-shadow: inherit;
+    filter: none;
+  }
+
+  42% {
+    box-shadow:
+      0 10px 24px rgba(59, 130, 246, 0.2),
+      0 0 0 6px rgba(59, 130, 246, 0.1);
+    filter: saturate(1.04);
+  }
+}
+
+@keyframes cta-attention-halo {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  42% {
+    opacity: 0.5;
+    transform: scale(1.04);
+  }
+
+  68% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-attention-button,
+  .cta-attention-button::after,
+  .btn-white-lift,
+  .btn-white-lift::after {
+    animation: none;
+    filter: none;
+  }
+}
+
+.floating-action-btn {
+  right: 1.5rem !important;
+  bottom: calc(1.5rem + (var(--floating-action-slot) * 3.75rem)) !important;
+}
+
+.floating-action-btn:hover,
+.floating-action-btn:active {
+  transform: none;
+}
+
+.floating-action-btn[href] {
+  animation: floating-action-pulse 2.8s ease-in-out infinite;
+}
+
+.floating-action-btn[data-scroll-top] {
+  --floating-action-slot: 0;
+}
+
+.floating-action-btn[href^="tel:"] {
+  --floating-action-slot: 1;
+}
+
+.floating-action-btn[href^="mailto:"] {
+  --floating-action-slot: 2;
+}
+
+@keyframes floating-action-pulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.24);
+    filter: none;
+  }
+
+  42% {
+    box-shadow:
+      0 12px 30px rgba(15, 23, 42, 0.22),
+      0 0 0 7px rgba(59, 130, 246, 0.12);
+    filter: saturate(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-action-btn {
+    animation: none;
+    filter: none;
+  }
+}

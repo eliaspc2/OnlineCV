@@ -836,6 +836,7 @@
     "summary.cta.link": {
       "tag": "a",
       "classKey": "visual.summary.px_4_py_2_bg_white_20_hover_bg_white_30_rounded_lg_tex",
+      "class": "cta-attention-button",
       "i18nKey": "objdef.summary.cta.link"
     },
     "summary.metric.value": {
@@ -1261,11 +1262,13 @@
     "auto.singleton.a.parts_ctaprimary": {
       "tag": "a",
       "classKey": "parts.ctaPrimary",
+      "class": "cta-attention-button",
       "i18nKey": "objdef.auto.singleton.a.parts_ctaprimary"
     },
     "auto.singleton.a.parts_ctaoutline": {
       "tag": "a",
       "classKey": "parts.ctaOutline",
+      "class": "cta-attention-button",
       "i18nKey": "objdef.auto.singleton.a.parts_ctaoutline"
     },
     "auto.singleton.div.visual_hero_reveal_opacity_0_order_1_lg_order_2_flex_justify_cente": {
