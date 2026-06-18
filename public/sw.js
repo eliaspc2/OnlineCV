@@ -1,4 +1,4 @@
-const CACHE_NAME = 'json-site-v20';
+const CACHE_NAME = 'json-site-v21';
 const scopeUrl = new URL(self.registration.scope);
 const BASE_PATH = scopeUrl.pathname.endsWith('/') ? scopeUrl.pathname : `${scopeUrl.pathname}/`;
 const INDEX_URL = new URL(`${BASE_PATH}index.html`, scopeUrl.origin).toString();

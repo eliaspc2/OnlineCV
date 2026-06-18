@@ -198,14 +198,6 @@
       "classKey": "parts.floatingActionButton",
       "i18nKey": "objdef.floating.action.link"
     },
-    "floating.socialDock": {
-      "tag": "div",
-      "class": "persistent-social-dock",
-      "attrs": {
-        "aria-label": "Contactos rápidos"
-      },
-      "i18nKey": "objdef.floating.socialDock"
-    },
     "list.item.plain": {
       "tag": "li",
       "classKey": "unstyled.li",
@@ -5434,92 +5426,11 @@
                                                         "data-level": "50",
                                                         "data-delay": "400"
                                                       }
-          }
-        ]
-      },
-      {
-        "ref": "floating.socialDock",
-        "children": [
-          {
-            "attrs": {
-              "href": "https://github.com/eliaspc2",
-              "target": "_blank",
-              "rel": "noopener noreferrer",
-              "aria-label": "GitHub"
-            },
-            "class": "persistent-social-dock-button",
-            "children": [
-              {
-                "attrs": {
-                  "src": "assets/images/icons/github.svg"
-                },
-                "id": "floating.socialDock.github.icon",
-                "ref": "icon.sm"
-              }
-            ],
-            "id": "floating.socialDock.github",
-            "ref": "link.social.button"
-          },
-          {
-            "attrs": {
-              "href": "https://www.linkedin.com/in/eliaspc/",
-              "target": "_blank",
-              "rel": "noopener noreferrer",
-              "aria-label": "LinkedIn"
-            },
-            "class": "persistent-social-dock-button",
-            "children": [
-              {
-                "attrs": {
-                  "src": "assets/images/icons/linkedin.svg"
-                },
-                "id": "floating.socialDock.linkedin.icon",
-                "ref": "icon.sm"
-              }
-            ],
-            "id": "floating.socialDock.linkedin",
-            "ref": "link.social.button"
-          },
-          {
-            "attrs": {
-              "href": "mailto:eliaspc2@gmail.com",
-              "aria-label": "Email"
-            },
-            "class": "persistent-social-dock-button",
-            "children": [
-              {
-                "attrs": {
-                  "src": "assets/images/icons/mail.svg"
-                },
-                "id": "floating.socialDock.email.icon",
-                "ref": "icon.sm"
-              }
-            ],
-            "id": "floating.socialDock.email",
-            "ref": "link.social.button"
-          },
-          {
-            "attrs": {
-              "href": "tel:+351928308015",
-              "aria-label": "Telefone"
-            },
-            "class": "persistent-social-dock-button",
-            "children": [
-              {
-                "attrs": {
-                  "src": "assets/images/icons/phone.svg"
-                },
-                "id": "floating.socialDock.phone.icon",
-                "ref": "icon.sm"
-              }
-            ],
-            "id": "floating.socialDock.phone",
-            "ref": "link.social.button"
-          }
-        ]
-      }
-    ]
-  },
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
                                             {
                                               "id": "n_543812bb",
                                               "ref": "common.div.plain",

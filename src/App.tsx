@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-18.5';
+const APP_BUILD_VERSION = '2026-06-18.6';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v20'
+        serviceWorker: 'json-site-v21'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -607,10 +607,23 @@ export default function App() {
         }
       }
       updateScrollNoteParallax();
+      updateFooterDockState();
     };
     const handleResize = () => {
       updateScrollNotePositions();
       updateScrollNoteParallax();
+      updateFooterDockState();
+    };
+
+    const footerElement = document.getElementById('site-footer');
+    const updateFooterDockState = () => {
+      if (!footerElement) return;
+      const contactElement = document.getElementById('contact');
+      const contactRect = contactElement?.getBoundingClientRect();
+      const nearPageEnd =
+        document.documentElement.scrollHeight - window.scrollY - window.innerHeight < 260;
+      const contactInFocus = contactRect ? contactRect.top < window.innerHeight * 0.58 : false;
+      document.body.classList.toggle('footer-dock-expanded', nearPageEnd || contactInFocus);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -621,6 +634,7 @@ export default function App() {
       updateScrollNoteParallax();
     }, 600);
     handleScroll();
+    updateFooterDockState();
     updateScrollNotePositions();
     updateScrollNoteParallax();
 
@@ -879,6 +893,7 @@ export default function App() {
     return () => {
       revealObserver.disconnect();
       skillObserver.disconnect();
+      document.body.classList.remove('footer-dock-expanded');
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
       if (noteParallaxFrame) window.cancelAnimationFrame(noteParallaxFrame);
