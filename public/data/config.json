@@ -3758,6 +3758,10 @@
                     }
                   ],
                   "id": "n_8f1846bb",
+                  "styles": {
+                    "paddingLeft": "30px",
+                    "paddingRight": "40px"
+                  },
                   "ref": "layout.container.relative"
                 }
               ],
