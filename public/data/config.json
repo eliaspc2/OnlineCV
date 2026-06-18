@@ -859,7 +859,6 @@
     "contact.card.row": {
       "tag": "div",
       "classKey": "visual.contact.card_hover_flex_items_center_gap_4_p_5_rounded_xl_bg_w",
-      "class": "contact-pulse-target",
       "i18nKey": "objdef.contact.card.row"
     },
     "contact.social.link": {

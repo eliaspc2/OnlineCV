@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-18.8';
+const APP_BUILD_VERSION = '2026-06-18.16';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const isAbsoluteUrl = (value: string) =>
@@ -411,7 +411,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v23'
+        serviceWorker: 'json-site-v31'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -588,13 +588,59 @@ export default function App() {
     };
 
     const footerElement = document.getElementById('site-footer');
+    let footerDockMode: 'auto' | 'manual-open' | 'manual-closed' = 'auto';
+    let manualFooterDockScrollY = 0;
     const updateFooterDockState = () => {
       if (!footerElement) return;
+      if (footerDockMode === 'manual-closed') {
+        const moved = Math.abs(window.scrollY - manualFooterDockScrollY);
+        if (moved < 120) {
+          document.body.classList.remove('footer-dock-expanded');
+          return;
+        }
+        footerDockMode = 'auto';
+      }
+      if (footerDockMode === 'manual-open') {
+        const moved = Math.abs(window.scrollY - manualFooterDockScrollY);
+        if (moved < 120) {
+          document.body.classList.add('footer-dock-expanded');
+          return;
+        }
+        footerDockMode = 'auto';
+      }
       const scrollRoot = document.scrollingElement || document.documentElement;
       const maxScroll = Math.max(1, scrollRoot.scrollHeight - window.innerHeight);
       const remaining = maxScroll - window.scrollY;
-      document.body.classList.toggle('footer-dock-expanded', remaining < 220);
+      const isExpanded = document.body.classList.contains('footer-dock-expanded');
+      const shouldExpand = isExpanded ? remaining < 500 : remaining < 80;
+      document.body.classList.toggle('footer-dock-expanded', shouldExpand);
     };
+    const footerBrand = footerElement?.querySelector(
+      '.grid > :first-child > div:first-child'
+    ) as HTMLElement | null;
+    const toggleFooterDock = (event?: Event) => {
+      event?.preventDefault();
+      if (document.body.classList.contains('footer-dock-expanded')) {
+        footerDockMode = 'manual-closed';
+        manualFooterDockScrollY = window.scrollY;
+        document.body.classList.remove('footer-dock-expanded');
+        return;
+      }
+      footerDockMode = 'manual-open';
+      manualFooterDockScrollY = window.scrollY;
+      document.body.classList.add('footer-dock-expanded');
+    };
+    const onFooterBrandKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      toggleFooterDock(event);
+    };
+    if (footerBrand) {
+      footerBrand.setAttribute('role', 'button');
+      footerBrand.setAttribute('tabindex', '0');
+      footerBrand.setAttribute('aria-label', 'Abrir rodape');
+      footerBrand.addEventListener('click', toggleFooterDock);
+      footerBrand.addEventListener('keydown', onFooterBrandKeyDown);
+    }
 
     const handleScroll = () => {
       for (const section of sections) {
@@ -886,6 +932,10 @@ export default function App() {
       revealObserver.disconnect();
       skillObserver.disconnect();
       window.clearInterval(footerDockInterval);
+      if (footerBrand) {
+        footerBrand.removeEventListener('click', toggleFooterDock);
+        footerBrand.removeEventListener('keydown', onFooterBrandKeyDown);
+      }
       document.body.classList.remove('footer-dock-expanded');
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
