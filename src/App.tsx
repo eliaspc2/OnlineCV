@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-20.1';
+const APP_BUILD_VERSION = '2026-06-20.6';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const FOOTER_DOCUMENT_LINKS = [
@@ -449,7 +449,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v35'
+        serviceWorker: 'json-site-v40'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -540,6 +540,59 @@ export default function App() {
 
     skillBars.forEach((bar) => skillObserver.observe(bar));
 
+    const heroSection = document.getElementById('hero');
+    const heroRings = Array.from(document.querySelectorAll('.hero-portrait-ring'));
+    let heroRingsPlayedForCurrentVisit = false;
+    const heroRingObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry) return;
+        if (!entry.isIntersecting) {
+          heroRingsPlayedForCurrentVisit = false;
+          heroRings.forEach((ring) => ring.classList.remove('is-entering'));
+          return;
+        }
+        if (heroRingsPlayedForCurrentVisit) return;
+        heroRingsPlayedForCurrentVisit = true;
+        heroRings.forEach((ring) => ring.classList.remove('is-entering'));
+        void (heroRings[0] as HTMLElement | undefined)?.offsetWidth;
+        heroRings.forEach((ring) => ring.classList.add('is-entering'));
+      },
+      { threshold: 0.45 }
+    );
+    if (heroSection) heroRingObserver.observe(heroSection);
+
+    const heroProfileContactTrigger = document.querySelector(
+      '.hero-profile-contact-trigger'
+    ) as HTMLElement | null;
+    const usePhoneForHeroProfile = () =>
+      window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 767;
+    const updateHeroProfileContactLabel = () => {
+      if (!heroProfileContactTrigger) return;
+      heroProfileContactTrigger.setAttribute(
+        'aria-label',
+        usePhoneForHeroProfile() ? 'Telefonar para André Câmara' : 'Enviar email a André Câmara'
+      );
+    };
+    const openHeroProfileContact = (event?: Event) => {
+      event?.preventDefault();
+      const contactLink = document.createElement('a');
+      contactLink.href = usePhoneForHeroProfile()
+        ? 'tel:+351928308015'
+        : 'mailto:eliaspc2@gmail.com';
+      contactLink.click();
+    };
+    const onHeroProfileContactKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      openHeroProfileContact(event);
+    };
+    if (heroProfileContactTrigger) {
+      heroProfileContactTrigger.setAttribute('role', 'button');
+      heroProfileContactTrigger.setAttribute('tabindex', '0');
+      updateHeroProfileContactLabel();
+      heroProfileContactTrigger.addEventListener('click', openHeroProfileContact);
+      heroProfileContactTrigger.addEventListener('keydown', onHeroProfileContactKeyDown);
+    }
+
     const syncFooterQuickLinksFromHeader = () => {
       const headerLinks = Array.from(
         document.querySelectorAll('#site-header [data-nav-link]')
@@ -628,8 +681,14 @@ export default function App() {
     const footerElement = document.getElementById('site-footer');
     let footerDockMode: 'auto' | 'manual-open' | 'manual-closed' = 'auto';
     let manualFooterDockScrollY = 0;
+    let footerDockPinnedDuringNavigation = false;
+    let footerDockNavigationTimer: number | undefined;
     const updateFooterDockState = () => {
       if (!footerElement) return;
+      if (footerDockPinnedDuringNavigation) {
+        document.body.classList.add('footer-dock-expanded');
+        return;
+      }
       if (footerDockMode === 'manual-closed') {
         const moved = Math.abs(window.scrollY - manualFooterDockScrollY);
         if (moved < 120) {
@@ -658,6 +717,11 @@ export default function App() {
     ) as HTMLElement | null;
     const toggleFooterDock = (event?: Event) => {
       event?.preventDefault();
+      footerDockPinnedDuringNavigation = false;
+      if (footerDockNavigationTimer) {
+        window.clearTimeout(footerDockNavigationTimer);
+        footerDockNavigationTimer = undefined;
+      }
       if (document.body.classList.contains('footer-dock-expanded')) {
         footerDockMode = 'manual-closed';
         manualFooterDockScrollY = window.scrollY;
@@ -668,17 +732,41 @@ export default function App() {
       manualFooterDockScrollY = window.scrollY;
       document.body.classList.add('footer-dock-expanded');
     };
+    const goToPageStart = (event?: Event) => {
+      event?.preventDefault();
+      event?.stopPropagation();
+      const keepDockOpen = document.body.classList.contains('footer-dock-expanded');
+      footerDockPinnedDuringNavigation = keepDockOpen;
+      footerDockMode = keepDockOpen ? 'manual-open' : 'manual-closed';
+      manualFooterDockScrollY = window.scrollY;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (footerDockNavigationTimer) window.clearTimeout(footerDockNavigationTimer);
+      footerDockNavigationTimer = window.setTimeout(() => {
+        footerDockPinnedDuringNavigation = false;
+        footerDockNavigationTimer = undefined;
+        footerDockMode = keepDockOpen ? 'manual-open' : 'manual-closed';
+        manualFooterDockScrollY = window.scrollY;
+        document.body.classList.toggle('footer-dock-expanded', keepDockOpen);
+      }, 1000);
+    };
     const onFooterBrandKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Enter' && event.key !== ' ') return;
+      goToPageStart(event);
+    };
+    const onFooterBackgroundClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target || footerBrand?.contains(target)) return;
+      if (target.closest('a, button, input, select, textarea, [role="button"]')) return;
       toggleFooterDock(event);
     };
     if (footerBrand) {
       footerBrand.setAttribute('role', 'button');
       footerBrand.setAttribute('tabindex', '0');
-      footerBrand.setAttribute('aria-label', 'Abrir rodape');
-      footerBrand.addEventListener('click', toggleFooterDock);
+      footerBrand.setAttribute('aria-label', 'Ir para o início');
+      footerBrand.addEventListener('click', goToPageStart);
       footerBrand.addEventListener('keydown', onFooterBrandKeyDown);
     }
+    footerElement?.addEventListener('click', onFooterBackgroundClick);
 
     const handleScroll = () => {
       for (const section of sections) {
@@ -706,6 +794,7 @@ export default function App() {
       updateScrollNotePositions();
       updateScrollNoteParallax();
       updateFooterDockState();
+      updateHeroProfileContactLabel();
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -969,11 +1058,18 @@ export default function App() {
     return () => {
       revealObserver.disconnect();
       skillObserver.disconnect();
+      heroRingObserver.disconnect();
+      if (heroProfileContactTrigger) {
+        heroProfileContactTrigger.removeEventListener('click', openHeroProfileContact);
+        heroProfileContactTrigger.removeEventListener('keydown', onHeroProfileContactKeyDown);
+      }
       window.clearInterval(footerDockInterval);
+      if (footerDockNavigationTimer) window.clearTimeout(footerDockNavigationTimer);
       if (footerBrand) {
-        footerBrand.removeEventListener('click', toggleFooterDock);
+        footerBrand.removeEventListener('click', goToPageStart);
         footerBrand.removeEventListener('keydown', onFooterBrandKeyDown);
       }
+      footerElement?.removeEventListener('click', onFooterBackgroundClick);
       document.body.classList.remove('footer-dock-expanded');
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);

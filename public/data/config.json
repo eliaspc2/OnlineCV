@@ -826,6 +826,11 @@
       "class": "cta-attention-button",
       "i18nKey": "objdef.summary.cta.link"
     },
+    "summary.cta.link.stable": {
+      "tag": "a",
+      "classKey": "visual.summary.px_4_py_2_bg_white_20_hover_bg_white_30_rounded_lg_tex",
+      "i18nKey": "objdef.summary.cta.link"
+    },
     "summary.metric.value": {
       "tag": "div",
       "classKey": "visual.summary.text_3xl_font_bold_gradient_text_mb_1",
@@ -1268,16 +1273,19 @@
     "auto.singleton.div.visual_shared_no_motion_absolute_inset_0_m_4_rounded_full_border_2_borde": {
       "tag": "div",
       "classKey": "visual.shared.no_motion_absolute_inset_0_m_4_rounded_full_border_2_borde",
+      "class": "hero-portrait-ring hero-portrait-ring-inner",
       "i18nKey": "objdef.auto.singleton.div.visual_shared_no_motion_absolute_inset_0_m_4_rounded_full_border_2_borde"
     },
     "auto.singleton.div.visual_hero_absolute_inset_0_m_8_rounded_full_border_border_3b82f6": {
       "tag": "div",
       "classKey": "visual.hero.absolute_inset_0_m_8_rounded_full_border_border_3b82f6",
+      "class": "hero-portrait-ring hero-portrait-ring-outer",
       "i18nKey": "objdef.auto.singleton.div.visual_hero_absolute_inset_0_m_8_rounded_full_border_border_3b82f6"
     },
     "auto.singleton.div.visual_hero_relative_w_64_h_64_sm_w_80_sm_h_80_rounded_full_overfl": {
       "tag": "div",
       "classKey": "visual.hero.relative_w_64_h_64_sm_w_80_sm_h_80_rounded_full_overfl",
+      "class": "hero-profile-contact-trigger",
       "i18nKey": "objdef.auto.singleton.div.visual_hero_relative_w_64_h_64_sm_w_80_sm_h_80_rounded_full_overfl"
     },
     "auto.singleton.img.visual_hero_w_full_h_full_object_cover": {
@@ -8381,7 +8389,7 @@
                                         }
                                       ],
                                       "id": "n_767b1b5b",
-                                      "ref": "summary.cta.link"
+                                      "ref": "summary.cta.link.stable"
                                     },
                                     {
                                       "attrs": {
@@ -8403,7 +8411,7 @@
                                         }
                                       ],
                                       "id": "n_777b1cee",
-                                      "ref": "summary.cta.link"
+                                      "ref": "summary.cta.link.stable"
                                     }
                                   ],
                                   "id": "n_437366f0",
