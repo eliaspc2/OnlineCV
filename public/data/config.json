@@ -2751,6 +2751,10 @@
                                         {
                                           "id": "n_3190b0eb",
                                           "ref": "auto.singleton.p.visual_shared_text_sm_font_semibold_text_0f172a"
+                                        },
+                                        {
+                                          "id": "n_7f4a91c2",
+                                          "ref": "text.xs.dim.p"
                                         }
                                       ],
                                       "id": "n_329d9220",
@@ -4513,7 +4517,7 @@
                                             }
                                           ],
                                           "id": "n_cdc2d010",
-                                          "ref": "auto.span.visual_skills_px_2_py_0_5_text_xs_font_medium_rounded_full_border_fl_2"
+                                          "ref": "auto.singleton.span.visual_skills_px_2_py_0_5_text_xs_font_medium_rounded_full_border_fl"
                                         },
                                         {
                                           "children": [

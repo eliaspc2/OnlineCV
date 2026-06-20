@@ -799,6 +799,12 @@
       }
     },
     {
+      "ref": "obj.n_7f4a91c2",
+      "strings": {
+        "text": "July 2026"
+      }
+    },
+    {
       "ref": "obj.n_4e37f628",
       "strings": {
         "attrs": {
@@ -2315,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "IN PROGRESS"
+        "text": "COMPLETION: JULY 2026"
       }
     },
     {
@@ -4724,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – IT Programmer (Level 4, 1,416h, in progress)"
+        "text": "EFA – IT Programmer (Level 4, 1,416h, completion in July 2026)"
       }
     },
     {
@@ -5416,7 +5422,7 @@
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Available for a curricular internship (210h) in a real development or systems context, able to contribute effectively from day one."
+        "text": "Available for a curricular internship (210h) during July, in a real development or systems context, able to contribute effectively from day one."
       }
     },
     {
@@ -5550,7 +5556,7 @@
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "The theoretical component ends in late June, and the internship can start from July 2026."
+        "text": "Completion in July 2026. Available for a curricular internship from the same month."
       }
     },
     {

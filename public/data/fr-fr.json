@@ -799,6 +799,12 @@
       }
     },
     {
+      "ref": "obj.n_7f4a91c2",
+      "strings": {
+        "text": "Juillet 2026"
+      }
+    },
+    {
       "ref": "obj.n_4e37f628",
       "strings": {
         "attrs": {
@@ -2315,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "EN COURS"
+        "text": "FIN : JUILLET 2026"
       }
     },
     {
@@ -4724,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – Programmeur informatique (Niveau 4, 1 416h, en cours)"
+        "text": "EFA – Programmeur informatique (Niveau 4, 1 416h, fin en juillet 2026)"
       }
     },
     {
@@ -5416,7 +5422,7 @@
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Disponible pour un stage curriculaire (210h) dans un contexte réel de développement ou de systèmes, capable de contribuer efficacement dès le premier jour."
+        "text": "Disponible pour un stage curriculaire (210h) pendant le mois de juillet, dans un contexte réel de développement ou de systèmes, capable de contribuer efficacement dès le premier jour."
       }
     },
     {
@@ -5550,7 +5556,7 @@
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "La partie théorique se termine fin juin, et le stage peut commencer à partir de juillet 2026."
+        "text": "Fin en juillet 2026. Disponible pour un stage curriculaire à partir du même mois."
       }
     },
     {

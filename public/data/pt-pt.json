@@ -799,6 +799,12 @@
       }
     },
     {
+      "ref": "obj.n_7f4a91c2",
+      "strings": {
+        "text": "Julho 2026"
+      }
+    },
+    {
       "ref": "obj.n_4e37f628",
       "strings": {
         "attrs": {
@@ -2315,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "EM CURSO"
+        "text": "CONCLUSÃO: JULHO 2026"
       }
     },
     {
@@ -2333,7 +2339,7 @@
     {
       "ref": "obj.n_68e6486b",
       "strings": {
-        "text": "Estágio: Junho 2026"
+        "text": "Estágio: Julho 2026"
       }
     },
     {
@@ -4724,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – Programador Informático (Nível 4, 1.416h, em curso)"
+        "text": "EFA – Programador Informático (Nível 4, 1.416h, conclusão em julho de 2026)"
       }
     },
     {
@@ -5416,7 +5422,7 @@
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Disponível para estágio curricular (210h) em contexto real de desenvolvimento ou sistemas, com capacidade de contributo efetivo desde o início."
+        "text": "Disponível para estágio curricular (210h) durante o mês de julho, em contexto real de desenvolvimento ou sistemas, com capacidade de contributo efetivo desde o início."
       }
     },
     {
@@ -5550,7 +5556,7 @@
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "A componente teórica termina no final de junho e o estágio pode iniciar a partir de julho de 2026."
+        "text": "Conclusão em julho de 2026. Disponível para estágio curricular a partir do mesmo mês."
       }
     },
     {

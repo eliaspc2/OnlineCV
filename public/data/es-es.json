@@ -799,6 +799,12 @@
       }
     },
     {
+      "ref": "obj.n_7f4a91c2",
+      "strings": {
+        "text": "Julio 2026"
+      }
+    },
+    {
       "ref": "obj.n_4e37f628",
       "strings": {
         "attrs": {
@@ -2315,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "EN CURSO"
+        "text": "FINALIZACIÓN: JULIO 2026"
       }
     },
     {
@@ -4724,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – Programador Informático (Nivel 4, 1.416h, en curso)"
+        "text": "EFA – Programador Informático (Nivel 4, 1.416h, finalización en julio de 2026)"
       }
     },
     {
@@ -5416,7 +5422,7 @@
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Disponible para prácticas curriculares (210h) en un contexto real de desarrollo o sistemas, con capacidad de contribución efectiva desde el inicio."
+        "text": "Disponible para prácticas curriculares (210h) durante el mes de julio, en un contexto real de desarrollo o sistemas, con capacidad de contribución efectiva desde el inicio."
       }
     },
     {
@@ -5550,7 +5556,7 @@
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "La componente teórica termina a finales de junio y la pasantía puede comenzar a partir de julio de 2026."
+        "text": "Finalización en julio de 2026. Disponible para prácticas curriculares a partir del mismo mes."
       }
     },
     {
