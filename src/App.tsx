@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-21.1';
+const APP_BUILD_VERSION = '2026-06-21.2';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const FOOTER_DOCUMENT_LINKS = [
@@ -449,7 +449,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v41'
+        serviceWorker: 'json-site-v42'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));

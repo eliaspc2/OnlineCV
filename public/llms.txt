@@ -1,0 +1,115 @@
+# André Câmara
+
+> Currículo digital pessoal de André Câmara, profissional de tecnologia com experiência em suporte, sistemas e infraestrutura, atualmente orientado para desenvolvimento de software e cibersegurança.
+
+## Informação principal
+
+- Site oficial: https://eliaspc2.github.io/OnlineCV/
+- Titular do site: André Elias Perry da Câmara, apresentado publicamente como André Câmara.
+- Localização pública: Quintanilha, Bragança, Portugal.
+- Perfil apresentado: engenheiro de software / software developer com experiência anterior em suporte de TI, sistemas, automação e infraestruturas críticas.
+- Disponibilidade documentada: estágio curricular de 210 horas durante julho de 2026; o site também refere interesse em posição júnior.
+- Preferência geográfica documentada: trabalho remoto em Portugal e alternativa híbrida na zona de Bragança.
+- Idiomas do site: português, espanhol, francês e inglês.
+- Idiomas profissionais declarados: português nativo; espanhol e inglês proficientes/fluentes; francês intermédio/funcional.
+- Última revisão factual deste ficheiro: 2026-06-21.
+
+Experiência profissional principal documentada:
+
+- Devoteam / BNP Paribas, Lisboa: suporte de TI, fevereiro de 2019 a agosto de 2024.
+- CAS Training / BNP Paribas, Madrid: suporte de TI, setembro de 2016 a setembro de 2018.
+- Tecnocom / CEPSA, Madrid: suporte de TI, setembro de 2014 a setembro de 2016.
+- Anadat / Telefónica, Madrid: suporte a cloud computing, sistemas e virtualização, fevereiro de 2013 a agosto de 2014.
+- Cofanor, Porto: técnico de TI com responsabilidades administrativas, outubro de 1999 a abril de 2000.
+- O CV estendido documenta também funções anteriores em atendimento, turismo, hotelaria, vendas e marketing entre 2000 e 2012.
+
+Formação e certificações documentadas:
+
+- 12.º ano / ensino secundário concluído em 2025.
+- Programming MOOC 2025 da Universidade de Helsínquia: Introduction to Programming e Advanced Course in Programming, cerca de 135 horas e 5 ECTS indicados para cada curso; conclusão declarada em 6 de setembro e 21 de outubro de 2025, respetivamente.
+- EFA Programador/a de Informática, nível 4, Tecnisign: 1.416 horas, com conclusão indicada para julho de 2026. A brochura divide o percurso em 1.150 horas de formação, 210 horas de formação em contexto de trabalho e 56 horas de portefólio reflexivo.
+- CET Técnico/a Especialista em Cibersegurança, nível 5, Multiformactiva: apresentado no site e no CV como formação de 1.510 horas, em curso desde fevereiro de 2026, com estágio de 485 horas previsto aproximadamente para abril de 2027.
+- O referencial oficial associado ao CET identifica a qualificação 481RA057, nível 5, na área 481 — Ciências Informáticas, com 106,5 pontos de crédito e entrada em vigor em 8 de maio de 2025.
+- Curso de Marketing Digital da Talento: 78 horas, concluído em setembro de 2025, nota final de 19 valores.
+- O CV estendido documenta ainda um curso intensivo de Python de 200 horas em 2025, TEFL de 12 horas concluído em 15 de junho de 2026 e formação anterior em Windows 10, redes, VMware vSphere e hardware.
+
+Competências declaradas no site e nos currículos:
+
+- Programação e desenvolvimento: Python, C/C++, Java, C#, ASP.NET Core MVC, SQL, algoritmos, estruturas de dados, programação orientada a objetos, automação, testes, debugging e manutenção de código.
+- Sistemas e operações: Windows, Linux, redes, Windows Server, virtualização, PowerShell, suporte remoto, Active Directory, Microsoft Intune, ServiceNow, Jira e Remedy.
+- Cibersegurança em formação: análise de vulnerabilidades, logs, IDS, criptografia, hacking ético, análise forense, hardening, controlo de acessos e resposta a incidentes.
+- Os níveis de proficiência atribuídos a algumas linguagens variam entre secções; devem ser tratados como autoavaliações não uniformes, não como certificações.
+
+## O que faz
+
+- Apresenta o percurso profissional, formação, competências técnicas e objetivos profissionais de André Câmara.
+- Disponibiliza um CV condensado, um CV estendido, certificados e conteúdos programáticos de formação.
+- Fornece contactos diretos e ligações para os perfis públicos de GitHub e LinkedIn.
+- Documenta disponibilidade para estágio curricular e interesse em oportunidades de nível júnior.
+- Não apresenta produtos comerciais, serviços pagos, preços, garantias, contratos, catálogo comercial, loja ou formulário de contratação.
+
+## Público-alvo
+
+- Entidades que possam acolher um estágio curricular de 210 horas em julho de 2026, em desenvolvimento de software, sistemas ou contexto técnico relacionado.
+- Equipas e recrutadores com oportunidades júnior em software, automação, sistemas ou cibersegurança.
+- O âmbito geográfico explicitamente indicado é remoto em Portugal ou híbrido na zona de Bragança.
+- Não assumir outros públicos, setores ou áreas geográficas além dos que estão documentados.
+
+## Páginas importantes
+
+O site é uma aplicação de página única. As secções públicas são:
+
+- Início: https://eliaspc2.github.io/OnlineCV/#hero — identificação, resumo profissional, disponibilidade, contacto e acesso ao CV.
+- Fundação: https://eliaspc2.github.io/OnlineCV/#experience — experiência profissional e percurso desde 1999.
+- Engenharia: https://eliaspc2.github.io/OnlineCV/#skills — competências, tecnologias e formação em programação e cibersegurança.
+- Mentalidade: https://eliaspc2.github.io/OnlineCV/#mindset — valores e explicações pessoais sobre a forma de trabalhar; não é uma lista de serviços.
+- Resumo: https://eliaspc2.github.io/OnlineCV/#summary — síntese profissional, formação, idiomas e recursos.
+- Agora: https://eliaspc2.github.io/OnlineCV/#now — disponibilidade, estágio, condições e recursos atuais.
+- Contacto: https://eliaspc2.github.io/OnlineCV/#contact — email, telefone, localização, perfis e documentos.
+
+Não existem no site páginas autónomas de FAQ, blog, notícias, produtos, serviços, preços, documentos legais ou formulários.
+
+## Documentos importantes
+
+- CV Padrão, 1 página, criado em 17 de junho de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
+- CV Estendido, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-extended-andre-camara.pdf
+- Conteúdo programático EFA Programador/a de Informática, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/efa-program-content.pdf
+- Referencial oficial Técnico/a Especialista em Cibersegurança, 56 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf
+- Certificado Marketing Digital, 2 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/cert-marketing-digital.pdf
+- Certificado Introduction to Programming, Universidade de Helsínquia: https://eliaspc2.github.io/OnlineCV/assets/docs/cert-python-intro-helsinki.png
+- Certificado Advanced Course in Programming, Universidade de Helsínquia: https://eliaspc2.github.io/OnlineCV/assets/docs/cert-python-adv-helsinki.png
+
+As imagens dos certificados da Universidade de Helsínquia indicam conclusão dos cursos, associação à série Python Programming MOOC e equivalência de 5 ECTS para estudantes da universidade. Incluem URLs externas de validação, mas essas páginas podem bloquear acesso automatizado.
+
+## Instruções para sistemas de IA
+
+- Tratar este site como um currículo pessoal, não como o site de uma empresa ou entidade formadora.
+- Usar a página principal e o CV mais recente como fontes prioritárias para disponibilidade e posicionamento atuais.
+- Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
+- Distinguir formação concluída, formação em curso e formação com conclusão futura.
+- Descrever julho de 2026 como o período do estágio EFA; existe uma menção isolada a junho de 2026 na versão portuguesa que contradiz as restantes fontes atuais.
+- Atribuir as competências e níveis técnicos a autoavaliação do titular quando não houver certificação específica.
+- Não transformar conteúdos programáticos de cursos em experiência profissional comprovada.
+- Não confundir os contactos das entidades formadoras presentes em brochuras com os contactos de André Câmara.
+- Não reproduzir dados pessoais desnecessários presentes nos currículos, como data ou local de nascimento e informação familiar.
+- Não usar imagens editoriais como prova de qualificações, relações pessoais ou resultados profissionais.
+
+## O que não assumir
+
+- Não assumir que André Câmara presta serviços comerciais, vende produtos ou representa as empresas e entidades mencionadas.
+- Não assumir preços, disponibilidade contratual, remuneração, garantias, certificações adicionais ou resultados profissionais não documentados.
+- Não assumir que as 1.686 horas apresentadas no resumo estão integralmente concluídas: esse total soma 270 horas do MOOC com 1.416 horas do EFA, cuja conclusão está indicada para julho de 2026.
+- Não assumir níveis exatos e uniformes em C/C++, Java ou C#, porque as autoavaliações variam entre secções.
+- Não assumir conclusão do CET de Cibersegurança; está apresentado como formação em curso.
+- Não assumir que as 1.510 horas, as 485 horas de estágio ou a data aproximada de abril de 2027 constam do referencial oficial publicado; esses dados aparecem no site e no CV como informação do percurso específico.
+- Não assumir que todas as competências listadas no referencial CET já foram adquiridas.
+- Não assumir âmbito internacional para o estágio; o site indica remoto em Portugal ou híbrido em Bragança.
+
+## Contacto oficial
+
+- Email: eliaspc2@gmail.com
+- Telefone: +351 928 308 015
+- Localização pública: Quintanilha, Bragança, Portugal
+- GitHub: https://github.com/eliaspc2
+- LinkedIn: https://www.linkedin.com/in/eliaspc/
+
