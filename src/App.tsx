@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-06-20.6';
+const APP_BUILD_VERSION = '2026-06-21.1';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const FOOTER_DOCUMENT_LINKS = [
@@ -449,7 +449,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v40'
+        serviceWorker: 'json-site-v41'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -683,8 +683,15 @@ export default function App() {
     let manualFooterDockScrollY = 0;
     let footerDockPinnedDuringNavigation = false;
     let footerDockNavigationTimer: number | undefined;
+    const canExpandFooterDock = () => !window.matchMedia('(max-width: 480px)').matches;
     const updateFooterDockState = () => {
       if (!footerElement) return;
+      if (!canExpandFooterDock()) {
+        footerDockPinnedDuringNavigation = false;
+        footerDockMode = 'manual-closed';
+        document.body.classList.remove('footer-dock-expanded');
+        return;
+      }
       if (footerDockPinnedDuringNavigation) {
         document.body.classList.add('footer-dock-expanded');
         return;
@@ -697,6 +704,12 @@ export default function App() {
         }
         footerDockMode = 'auto';
       }
+      const scrollRoot = document.scrollingElement || document.documentElement;
+      const maxScroll = Math.max(1, scrollRoot.scrollHeight - window.innerHeight);
+      const remaining = maxScroll - window.scrollY;
+      const isExpanded = document.body.classList.contains('footer-dock-expanded');
+      const shouldExpand = isExpanded ? remaining < 500 : remaining < 80;
+      document.body.classList.toggle('footer-dock-expanded', shouldExpand);
       if (footerDockMode === 'manual-open') {
         const moved = Math.abs(window.scrollY - manualFooterDockScrollY);
         if (moved < 120) {
@@ -705,12 +718,6 @@ export default function App() {
         }
         footerDockMode = 'auto';
       }
-      const scrollRoot = document.scrollingElement || document.documentElement;
-      const maxScroll = Math.max(1, scrollRoot.scrollHeight - window.innerHeight);
-      const remaining = maxScroll - window.scrollY;
-      const isExpanded = document.body.classList.contains('footer-dock-expanded');
-      const shouldExpand = isExpanded ? remaining < 500 : remaining < 80;
-      document.body.classList.toggle('footer-dock-expanded', shouldExpand);
     };
     const footerBrand = footerElement?.querySelector(
       '.grid > :first-child > div:first-child'
@@ -757,6 +764,7 @@ export default function App() {
       const target = event.target as HTMLElement | null;
       if (!target || footerBrand?.contains(target)) return;
       if (target.closest('a, button, input, select, textarea, [role="button"]')) return;
+      if (!canExpandFooterDock()) return;
       toggleFooterDock(event);
     };
     if (footerBrand) {

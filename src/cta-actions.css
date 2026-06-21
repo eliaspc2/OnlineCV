@@ -409,7 +409,7 @@ body.footer-dock-expanded #site-footer .footer-doc-links a {
     transform 180ms ease;
 }
 
-body.footer-dock-expanded #site-footer .footer-doc-links a[href$="cv-andre-camara.pdf"],
+#site-footer .footer-doc-links a[href$="cv-andre-camara.pdf"],
 #contact a[href$="cv-andre-camara.pdf"] > div:first-child {
   --cta-pulse-shadow: rgba(59, 130, 246, 0.26);
   --cta-pulse-ring: rgba(59, 130, 246, 0.18);
@@ -419,7 +419,7 @@ body.footer-dock-expanded #site-footer .footer-doc-links a[href$="cv-andre-camar
   animation: cta-attention-pulse 2.8s ease-in-out infinite;
 }
 
-body.footer-dock-expanded #site-footer .footer-doc-links a[href$="cv-andre-camara.pdf"]::after,
+#site-footer .footer-doc-links a[href$="cv-andre-camara.pdf"]::after,
 #contact a[href$="cv-andre-camara.pdf"] > div:first-child::after {
   content: "";
   pointer-events: none;
@@ -453,6 +453,15 @@ body.footer-dock-expanded #site-footer .footer-doc-links a:hover {
 
   body:not(.footer-dock-expanded) #site-footer .grid > :first-child > div:first-child {
     display: none;
+  }
+
+  body:not(.footer-dock-expanded) #site-footer .grid > :first-child {
+    grid-template-columns: 1fr;
+  }
+
+  body:not(.footer-dock-expanded) #site-footer .grid > :first-child > div:last-child {
+    grid-column: 1;
+    justify-self: center;
   }
 
   body:not(.footer-dock-expanded) #site-footer .grid > :first-child,

@@ -1,0 +1,66 @@
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 3.75rem 1rem !important;
+  }
+
+  :is(#experience, #skills, #mindset, #summary, #now, #contact) > .container-custom {
+    width: 100%;
+    padding-inline: 0 !important;
+  }
+
+  :is(#experience, #skills, #mindset, #summary, #now, #contact) h2 {
+    font-size: clamp(1.75rem, 8vw, 2.125rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  :is(#experience, #skills, #mindset, #summary, #now, #contact) h2 + p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  #experience [data-accordion-item] {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+  }
+
+  :is(#skills, #summary) [data-accordion-item],
+  #mindset .rounded-2xl {
+    border-radius: 0.75rem;
+  }
+
+  #mindset .p-6 {
+    padding: 1.25rem;
+  }
+
+  .lang-switcher {
+    top: 1.5rem !important;
+    right: 5.5rem !important;
+    bottom: auto !important;
+    flex-direction: row !important;
+    gap: 0.25rem !important;
+  }
+
+  .lang-btn {
+    width: 1.5rem !important;
+    height: 1rem !important;
+    border-radius: 0.25rem;
+  }
+
+  .lang-btn img {
+    border-radius: 0.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .section-padding {
+    padding-inline: 0.75rem !important;
+  }
+
+  nav [data-scroll-to='hero'] > span {
+    display: none;
+  }
+
+  .lang-switcher {
+    right: 5rem !important;
+  }
+}

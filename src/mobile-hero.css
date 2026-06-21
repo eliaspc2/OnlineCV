@@ -1,3 +1,10 @@
+/* Keep the first-screen cue clear of the fixed dock at every viewport size. */
+#hero > button[data-scroll-to='about'] {
+  bottom: calc(var(--footer-dock-height, 5rem) + 1.25rem);
+  margin-left: -1rem;
+  z-index: 20;
+}
+
 @media (max-width: 767px) {
   #hero {
     min-height: calc(100svh - 4rem);
@@ -52,7 +59,13 @@
   }
 
   #hero > button[data-scroll-to='about'] {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    bottom: calc(var(--footer-dock-height, 4.5rem) + 0.75rem);
+    margin-left: -1.375rem;
   }
 }
 
