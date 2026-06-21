@@ -28,6 +28,95 @@
     border-radius: 0.75rem;
   }
 
+  #skills [data-accordion-toggle] {
+    display: grid !important;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.25rem !important;
+  }
+
+  #skills [data-accordion-toggle] > :first-child {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    align-self: start;
+  }
+
+  #skills [data-accordion-toggle] > :first-child img {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+  }
+
+  #skills [data-accordion-toggle] > :nth-child(2) {
+    min-width: 0;
+  }
+
+  #skills [data-accordion-toggle] > :nth-child(2) > :first-child {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    gap: 0.45rem 0.5rem !important;
+    min-width: 0;
+  }
+
+  #skills [data-accordion-toggle] h3 {
+    flex: 1 0 100%;
+    min-width: 0;
+    font-size: clamp(1.32rem, 6vw, 1.62rem) !important;
+    line-height: 1.15 !important;
+    overflow-wrap: anywhere;
+  }
+
+  #skills [data-accordion-toggle] > :nth-child(2) > :first-child > span {
+    max-width: 100%;
+    min-height: 1.75rem;
+    align-items: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.15;
+    padding: 0.25rem 0.55rem !important;
+  }
+
+  #skills [data-accordion-toggle] > :nth-child(2) > p {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  #skills [data-accordion-toggle] > :nth-child(3) {
+    grid-column: 2;
+    justify-self: start;
+    align-items: center;
+    gap: 0.65rem !important;
+    margin-left: 0 !important;
+    min-width: 0;
+  }
+
+  #skills [data-accordion-toggle] > :nth-child(3) > span {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  #skills [data-accordion-panel] {
+    padding-right: 1.25rem !important;
+    padding-left: 1.25rem !important;
+  }
+
+  #skills [data-accordion-panel] a {
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  #skills [data-accordion-panel] .grid {
+    min-width: 0;
+  }
+
+  #skills [data-accordion-panel] .flex-wrap > * {
+    min-width: 0;
+  }
+
   #mindset .p-6 {
     padding: 1.25rem;
   }
@@ -62,5 +151,20 @@
 
   .lang-switcher {
     right: 5rem !important;
+  }
+
+  #skills [data-accordion-toggle] {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 0.85rem;
+    padding: 1rem !important;
+  }
+
+  #skills [data-accordion-toggle] > :first-child {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+  }
+
+  #skills [data-accordion-toggle] h3 {
+    font-size: 1.25rem !important;
   }
 }
