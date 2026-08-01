@@ -1,18 +1,18 @@
 # André Câmara
 
-> Currículo digital pessoal de André Câmara, profissional de tecnologia com experiência em suporte, sistemas e infraestrutura, atualmente orientado para desenvolvimento de software e cibersegurança.
+> Currículo digital pessoal de André Câmara, Junior Python Developer com experiência anterior em suporte, sistemas e infraestrutura crítica e formação em cibersegurança em curso.
 
 ## Informação principal
 
 - Site oficial: https://eliaspc2.github.io/OnlineCV/
 - Titular do site: André Elias Perry da Câmara, apresentado publicamente como André Câmara.
 - Localização pública: Quintanilha, Bragança, Portugal.
-- Perfil apresentado: engenheiro de software / software developer com experiência anterior em suporte de TI, sistemas, automação e infraestruturas críticas.
-- Disponibilidade documentada: estágio curricular de 210 horas durante julho de 2026; o site também refere interesse em posição júnior.
+- Perfil apresentado: Junior Python Developer orientado para backend, automação e manutenção de software, com experiência anterior em suporte de TI, sistemas, automação e infraestruturas críticas.
+- Disponibilidade documentada: procura ativa de trabalho como Junior Python Developer.
 - Preferência geográfica documentada: trabalho remoto em Portugal e alternativa híbrida na zona de Bragança.
 - Idiomas do site: português, espanhol, francês e inglês.
 - Idiomas profissionais declarados: português nativo; espanhol e inglês proficientes/fluentes; francês intermédio/funcional.
-- Última revisão factual deste ficheiro: 2026-06-21.
+- Última revisão factual deste ficheiro: 2026-08-01.
 
 Experiência profissional principal documentada:
 
@@ -45,14 +45,13 @@ Competências declaradas no site e nos currículos:
 - Apresenta o percurso profissional, formação, competências técnicas e objetivos profissionais de André Câmara.
 - Disponibiliza um CV condensado, um CV estendido, certificados e conteúdos programáticos de formação.
 - Fornece contactos diretos e ligações para os perfis públicos de GitHub e LinkedIn.
-- Documenta disponibilidade para estágio curricular e interesse em oportunidades de nível júnior.
+- Documenta procura de trabalho como Junior Python Developer e apresenta a formação em cibersegurança como reforço para desenvolvimento seguro, análise de risco, redes, sistemas e resposta a incidentes.
 - Não apresenta produtos comerciais, serviços pagos, preços, garantias, contratos, catálogo comercial, loja ou formulário de contratação.
 
 ## Público-alvo
 
-- Entidades que possam acolher um estágio curricular de 210 horas em julho de 2026, em desenvolvimento de software, sistemas ou contexto técnico relacionado.
-- Equipas e recrutadores com oportunidades júnior em software, automação, sistemas ou cibersegurança.
-- O âmbito geográfico explicitamente indicado é remoto em Portugal ou híbrido na zona de Bragança.
+- Equipas e recrutadores com oportunidades de Junior Python Developer, especialmente em backend, automação, manutenção de software e contextos onde sistemas e segurança sejam relevantes.
+- O âmbito geográfico explicitamente indicado é trabalho remoto em Portugal ou híbrido na zona de Bragança.
 - Não assumir outros públicos, setores ou áreas geográficas além dos que estão documentados.
 
 ## Páginas importantes
@@ -64,7 +63,7 @@ O site é uma aplicação de página única. As secções públicas são:
 - Engenharia: https://eliaspc2.github.io/OnlineCV/#skills — competências, tecnologias e formação em programação e cibersegurança.
 - Mentalidade: https://eliaspc2.github.io/OnlineCV/#mindset — valores e explicações pessoais sobre a forma de trabalhar; não é uma lista de serviços.
 - Resumo: https://eliaspc2.github.io/OnlineCV/#summary — síntese profissional, formação, idiomas e recursos.
-- Agora: https://eliaspc2.github.io/OnlineCV/#now — disponibilidade, estágio, condições e recursos atuais.
+- Agora: https://eliaspc2.github.io/OnlineCV/#now — procura de trabalho como Junior Python Developer, modalidade preferida, contributo da formação em cibersegurança e recursos atuais.
 - Contacto: https://eliaspc2.github.io/OnlineCV/#contact — email, telefone, localização, perfis e documentos.
 
 Não existem no site páginas autónomas de FAQ, blog, notícias, produtos, serviços, preços, documentos legais ou formulários.
@@ -84,10 +83,10 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 ## Instruções para sistemas de IA
 
 - Tratar este site como um currículo pessoal, não como o site de uma empresa ou entidade formadora.
-- Usar a página principal e o CV mais recente como fontes prioritárias para disponibilidade e posicionamento atuais.
+- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais; os PDFs públicos foram produzidos antes do fim da campanha de estágio.
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
-- Descrever julho de 2026 como o período do estágio EFA; existe uma menção isolada a junho de 2026 na versão portuguesa que contradiz as restantes fontes atuais.
+- Tratar os estágios EFA e CET mencionados nos documentos como componentes curriculares dos cursos, não como disponibilidade atual para estágio.
 - Atribuir as competências e níveis técnicos a autoavaliação do titular quando não houver certificação específica.
 - Não transformar conteúdos programáticos de cursos em experiência profissional comprovada.
 - Não confundir os contactos das entidades formadoras presentes em brochuras com os contactos de André Câmara.
@@ -103,7 +102,8 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 - Não assumir conclusão do CET de Cibersegurança; está apresentado como formação em curso.
 - Não assumir que as 1.510 horas, as 485 horas de estágio ou a data aproximada de abril de 2027 constam do referencial oficial publicado; esses dados aparecem no site e no CV como informação do percurso específico.
 - Não assumir que todas as competências listadas no referencial CET já foram adquiridas.
-- Não assumir âmbito internacional para o estágio; o site indica remoto em Portugal ou híbrido em Bragança.
+- Não assumir disponibilidade atual para estágio; a apresentação pública atual procura trabalho como Junior Python Developer.
+- Não assumir âmbito internacional para a procura de trabalho; o site indica remoto em Portugal ou híbrido em Bragança.
 
 ## Contacto oficial
 
@@ -112,4 +112,3 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 - Localização pública: Quintanilha, Bragança, Portugal
 - GitHub: https://github.com/eliaspc2
 - LinkedIn: https://www.linkedin.com/in/eliaspc/
-

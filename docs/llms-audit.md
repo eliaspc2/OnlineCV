@@ -1,6 +1,6 @@
 # Auditoria para o llms.txt
 
-Data da auditoria: 2026-06-21
+Data da auditoria: 2026-08-01
 
 ## Páginas analisadas
 
@@ -37,7 +37,7 @@ Imagens editoriais verificadas:
 
 ## Conflitos encontrados
 
-1. Estágio EFA: a versão portuguesa contém a expressão isolada `A partir de Junho 2026`, enquanto o restante site, os outros três idiomas e o CV estendido indicam julho de 2026. O `llms.txt` adota julho de 2026.
+1. Posicionamento profissional: a página atual procura trabalho como Junior Python Developer e já não apresenta disponibilidade para estágio. Os PDFs, produzidos antes desta mudança, ainda descrevem os estágios EFA/CET como componentes curriculares e o CV estendido diz que o estágio EFA estava agendado para julho de 2026. Para disponibilidade atual, a página viva foi preferida.
 2. Horas de formação: o resumo apresenta `1.686h de formação intensiva`, soma de 270h do MOOC com 1.416h do EFA. O EFA ainda tem conclusão futura em julho de 2026, pelo que o total não deve ser interpretado como horas já concluídas.
 3. Proficiência: em `Engenharia`, C/C++ e Java aparecem como `Avançado` e C# como `Sólido`; em `Agora`, as três aparecem como `Intermédio`. O `llms.txt` lista as tecnologias sem fixar esses níveis.
 4. Experiência BNP Paribas: a secção Fundação agrega `2016–2024, Lisboa & Madrid`; os CVs detalham dois períodos, 2016–2018 em Madrid e 2019–2024 em Lisboa. A cronologia detalhada foi preferida.
@@ -55,7 +55,7 @@ Imagens editoriais verificadas:
 
 ## Lacunas identificadas
 
-- Falta corrigir `A partir de Junho 2026` na tradução portuguesa.
+- Os PDFs públicos ainda não foram reeditados depois do fim da campanha de estágio e devem ser atualizados numa futura versão documental.
 - Falta uniformizar os níveis de C/C++, Java e C# entre secções.
 - Falta separar visualmente horas concluídas de horas previstas/em curso no total de 1.686h.
 - Não existe documento do percurso específico da Multiformactiva que confirme publicamente 1.510h, 485h de estágio e a data aproximada de abril de 2027.
@@ -68,7 +68,7 @@ Imagens editoriais verificadas:
 
 ## Recomendações
 
-- Corrigir a data portuguesa do estágio para julho de 2026.
+- Atualizar os dois CVs em PDF para refletirem o posicionamento atual como Junior Python Developer e removerem formulações futuras já ultrapassadas.
 - Distinguir `horas concluídas` de `horas do percurso em curso`.
 - Adotar uma escala única de proficiência ou remover níveis subjetivos conflitantes.
 - Publicar um documento da entidade formadora que sustente a duração e o calendário específicos do CET.
@@ -80,5 +80,4 @@ Imagens editoriais verificadas:
 
 ## Grau de confiança global
 
-**Alto (0,90).** Todo o conteúdo do site e os sete documentos públicos foram lidos; a versão publicada coincide com o repositório. A confiança não é máxima devido aos conflitos internos assinalados e à ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.
-
+**Alto (0,90).** Todo o conteúdo do site e os sete documentos públicos foram lidos. A confiança não é máxima devido à diferença temporal entre a página atual e os PDFs, aos conflitos internos assinalados e à ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.

@@ -1,25 +1,25 @@
 {
   "lang": "en-GB",
   "globals": {
-    "meta.description": "Digital CV of André Câmara. Software engineering oriented to stability, automation, and critical systems.",
-    "meta.pwa.description": "Digital CV of André Câmara. Software engineering oriented to stability, automation, and critical systems.",
+    "meta.description": "Digital CV of André Câmara, a Junior Python Developer with critical systems experience and ongoing cybersecurity training.",
+    "meta.pwa.description": "Digital CV of André Câmara, a Junior Python Developer with critical systems experience and ongoing cybersecurity training.",
     "meta.pwa.name": "André Câmara — CV",
     "meta.pwa.shortName": "André CV",
     "meta.title": "André Câmara — Resume",
     "notes.aria": "Section highlights",
     "notes.contact.left": "Direct contact: clear availability, quick response, practical next step.",
-    "notes.contact.right": "Best fit: internship or junior role with real engineering ownership.",
+    "notes.contact.right": "Best fit: Junior Python Developer role with real engineering ownership.",
     "notes.experience.left": "Real systems before code: networks, support, automation and uptime pressure.",
     "notes.experience.right": "The useful detail: work history shaped by responsibility, not only coursework.",
     "notes.hero.left": "Profile signal: technical maturity from real infrastructure and long-term systems.",
-    "notes.hero.right": "Opportunity angle: ready for internship work where stability matters.",
+    "notes.hero.right": "Opportunity angle: Python development backed by systems maturity and growing security skills.",
     "notes.mindset.left": "Work style: steady, communicative, family-grounded and process oriented.",
     "notes.mindset.right": "The human side explains the technical side: calm under operational pressure.",
-    "notes.now.left": "Current focus: curricular internship with immediate practical contribution.",
+    "notes.now.left": "Current focus: Junior Python Developer role with immediate practical contribution.",
     "notes.now.right": "Available to join teams that value maintenance, automation and reliability.",
     "notes.skills.left": "Skills are presented as usable tools, not decorative keywords.",
     "notes.skills.right": "Look for the pattern: backend, systems, automation and security awareness.",
-    "notes.summary.left": "Summary point: senior attitude entering a junior software path.",
+    "notes.summary.left": "Summary point: operational maturity in a junior Python development path.",
     "notes.summary.right": "The differentiator is continuity: keeping existing systems understandable and working.",
     "ui.viewer.title": "Document",
     "ui.viewer.download": "Download",
@@ -609,7 +609,7 @@
     {
       "ref": "obj.n_7fd47b4c",
       "strings": {
-        "text": "Software Engineer"
+        "text": "Junior Python Developer"
       }
     },
     {
@@ -619,7 +619,7 @@
     {
       "ref": "obj.n_e5a277a0",
       "strings": {
-        "text": "Focused on stability, automation, and existing systems. From critical infrastructure to software engineering."
+        "text": "Python, automation, and critical systems, strengthened by ongoing cybersecurity training."
       }
     },
     {
@@ -795,13 +795,13 @@
     {
       "ref": "obj.n_3190b0eb",
       "strings": {
-        "text": "For Internship"
+        "text": "Junior Python"
       }
     },
     {
       "ref": "obj.n_7f4a91c2",
       "strings": {
-        "text": "July 2026"
+        "text": "Developer"
       }
     },
     {
@@ -5396,13 +5396,13 @@
     {
       "ref": "obj.n_dd9d9d18",
       "strings": {
-        "text": "Available for Internship"
+        "text": "Available for work"
       }
     },
     {
       "ref": "obj.n_de9d9ea8",
       "strings": {
-        "text": "EFA – IT Programmer"
+        "text": "Junior Python Developer"
       }
     },
     {
@@ -5416,13 +5416,13 @@
     {
       "ref": "obj.n_292678e0",
       "strings": {
-        "text": "210 curricular hours"
+        "text": "Python + Cybersecurity"
       }
     },
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Available for a curricular internship (210h) during July, in a real development or systems context, able to contribute effectively from day one."
+        "text": "Seeking a Junior Python Developer role, combining programming and automation with critical systems experience and current cybersecurity training."
       }
     },
     {
@@ -5550,13 +5550,13 @@
     {
       "ref": "obj.n_f4db39b9",
       "strings": {
-        "text": "When"
+        "text": "Goal"
       }
     },
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "Completion in July 2026. Available for a curricular internship from the same month."
+        "text": "Join a team as a Junior Python Developer, focused on backend, automation, and software maintenance."
       }
     },
     {
@@ -5578,7 +5578,7 @@
     {
       "ref": "obj.n_b9c01040",
       "strings": {
-        "text": "Where"
+        "text": "Work mode"
       }
     },
     {
@@ -5606,13 +5606,13 @@
     {
       "ref": "obj.n_bb8d4424",
       "strings": {
-        "text": "Context"
+        "text": "Cybersecurity"
       }
     },
     {
       "ref": "obj.n_bcdc387c",
       "strings": {
-        "text": "The internship is supervised by the training provider, with an individual plan and defined objectives."
+        "text": "The ongoing CET strengthens secure development, risk analysis, networking, systems, and incident response practices."
       }
     },
     {
@@ -5640,7 +5640,7 @@
     {
       "ref": "obj.n_b1064db4",
       "strings": {
-        "text": "Does not require basic training — I'm already used to real work contexts and systems with history."
+        "text": "I bring more than ten years in real work environments, support, and critical legacy systems."
       }
     },
     {
@@ -5654,13 +5654,13 @@
     {
       "ref": "obj.n_0de48d77",
       "strings": {
-        "text": "210h"
+        "text": "Level 5"
       }
     },
     {
       "ref": "obj.n_0ce48be4",
       "strings": {
-        "text": "Internship"
+        "text": "Cybersecurity"
       }
     },
     {
@@ -5868,13 +5868,13 @@
     {
       "ref": "obj.n_e7c6d9ee",
       "strings": {
-        "text": "Available for opportunities"
+        "text": "Available for work"
       }
     },
     {
       "ref": "obj.n_e8c6db80",
       "strings": {
-        "text": "Internship or junior position"
+        "text": "Junior Python Developer"
       }
     },
     {
@@ -5920,7 +5920,7 @@
     {
       "ref": "obj.n_50fbc818",
       "strings": {
-        "text": "Starting July 2026"
+        "text": "Available now"
       }
     },
     {
@@ -5990,7 +5990,7 @@
     {
       "ref": "obj.n_a379f362",
       "strings": {
-        "text": "Available for projects where technical maturity and human commitment make the difference."
+        "text": "Available to join teams where Python, reliability, and security make a difference."
       }
     },
     {

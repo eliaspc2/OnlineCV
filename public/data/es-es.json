@@ -1,25 +1,25 @@
 {
   "lang": "es-ES",
   "globals": {
-    "meta.description": "Currículum digital de André Câmara. Ingeniería de software orientada a estabilidad, automatización y sistemas críticos.",
-    "meta.pwa.description": "Currículum digital de André Câmara. Ingeniería de software orientada a estabilidad, automatización y sistemas críticos.",
+    "meta.description": "Currículum digital de André Câmara, Junior Python Developer con experiencia en sistemas críticos y formación en ciberseguridad en curso.",
+    "meta.pwa.description": "Currículum digital de André Câmara, Junior Python Developer con experiencia en sistemas críticos y formación en ciberseguridad en curso.",
     "meta.pwa.name": "André Câmara — Currículum",
     "meta.pwa.shortName": "André CV",
     "meta.title": "André Câmara — Currículum",
     "notes.aria": "Destacados de la sección",
     "notes.contact.left": "Contacto directo: disponibilidad clara, respuesta rápida y siguiente paso práctico.",
-    "notes.contact.right": "Mejor encaje: prácticas o puesto junior con responsabilidad real de ingeniería.",
+    "notes.contact.right": "Mejor encaje: puesto de Junior Python Developer con responsabilidad real de ingeniería.",
     "notes.experience.left": "Sistemas reales antes del código: redes, soporte, automatización y presión de disponibilidad.",
     "notes.experience.right": "El detalle útil: trayectoria marcada por responsabilidad, no solo por formación.",
     "notes.hero.left": "Señal de perfil: madurez técnica desde infraestructura y sistemas de largo plazo.",
-    "notes.hero.right": "Ángulo de oportunidad: preparado para prácticas donde la estabilidad importa.",
+    "notes.hero.right": "Ángulo de oportunidad: desarrollo Python con madurez de sistemas y seguridad en evolución.",
     "notes.mindset.left": "Forma de trabajar: estable, comunicativa, familiar y orientada al proceso.",
     "notes.mindset.right": "El lado humano explica el técnico: calma bajo presión operativa.",
-    "notes.now.left": "Foco actual: prácticas curriculares con contribución práctica inmediata.",
+    "notes.now.left": "Foco actual: oportunidad como Junior Python Developer con contribución práctica inmediata.",
     "notes.now.right": "Disponible para equipos que valoran mantenimiento, automatización y fiabilidad.",
     "notes.skills.left": "Las competencias aparecen como herramientas útiles, no palabras decorativas.",
     "notes.skills.right": "El patrón es claro: backend, sistemas, automatización y conciencia de seguridad.",
-    "notes.summary.left": "Idea central: actitud sénior entrando en un camino junior de software.",
+    "notes.summary.left": "Idea central: madurez operativa en un recorrido junior de desarrollo Python.",
     "notes.summary.right": "El diferencial es la continuidad: mantener sistemas existentes comprensibles y funcionando.",
     "ui.viewer.title": "Documento",
     "ui.viewer.download": "Descargar",
@@ -609,7 +609,7 @@
     {
       "ref": "obj.n_7fd47b4c",
       "strings": {
-        "text": "Ingeniero de Software"
+        "text": "Junior Python Developer"
       }
     },
     {
@@ -619,7 +619,7 @@
     {
       "ref": "obj.n_e5a277a0",
       "strings": {
-        "text": "Enfocado en estabilidad, automatización y sistemas existentes. De la infraestructura crítica a la ingeniería de software."
+        "text": "Python, automatización y sistemas críticos, con formación en ciberseguridad en curso."
       }
     },
     {
@@ -795,13 +795,13 @@
     {
       "ref": "obj.n_3190b0eb",
       "strings": {
-        "text": "Para Prácticas"
+        "text": "Junior Python"
       }
     },
     {
       "ref": "obj.n_7f4a91c2",
       "strings": {
-        "text": "Julio 2026"
+        "text": "Developer"
       }
     },
     {
@@ -5396,13 +5396,13 @@
     {
       "ref": "obj.n_dd9d9d18",
       "strings": {
-        "text": "Disponible para Prácticas"
+        "text": "Disponible para trabajar"
       }
     },
     {
       "ref": "obj.n_de9d9ea8",
       "strings": {
-        "text": "EFA – Programador Informático"
+        "text": "Junior Python Developer"
       }
     },
     {
@@ -5416,13 +5416,13 @@
     {
       "ref": "obj.n_292678e0",
       "strings": {
-        "text": "210 horas curriculares"
+        "text": "Python + Ciberseguridad"
       }
     },
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Disponible para prácticas curriculares (210h) durante el mes de julio, en un contexto real de desarrollo o sistemas, con capacidad de contribución efectiva desde el inicio."
+        "text": "Busco una oportunidad como Junior Python Developer, uniendo programación y automatización a la experiencia en sistemas críticos y la formación actual en ciberseguridad."
       }
     },
     {
@@ -5550,13 +5550,13 @@
     {
       "ref": "obj.n_f4db39b9",
       "strings": {
-        "text": "Cuándo"
+        "text": "Objetivo"
       }
     },
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "Finalización en julio de 2026. Disponible para prácticas curriculares a partir del mismo mes."
+        "text": "Integrarme en un equipo como Junior Python Developer, con foco en backend, automatización y mantenimiento de software."
       }
     },
     {
@@ -5578,7 +5578,7 @@
     {
       "ref": "obj.n_b9c01040",
       "strings": {
-        "text": "Dónde"
+        "text": "Modalidad"
       }
     },
     {
@@ -5606,13 +5606,13 @@
     {
       "ref": "obj.n_bb8d4424",
       "strings": {
-        "text": "Contexto"
+        "text": "Ciberseguridad"
       }
     },
     {
       "ref": "obj.n_bcdc387c",
       "strings": {
-        "text": "La práctica está acompañada por la entidad formadora, con plan individual y objetivos definidos."
+        "text": "El CET en curso refuerza el desarrollo seguro, el análisis de riesgos, redes, sistemas y respuesta a incidentes."
       }
     },
     {
@@ -5640,7 +5640,7 @@
     {
       "ref": "obj.n_b1064db4",
       "strings": {
-        "text": "No requiere formación básica — ya estoy acostumbrado a contextos reales de trabajo y sistemas con historial."
+        "text": "Aporto más de diez años en contextos reales de trabajo, soporte y sistemas críticos con historial."
       }
     },
     {
@@ -5654,13 +5654,13 @@
     {
       "ref": "obj.n_0de48d77",
       "strings": {
-        "text": "210h"
+        "text": "Nivel 5"
       }
     },
     {
       "ref": "obj.n_0ce48be4",
       "strings": {
-        "text": "Prácticas"
+        "text": "Ciberseguridad"
       }
     },
     {
@@ -5868,13 +5868,13 @@
     {
       "ref": "obj.n_e7c6d9ee",
       "strings": {
-        "text": "Disponible para oportunidades"
+        "text": "Disponible para trabajar"
       }
     },
     {
       "ref": "obj.n_e8c6db80",
       "strings": {
-        "text": "Prácticas o puesto junior"
+        "text": "Junior Python Developer"
       }
     },
     {
@@ -5920,7 +5920,7 @@
     {
       "ref": "obj.n_50fbc818",
       "strings": {
-        "text": "A partir de julio de 2026"
+        "text": "Disponible ahora"
       }
     },
     {
@@ -5990,7 +5990,7 @@
     {
       "ref": "obj.n_a379f362",
       "strings": {
-        "text": "Disponible para proyectos donde la madurez técnica y el compromiso humano marquen la diferencia."
+        "text": "Disponible para equipos donde Python, fiabilidad y seguridad marquen la diferencia."
       }
     },
     {
