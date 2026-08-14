@@ -12,7 +12,7 @@
 - Preferência geográfica documentada: trabalho remoto em Portugal e alternativa híbrida na zona de Bragança.
 - Idiomas do site: português, espanhol, francês e inglês.
 - Idiomas profissionais declarados: português nativo; espanhol e inglês proficientes/fluentes; francês intermédio/funcional.
-- Última revisão factual deste ficheiro: 2026-08-01.
+- Última revisão factual deste ficheiro: 2026-08-14.
 
 Experiência profissional principal documentada:
 
@@ -27,7 +27,7 @@ Formação e certificações documentadas:
 
 - 12.º ano / ensino secundário concluído em 2025.
 - Programming MOOC 2025 da Universidade de Helsínquia: Introduction to Programming e Advanced Course in Programming, cerca de 135 horas e 5 ECTS indicados para cada curso; conclusão declarada em 6 de setembro e 21 de outubro de 2025, respetivamente.
-- EFA Programador/a de Informática, nível 4, Tecnisign: 1.416 horas, com conclusão indicada para julho de 2026. A brochura divide o percurso em 1.150 horas de formação, 210 horas de formação em contexto de trabalho e 56 horas de portefólio reflexivo.
+- EFA Programador/a de Informática, nível 4, Tecnisign: 1.416 horas. O CV Padrão atualizado em 14 de agosto de 2026 declara a formação concluída; alguns textos da página continuam a indicar “conclusão em julho de 2026”. A brochura divide o percurso em 1.150 horas de formação, 210 horas de formação em contexto de trabalho e 56 horas de portefólio reflexivo.
 - CET Técnico/a Especialista em Cibersegurança, nível 5, Multiformactiva: apresentado no site e no CV como formação de 1.510 horas, em curso desde fevereiro de 2026, com estágio de 485 horas previsto aproximadamente para abril de 2027.
 - O referencial oficial associado ao CET identifica a qualificação 481RA057, nível 5, na área 481 — Ciências Informáticas, com 106,5 pontos de crédito e entrada em vigor em 8 de maio de 2025.
 - Curso de Marketing Digital da Talento: 78 horas, concluído em setembro de 2025, nota final de 19 valores.
@@ -70,7 +70,7 @@ Não existem no site páginas autónomas de FAQ, blog, notícias, produtos, serv
 
 ## Documentos importantes
 
-- CV Padrão, 1 página, criado em 17 de junho de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
+- CV Padrão, 1 página, atualizado em 14 de agosto de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
 - CV Estendido, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-extended-andre-camara.pdf
 - Conteúdo programático EFA Programador/a de Informática, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/efa-program-content.pdf
 - Referencial oficial Técnico/a Especialista em Cibersegurança, 56 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf
@@ -83,7 +83,7 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 ## Instruções para sistemas de IA
 
 - Tratar este site como um currículo pessoal, não como o site de uma empresa ou entidade formadora.
-- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais; os PDFs públicos foram produzidos antes do fim da campanha de estágio.
+- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. O CV Padrão foi atualizado em 14 de agosto de 2026; o CV Estendido é anterior ao fim da campanha de estágio.
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
 - Tratar os estágios EFA e CET mencionados nos documentos como componentes curriculares dos cursos, não como disponibilidade atual para estágio.
@@ -97,7 +97,7 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 
 - Não assumir que André Câmara presta serviços comerciais, vende produtos ou representa as empresas e entidades mencionadas.
 - Não assumir preços, disponibilidade contratual, remuneração, garantias, certificações adicionais ou resultados profissionais não documentados.
-- Não assumir que as 1.686 horas apresentadas no resumo estão integralmente concluídas: esse total soma 270 horas do MOOC com 1.416 horas do EFA, cuja conclusão está indicada para julho de 2026.
+- Não interpretar as 1.686 horas apresentadas no resumo como duração do CET: esse total soma 270 horas do MOOC com 1.416 horas do EFA.
 - Não assumir níveis exatos e uniformes em C/C++, Java ou C#, porque as autoavaliações variam entre secções.
 - Não assumir conclusão do CET de Cibersegurança; está apresentado como formação em curso.
 - Não assumir que as 1.510 horas, as 485 horas de estágio ou a data aproximada de abril de 2027 constam do referencial oficial publicado; esses dados aparecem no site e no CV como informação do percurso específico.
