@@ -1,25 +1,25 @@
 {
   "lang": "en-GB",
   "globals": {
-    "meta.description": "Digital CV of André Câmara, a Junior Python Developer with critical systems experience and ongoing cybersecurity training.",
-    "meta.pwa.description": "Digital CV of André Câmara, a Junior Python Developer with critical systems experience and ongoing cybersecurity training.",
+    "meta.description": "Digital CV of André Câmara, a Junior Cybersecurity Technician with 10+ years of IT support and critical systems experience.",
+    "meta.pwa.description": "Digital CV of André Câmara, a Junior Cybersecurity Technician with 10+ years of IT support and critical systems experience.",
     "meta.pwa.name": "André Câmara — CV",
     "meta.pwa.shortName": "André CV",
     "meta.title": "André Câmara — Resume",
     "notes.aria": "Section highlights",
     "notes.contact.left": "Direct contact: clear availability, quick response, practical next step.",
-    "notes.contact.right": "Best fit: Junior Python Developer role with real engineering ownership.",
+    "notes.contact.right": "Best fit: junior cybersecurity, SOC, security operations, or infrastructure security roles.",
     "notes.experience.left": "Real systems before code: networks, support, automation and uptime pressure.",
     "notes.experience.right": "The useful detail: work history shaped by responsibility, not only coursework.",
     "notes.hero.left": "Profile signal: technical maturity from real infrastructure and long-term systems.",
-    "notes.hero.right": "Opportunity angle: Python development backed by systems maturity and growing security skills.",
+    "notes.hero.right": "Opportunity angle: cybersecurity training backed by systems maturity, automation, and operational discipline.",
     "notes.mindset.left": "Work style: steady, communicative, family-grounded and process oriented.",
     "notes.mindset.right": "The human side explains the technical side: calm under operational pressure.",
-    "notes.now.left": "Current focus: Junior Python Developer role with immediate practical contribution.",
-    "notes.now.right": "Available to join teams that value maintenance, automation and reliability.",
+    "notes.now.left": "Current focus: entry-level cybersecurity role with immediate practical contribution.",
+    "notes.now.right": "Available to join teams that value security, resilience, automation, and operational continuity.",
     "notes.skills.left": "Skills are presented as usable tools, not decorative keywords.",
-    "notes.skills.right": "Look for the pattern: backend, systems, automation and security awareness.",
-    "notes.summary.left": "Summary point: operational maturity in a junior Python development path.",
+    "notes.skills.right": "Look for the pattern: systems, networks, automation, security monitoring, and risk awareness.",
+    "notes.summary.left": "Summary point: operational maturity supporting a junior cybersecurity path.",
     "notes.summary.right": "The differentiator is continuity: keeping existing systems understandable and working.",
     "ui.viewer.title": "Document",
     "ui.viewer.download": "Download",
@@ -91,19 +91,19 @@
     {
       "ref": "obj.nav.desktop.experience",
       "strings": {
-        "text": "Foundation"
+        "text": "Experience"
       }
     },
     {
       "ref": "obj.nav.desktop.skills",
       "strings": {
-        "text": "Engineering"
+        "text": "Cybersecurity"
       }
     },
     {
       "ref": "obj.nav.desktop.mindset",
       "strings": {
-        "text": "Mindset"
+        "text": "Profile"
       }
     },
     {
@@ -115,7 +115,7 @@
     {
       "ref": "obj.nav.desktop.now",
       "strings": {
-        "text": "Now"
+        "text": "Opportunities"
       }
     },
     {
@@ -173,19 +173,19 @@
     {
       "ref": "obj.nav.mobile.experience",
       "strings": {
-        "text": "Foundation"
+        "text": "Experience"
       }
     },
     {
       "ref": "obj.nav.mobile.skills",
       "strings": {
-        "text": "Engineering"
+        "text": "Cybersecurity"
       }
     },
     {
       "ref": "obj.nav.mobile.mindset",
       "strings": {
-        "text": "Mindset"
+        "text": "Profile"
       }
     },
     {
@@ -197,7 +197,7 @@
     {
       "ref": "obj.nav.mobile.now",
       "strings": {
-        "text": "Now"
+        "text": "Opportunities"
       }
     },
     {
@@ -263,7 +263,7 @@
     {
       "ref": "obj.n_a2ac0e34",
       "strings": {
-        "text": "Software engineering oriented to stability, automation, and critical systems."
+        "text": "Cybersecurity grounded in IT support, critical systems, automation, and operational continuity."
       }
     },
     {
@@ -337,7 +337,7 @@
     {
       "ref": "obj.footer.quick.experience",
       "strings": {
-        "text": "Foundation"
+        "text": "Experience"
       }
     },
     {
@@ -347,7 +347,7 @@
     {
       "ref": "obj.footer.quick.skills",
       "strings": {
-        "text": "Engineering"
+        "text": "Cybersecurity"
       }
     },
     {
@@ -357,7 +357,7 @@
     {
       "ref": "obj.footer.quick.mindset",
       "strings": {
-        "text": "Mindset"
+        "text": "Profile"
       }
     },
     {
@@ -367,7 +367,7 @@
     {
       "ref": "obj.footer.quick.now",
       "strings": {
-        "text": "Now"
+        "text": "Opportunities"
       }
     },
     {
@@ -609,7 +609,7 @@
     {
       "ref": "obj.n_7fd47b4c",
       "strings": {
-        "text": "Junior Python Developer"
+        "text": "Junior Cybersecurity Technician"
       }
     },
     {
@@ -619,7 +619,7 @@
     {
       "ref": "obj.n_e5a277a0",
       "strings": {
-        "text": "Python, automation, and critical systems, strengthened by ongoing cybersecurity training."
+        "text": "Available for junior cybersecurity roles. 10+ years in IT support and critical systems, with Level 5 cybersecurity training (in progress)."
       }
     },
     {
@@ -795,13 +795,13 @@
     {
       "ref": "obj.n_3190b0eb",
       "strings": {
-        "text": "Junior Python"
+        "text": "Cybersecurity"
       }
     },
     {
       "ref": "obj.n_7f4a91c2",
       "strings": {
-        "text": "Developer"
+        "text": "Technician"
       }
     },
     {
@@ -847,7 +847,7 @@
     {
       "ref": "obj.n_4b47a0b0",
       "strings": {
-        "text": "Technical Foundation"
+        "text": "Operational Experience"
       }
     },
     {
@@ -857,13 +857,13 @@
     {
       "ref": "obj.n_0c7c7840",
       "strings": {
-        "text": "Two decades of evolution. From critical infrastructure to "
+        "text": "A career built in IT support, critical infrastructure, and "
       }
     },
     {
       "ref": "obj.n_0d7c79d0",
       "strings": {
-        "text": "software engineering"
+        "text": "cybersecurity"
       }
     },
     {
@@ -1047,7 +1047,7 @@
     {
       "ref": "obj.n_04a0cb80",
       "strings": {
-        "text": "I bring that operational discipline into software: predictable delivery, safe changes, and long-term reliability."
+        "text": "I bring that discipline into security operations: controlled changes, traceability, resilience, and reliable response."
       }
     },
     {
@@ -1231,7 +1231,7 @@
     {
       "ref": "obj.n_68453bfb",
       "strings": {
-        "text": "That resilience mindset translates into software that degrades gracefully and stays maintainable."
+        "text": "That resilience mindset supports incident preparedness, recovery planning, and operational continuity."
       }
     },
     {
@@ -1415,7 +1415,7 @@
     {
       "ref": "obj.n_4ce41264",
       "strings": {
-        "text": "I apply this systemic view to build modular, scalable software."
+        "text": "I apply this systemic view to assess dependencies, attack surfaces, and security controls across infrastructure."
       }
     },
     {
@@ -1593,7 +1593,7 @@
     {
       "ref": "obj.n_88e372cf",
       "strings": {
-        "text": "I translate complex business needs into code that solves real problems."
+        "text": "I translate technical risk into clear actions for users, operations, and security teams."
       }
     },
     {
@@ -1645,7 +1645,7 @@
     {
       "ref": "obj.n_5dc40aea",
       "strings": {
-        "text": "Software Engineering"
+        "text": "Cybersecurity & Automation"
       }
     },
     {
@@ -1655,19 +1655,19 @@
     {
       "ref": "obj.n_ad7792a8",
       "strings": {
-        "text": "Focus on Python and the art of "
+        "text": "Security grounded in systems, networks, and "
       }
     },
     {
       "ref": "obj.n_ae77943b",
       "strings": {
-        "text": "simplify the complex"
+        "text": "practical automation"
       }
     },
     {
       "ref": "obj.n_5bc407c4",
       "strings": {
-        "text": "For me, code is a tool for stability. Skill levels are living indicators—reviewed continuously from real practice, formal training, and active projects."
+        "text": "My cybersecurity profile combines Level 5 training with real experience in systems, support, networks, automation, and operational continuity."
       }
     },
     {
@@ -4477,13 +4477,13 @@
     {
       "ref": "obj.n_368d4e4c",
       "strings": {
-        "text": "Software Engineering | Bragança, Portugal"
+        "text": "Cybersecurity | Bragança, Portugal"
       }
     },
     {
       "ref": "obj.n_a7269434",
       "strings": {
-        "text": "I've worked with technology since the late 90s, with a strong base in critical systems, automation, and 24/7 infrastructure. I re-entered software development focused on continuity, predictability, and technical quality."
+        "text": "I bring more than a decade of IT support and critical-systems experience. I am now specialising in cybersecurity, applying operational discipline, automation, and systems knowledge to security, risk, and resilience."
       }
     },
     {
@@ -4527,7 +4527,7 @@
     {
       "ref": "obj.n_72cd9d68",
       "strings": {
-        "text": "Python",
+        "text": "Cybersecurity",
         "attrs": {
           "title": "Advanced"
         }
@@ -4864,7 +4864,7 @@
     {
       "ref": "obj.n_142bf10b",
       "strings": {
-        "text": "1.686h of intensive software development training"
+        "text": "1,510h Level 5 cybersecurity specialisation"
       }
     },
     {
@@ -4968,7 +4968,7 @@
     {
       "ref": "obj.n_241fb9f8",
       "strings": {
-        "text": "The mindset built in critical environments now applies to software development."
+        "text": "The mindset built in critical environments now supports security, risk management, and operational resilience."
       }
     },
     {
@@ -5402,7 +5402,7 @@
     {
       "ref": "obj.n_de9d9ea8",
       "strings": {
-        "text": "Junior Python Developer"
+        "text": "Junior Cybersecurity Technician"
       }
     },
     {
@@ -5416,13 +5416,13 @@
     {
       "ref": "obj.n_292678e0",
       "strings": {
-        "text": "Python + Cybersecurity"
+        "text": "Security + IT Operations"
       }
     },
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Seeking a Junior Python Developer role, combining programming and automation with critical systems experience and current cybersecurity training."
+        "text": "Seeking a junior cybersecurity role, combining Level 5 training with IT support, critical systems, networks, and automation experience."
       }
     },
     {
@@ -5440,7 +5440,7 @@
     {
       "ref": "obj.n_ac524574",
       "strings": {
-        "text": "Technical Skills"
+        "text": "Cybersecurity Skills"
       }
     },
     {
@@ -5454,13 +5454,13 @@
     {
       "ref": "obj.n_ea7c5d8c",
       "strings": {
-        "text": "Python"
+        "text": "Cybersecurity"
       }
     },
     {
       "ref": "obj.n_eb7c5f1f",
       "strings": {
-        "text": " (Advanced)"
+        "text": " (Level 5 CET)"
       }
     },
     {
@@ -5470,13 +5470,13 @@
     {
       "ref": "obj.n_4771c8da",
       "strings": {
-        "text": "C/C++"
+        "text": "Network Security"
       }
     },
     {
       "ref": "obj.n_4871ca6d",
       "strings": {
-        "text": " (Intermediate)"
+        "text": " (Training)"
       }
     },
     {
@@ -5486,13 +5486,13 @@
     {
       "ref": "obj.n_50e736f8",
       "strings": {
-        "text": "C#"
+        "text": "Incident Response"
       }
     },
     {
       "ref": "obj.n_51e7388c",
       "strings": {
-        "text": " (Intermediate)"
+        "text": " (Training)"
       }
     },
     {
@@ -5502,13 +5502,13 @@
     {
       "ref": "obj.n_e8e03950",
       "strings": {
-        "text": "Java"
+        "text": "SIEM & Logs"
       }
     },
     {
       "ref": "obj.n_e9e03ae0",
       "strings": {
-        "text": " (Intermediate)"
+        "text": " (Training)"
       }
     },
     {
@@ -5518,13 +5518,13 @@
     {
       "ref": "obj.n_be137184",
       "strings": {
-        "text": "SQL"
+        "text": "PowerShell"
       }
     },
     {
       "ref": "obj.n_bf137318",
       "strings": {
-        "text": " (Advanced)"
+        "text": " (Practical)"
       }
     },
     {
@@ -5556,7 +5556,7 @@
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "Join a team as a Junior Python Developer, focused on backend, automation, and software maintenance."
+        "text": "Join a cybersecurity or SOC team, contributing to monitoring, incident response, hardening, risk reduction, and security automation."
       }
     },
     {
@@ -5874,7 +5874,7 @@
     {
       "ref": "obj.n_e8c6db80",
       "strings": {
-        "text": "Junior Python Developer"
+        "text": "Junior Cybersecurity Technician"
       }
     },
     {
@@ -5990,7 +5990,7 @@
     {
       "ref": "obj.n_a379f362",
       "strings": {
-        "text": "Available to join teams where Python, reliability, and security make a difference."
+        "text": "Available to join teams where security, reliability, and operational resilience make a difference."
       }
     },
     {
