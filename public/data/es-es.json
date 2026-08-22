@@ -2321,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "FINALIZACIÓN: JULIO 2026"
+        "text": "COMPLETADO: JULIO 2026"
       }
     },
     {
@@ -2339,7 +2339,7 @@
     {
       "ref": "obj.n_68e6486b",
       "strings": {
-        "text": "Prácticas: julio 2026"
+        "text": "Prácticas completadas: 210h"
       }
     },
     {
@@ -2425,7 +2425,7 @@
     {
       "ref": "obj.n_5e754bc8",
       "strings": {
-        "text": "Consolidación formal de bases ya aplicadas en contexto real. Nivel EQF 4. Incluye prácticas (FCT) de 210h."
+        "text": "Formación de nivel EQF 4 completada, consolidando bases ya aplicadas en contexto real e incluyendo prácticas profesionales (FCT) de 210h."
       }
     },
     {
@@ -4730,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – Programador Informático (Nivel 4, 1.416h, finalización en julio de 2026)"
+        "text": "EFA – Programador Informático (Nivel 4, 1.416h, completado en julio de 2026)"
       }
     },
     {

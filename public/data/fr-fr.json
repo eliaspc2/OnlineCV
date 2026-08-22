@@ -2321,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "FIN : JUILLET 2026"
+        "text": "TERMINÉ : JUILLET 2026"
       }
     },
     {
@@ -2339,7 +2339,7 @@
     {
       "ref": "obj.n_68e6486b",
       "strings": {
-        "text": "Stage : juillet 2026"
+        "text": "Stage terminé : 210h"
       }
     },
     {
@@ -2425,7 +2425,7 @@
     {
       "ref": "obj.n_5e754bc8",
       "strings": {
-        "text": "Consolidation formelle de bases déjà utilisées en contexte réel. Niveau EQF 4. Inclut un stage (FCT) de 210h."
+        "text": "Formation de niveau EQF 4 terminée, consolidant des bases déjà appliquées en contexte réel et comprenant un stage professionnel (FCT) de 210h."
       }
     },
     {
@@ -4730,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – Programmeur informatique (Niveau 4, 1 416h, fin en juillet 2026)"
+        "text": "EFA – Programmeur informatique (Niveau 4, 1 416h, terminé en juillet 2026)"
       }
     },
     {
