@@ -2,11 +2,13 @@
 
 Data da última revisão incremental: 2026-09-05
 
-Esta revisão acrescenta o programa de Ciência de Dados, verifica a sua apresentação nas quatro línguas e atualiza o llms.txt. As observações sobre os restantes documentos provêm da auditoria anterior. O titular pediu expressamente que não se atribuísse nível 5 ao novo curso, pois a realização de estágio não está decidida.
+Esta revisão acrescenta o programa de Ciência de Dados, verifica a sua apresentação nas quatro línguas e atualiza o llms.txt. As observações sobre os restantes documentos provêm da auditoria anterior. O titular pediu expressamente que não se atribuísse nível 5 ao novo curso, pois a realização de estágio não está decidida. O CV Padrão foi novamente substituído pela versão revista no Canva e integralmente relido.
 
 Antes da publicação foram integrados os três commits remotos de 22 de agosto de 2026, preservando o posicionamento em cibersegurança e a conclusão do EFA em agosto. O CV Padrão remoto foi novamente lido integralmente. Foi corrigida nas quatro línguas a etiqueta `obj.n_72cd9d68`: Python tinha sido substituído incorretamente por Cibersegurança na lista de linguagens. As observações abaixo substituem os resultados anteriores quando há informação mais recente.
 
 Validação incremental: build aprovado; browser headless a 320, 390 e 1920 px nas quatro línguas, sem erros de consola nem overflow no novo cartão; abertura/fecho do cartão e visualizador PDF verificados. O novo PDF responde HTTP 200 e coincide com o original. Aos 320 px subsiste overflow global de 384 px, reproduzido também com a configuração anterior, em decorações e contactos fora do novo curso.
+
+Validação do CV Padrão revisto: PDF A4 de uma página, 462.477 bytes, hash idêntico ao ficheiro fornecido, texto integral extraído e página renderizada sem cortes ou sobreposições. Build de produção aprovado; capa verificada a 1600x1000 e 390x844; ficheiro servido pelo preview com hash idêntico ao PDF do repositório.
 
 ## Páginas analisadas
 
@@ -22,14 +24,14 @@ Validação incremental: build aprovado; browser headless a 320, 390 e 1920 px n
 
 - `data-science-program-content.pdf`: 4 páginas, brochura Tecnisign criada em 2026-04-14; texto integral lido. Contém 30 UFCD, cuja soma é 1.000 horas, e metodologia e-learning com atividades assíncronas e sessões síncronas. Início em 2026-09-08 e fim previsto em outubro de 2027 foram comunicados pelo titular em 2026-09-05; não constam do PDF.
 
-- `cv-andre-camara.pdf`: 1 página, 461.974 bytes, criado em 2026-09-05; substituído pelo ficheiro fornecido pelo titular, sem reedição. Texto integral lido; já inclui Ciência de Dados. Subsistem o lapso `II am`, a associação do EFA a 2025 e a apresentação do curso futuro como já iniciado.
+- `cv-andre-camara.pdf`: 1 página, 462.477 bytes, criado em 2026-09-05; substituído pela versão revista fornecida pelo titular. Texto integral lido e renderização visual verificada. Corrige o lapso `II am`, separa as datas de conclusão do EFA e do MOOC, indica o certificado EFA pendente e apresenta Ciência de Dados como formação iniciada em setembro de 2026, com fim previsto em outubro de 2027.
 - `cv-extended-andre-camara.pdf`: novamente substituído em 2026-09-05 pelo PDF revisto fornecido pelo titular, 5 páginas, 175.002 bytes; texto integral lido. Cabeçalho em cibersegurança, EFA concluído e certificado pendente, calendário de Ciência de Dados corrigido. Mantido byte a byte, sem reedição.
 - `efa-program-content.pdf`: 4 páginas, 558 palavras extraídas.
 - `Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf`: 56 páginas, 14.433 palavras extraídas.
 - `cert-marketing-digital.pdf`: 2 páginas, 147 palavras extraídas.
 - `cert-python-intro-helsinki.png`: certificado lido visualmente; inclui nome, curso, entidade, equivalência de 5 ECTS e URL de validação.
 - `cert-python-adv-helsinki.png`: certificado lido visualmente; inclui nome, curso, entidade, equivalência de 5 ECTS e URL de validação.
-- Todos os sete documentos publicados responderam HTTP 200, com MIME correto, e são byte a byte iguais aos ficheiros do repositório.
+- Todos os oito documentos publicados responderam HTTP 200, com MIME correto, e são byte a byte iguais aos ficheiros do repositório após a validação da publicação.
 - Não existem DOCX, XLSX, PPTX ou outros ficheiros de Office na área pública do site.
 
 Imagens editoriais verificadas:
@@ -46,8 +48,8 @@ Imagens editoriais verificadas:
 ## Conflitos encontrados
 
 1. Posicionamento profissional: resolvido no Estendido revisto; ambos os CVs e a página apresentam um perfil júnior de cibersegurança.
-2. Estado do EFA: a página corrigida em 22 de agosto indica conclusão em agosto de 2026 e estágio entre julho e agosto. O CV Padrão remoto associa numa frase a conclusão do EFA e do MOOC a 2025; a data do EFA deve ser corrigida no PDF. Preferiu-se a correção explícita mais recente da página.
-3. Horas de formação: 1.686h correspondem ao MOOC e EFA; 1.510h referem-se ao CET em curso. Não somar estes valores como formação já concluída nem acrescentar as 1.000h futuras de Ciência de Dados ao total concluído.
+2. Estado do EFA: resolvido no CV Padrão revisto. A página e ambos os CVs indicam conclusão em agosto de 2026; o Padrão explicita o estágio de 210 horas e o certificado pendente.
+3. Horas de formação: 1.686h correspondem ao MOOC e EFA; 1.510h referem-se ao CET em curso. Não somar estes valores como formação já concluída nem acrescentar as 1.000h do percurso de Ciência de Dados em curso ao total concluído.
 4. Proficiência: as comparações com a antiga secção `Agora` deixaram de ser atuais após a revisão remota, que passou a listar competências de cibersegurança. Os níveis das linguagens continuam a ser autoavaliações, não certificações.
 5. Experiência BNP Paribas: a secção Fundação agrega `2016–2024, Lisboa & Madrid`; os CVs detalham dois períodos, 2016–2018 em Madrid e 2019–2024 em Lisboa. A cronologia detalhada foi preferida.
 6. CET: o site e o CV indicam 1.510h, estágio de 485h e início aproximado em abril de 2027. O referencial oficial associado confirma a qualificação, o nível e os créditos, mas não apresenta esses dados específicos do percurso do formando.
@@ -72,7 +74,7 @@ Imagens editoriais verificadas:
 - A brochura de Ciência de Dados não indica o calendário individual, nível de qualificação nem estágio; esses dois últimos atributos não foram atribuídos ao curso no site.
 
 - Resolvidos no Estendido revisto: estado do EFA, certificado pendente, parágrafo em português e calendário de Ciência de Dados. O ficheiro foi publicado tal como fornecido.
-- O CV Padrão deve corrigir a frase que associa a conclusão do EFA a 2025; a página indica agosto de 2026.
+- Resolvidos no CV Padrão revisto: lapso `II am`, data de conclusão do EFA, certificado pendente e estado de Ciência de Dados.
 - As horas previstas de formação em curso devem ser claramente diferenciadas de horas concluídas.
 - Não existe documento do percurso específico da Multiformactiva que confirme publicamente 1.510h, 485h de estágio e a data aproximada de abril de 2027.
 - Não existe certificado TEFL nem certificado do curso intensivo de Python entre os documentos públicos.
@@ -84,10 +86,10 @@ Imagens editoriais verificadas:
 
 ## Recomendações
 
-- Corrigir o lapso `II am` do CV Padrão e confirmar o estado efetivo de Ciência de Dados após o início previsto e a conclusão prevista.
+- Manter sincronizados no site e nos dois CVs o estado e o calendário de Ciência de Dados.
 
 - Manter a coerência do Estendido revisto nas próximas atualizações da formação.
-- Corrigir a data de conclusão do EFA no CV Padrão para corresponder à atualização explícita da página.
+- Manter explícita a distinção entre a conclusão do EFA e a emissão pendente do respetivo certificado.
 - Distinguir `horas concluídas` de `horas do percurso em curso`.
 - Adotar uma escala única de proficiência ou remover níveis subjetivos conflitantes.
 - Publicar um documento da entidade formadora que sustente a duração e o calendário específicos do CET.
@@ -99,4 +101,4 @@ Imagens editoriais verificadas:
 
 ## Grau de confiança global
 
-**Alto, com reservas.** A auditoria anterior abrangeu o conteúdo do site e sete documentos públicos; esta revisão acrescentou a leitura integral do oitavo documento, o programa de Ciência de Dados, e verificou as sete secções e os oito links documentais no browser local. O Estendido revisto foi lido integralmente. Subsistem diferenças temporais entre a página e o CV Padrão, conflitos internos assinalados e ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.
+**Alto, com reservas.** A auditoria abrange o conteúdo do site, as sete secções públicas e os oito documentos ligados. Ambos os CVs revistos foram lidos integralmente, e o CV Padrão foi também renderizado para inspeção visual. Os conflitos de data do EFA e o lapso do Padrão ficaram resolvidos. Permanecem reservas por ausência de documentação pública para alguns dados específicos do CET e para formações mencionadas apenas nos CVs.
