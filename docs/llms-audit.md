@@ -2,6 +2,8 @@
 
 Data da última revisão incremental: 2026-09-05
 
+Limpeza interna incremental: removido o ícone `arrow-up.svg` e o seletor `.interactive-icon`, ambos sem referências no código, dados ou DOM renderizado. As ações com pulsação foram preservadas; `llms.txt` relido e mantém-se factual, pois não houve alteração de conteúdo público. Versão `2026-09-05.11`, cache `json-site-v57`.
+
 Revisão estética: contraste do texto secundário, navegação e indicadores em mobile, densidade da lista de linguagens e espaço dos ícones nos recursos. Conteúdo, documentos e destinos dos links preservados; `public/llms.txt` relido e continua factual para estas alterações de apresentação.
 
 O cartão de Ciência de Dados passou a disponibilizar também o link público da entidade formadora Tecnisign (`https://tecnisign.pt/`), seguindo o padrão do EFA. `llms.txt` atualizado. Versão `2026-09-05.10`, cache `json-site-v56`.
