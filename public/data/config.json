@@ -2772,7 +2772,7 @@
                                   "attrs": {
                                     "type": "button",
                                     "data-scroll-to": "now",
-                                    "aria-label": "Go to Agora"
+                                    "aria-label": "Go to opportunities"
                                   },
                                   "id": "n_9f11fd1c",
                                   "ref": "auto.singleton.button.visual_hero_absolute_bottom_2_right_2_bg_white_rounded_xl_shadow_l"
@@ -3968,7 +3968,9 @@
                     },
                     {
                       "styles": {
-                        "animationDelay": "0.2s"
+                        "animationDelay": "0.2s",
+                        "display": "flex",
+                        "flexDirection": "column"
                       },
                       "children": [
                         {
@@ -4474,6 +4476,9 @@
                               "ref": "auto.div.visual_shared_overflow_hidden_transition_all_duration_500_max_h_2000"
                             }
                           ],
+                          "styles": {
+                            "order": 2
+                          },
                           "id": "n_eeff0c06",
                           "ref": "skills.card.main"
                         },
@@ -4975,6 +4980,9 @@
                               "ref": "panel.hidden"
                             }
                           ],
+                          "styles": {
+                            "order": 3
+                          },
                           "id": "n_efff0d99",
                           "ref": "skills.card.main"
                         },
@@ -5476,6 +5484,9 @@
                               "ref": "panel.hidden"
                             }
                           ],
+                          "styles": {
+                            "order": 1
+                          },
                           "id": "n_ecff08e0",
                           "ref": "skills.card.main"
                         },

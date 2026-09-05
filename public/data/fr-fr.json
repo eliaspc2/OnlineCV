@@ -1,25 +1,25 @@
 {
   "lang": "fr-FR",
   "globals": {
-    "meta.description": "CV numérique d'André Câmara, Junior Python Developer avec une expérience des systèmes critiques et une formation en cybersécurité en cours.",
-    "meta.pwa.description": "CV numérique d'André Câmara, Junior Python Developer avec une expérience des systèmes critiques et une formation en cybersécurité en cours.",
+    "meta.description": "CV numérique d'André Câmara, Technicien Junior en Cybersécurité avec plus de 10 ans d'expérience en support IT et systèmes critiques.",
+    "meta.pwa.description": "CV numérique d'André Câmara, Technicien Junior en Cybersécurité avec plus de 10 ans d'expérience en support IT et systèmes critiques.",
     "meta.pwa.name": "André Câmara — CV",
     "meta.pwa.shortName": "CV André",
     "meta.title": "André Câmara — CV",
     "notes.aria": "Points forts de la section",
     "notes.contact.left": "Contact direct : disponibilité claire, réponse rapide et étape suivante concrète.",
-    "notes.contact.right": "Meilleur ajustement : poste de Junior Python Developer avec une vraie responsabilité d'ingénierie.",
+    "notes.contact.right": "Meilleur ajustement : postes junior en cybersécurité, SOC, opérations de sécurité ou sécurité des infrastructures.",
     "notes.experience.left": "Des systèmes réels avant le code : réseaux, support, automatisation et pression de disponibilité.",
     "notes.experience.right": "Le détail utile : un parcours formé par la responsabilité, pas seulement par la formation.",
     "notes.hero.left": "Signal de profil : maturité technique issue d'infrastructures et de systèmes durables.",
-    "notes.hero.right": "Angle d'opportunité : développement Python avec maturité systèmes et sécurité en progression.",
+    "notes.hero.right": "Angle d'opportunité : formation en cybersécurité soutenue par une maturité systèmes, l'automatisation et la discipline opérationnelle.",
     "notes.mindset.left": "Style de travail : stable, communicatif, ancré dans la famille et orienté processus.",
     "notes.mindset.right": "Le côté humain explique le côté technique : calme sous pression opérationnelle.",
-    "notes.now.left": "Priorité actuelle : poste de Junior Python Developer avec contribution pratique immédiate.",
-    "notes.now.right": "Disponible pour des équipes qui valorisent maintenance, automatisation et fiabilité.",
+    "notes.now.left": "Priorité actuelle : poste débutant en cybersécurité avec contribution pratique immédiate.",
+    "notes.now.right": "Disponible pour des équipes qui valorisent sécurité, résilience, automatisation et continuité opérationnelle.",
     "notes.skills.left": "Les compétences sont montrées comme des outils utiles, pas comme des mots décoratifs.",
-    "notes.skills.right": "Le motif est clair : backend, systèmes, automatisation et conscience sécurité.",
-    "notes.summary.left": "Point central : maturité opérationnelle dans un parcours junior de développement Python.",
+    "notes.skills.right": "Le motif est clair : systèmes, réseaux, automatisation, supervision de sécurité et analyse des risques.",
+    "notes.summary.left": "Point central : maturité opérationnelle appliquée à un parcours junior en cybersécurité.",
     "notes.summary.right": "Le différenciateur est la continuité : garder les systèmes existants compréhensibles et fonctionnels.",
     "ui.viewer.title": "Document",
     "ui.viewer.download": "Télécharger",
@@ -91,19 +91,19 @@
     {
       "ref": "obj.nav.desktop.experience",
       "strings": {
-        "text": "Fondation"
+        "text": "Expérience"
       }
     },
     {
       "ref": "obj.nav.desktop.skills",
       "strings": {
-        "text": "Ingénierie"
+        "text": "Cybersécurité"
       }
     },
     {
       "ref": "obj.nav.desktop.mindset",
       "strings": {
-        "text": "Mentalité"
+        "text": "Profil"
       }
     },
     {
@@ -115,7 +115,7 @@
     {
       "ref": "obj.nav.desktop.now",
       "strings": {
-        "text": "Maintenant"
+        "text": "Opportunités"
       }
     },
     {
@@ -173,19 +173,19 @@
     {
       "ref": "obj.nav.mobile.experience",
       "strings": {
-        "text": "Fondation"
+        "text": "Expérience"
       }
     },
     {
       "ref": "obj.nav.mobile.skills",
       "strings": {
-        "text": "Ingénierie"
+        "text": "Cybersécurité"
       }
     },
     {
       "ref": "obj.nav.mobile.mindset",
       "strings": {
-        "text": "Mentalité"
+        "text": "Profil"
       }
     },
     {
@@ -197,7 +197,7 @@
     {
       "ref": "obj.nav.mobile.now",
       "strings": {
-        "text": "Maintenant"
+        "text": "Opportunités"
       }
     },
     {
@@ -263,7 +263,7 @@
     {
       "ref": "obj.n_a2ac0e34",
       "strings": {
-        "text": "Ingénierie logicielle orientée vers la stabilité, l'automatisation et les systèmes critiques."
+        "text": "Cybersécurité fondée sur le support IT, les systèmes critiques, l'automatisation et la continuité opérationnelle."
       }
     },
     {
@@ -337,7 +337,7 @@
     {
       "ref": "obj.footer.quick.experience",
       "strings": {
-        "text": "Fondation"
+        "text": "Expérience"
       }
     },
     {
@@ -347,7 +347,7 @@
     {
       "ref": "obj.footer.quick.skills",
       "strings": {
-        "text": "Ingénierie"
+        "text": "Cybersécurité"
       }
     },
     {
@@ -357,7 +357,7 @@
     {
       "ref": "obj.footer.quick.mindset",
       "strings": {
-        "text": "Mentalité"
+        "text": "Profil"
       }
     },
     {
@@ -367,7 +367,7 @@
     {
       "ref": "obj.footer.quick.now",
       "strings": {
-        "text": "Maintenant"
+        "text": "Opportunités"
       }
     },
     {
@@ -609,7 +609,7 @@
     {
       "ref": "obj.n_7fd47b4c",
       "strings": {
-        "text": "Junior Python Developer"
+        "text": "Technicien Junior en Cybersécurité"
       }
     },
     {
@@ -619,7 +619,7 @@
     {
       "ref": "obj.n_e5a277a0",
       "strings": {
-        "text": "Python, automatisation et systèmes critiques, avec une formation en cybersécurité en cours."
+        "text": "Disponible pour des postes junior en cybersécurité. Plus de 10 ans en support IT et systèmes critiques, avec une formation de niveau 5 en cybersécurité (en cours)."
       }
     },
     {
@@ -795,13 +795,13 @@
     {
       "ref": "obj.n_3190b0eb",
       "strings": {
-        "text": "Junior Python"
+        "text": "Cybersécurité"
       }
     },
     {
       "ref": "obj.n_7f4a91c2",
       "strings": {
-        "text": "Developer"
+        "text": "Technicien Junior"
       }
     },
     {
@@ -847,7 +847,7 @@
     {
       "ref": "obj.n_4b47a0b0",
       "strings": {
-        "text": "Fondations techniques"
+        "text": "Expérience opérationnelle"
       }
     },
     {
@@ -857,13 +857,13 @@
     {
       "ref": "obj.n_0c7c7840",
       "strings": {
-        "text": "Deux décennies d'évolution. Des infrastructures critiques à "
+        "text": "Un parcours construit dans le support IT, les infrastructures critiques et la "
       }
     },
     {
       "ref": "obj.n_0d7c79d0",
       "strings": {
-        "text": "l'ingénierie logicielle"
+        "text": "cybersécurité"
       }
     },
     {
@@ -1047,7 +1047,7 @@
     {
       "ref": "obj.n_04a0cb80",
       "strings": {
-        "text": "J'applique cette discipline au logiciel : livraisons prévisibles, changements sûrs et fiabilité long terme."
+        "text": "J'applique cette discipline aux opérations de sécurité : changements contrôlés, traçabilité, résilience et réponse fiable."
       }
     },
     {
@@ -1231,7 +1231,7 @@
     {
       "ref": "obj.n_68453bfb",
       "strings": {
-        "text": "Cette mentalité de résilience se traduit par un logiciel qui dégrade proprement et reste maintenable."
+        "text": "Cette culture de la résilience soutient la préparation aux incidents, la reprise et la continuité opérationnelle."
       }
     },
     {
@@ -1415,7 +1415,7 @@
     {
       "ref": "obj.n_4ce41264",
       "strings": {
-        "text": "J'applique cette vision systémique pour construire un logiciel modulaire et scalable."
+        "text": "J'applique cette vision systémique à l'analyse des dépendances, des surfaces d'attaque et des contrôles de sécurité de l'infrastructure."
       }
     },
     {
@@ -1593,7 +1593,7 @@
     {
       "ref": "obj.n_88e372cf",
       "strings": {
-        "text": "Je traduis des besoins métiers complexes en code qui résout de vrais problèmes."
+        "text": "Je traduis les risques techniques en actions claires pour les utilisateurs, les opérations et les équipes de sécurité."
       }
     },
     {
@@ -1645,7 +1645,7 @@
     {
       "ref": "obj.n_5dc40aea",
       "strings": {
-        "text": "Ingénierie logicielle"
+        "text": "Cybersécurité et automatisation"
       }
     },
     {
@@ -1655,19 +1655,19 @@
     {
       "ref": "obj.n_ad7792a8",
       "strings": {
-        "text": "Focus sur Python et l'art de "
+        "text": "Sécurité fondée sur les systèmes, les réseaux et "
       }
     },
     {
       "ref": "obj.n_ae77943b",
       "strings": {
-        "text": "simplifier le complexe"
+        "text": "l'automatisation pratique"
       }
     },
     {
       "ref": "obj.n_5bc407c4",
       "strings": {
-        "text": "Pour moi, le code est un outil de stabilité. Indicateurs de maîtrise technique, révisés en continu à partir de la pratique réelle, de la formation formelle et de projets actifs."
+        "text": "Mon profil combine une formation de niveau 5 en cybersécurité et une expérience réelle des systèmes, du support, des réseaux, de l'automatisation et de la continuité opérationnelle."
       }
     },
     {
@@ -2321,7 +2321,7 @@
     {
       "ref": "obj.n_0f06a60c",
       "strings": {
-        "text": "FIN : JUILLET 2026"
+        "text": "TERMINÉ : AOÛT 2026"
       }
     },
     {
@@ -2339,7 +2339,7 @@
     {
       "ref": "obj.n_68e6486b",
       "strings": {
-        "text": "Stage : juillet 2026"
+        "text": "Stage terminé : juillet à août 2026 (210h)"
       }
     },
     {
@@ -2425,7 +2425,7 @@
     {
       "ref": "obj.n_5e754bc8",
       "strings": {
-        "text": "Consolidation formelle de bases déjà utilisées en contexte réel. Niveau EQF 4. Inclut un stage (FCT) de 210h."
+        "text": "Formation de niveau EQF 4 terminée, consolidant des bases déjà appliquées en contexte réel et comprenant un stage professionnel (FCT) de 210h."
       }
     },
     {
@@ -4477,13 +4477,13 @@
     {
       "ref": "obj.n_368d4e4c",
       "strings": {
-        "text": "Ingénierie logicielle | Bragança, Portugal"
+        "text": "Cybersécurité | Bragança, Portugal"
       }
     },
     {
       "ref": "obj.n_a7269434",
       "strings": {
-        "text": "Je travaille avec la technologie depuis la fin des années 90, avec une base solide en systèmes critiques, automatisation et infrastructures 24/7. Je suis revenu au développement logiciel avec un focus sur la continuité, la prévisibilité et la qualité technique."
+        "text": "J'apporte plus de dix ans d'expérience en support IT et systèmes critiques. Je me spécialise désormais en cybersécurité, en appliquant discipline opérationnelle, automatisation et connaissance des systèmes à la sécurité, aux risques et à la résilience."
       }
     },
     {
@@ -4527,7 +4527,7 @@
     {
       "ref": "obj.n_72cd9d68",
       "strings": {
-        "text": "Python",
+        "text": "Cybersécurité",
         "attrs": {
           "title": "Avancé"
         }
@@ -4730,7 +4730,7 @@
     {
       "ref": "obj.n_e67b8148",
       "strings": {
-        "text": "EFA – Programmeur informatique (Niveau 4, 1 416h, fin en juillet 2026)"
+        "text": "EFA – Programmeur informatique (Niveau 4, 1 416h, terminé en août 2026)"
       }
     },
     {
@@ -4864,7 +4864,7 @@
     {
       "ref": "obj.n_142bf10b",
       "strings": {
-        "text": "1 686h de formation intensive en développement logiciel"
+        "text": "1 510h de spécialisation de niveau 5 en cybersécurité"
       }
     },
     {
@@ -4968,7 +4968,7 @@
     {
       "ref": "obj.n_241fb9f8",
       "strings": {
-        "text": "L'état d'esprit construit dans des environnements critiques s'applique maintenant au développement logiciel."
+        "text": "L'état d'esprit construit dans des environnements critiques s'applique maintenant à la sécurité, à la gestion des risques et à la résilience opérationnelle."
       }
     },
     {
@@ -5402,7 +5402,7 @@
     {
       "ref": "obj.n_de9d9ea8",
       "strings": {
-        "text": "Junior Python Developer"
+        "text": "Technicien Junior en Cybersécurité"
       }
     },
     {
@@ -5416,13 +5416,13 @@
     {
       "ref": "obj.n_292678e0",
       "strings": {
-        "text": "Python + Cybersécurité"
+        "text": "Sécurité + Opérations IT"
       }
     },
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Je recherche un poste de Junior Python Developer, alliant programmation et automatisation à mon expérience des systèmes critiques et à ma formation actuelle en cybersécurité."
+        "text": "Je recherche un poste junior en cybersécurité, alliant formation de niveau 5 et expérience en support IT, systèmes critiques, réseaux et automatisation."
       }
     },
     {
@@ -5440,7 +5440,7 @@
     {
       "ref": "obj.n_ac524574",
       "strings": {
-        "text": "Compétences techniques"
+        "text": "Compétences en cybersécurité"
       }
     },
     {
@@ -5454,13 +5454,13 @@
     {
       "ref": "obj.n_ea7c5d8c",
       "strings": {
-        "text": "Python"
+        "text": "Cybersécurité"
       }
     },
     {
       "ref": "obj.n_eb7c5f1f",
       "strings": {
-        "text": " (Avancé)"
+        "text": " (CET Niveau 5)"
       }
     },
     {
@@ -5470,13 +5470,13 @@
     {
       "ref": "obj.n_4771c8da",
       "strings": {
-        "text": "C/C++"
+        "text": "Sécurité des réseaux"
       }
     },
     {
       "ref": "obj.n_4871ca6d",
       "strings": {
-        "text": " (Intermédiaire)"
+        "text": " (En formation)"
       }
     },
     {
@@ -5486,13 +5486,13 @@
     {
       "ref": "obj.n_50e736f8",
       "strings": {
-        "text": "C#"
+        "text": "Réponse aux incidents"
       }
     },
     {
       "ref": "obj.n_51e7388c",
       "strings": {
-        "text": " (Intermédiaire)"
+        "text": " (En formation)"
       }
     },
     {
@@ -5502,13 +5502,13 @@
     {
       "ref": "obj.n_e8e03950",
       "strings": {
-        "text": "Java"
+        "text": "SIEM et logs"
       }
     },
     {
       "ref": "obj.n_e9e03ae0",
       "strings": {
-        "text": " (Intermédiaire)"
+        "text": " (En formation)"
       }
     },
     {
@@ -5518,13 +5518,13 @@
     {
       "ref": "obj.n_be137184",
       "strings": {
-        "text": "SQL"
+        "text": "PowerShell"
       }
     },
     {
       "ref": "obj.n_bf137318",
       "strings": {
-        "text": " (Avancé)"
+        "text": " (Pratique)"
       }
     },
     {
@@ -5556,7 +5556,7 @@
     {
       "ref": "obj.n_638fe72c",
       "strings": {
-        "text": "Rejoindre une équipe comme Junior Python Developer, avec un focus backend, automatisation et maintenance logicielle."
+        "text": "Rejoindre une équipe cybersécurité ou SOC et contribuer à la supervision, la réponse aux incidents, au hardening, à la réduction des risques et à l'automatisation de la sécurité."
       }
     },
     {
@@ -5874,7 +5874,7 @@
     {
       "ref": "obj.n_e8c6db80",
       "strings": {
-        "text": "Junior Python Developer"
+        "text": "Technicien Junior en Cybersécurité"
       }
     },
     {
@@ -5990,7 +5990,7 @@
     {
       "ref": "obj.n_a379f362",
       "strings": {
-        "text": "Disponible pour rejoindre des équipes où Python, fiabilité et sécurité font la différence."
+        "text": "Disponible pour des équipes où sécurité, fiabilité et résilience opérationnelle font la différence."
       }
     },
     {
