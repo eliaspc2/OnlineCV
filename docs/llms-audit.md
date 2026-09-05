@@ -4,6 +4,8 @@ Data da última revisão incremental: 2026-09-05
 
 Revisão estética: contraste do texto secundário, navegação e indicadores em mobile, densidade da lista de linguagens e espaço dos ícones nos recursos. Conteúdo, documentos e destinos dos links preservados; `public/llms.txt` relido e continua factual para estas alterações de apresentação.
 
+O cartão de Ciência de Dados passou a disponibilizar também o link público da entidade formadora Tecnisign (`https://tecnisign.pt/`), seguindo o padrão do EFA. `llms.txt` atualizado. Versão `2026-09-05.10`, cache `json-site-v56`.
+
 Removidos estilos substituídos e o atributo de contador sem consumidores. Retirada decoração que provocava largura de 384 px num viewport de 320 px. Validação em 320, 390, 768 e 1440 px nas quatro línguas sem overflow horizontal; menu, acordeão CET, visualizador de CV e dock verificados. Preferência de movimento reduzido corrigida para abranger as pulsações da dock.
 
 Correção dos contadores de Resumo e Oportunidades: substituídas as 1.686h de programação por 1.510h do CET de Cibersegurança, nas quatro línguas. As 1.510h representam a duração completa do CET, não horas já frequentadas. O destaque do Resumo explicita a transição para Cibersegurança, com formação em programação como base complementar. O botão do programa no Resumo abre agora o referencial do CET.

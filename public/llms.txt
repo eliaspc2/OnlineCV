@@ -28,6 +28,7 @@ Formação e certificações documentadas:
 - Certificado do EFA pendente, segundo o titular em 5 de setembro de 2026. A pendência documental não altera o estado de conclusão declarado do curso.
 
 - Gestão de Informação e Ciência de Dados, Tecnisign, e-learning: iniciado em setembro de 2026 e com conclusão prevista em outubro de 2027, segundo o titular. O site apresenta 8 de setembro de 2026 como data de início. As 30 UFCD da brochura somam 1.000 horas. O programa inclui Python e programação avançada, limpeza e transformação de dados, visualização, modelos analíticos em Python, SQL, armazenamento, ingestão e modelação de dados, estatística, governança, proteção de dados e projetos de business intelligence e análise de dados.
+  - A ficha de Ciência de Dados disponibiliza o conteúdo programático e um link para a entidade formadora Tecnisign: https://tecnisign.pt/.
 
 - 12.º ano / ensino secundário concluído em 2025.
 - Programming MOOC 2025 da Universidade de Helsínquia: Introduction to Programming e Advanced Course in Programming, cerca de 135 horas e 5 ECTS indicados para cada curso; conclusão declarada em 6 de setembro e 21 de outubro de 2025, respetivamente.

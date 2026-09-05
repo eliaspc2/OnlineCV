@@ -6796,6 +6796,12 @@
       }
     },
     {
+      "ref": "obj.data_provider_label",
+      "strings": {
+        "text": "Entidade formadora"
+      }
+    },
+    {
       "ref": "obj.data_course_20",
       "strings": {
         "text": "Formação especializada com início a 8 de setembro de 2026 e conclusão prevista para outubro de 2027. As 30 UFCD do programa somam 1.000 horas."

@@ -6796,6 +6796,12 @@
       }
     },
     {
+      "ref": "obj.data_provider_label",
+      "strings": {
+        "text": "Entidad formadora"
+      }
+    },
+    {
       "ref": "obj.data_course_20",
       "strings": {
         "text": "Formación especializada con inicio el 8 de septiembre de 2026 y finalización prevista para octubre de 2027. Las 30 unidades del programa suman 1.000 horas."

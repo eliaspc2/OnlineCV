@@ -6796,6 +6796,12 @@
       }
     },
     {
+      "ref": "obj.data_provider_label",
+      "strings": {
+        "text": "Training provider"
+      }
+    },
+    {
       "ref": "obj.data_course_20",
       "strings": {
         "text": "Specialised training starting on 8 September 2026, with completion expected in October 2027. The 30 training units in the syllabus total 1,000 hours."
