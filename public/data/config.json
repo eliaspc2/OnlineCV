@@ -1173,26 +1173,6 @@
       "classKey": "visual.hero.absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f",
       "i18nKey": "objdef.auto.singleton.div.visual_hero_absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f"
     },
-    "auto.singleton.div.visual_hero_absolute_inset_0_overflow_hidden": {
-      "tag": "div",
-      "classKey": "visual.hero.absolute_inset_0_overflow_hidden",
-      "i18nKey": "objdef.auto.singleton.div.visual_hero_absolute_inset_0_overflow_hidden"
-    },
-    "auto.singleton.div.visual_shared_no_motion_absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_ro": {
-      "tag": "div",
-      "classKey": "visual.shared.no_motion_absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_ro",
-      "i18nKey": "objdef.auto.singleton.div.visual_shared_no_motion_absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_ro"
-    },
-    "auto.singleton.div.visual_shared_no_motion_absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6": {
-      "tag": "div",
-      "classKey": "visual.shared.no_motion_absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6",
-      "i18nKey": "objdef.auto.singleton.div.visual_shared_no_motion_absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6"
-    },
-    "auto.singleton.div.visual_hero_absolute_top_1_2_left_1_2_translate_x_1_2_translate_y": {
-      "tag": "div",
-      "classKey": "visual.hero.absolute_top_1_2_left_1_2_translate_x_1_2_translate_y",
-      "i18nKey": "objdef.auto.singleton.div.visual_hero_absolute_top_1_2_left_1_2_translate_x_1_2_translate_y"
-    },
     "auto.singleton.div.visual_hero_absolute_inset_0_opacity_0_03": {
       "tag": "div",
       "classKey": "visual.hero.absolute_inset_0_opacity_0_03",
@@ -1352,16 +1332,6 @@
       "tag": "div",
       "classKey": "visual.skills.absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f_2",
       "i18nKey": "objdef.auto.singleton.div.visual_skills_absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f_2"
-    },
-    "auto.singleton.div.visual_skills_absolute_top_20_left_10_w_64_h_64_bg_3b82f6_5_rounded": {
-      "tag": "div",
-      "classKey": "visual.skills.absolute_top_20_left_10_w_64_h_64_bg_3b82f6_5_rounded",
-      "i18nKey": "objdef.auto.singleton.div.visual_skills_absolute_top_20_left_10_w_64_h_64_bg_3b82f6_5_rounded"
-    },
-    "auto.singleton.div.visual_skills_absolute_bottom_20_right_10_w_80_h_80_bg_3b82f6_5_roun": {
-      "tag": "div",
-      "classKey": "visual.skills.absolute_bottom_20_right_10_w_80_h_80_bg_3b82f6_5_roun",
-      "i18nKey": "objdef.auto.singleton.div.visual_skills_absolute_bottom_20_right_10_w_80_h_80_bg_3b82f6_5_roun"
     },
     "auto.singleton.div.visual_skills_p_6_rounded_2xl_bg_gradient_to_r_from_0f172a_to_1e293b": {
       "tag": "div",
@@ -1558,11 +1528,6 @@
       "classKey": "visual.summary.absolute_inset_0_bg_gradient_to_t_from_eff6ff_50_via_f",
       "i18nKey": "objdef.auto.singleton.div.visual_summary_absolute_inset_0_bg_gradient_to_t_from_eff6ff_50_via_f"
     },
-    "auto.singleton.div.visual_summary_absolute_bottom_0_left_0_w_96_h_96_bg_3b82f6_5_rounded": {
-      "tag": "div",
-      "classKey": "visual.summary.absolute_bottom_0_left_0_w_96_h_96_bg_3b82f6_5_rounded",
-      "i18nKey": "objdef.auto.singleton.div.visual_summary_absolute_bottom_0_left_0_w_96_h_96_bg_3b82f6_5_rounded"
-    },
     "auto.singleton.div.visual_summary_grid_lg_grid_cols_2_gap_12_items_start_mb_16": {
       "tag": "div",
       "classKey": "visual.summary.grid_lg_grid_cols_2_gap_12_items_start_mb_16",
@@ -1652,11 +1617,6 @@
       "tag": "div",
       "classKey": "visual.now.absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_eff",
       "i18nKey": "objdef.auto.singleton.div.visual_now_absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_eff"
-    },
-    "auto.singleton.div.visual_now_absolute_top_20_right_10_w_96_h_96_bg_3b82f6_5_rounded": {
-      "tag": "div",
-      "classKey": "visual.now.absolute_top_20_right_10_w_96_h_96_bg_3b82f6_5_rounded",
-      "i18nKey": "objdef.auto.singleton.div.visual_now_absolute_top_20_right_10_w_96_h_96_bg_3b82f6_5_rounded"
     },
     "auto.singleton.div.visual_now_grid_lg_grid_cols_2_gap_12_items_start": {
       "tag": "div",
@@ -2475,27 +2435,6 @@
                 {
                   "id": "n_5237fc74",
                   "ref": "auto.singleton.div.visual_hero_absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f"
-                },
-                {
-                  "children": [
-                    {
-                      "id": "n_8a941210",
-                      "ref": "auto.singleton.div.visual_shared_no_motion_absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_ro"
-                    },
-                    {
-                      "styles": {
-                        "animationDelay": "1s"
-                      },
-                      "id": "n_8b9413a4",
-                      "ref": "auto.singleton.div.visual_shared_no_motion_absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6"
-                    },
-                    {
-                      "id": "n_8c941538",
-                      "ref": "auto.singleton.div.visual_hero_absolute_top_1_2_left_1_2_translate_x_1_2_translate_y"
-                    }
-                  ],
-                  "id": "n_5337fe08",
-                  "ref": "auto.singleton.div.visual_hero_absolute_inset_0_overflow_hidden"
                 },
                 {
                   "styles": {
@@ -3740,14 +3679,6 @@
                 {
                   "id": "n_5e6dace8",
                   "ref": "auto.singleton.div.visual_skills_absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f_2"
-                },
-                {
-                  "id": "n_5f6dae7c",
-                  "ref": "auto.singleton.div.visual_skills_absolute_top_20_left_10_w_64_h_64_bg_3b82f6_5_rounded"
-                },
-                {
-                  "id": "n_606db010",
-                  "ref": "auto.singleton.div.visual_skills_absolute_bottom_20_right_10_w_80_h_80_bg_3b82f6_5_roun"
                 },
                 {
                   "styles": {
@@ -7671,10 +7602,6 @@
                   "ref": "auto.singleton.div.visual_summary_absolute_inset_0_bg_gradient_to_t_from_eff6ff_50_via_f"
                 },
                 {
-                  "id": "n_060e84b0",
-                  "ref": "auto.singleton.div.visual_summary_absolute_bottom_0_left_0_w_96_h_96_bg_3b82f6_5_rounded"
-                },
-                {
                   "styles": {
                     "paddingLeft": "30px",
                     "paddingRight": "40px"
@@ -8663,7 +8590,6 @@
                                   "children": [
                                     {
                                       "id": "n_7363d526",
-                                      "attrs": {"data-training-hours": "true"},
                                       "ref": "summary.metric.value"
                                     },
                                     {
@@ -8721,10 +8647,6 @@
                 {
                   "id": "n_095189c0",
                   "ref": "auto.singleton.div.visual_now_absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_eff"
-                },
-                {
-                  "id": "n_0a518b54",
-                  "ref": "auto.singleton.div.visual_now_absolute_top_20_right_10_w_96_h_96_bg_3b82f6_5_rounded"
                 },
                 {
                   "styles": {
@@ -9146,7 +9068,16 @@
                                     {
                                       "id": "now_data_icon_wrap",
                                       "ref": "shared.icon.box",
-                                      "children": [{"id": "now_data_icon", "ref": "icon.md", "attrs": {"src": "assets/images/icons/download.svg", "alt": ""}}]
+                                      "children": [
+                                        {
+                                          "id": "now_data_icon",
+                                          "ref": "icon.md",
+                                          "attrs": {
+                                            "src": "assets/images/icons/download.svg",
+                                            "alt": ""
+                                          }
+                                        }
+                                      ]
                                     },
                                     {
                                       "id": "now_data_text",

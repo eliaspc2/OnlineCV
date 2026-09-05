@@ -551,22 +551,6 @@
       "strings": {}
     },
     {
-      "ref": "obj.n_5337fe08",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_8a941210",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_8b9413a4",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_8c941538",
-      "strings": {}
-    },
-    {
       "ref": "obj.n_5437ff98",
       "strings": {}
     },
@@ -1624,14 +1608,6 @@
     },
     {
       "ref": "obj.n_5e6dace8",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_5f6dae7c",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_606db010",
       "strings": {}
     },
     {
@@ -4407,10 +4383,6 @@
       "strings": {}
     },
     {
-      "ref": "obj.n_060e84b0",
-      "strings": {}
-    },
-    {
       "ref": "obj.n_070e8640",
       "strings": {}
     },
@@ -5313,10 +5285,6 @@
     },
     {
       "ref": "obj.n_095189c0",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_0a518b54",
       "strings": {}
     },
     {
@@ -6781,15 +6749,21 @@
     },
     {
       "ref": "obj.efa_certificate_pending",
-      "strings": {"text": "Certificado pendiente"}
+      "strings": {
+        "text": "Certificado pendiente"
+      }
     },
     {
       "ref": "obj.now_data_title",
-      "strings": {"text": "Contenido del Programa (Ciencia de Datos)"}
+      "strings": {
+        "text": "Contenido del Programa (Ciencia de Datos)"
+      }
     },
     {
       "ref": "obj.now_data_description",
-      "strings": {"text": "Gestión de Información y Ciencia de Datos · 1.000h"}
+      "strings": {
+        "text": "Gestión de Información y Ciencia de Datos · 1.000h"
+      }
     },
     {
       "ref": "obj.data_course_2",

@@ -35,8 +35,6 @@
         "absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#f8fafc] to-[#f1f5f9]",
         "absolute_inset_0_m_8_rounded_full_border_border_3b82f6": "absolute inset-0 -m-8 rounded-full border border-[#3b82f6]/10",
         "absolute_inset_0_opacity_0_03": "absolute inset-0 opacity-[0.03]",
-        "absolute_inset_0_overflow_hidden": "absolute inset-0 overflow-hidden",
-        "absolute_top_1_2_left_1_2_translate_x_1_2_translate_y": "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/5 rounded-full blur-3xl",
         "flex_items_center_gap_2_text_64748b": "inline-contact-link flex items-center gap-2 text-[#64748b]",
         "flex_items_center_gap_2_text_64748b_hover_text_3b82f6": "inline-contact-link flex items-center gap-2 text-[#64748b]",
         "grid_lg_grid_cols_2_gap_12_items_center": "grid lg:grid-cols-2 gap-12 items-center",
@@ -86,9 +84,7 @@
         "w_4_h_4_rounded_full_border_4_z_10_bg_white_border_3b8": "w-4 h-4 rounded-full border-4 z-10 bg-white border-[#3b82f6]"
       },
       "skills": {
-        "absolute_bottom_20_right_10_w_80_h_80_bg_3b82f6_5_roun": "absolute bottom-20 right-10 w-80 h-80 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_f8f_2": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#f8fafc] to-[#fcfcfd]",
-        "absolute_top_20_left_10_w_64_h_64_bg_3b82f6_5_rounded": "absolute top-20 left-10 w-64 h-64 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "card_hover_px_4_py_2_bg_white_rounded_lg_border_border": "card-hover px-4 py-2 bg-white rounded-lg border border-[#e2e8f0] text-sm font-medium text-[#64748b] flex items-center gap-2 transition-all duration-300",
         "card_hover_px_4_py_2_bg_white_rounded_lg_border_border_2": "card-hover px-4 py-2 bg-white rounded-lg border border-green-200 text-sm font-medium text-green-700 flex items-center gap-2 transition-all duration-300",
         "card_hover_px_4_py_2_bg_white_rounded_lg_border_border_3": "card-hover px-4 py-2 bg-white rounded-lg border border-[#bfdbfe] text-sm font-medium text-[#3b82f6] flex items-center gap-2 transition-all duration-300",
@@ -179,7 +175,6 @@
         "w_6_h_6_text_white": "w-6 h-6 text-white"
       },
       "summary": {
-        "absolute_bottom_0_left_0_w_96_h_96_bg_3b82f6_5_rounded": "absolute bottom-0 left-0 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "absolute_inset_0_bg_gradient_to_t_from_0f172a_60_to_tr": "absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 to-transparent",
         "absolute_inset_0_bg_gradient_to_t_from_eff6ff_50_via_f": "absolute inset-0 bg-gradient-to-t from-[#eff6ff]/50 via-[#f8fafc] to-[#fcfcfd]",
         "card_hover_rounded_xl_bg_white_border_border_e2e8f0_ov": "card-hover rounded-xl bg-white border border-[#e2e8f0] overflow-hidden",
@@ -214,7 +209,6 @@
       "now": {
         "absolute_bottom_1_right_1_w_6_h_6_bg_green_500_rounded": "absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center",
         "absolute_inset_0_bg_gradient_to_br_from_fcfcfd_via_eff": "absolute inset-0 bg-gradient-to-br from-[#fcfcfd] via-[#eff6ff] to-[#fcfcfd]",
-        "absolute_top_20_right_10_w_96_h_96_bg_3b82f6_5_rounded": "absolute top-20 right-10 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "flex_items_center_gap_2_mb_2": "flex items-center gap-2 mb-2",
         "flex_items_center_gap_2_mt_1": "flex items-center gap-2 mt-1",
         "flex_items_center_gap_4_mb_6": "flex items-center gap-4 mb-6",
@@ -332,8 +326,6 @@
         "w_8_h_8": "w-8 h-8",
         "no_motion_bg_white_rounded_2xl_p_8_text_center_shadow_2xl": "bg-white rounded-2xl p-8 text-center shadow-2xl",
         "no_motion_absolute_top_1_right_1_w_5_h_5_bg_blue_600_text": "absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white text-xs rounded-full items-center justify-center hidden",
-        "no_motion_absolute_top_20_left_10_w_72_h_72_bg_3b82f6_5_ro": "absolute top-20 left-10 w-72 h-72 bg-[#3b82f6]/5 rounded-full blur-3xl",
-        "no_motion_absolute_bottom_20_right_10_w_96_h_96_bg_3b82f6": "absolute bottom-20 right-10 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-3xl",
         "no_motion_absolute_inset_0_m_4_rounded_full_border_2_borde": "absolute inset-0 -m-4 rounded-full border-2 border-[#3b82f6]/20",
         "no_motion_w_3_h_3_bg_green_500_rounded_full": "w-3 h-3 bg-green-500 rounded-full",
         "no_motion_flex_items_center_gap_3_px_5_py_3_rounded_full_b": "flex items-center gap-3 px-5 py-3 rounded-full bg-white border border-[#e2e8f0]",
