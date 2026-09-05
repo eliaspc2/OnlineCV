@@ -6,6 +6,8 @@ Correção dos contadores de Resumo e Oportunidades: substituídas as 1.686h de 
 
 A legenda final é Formação em Cibersegurança, por pedido do titular. O contador refere-se ao percurso completo do CET em curso e exclui as formações complementares em programação e Ciência de Dados.
 
+Revisão final da narrativa: experiência BNP Paribas e CEPSA alinhada com os CVs; programação e Ciência de Dados permanecem formação complementar à transição. llms.txt revisto, sem novos factos a acrescentar após esta correção. Ajustado o tamanho do contador no Resumo em mobile para preservar o sufixo h.
+
 Validação desta correção: build aprovado e contador verificado no browser a 390 e 1600 px nas quatro línguas, sem texto fora do cartão nem erros de execução. Capturas em português inspecionadas nos dois tamanhos.
 
 Revisão global seguinte: sete secções percorridas nas quatro línguas a 390 e 1600 px, sem erros JavaScript; oito documentos locais responderam HTTP 200. O botão do programa no Resumo abre o referencial CET no visualizador e fecha com Escape. A revisão textual eliminou os contadores de 1.686h e a transição para Programação, reforçando suporte IT como experiência anterior e Cibersegurança como transição para uma primeira função júnior.
@@ -76,7 +78,7 @@ Imagens editoriais verificadas:
 
 ## Lacunas identificadas
 
-- A descrição pública de BNP Paribas refere sistemas bancários core e automação em milhares de servidores. Os CVs fornecidos descrevem suporte corporativo e aprendizagem de PowerShell sem comprovar essa escala. Estas afirmações precisam de confirmação pelo titular; não foram usadas para acrescentar experiência profissional em cibersegurança.
+- A descrição de BNP Paribas foi alinhada com suporte corporativo, scripts batch e aprendizagem de PowerShell, conforme os CVs. Removidas as afirmações não sustentadas sobre sistemas core e milhares de servidores. A descrição CEPSA foi alinhada com suporte remoto multinacional, sem atribuir trabalho em refinaria ou logística pesada. Os destaques de experiência refletem suporte IT como base da transição para Cibersegurança.
 
 - Certificado EFA pendente, confirmado pelo titular em 2026-09-05 e indicado no cartão nas quatro línguas; não confundir a emissão pendente com curso em curso.
 

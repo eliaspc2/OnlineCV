@@ -913,7 +913,7 @@
     {
       "ref": "obj.n_57404cb5",
       "strings": {
-        "text": "\"O auge da responsabilidade. Oito anos no coração financeiro onde a tolerância ao erro era zero.\""
+        "text": "Suporte IT no setor financeiro: diagnóstico, comunicação e continuidade do serviço."
       }
     },
     {
@@ -995,7 +995,7 @@
     {
       "ref": "obj.n_0c751258",
       "strings": {
-        "text": "Assegurei a operação contínua de sistemas bancários core num ambiente 24/7. Automatizei operações em PowerShell para padronizar e escalar a gestão em milhares de servidores."
+        "text": "Prestei suporte a utilizadores e sistemas corporativos no BNP Paribas, com gestão de pedidos e resolução de problemas. Desenvolvi scripts batch e iniciei a aprendizagem de PowerShell para automatizar tarefas de suporte."
       }
     },
     {
@@ -1015,7 +1015,7 @@
     {
       "ref": "obj.n_3fad47eb",
       "strings": {
-        "text": "Ambiente bancário 24/7. Zero tolerância a falhas."
+        "text": "Diagnosticar problemas, priorizar pedidos e escalar incidentes em ambiente corporativo."
       }
     },
     {
@@ -1179,7 +1179,7 @@
     {
       "ref": "obj.n_fe74ad68",
       "strings": {
-        "text": "Suporte de TI em ambiente industrial exigente, onde a indisponibilidade tinha impacto físico imediato. Redes, terminais e operações logísticas."
+        "text": "Prestei suporte IT remoto a utilizadores da CEPSA, num contexto multinacional, consolidando diagnóstico, comunicação e resolução de problemas."
       }
     },
     {
@@ -1199,7 +1199,7 @@
     {
       "ref": "obj.n_768b4379",
       "strings": {
-        "text": "Ambiente de refinaria e logística pesada. Pressão física por resolução rápida sob condições adversas."
+        "text": "Resolver problemas técnicos à distância e comunicar com utilizadores num contexto multinacional."
       }
     },
     {
@@ -4788,13 +4788,13 @@
     {
       "ref": "obj.n_84466ae8",
       "strings": {
-        "text": "10+ anos em sistemas críticos"
+        "text": "10+ anos em suporte IT"
       }
     },
     {
       "ref": "obj.n_85466c7b",
       "strings": {
-        "text": "Infraestrutura bancária 24/7 com tolerância zero a falhas"
+        "text": "Diagnóstico e resolução de problemas em ambientes corporativos"
       }
     },
     {
@@ -4828,7 +4828,7 @@
     {
       "ref": "obj.n_acd94320",
       "strings": {
-        "text": "BNP Paribas, CEPSA, Telefónica — ambientes onde a estabilidade era absoluta."
+        "text": "BNP Paribas, CEPSA e Telefónica: experiência em suporte IT, sistemas e virtualização."
       }
     },
     {

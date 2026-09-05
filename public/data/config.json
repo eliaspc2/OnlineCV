@@ -8663,6 +8663,7 @@
                                   "children": [
                                     {
                                       "id": "n_7363d526",
+                                      "attrs": {"data-training-hours": "true"},
                                       "ref": "summary.metric.value"
                                     },
                                     {

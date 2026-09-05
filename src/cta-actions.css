@@ -504,3 +504,12 @@ body.footer-dock-expanded #site-footer .footer-doc-links a:hover {
     justify-content: flex-start;
   }
 }
+@media (max-width: 639px) {
+  #summary div:has(> [data-training-hours]) {
+    padding-inline: 8px;
+    overflow-wrap: anywhere;
+  }
+  #summary [data-training-hours] {
+    font-size: 22px;
+  }
+}
