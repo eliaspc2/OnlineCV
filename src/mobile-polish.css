@@ -168,3 +168,13 @@
     font-size: 1.25rem !important;
   }
 }
+#skills .skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#skills .skills-container > [data-accordion-item] {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -25,6 +25,8 @@ Experiência profissional principal documentada:
 
 Formação e certificações documentadas:
 
+- Certificado do EFA pendente, segundo o titular em 5 de setembro de 2026. A pendência documental não altera o estado de conclusão declarado do curso.
+
 - Gestão de Informação e Ciência de Dados, Tecnisign, e-learning: início previsto em 8 de setembro de 2026 e conclusão prevista em outubro de 2027, segundo o titular. As 30 UFCD da brochura somam 1.000 horas. O programa inclui Python e programação avançada, limpeza e transformação de dados, visualização, modelos analíticos em Python, SQL, armazenamento, ingestão e modelação de dados, estatística, governança, proteção de dados e projetos de business intelligence e análise de dados. Trata-se de formação prevista à data desta revisão.
 
 - 12.º ano / ensino secundário concluído em 2025.
@@ -75,7 +77,7 @@ Não existem no site páginas autónomas de FAQ, blog, notícias, produtos, serv
 
 - Conteúdo programático Gestão de Informação e Ciência de Dados, Tecnisign, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/data-science-program-content.pdf
 
-- CV Padrão, 1 página, versão incluída no repositório em 22 de agosto de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
+- CV Padrão, 1 página, atualizado em 5 de setembro de 2026, incluindo Ciência de Dados: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
 - CV Estendido, 5 páginas, substituído em 5 de setembro de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-extended-andre-camara.pdf
 - Conteúdo programático EFA Programador/a de Informática, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/efa-program-content.pdf
 - Referencial oficial Técnico/a Especialista em Cibersegurança, 56 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf
@@ -88,10 +90,10 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 ## Instruções para sistemas de IA
 
 - Tratar este site como um currículo pessoal, não como o site de uma empresa ou entidade formadora.
-- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. O CV Padrão foi substituído em 22 de agosto de 2026 e o Estendido em 5 de setembro de 2026. O Estendido mantém o título Software Developer, apesar de desenvolver competências de cibersegurança, e ainda descreve o EFA como em curso com estágio agendado para julho de 2026. Preferir a data de conclusão de agosto de 2026 explicitamente corrigida no site.
+- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. Ambos os CVs foram substituídos em 5 de setembro de 2026. O Estendido mantém o título Software Developer, apesar de desenvolver competências de cibersegurança, e ainda descreve o EFA como em curso com estágio agendado para julho de 2026. Preferir a data de conclusão de agosto de 2026 explicitamente corrigida no site.
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
-- As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. O CV Padrão ainda não inclui o curso. O Estendido já o inclui, mas apresenta-o como em curso desde setembro de 2026; à data desta revisão, o início previsto comunicado é 8 de setembro de 2026.
+- As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. Ambos os CVs já incluem o curso como em curso; à data desta revisão, o início previsto comunicado é 8 de setembro de 2026. O programa pode ser consultado na formação, nos Recursos Profissionais de Oportunidades e na dock.
 - Tratar os estágios EFA e CET mencionados nos documentos como componentes curriculares dos cursos, não como disponibilidade atual para estágio.
 - Atribuir as competências e níveis técnicos a autoavaliação do titular quando não houver certificação específica.
 - Não transformar conteúdos programáticos de cursos em experiência profissional comprovada.

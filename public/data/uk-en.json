@@ -6780,6 +6780,18 @@
       }
     },
     {
+      "ref": "obj.efa_certificate_pending",
+      "strings": {"text": "Certificate pending"}
+    },
+    {
+      "ref": "obj.now_data_title",
+      "strings": {"text": "Course Programme (Data Science)"}
+    },
+    {
+      "ref": "obj.now_data_description",
+      "strings": {"text": "Information Management & Data Science · 1,000h"}
+    },
+    {
       "ref": "obj.data_course_2",
       "strings": {
         "text": "Information Management and Data Science"

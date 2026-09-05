@@ -6780,6 +6780,18 @@
       }
     },
     {
+      "ref": "obj.efa_certificate_pending",
+      "strings": {"text": "Certificat en attente"}
+    },
+    {
+      "ref": "obj.now_data_title",
+      "strings": {"text": "Programme (Science des données)"}
+    },
+    {
+      "ref": "obj.now_data_description",
+      "strings": {"text": "Gestion de l’information et science des données · 1 000h"}
+    },
+    {
       "ref": "obj.data_course_2",
       "strings": {
         "text": "Gestion de l’information et science des données"

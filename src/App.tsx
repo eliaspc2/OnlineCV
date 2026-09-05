@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-09-05.1';
+const APP_BUILD_VERSION = '2026-09-05.2';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const FOOTER_DOCUMENT_LINKS = [
@@ -454,7 +454,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v47'
+        serviceWorker: 'json-site-v48'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -894,6 +894,11 @@ export default function App() {
         if (upIcon) upIcon.classList.add('hidden');
       }
     };
+
+    document.querySelectorAll('[data-accordion-group="skills-categories"]').forEach((item) => {
+      const id = item.getAttribute('data-accordion-item');
+      if (id) setAccordionState(id, id === 'skills-cat-2');
+    });
 
     const toggleAccordionById = (panelId: string, contextEl?: HTMLElement) => {
       const item = (contextEl?.closest('[data-accordion-item]') as HTMLElement | null) || null;

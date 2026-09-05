@@ -6780,6 +6780,18 @@
       }
     },
     {
+      "ref": "obj.efa_certificate_pending",
+      "strings": {"text": "Certificado pendiente"}
+    },
+    {
+      "ref": "obj.now_data_title",
+      "strings": {"text": "Contenido del Programa (Ciencia de Datos)"}
+    },
+    {
+      "ref": "obj.now_data_description",
+      "strings": {"text": "Gestión de Información y Ciencia de Datos · 1.000h"}
+    },
+    {
       "ref": "obj.data_course_2",
       "strings": {
         "text": "Gestión de Información y Ciencia de Datos"

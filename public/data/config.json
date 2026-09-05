@@ -4548,6 +4548,14 @@
                                           ],
                                           "id": "n_cac2cb58",
                                           "ref": "auto.span.visual_skills_px_2_py_0_5_text_xs_font_medium_rounded_full_border_fl_3"
+                                        },
+                                        {
+                                          "id": "efa_certificate_badge",
+                                          "ref": "auto.span.visual_skills_px_2_py_0_5_text_xs_font_medium_rounded_full_border_fl_3",
+                                          "children": [
+                                            {"id": "efa_certificate_icon", "ref": "icon.sm", "attrs": {"src": "assets/images/icons/clock.svg", "alt": ""}},
+                                            {"id": "efa_certificate_pending", "ref": "common.span.plain"}
+                                          ]
                                         }
                                       ],
                                       "id": "n_463125c8",
@@ -9125,6 +9133,31 @@
                             },
                             {
                               "children": [
+                                {
+                                  "attrs": {
+                                    "href": "assets/docs/data-science-program-content.pdf",
+                                    "download": "data-science-program-content.pdf",
+                                    "data-open-inline": "true"
+                                  },
+                                  "id": "now_data_resource",
+                                  "ref": "now.resource.link",
+                                  "children": [
+                                    {
+                                      "id": "now_data_icon_wrap",
+                                      "ref": "shared.icon.box",
+                                      "children": [{"id": "now_data_icon", "ref": "icon.md", "attrs": {"src": "assets/images/icons/download.svg", "alt": ""}}]
+                                    },
+                                    {
+                                      "id": "now_data_text",
+                                      "ref": "common.flex.1",
+                                      "children": [
+                                        {"id": "now_data_title", "ref": "now.resource.title"},
+                                        {"id": "now_data_description", "ref": "text.sm.dim"}
+                                      ]
+                                    },
+                                    {"id": "now_data_external", "ref": "now.meta.icon", "attrs": {"src": "assets/images/icons/external-link.svg", "alt": ""}}
+                                  ]
+                                },
                                 {
                                   "attrs": {
                                     "href": "assets/docs/efa-program-content.pdf",
