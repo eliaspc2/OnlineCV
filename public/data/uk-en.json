@@ -5612,7 +5612,7 @@
     {
       "ref": "obj.n_bcdc387c",
       "strings": {
-        "text": "The ongoing CET strengthens secure development, risk analysis, networking, systems, and incident response practices."
+        "text": "The ongoing CET strengthens secure development, risk analysis, networking, systems, and incident response practices. Through the Data Science course, I aim to deepen my Python knowledge and gradually develop analytical skills useful for automation, software and cybersecurity."
       }
     },
     {
@@ -6777,6 +6777,78 @@
       "ref": "obj.n_2f75bb96",
       "strings": {
         "text": "Cross-functional collaboration"
+      }
+    },
+    {
+      "ref": "obj.data_course_2",
+      "strings": {
+        "text": "Information Management and Data Science"
+      }
+    },
+    {
+      "ref": "obj.data_course_4",
+      "strings": {
+        "text": "Starts: 08/09/2026"
+      }
+    },
+    {
+      "ref": "obj.data_course_7",
+      "strings": {
+        "text": "Expected completion: October 2027"
+      }
+    },
+    {
+      "ref": "obj.data_course_10",
+      "strings": {
+        "text": "Tecnisign · E-learning"
+      }
+    },
+    {
+      "ref": "obj.data_course_17",
+      "strings": {
+        "text": "Course syllabus"
+      }
+    },
+    {
+      "ref": "obj.data_course_20",
+      "strings": {
+        "text": "Specialised training starting on 8 September 2026, with completion expected in October 2027. The 30 training units in the syllabus total 1,000 hours."
+      }
+    },
+    {
+      "ref": "obj.data_course_21",
+      "strings": {
+        "text": "Planned syllabus"
+      }
+    },
+    {
+      "ref": "obj.data_course_22",
+      "strings": {
+        "text": "Python and advanced programming; data cleaning, transformation and visualisation in Python; analytical model fundamentals."
+      }
+    },
+    {
+      "ref": "obj.data_course_23",
+      "strings": {
+        "text": "SQL; data management, storage, ingestion and modelling; data governance and personal data protection."
+      }
+    },
+    {
+      "ref": "obj.data_course_24",
+      "strings": {
+        "text": "Mathematics, statistics, exploratory and advanced analysis, data storytelling, and business intelligence and data analysis projects."
+      }
+    },
+    {
+      "ref": "obj.data_course_25",
+      "strings": {
+        "text": "I chose this course to deepen my Python knowledge and learn to work more effectively with data. As the training progresses, I aim to apply these skills to software development, automation and cybersecurity, including log analysis and pattern identification. It is an ongoing investment in contributing more effectively to the projects I join."
+      }
+    },
+    {
+      "ref": "obj.data_course_31",
+      "strings": {
+        "text": "Information Management and Data Science (Tecnisign, 1,000h; September 2026 – October 2027)"
       }
     }
   ]

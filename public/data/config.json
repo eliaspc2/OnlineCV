@@ -5478,6 +5478,191 @@
                           ],
                           "id": "n_ecff08e0",
                           "ref": "skills.card.main"
+                        },
+                        {
+                          "id": "data_course_28",
+                          "ref": "skills.card.main",
+                          "children": [
+                            {
+                              "id": "data_course_15",
+                              "ref": "skills.card.button",
+                              "children": [
+                                {
+                                  "id": "data_course_1",
+                                  "ref": "skills.icon.wrap",
+                                  "children": [
+                                    {
+                                      "id": "data_course_0",
+                                      "ref": "skills.icon.main",
+                                      "attrs": {
+                                        "src": "assets/images/icons/database.svg",
+                                        "alt": ""
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "data_course_11",
+                                  "ref": "common.flex.1",
+                                  "children": [
+                                    {
+                                      "id": "data_course_9",
+                                      "ref": "auto.singleton.div.visual_skills_flex_items_center_gap_2_mb_1_flex_wrap",
+                                      "children": [
+                                        {
+                                          "id": "data_course_2",
+                                          "ref": "heading.xl.base"
+                                        },
+                                        {
+                                          "id": "data_course_5",
+                                          "ref": "auto.span.visual_skills_px_2_py_0_5_text_xs_font_medium_rounded_full_border_fl_3",
+                                          "children": [
+                                            {
+                                              "id": "data_course_3",
+                                              "ref": "icon.sm",
+                                              "attrs": {
+                                                "src": "assets/images/icons/calendar.svg",
+                                                "alt": ""
+                                              }
+                                            },
+                                            {
+                                              "id": "data_course_4",
+                                              "ref": "common.span.plain"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "data_course_8",
+                                          "ref": "auto.span.visual_skills_px_2_py_0_5_text_xs_font_medium_rounded_full_border_fl_3",
+                                          "children": [
+                                            {
+                                              "id": "data_course_6",
+                                              "ref": "icon.sm",
+                                              "attrs": {
+                                                "src": "assets/images/icons/calendar.svg",
+                                                "alt": ""
+                                              }
+                                            },
+                                            {
+                                              "id": "data_course_7",
+                                              "ref": "common.span.plain"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "data_course_10",
+                                      "ref": "text.base.muted"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "data_course_14",
+                                  "ref": "skills.row.header.top",
+                                  "children": [
+                                    {
+                                      "id": "data_course_12",
+                                      "ref": "icon.md.muted.hidden",
+                                      "attrs": {
+                                        "src": "assets/images/icons/chevron-up.svg",
+                                        "data-accordion-icon": "up",
+                                        "data-accordion-for": "skills-data-science",
+                                        "alt": ""
+                                      }
+                                    },
+                                    {
+                                      "id": "data_course_13",
+                                      "ref": "icon.md.muted",
+                                      "attrs": {
+                                        "src": "assets/images/icons/chevron-down.svg",
+                                        "data-accordion-icon": "down",
+                                        "data-accordion-for": "skills-data-science",
+                                        "alt": ""
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "attrs": {
+                                "type": "button",
+                                "data-accordion-toggle": "skills-data-science"
+                              }
+                            },
+                            {
+                              "id": "data_course_27",
+                              "ref": "panel.hidden",
+                              "children": [
+                                {
+                                  "id": "data_course_26",
+                                  "ref": "skills.panel.body",
+                                  "children": [
+                                    {
+                                      "id": "data_course_19",
+                                      "ref": "skills.tags.row",
+                                      "children": [
+                                        {
+                                          "id": "data_course_18",
+                                          "ref": "skills.tag.link",
+                                          "children": [
+                                            {
+                                              "id": "data_course_16",
+                                              "ref": "icon.sm",
+                                              "attrs": {
+                                                "src": "assets/images/icons/download.svg",
+                                                "alt": ""
+                                              }
+                                            },
+                                            {
+                                              "id": "data_course_17",
+                                              "ref": "common.span.plain"
+                                            }
+                                          ],
+                                          "attrs": {
+                                            "href": "assets/docs/data-science-program-content.pdf",
+                                            "download": "data-science-program-content.pdf",
+                                            "data-open-inline": "true"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "data_course_20",
+                                      "ref": "skills.text.mb4"
+                                    },
+                                    {
+                                      "id": "data_course_21",
+                                      "ref": "skills.h4.mb3"
+                                    },
+                                    {
+                                      "id": "data_course_22",
+                                      "ref": "skills.text.mb4"
+                                    },
+                                    {
+                                      "id": "data_course_23",
+                                      "ref": "skills.text.mb4"
+                                    },
+                                    {
+                                      "id": "data_course_24",
+                                      "ref": "skills.text.mb4"
+                                    },
+                                    {
+                                      "id": "data_course_25",
+                                      "ref": "text.sm.muted.p"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "attrs": {
+                                "data-accordion-panel": "skills-data-science",
+                                "data-accordion-max": "max-h-[2000px]"
+                              }
+                            }
+                          ],
+                          "attrs": {
+                            "data-accordion-item": "skills-data-science",
+                            "data-accordion-group": "skills-categories"
+                          }
                         }
                       ],
                       "id": "n_20f7f41e",
@@ -7762,6 +7947,24 @@
                                             }
                                           ],
                                           "id": "n_e1e6ff10",
+                                          "ref": "summary.list.item"
+                                        },
+                                        {
+                                          "children": [
+                                            {
+                                              "attrs": {
+                                                "src": "assets/images/icons/target.svg",
+                                                "alt": ""
+                                              },
+                                              "id": "data_course_30",
+                                              "ref": "summary.list.icon"
+                                            },
+                                            {
+                                              "id": "data_course_31",
+                                              "ref": "common.span.plain"
+                                            }
+                                          ],
+                                          "id": "data_course_29",
                                           "ref": "summary.list.item"
                                         }
                                       ],

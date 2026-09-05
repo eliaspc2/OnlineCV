@@ -1,18 +1,24 @@
 # Auditoria para o llms.txt
 
-Data da auditoria: 2026-08-14
+Data da última revisão incremental: 2026-09-05
+
+Esta revisão acrescenta o programa de Ciência de Dados, verifica a sua apresentação nas quatro línguas e atualiza o llms.txt. As observações sobre os restantes documentos provêm da auditoria anterior. O titular pediu expressamente que não se atribuísse nível 5 ao novo curso, pois a realização de estágio não está decidida.
+
+Validação incremental: build aprovado; browser headless a 320, 390 e 1920 px nas quatro línguas, sem erros de consola nem overflow no novo cartão; abertura/fecho do cartão e visualizador PDF verificados. O novo PDF responde HTTP 200 e coincide com o original. Aos 320 px subsiste overflow global de 384 px, reproduzido também com a configuração anterior, em decorações e contactos fora do novo curso.
 
 ## Páginas analisadas
 
 - `https://eliaspc2.github.io/OnlineCV/` — aplicação de página única publicada no GitHub Pages.
 - Secções navegáveis: `#hero`, `#experience`, `#skills`, `#mindset`, `#summary`, `#now` e `#contact`.
 - Âncora técnica adicional `#about`, sem conteúdo textual próprio.
-- Variantes linguísticas: português, espanhol, francês e inglês. Todas usam 1.288 referências de tradução e a mesma estrutura.
+- Variantes linguísticas: português, espanhol, francês e inglês, com a mesma estrutura e traduções do novo curso.
 - Manifesto PWA: `manifest.webmanifest`.
 - Não foram encontradas páginas autónomas de FAQ, blog, notícias, produtos, serviços, preços, contactos, documentos legais ou formulários.
 - `robots.txt`, `sitemap.xml` e `llms.txt` devolviam HTTP 404 antes desta alteração.
 
 ## Documentos analisados
+
+- `data-science-program-content.pdf`: 4 páginas, brochura Tecnisign criada em 2026-04-14; texto integral lido. Contém 30 UFCD, cuja soma é 1.000 horas, e metodologia e-learning com atividades assíncronas e sessões síncronas. Início em 2026-09-08 e fim previsto em outubro de 2027 foram comunicados pelo titular em 2026-09-05; não constam do PDF.
 
 - `cv-andre-camara.pdf`: 1 página, 372 palavras extraídas; metadados de criação de 2026-08-14.
 - `cv-extended-andre-camara.pdf`: 4 páginas, 1.097 palavras extraídas.
@@ -46,6 +52,8 @@ Imagens editoriais verificadas:
 
 ## Informação excluída e motivo
 
+- A motivação declarada pelo titular para Ciência de Dados foi incluída como objetivo de aprendizagem progressiva em Python, software, automação e cibersegurança. Análise de logs e identificação de padrões são aplicações pretendidas; não foram atribuídas como unidades curriculares da brochura ou resultados já demonstrados.
+
 - Data e local de nascimento presentes no CV estendido: dados pessoais desnecessários para compreender o site.
 - Estado civil e informação sobre o filho: conteúdo pessoal sem necessidade operacional para sistemas de IA.
 - Imagens pessoais e familiares: não são prova de competências, qualificações ou relações.
@@ -55,6 +63,9 @@ Imagens editoriais verificadas:
 - Anotações laterais editoriais: são comentários de apresentação e não fontes independentes.
 
 ## Lacunas identificadas
+
+- Os PDFs de CV ainda não incluem o novo curso de Ciência de Dados; a informação foi acrescentada ao currículo online e o programa ficou disponível na formação e na dock.
+- A brochura de Ciência de Dados não indica o calendário individual, nível de qualificação nem estágio; esses dois últimos atributos não foram atribuídos ao curso no site.
 
 - O CV Estendido ainda não foi reeditado depois do fim da campanha de estágio e mantém referências temporais antigas.
 - Alguns textos da página ainda apresentam o EFA apenas com `conclusão em julho de 2026`, enquanto o CV Padrão atualizado declara a formação concluída.
@@ -70,6 +81,8 @@ Imagens editoriais verificadas:
 
 ## Recomendações
 
+- Incluir Ciência de Dados na próxima revisão dos PDFs de CV e confirmar o estado efetivo do curso após o início previsto e a conclusão prevista.
+
 - Atualizar o CV Estendido para refletir o posicionamento atual como Junior Python Developer e remover formulações futuras já ultrapassadas.
 - Uniformizar na página o estado do EFA com o CV Padrão atualizado.
 - Distinguir `horas concluídas` de `horas do percurso em curso`.
@@ -77,10 +90,10 @@ Imagens editoriais verificadas:
 - Publicar um documento da entidade formadora que sustente a duração e o calendário específicos do CET.
 - Adicionar data de última atualização ao site e aos CVs.
 - Criar `robots.txt` e `sitemap.xml` com referência ao `llms.txt`.
-- Rever o `llms.txt` sempre que mudar a disponibilidade, terminar o EFA, começar o estágio ou avançar o CET.
+- Rever o `llms.txt` sempre que mudar a disponibilidade ou o estado das formações, incluindo o início de Ciência de Dados.
 - Considerar uma pequena secção de projetos verificáveis, com ligações diretas para código, demonstração e papel desempenhado.
 - Rever a necessidade de manter dados pessoais não profissionais no CV público.
 
 ## Grau de confiança global
 
-**Alto (0,91).** Todo o conteúdo do site e os sete documentos públicos foram lidos. A confiança não é máxima devido à diferença temporal entre alguns textos da página e o CV Padrão, ao CV Estendido ainda desatualizado, aos conflitos internos assinalados e à ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.
+**Alto, com reservas.** A auditoria anterior abrangeu o conteúdo do site e sete documentos públicos; esta revisão acrescentou a leitura integral do oitavo documento, o programa de Ciência de Dados, e verificou as sete secções e os oito links documentais no browser local. Subsistem diferenças temporais entre a página e o CV Padrão, o CV Estendido desatualizado, conflitos internos assinalados e ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.

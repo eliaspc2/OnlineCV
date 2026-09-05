@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-08-14.1';
+const APP_BUILD_VERSION = '2026-09-05.1';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const FOOTER_DOCUMENT_LINKS = [
@@ -42,6 +42,11 @@ const FOOTER_DOCUMENT_LINKS = [
     label: 'CET Cibersegurança',
     href: 'assets/docs/Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf',
     download: 'Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf'
+  },
+  {
+    label: 'Ciência de Dados',
+    href: 'assets/docs/data-science-program-content.pdf',
+    download: 'data-science-program-content.pdf'
   }
 ];
 
@@ -449,7 +454,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v46'
+        serviceWorker: 'json-site-v47'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));

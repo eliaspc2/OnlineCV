@@ -12,7 +12,7 @@
 - Preferência geográfica documentada: trabalho remoto em Portugal e alternativa híbrida na zona de Bragança.
 - Idiomas do site: português, espanhol, francês e inglês.
 - Idiomas profissionais declarados: português nativo; espanhol e inglês proficientes/fluentes; francês intermédio/funcional.
-- Última revisão factual deste ficheiro: 2026-08-14.
+- Última revisão factual deste ficheiro: 2026-09-05.
 
 Experiência profissional principal documentada:
 
@@ -24,6 +24,8 @@ Experiência profissional principal documentada:
 - O CV estendido documenta também funções anteriores em atendimento, turismo, hotelaria, vendas e marketing entre 2000 e 2012.
 
 Formação e certificações documentadas:
+
+- Gestão de Informação e Ciência de Dados, Tecnisign, e-learning: início previsto em 8 de setembro de 2026 e conclusão prevista em outubro de 2027, segundo o titular. As 30 UFCD da brochura somam 1.000 horas. O programa inclui Python e programação avançada, limpeza e transformação de dados, visualização, modelos analíticos em Python, SQL, armazenamento, ingestão e modelação de dados, estatística, governança, proteção de dados e projetos de business intelligence e análise de dados. Trata-se de formação prevista à data desta revisão.
 
 - 12.º ano / ensino secundário concluído em 2025.
 - Programming MOOC 2025 da Universidade de Helsínquia: Introduction to Programming e Advanced Course in Programming, cerca de 135 horas e 5 ECTS indicados para cada curso; conclusão declarada em 6 de setembro e 21 de outubro de 2025, respetivamente.
@@ -46,6 +48,7 @@ Competências declaradas no site e nos currículos:
 - Disponibiliza um CV condensado, um CV estendido, certificados e conteúdos programáticos de formação.
 - Fornece contactos diretos e ligações para os perfis públicos de GitHub e LinkedIn.
 - Documenta procura de trabalho como Junior Python Developer e apresenta a formação em cibersegurança como reforço para desenvolvimento seguro, análise de risco, redes, sistemas e resposta a incidentes.
+- O titular explica que escolheu Ciência de Dados para aprofundar Python e desenvolver progressivamente capacidades aplicáveis ao software, automação e cibersegurança, incluindo análise de logs e identificação de padrões. É uma motivação e aplicação futura pretendida, não uma declaração de competências já adquiridas nem uma garantia de resultados do curso.
 - Não apresenta produtos comerciais, serviços pagos, preços, garantias, contratos, catálogo comercial, loja ou formulário de contratação.
 
 ## Público-alvo
@@ -60,7 +63,7 @@ O site é uma aplicação de página única. As secções públicas são:
 
 - Início: https://eliaspc2.github.io/OnlineCV/#hero — identificação, resumo profissional, disponibilidade, contacto e acesso ao CV.
 - Fundação: https://eliaspc2.github.io/OnlineCV/#experience — experiência profissional e percurso desde 1999.
-- Engenharia: https://eliaspc2.github.io/OnlineCV/#skills — competências, tecnologias e formação em programação e cibersegurança.
+- Engenharia: https://eliaspc2.github.io/OnlineCV/#skills — competências, tecnologias e formação em programação, cibersegurança e ciência de dados.
 - Mentalidade: https://eliaspc2.github.io/OnlineCV/#mindset — valores e explicações pessoais sobre a forma de trabalhar; não é uma lista de serviços.
 - Resumo: https://eliaspc2.github.io/OnlineCV/#summary — síntese profissional, formação, idiomas e recursos.
 - Agora: https://eliaspc2.github.io/OnlineCV/#now — procura de trabalho como Junior Python Developer, modalidade preferida, contributo da formação em cibersegurança e recursos atuais.
@@ -69,6 +72,8 @@ O site é uma aplicação de página única. As secções públicas são:
 Não existem no site páginas autónomas de FAQ, blog, notícias, produtos, serviços, preços, documentos legais ou formulários.
 
 ## Documentos importantes
+
+- Conteúdo programático Gestão de Informação e Ciência de Dados, Tecnisign, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/data-science-program-content.pdf
 
 - CV Padrão, 1 página, atualizado em 14 de agosto de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
 - CV Estendido, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-extended-andre-camara.pdf
@@ -86,6 +91,7 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 - Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. O CV Padrão foi atualizado em 14 de agosto de 2026; o CV Estendido é anterior ao fim da campanha de estágio.
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
+- As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. Os PDFs do CV são anteriores à inclusão deste curso no site.
 - Tratar os estágios EFA e CET mencionados nos documentos como componentes curriculares dos cursos, não como disponibilidade atual para estágio.
 - Atribuir as competências e níveis técnicos a autoavaliação do titular quando não houver certificação específica.
 - Não transformar conteúdos programáticos de cursos em experiência profissional comprovada.
@@ -94,6 +100,8 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 - Não usar imagens editoriais como prova de qualificações, relações pessoais ou resultados profissionais.
 
 ## O que não assumir
+
+- Não assumir conclusão, competências já adquiridas, nível de qualificação ou estágio de Ciência de Dados. A brochura descreve conteúdos e metodologia, sem confirmar estes resultados ou atributos do percurso individual. As 1.000 horas previstas não foram somadas ao total de formação concluída do resumo.
 
 - Não assumir que André Câmara presta serviços comerciais, vende produtos ou representa as empresas e entidades mencionadas.
 - Não assumir preços, disponibilidade contratual, remuneração, garantias, certificações adicionais ou resultados profissionais não documentados.

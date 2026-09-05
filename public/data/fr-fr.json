@@ -5612,7 +5612,7 @@
     {
       "ref": "obj.n_bcdc387c",
       "strings": {
-        "text": "Le CET en cours renforce le développement sécurisé, l'analyse des risques, les réseaux, les systèmes et la réponse aux incidents."
+        "text": "Le CET en cours renforce le développement sécurisé, l'analyse des risques, les réseaux, les systèmes et la réponse aux incidents. Avec la formation en science des données, je souhaite approfondir Python et développer progressivement des capacités d’analyse utiles à l’automatisation, au logiciel et à la cybersécurité."
       }
     },
     {
@@ -6777,6 +6777,78 @@
       "ref": "obj.n_2f75bb96",
       "strings": {
         "text": "Collaboration transversale"
+      }
+    },
+    {
+      "ref": "obj.data_course_2",
+      "strings": {
+        "text": "Gestion de l’information et science des données"
+      }
+    },
+    {
+      "ref": "obj.data_course_4",
+      "strings": {
+        "text": "Début : 08/09/2026"
+      }
+    },
+    {
+      "ref": "obj.data_course_7",
+      "strings": {
+        "text": "Fin prévue : octobre 2027"
+      }
+    },
+    {
+      "ref": "obj.data_course_10",
+      "strings": {
+        "text": "Tecnisign · E-learning"
+      }
+    },
+    {
+      "ref": "obj.data_course_17",
+      "strings": {
+        "text": "Programme de formation"
+      }
+    },
+    {
+      "ref": "obj.data_course_20",
+      "strings": {
+        "text": "Formation spécialisée débutant le 8 septembre 2026, avec une fin prévue en octobre 2027. Les 30 unités du programme totalisent 1 000 heures."
+      }
+    },
+    {
+      "ref": "obj.data_course_21",
+      "strings": {
+        "text": "Programme prévu"
+      }
+    },
+    {
+      "ref": "obj.data_course_22",
+      "strings": {
+        "text": "Python et programmation avancée ; nettoyage, transformation et visualisation des données en Python ; bases des modèles analytiques."
+      }
+    },
+    {
+      "ref": "obj.data_course_23",
+      "strings": {
+        "text": "SQL ; gestion, stockage, ingestion et modélisation des données ; gouvernance et protection des données personnelles."
+      }
+    },
+    {
+      "ref": "obj.data_course_24",
+      "strings": {
+        "text": "Mathématiques, statistiques, analyse exploratoire et avancée, storytelling des données et projets de business intelligence et d’analyse de données."
+      }
+    },
+    {
+      "ref": "obj.data_course_25",
+      "strings": {
+        "text": "J’ai choisi cette formation pour approfondir Python et apprendre à mieux exploiter les données. Au fil de la formation, je souhaite appliquer progressivement ces connaissances au développement logiciel, à l’automatisation et à la cybersécurité, notamment à l’analyse des logs et à l’identification de tendances. C’est un investissement continu pour mieux contribuer aux projets auxquels je participerai."
+      }
+    },
+    {
+      "ref": "obj.data_course_31",
+      "strings": {
+        "text": "Gestion de l’information et science des données (Tecnisign, 1 000h ; septembre 2026 – octobre 2027)"
       }
     }
   ]
