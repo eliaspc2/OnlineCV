@@ -107,7 +107,7 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 
 - Não assumir que André Câmara presta serviços comerciais, vende produtos ou representa as empresas e entidades mencionadas.
 - Não assumir preços, disponibilidade contratual, remuneração, garantias, certificações adicionais ou resultados profissionais não documentados.
-- Não interpretar as horas previstas dos cursos em curso como horas já concluídas. O contador de Oportunidades apresenta 1.510 horas com a legenda CET em curso, referentes ao percurso completo de Cibersegurança. O total de 1.686 horas de programação no Resumo soma 270 horas do MOOC e 1.416 horas do EFA.
+- Não interpretar as horas previstas dos cursos em curso como horas já concluídas. O contador de Oportunidades apresenta 1.510 horas com a legenda Formação em Cibersegurança, referentes ao percurso completo do CET em curso. Não inclui formação complementar em programação ou Ciência de Dados. O total de 1.686 horas de programação no Resumo soma 270 horas do MOOC e 1.416 horas do EFA.
 - Não assumir níveis exatos e uniformes em C/C++, Java ou C#, porque as autoavaliações variam entre secções.
 - Não assumir conclusão do CET de Cibersegurança; está apresentado como formação em curso.
 - Não assumir que as 1.510 horas, as 485 horas de estágio ou a data aproximada de abril de 2027 constam do referencial oficial publicado; esses dados aparecem no site e no CV como informação do percurso específico.

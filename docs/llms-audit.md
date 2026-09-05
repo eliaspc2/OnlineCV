@@ -2,7 +2,9 @@
 
 Data da última revisão incremental: 2026-09-05
 
-Correção do contador de Oportunidades: substituídas as 1.686h de programação por 1.510h do CET de Cibersegurança, nas quatro línguas, com legenda que identifica o percurso em curso. O total de programação no Resumo mantém-se separado. As 1.510h representam a duração completa do CET, não horas já frequentadas.
+Correção do contador de Oportunidades: substituídas as 1.686h de programação por 1.510h do CET de Cibersegurança, nas quatro línguas. O total de programação no Resumo mantém-se separado. As 1.510h representam a duração completa do CET, não horas já frequentadas.
+
+A legenda final é Formação em Cibersegurança, por pedido do titular. O contador refere-se ao percurso completo do CET em curso e exclui as formações complementares em programação e Ciência de Dados.
 
 Validação desta correção: build aprovado e contador verificado no browser a 390 e 1600 px nas quatro línguas, sem texto fora do cartão nem erros de execução. Capturas em português inspecionadas nos dois tamanhos.
 
