@@ -49,7 +49,7 @@ Competências declaradas no site e nos currículos:
 - Apresenta o percurso profissional, formação, competências técnicas e objetivos profissionais de André Câmara.
 - Disponibiliza um CV condensado, um CV estendido, certificados e conteúdos programáticos de formação.
 - Fornece contactos diretos e ligações para os perfis públicos de GitHub e LinkedIn.
-- Documenta procura de trabalho júnior em cibersegurança, com objetivos em monitorização, resposta a incidentes, hardening, redução de risco e automação de segurança. Estes objetivos não comprovam experiência profissional prévia nessas funções.
+- Documenta transição de suporte IT, sistemas e redes para a primeira oportunidade júnior em cibersegurança, com CET de nível 5 em curso e formação complementar em Python e Ciência de Dados. Os objetivos em monitorização, resposta a incidentes, hardening, redução de risco e automação de segurança não comprovam experiência profissional prévia nessas funções.
 - O titular explica que escolheu Ciência de Dados para aprofundar Python e desenvolver progressivamente capacidades aplicáveis ao software, automação e cibersegurança, incluindo análise de logs e identificação de padrões. É uma motivação e aplicação futura pretendida, não uma declaração de competências já adquiridas nem uma garantia de resultados do curso.
 - Não apresenta produtos comerciais, serviços pagos, preços, garantias, contratos, catálogo comercial, loja ou formulário de contratação.
 
@@ -107,7 +107,7 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 
 - Não assumir que André Câmara presta serviços comerciais, vende produtos ou representa as empresas e entidades mencionadas.
 - Não assumir preços, disponibilidade contratual, remuneração, garantias, certificações adicionais ou resultados profissionais não documentados.
-- Não interpretar as horas previstas dos cursos em curso como horas já concluídas. O contador de Oportunidades apresenta 1.510 horas com a legenda Formação em Cibersegurança, referentes ao percurso completo do CET em curso. Não inclui formação complementar em programação ou Ciência de Dados. O total de 1.686 horas de programação no Resumo soma 270 horas do MOOC e 1.416 horas do EFA.
+- Não interpretar as horas previstas dos cursos em curso como horas já concluídas. Os contadores de Resumo e Oportunidades apresentam 1.510 horas com a legenda Formação em Cibersegurança, referentes ao percurso completo do CET em curso. Não incluem formação complementar em programação ou Ciência de Dados.
 - Não assumir níveis exatos e uniformes em C/C++, Java ou C#, porque as autoavaliações variam entre secções.
 - Não assumir conclusão do CET de Cibersegurança; está apresentado como formação em curso.
 - Não assumir que as 1.510 horas, as 485 horas de estágio ou a data aproximada de abril de 2027 constam do referencial oficial publicado; esses dados aparecem no site e no CV como informação do percurso específico.

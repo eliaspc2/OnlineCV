@@ -2,11 +2,13 @@
 
 Data da última revisão incremental: 2026-09-05
 
-Correção do contador de Oportunidades: substituídas as 1.686h de programação por 1.510h do CET de Cibersegurança, nas quatro línguas. O total de programação no Resumo mantém-se separado. As 1.510h representam a duração completa do CET, não horas já frequentadas.
+Correção dos contadores de Resumo e Oportunidades: substituídas as 1.686h de programação por 1.510h do CET de Cibersegurança, nas quatro línguas. As 1.510h representam a duração completa do CET, não horas já frequentadas. O destaque do Resumo explicita a transição para Cibersegurança, com formação em programação como base complementar. O botão do programa no Resumo abre agora o referencial do CET.
 
 A legenda final é Formação em Cibersegurança, por pedido do titular. O contador refere-se ao percurso completo do CET em curso e exclui as formações complementares em programação e Ciência de Dados.
 
 Validação desta correção: build aprovado e contador verificado no browser a 390 e 1600 px nas quatro línguas, sem texto fora do cartão nem erros de execução. Capturas em português inspecionadas nos dois tamanhos.
+
+Revisão global seguinte: sete secções percorridas nas quatro línguas a 390 e 1600 px, sem erros JavaScript; oito documentos locais responderam HTTP 200. O botão do programa no Resumo abre o referencial CET no visualizador e fecha com Escape. A revisão textual eliminou os contadores de 1.686h e a transição para Programação, reforçando suporte IT como experiência anterior e Cibersegurança como transição para uma primeira função júnior.
 
 Esta revisão acrescenta o programa de Ciência de Dados, verifica a sua apresentação nas quatro línguas e atualiza o llms.txt. As observações sobre os restantes documentos provêm da auditoria anterior. O titular pediu expressamente que não se atribuísse nível 5 ao novo curso, pois a realização de estágio não está decidida. O CV Padrão foi novamente substituído pela versão revista no Canva e integralmente relido.
 
@@ -73,6 +75,8 @@ Imagens editoriais verificadas:
 - Anotações laterais editoriais: são comentários de apresentação e não fontes independentes.
 
 ## Lacunas identificadas
+
+- A descrição pública de BNP Paribas refere sistemas bancários core e automação em milhares de servidores. Os CVs fornecidos descrevem suporte corporativo e aprendizagem de PowerShell sem comprovar essa escala. Estas afirmações precisam de confirmação pelo titular; não foram usadas para acrescentar experiência profissional em cibersegurança.
 
 - Certificado EFA pendente, confirmado pelo titular em 2026-09-05 e indicado no cartão nas quatro línguas; não confundir a emissão pendente com curso em curso.
 

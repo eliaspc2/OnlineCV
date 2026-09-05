@@ -1667,7 +1667,7 @@
     {
       "ref": "obj.n_5bc407c4",
       "strings": {
-        "text": "Mon profil combine une formation de niveau 5 en cybersécurité et une expérience réelle des systèmes, du support, des réseaux, de l'automatisation et de la continuité opérationnelle."
+        "text": "Mon expérience en support IT, systèmes, réseaux et automatisation constitue la base de ma transition vers la cybersécurité. Je suis le CET de niveau 5 ; Python et la science des données complètent cette formation."
       }
     },
     {
@@ -4847,7 +4847,7 @@
       "ref": "obj.n_eccca34c",
       "strings": {
         "attrs": {
-          "alt": "Transition vers la programmation"
+          "alt": ""
         }
       }
     },
@@ -4858,7 +4858,7 @@
     {
       "ref": "obj.n_132bef78",
       "strings": {
-        "text": "Transition vers la programmation"
+        "text": "Transition vers la cybersécurité"
       }
     },
     {
@@ -4898,7 +4898,7 @@
     {
       "ref": "obj.n_e40d6abc",
       "strings": {
-        "text": "Université d'Helsinki (270h) + EFA Programmeur informatique (1 416h). C/C++, C#, Java, Python, SQL."
+        "text": "CET de cybersécurité en cours chez Multiformactiva, soutenu par la formation achevée en programmation EFA (1 416h) et à l'Université d'Helsinki (270h)."
       }
     },
     {
@@ -5252,7 +5252,7 @@
     {
       "ref": "obj.n_e5d6d3dc",
       "strings": {
-        "text": "Programme EFA"
+        "text": "Programme de cybersécurité"
       }
     },
     {
@@ -5282,13 +5282,13 @@
     {
       "ref": "obj.n_7363d526",
       "strings": {
-        "text": "1.686"
+        "text": "1 510h"
       }
     },
     {
       "ref": "obj.n_7463d6b8",
       "strings": {
-        "text": "Heures de formation"
+        "text": "Formation en cybersécurité"
       }
     },
     {
@@ -5422,7 +5422,7 @@
     {
       "ref": "obj.n_82ec4bb0",
       "strings": {
-        "text": "Je recherche un poste junior en cybersécurité, alliant formation de niveau 5 et expérience en support IT, systèmes critiques, réseaux et automatisation."
+        "text": "Je recherche une première opportunité junior en cybersécurité, en m'appuyant sur mon expérience en support IT, systèmes et réseaux et sur le CET de niveau 5 en cours."
       }
     },
     {
