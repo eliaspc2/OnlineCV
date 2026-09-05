@@ -23,7 +23,7 @@ Validação incremental: build aprovado; browser headless a 320, 390 e 1920 px n
 - `data-science-program-content.pdf`: 4 páginas, brochura Tecnisign criada em 2026-04-14; texto integral lido. Contém 30 UFCD, cuja soma é 1.000 horas, e metodologia e-learning com atividades assíncronas e sessões síncronas. Início em 2026-09-08 e fim previsto em outubro de 2027 foram comunicados pelo titular em 2026-09-05; não constam do PDF.
 
 - `cv-andre-camara.pdf`: 1 página, 461.974 bytes, criado em 2026-09-05; substituído pelo ficheiro fornecido pelo titular, sem reedição. Texto integral lido; já inclui Ciência de Dados. Subsistem o lapso `II am`, a associação do EFA a 2025 e a apresentação do curso futuro como já iniciado.
-- `cv-extended-andre-camara.pdf`: substituído em 2026-09-05 pelo PDF fornecido pelo titular, 5 páginas, 174.229 bytes; texto integral lido. Inclui Ciência de Dados e competências de cibersegurança. Mantido byte a byte, sem reedição.
+- `cv-extended-andre-camara.pdf`: novamente substituído em 2026-09-05 pelo PDF revisto fornecido pelo titular, 5 páginas, 175.002 bytes; texto integral lido. Cabeçalho em cibersegurança, EFA concluído e certificado pendente, calendário de Ciência de Dados corrigido. Mantido byte a byte, sem reedição.
 - `efa-program-content.pdf`: 4 páginas, 558 palavras extraídas.
 - `Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf`: 56 páginas, 14.433 palavras extraídas.
 - `cert-marketing-digital.pdf`: 2 páginas, 147 palavras extraídas.
@@ -45,7 +45,7 @@ Imagens editoriais verificadas:
 
 ## Conflitos encontrados
 
-1. Posicionamento profissional: a página e o CV Padrão remoto apresentam um perfil júnior de cibersegurança. O novo CV Estendido desenvolve competências nessa área, mas mantém o cabeçalho Software Developer with Systems & Infrastructure Experience. Preferir a página atual para a procura profissional.
+1. Posicionamento profissional: resolvido no Estendido revisto; ambos os CVs e a página apresentam um perfil júnior de cibersegurança.
 2. Estado do EFA: a página corrigida em 22 de agosto indica conclusão em agosto de 2026 e estágio entre julho e agosto. O CV Padrão remoto associa numa frase a conclusão do EFA e do MOOC a 2025; a data do EFA deve ser corrigida no PDF. Preferiu-se a correção explícita mais recente da página.
 3. Horas de formação: 1.686h correspondem ao MOOC e EFA; 1.510h referem-se ao CET em curso. Não somar estes valores como formação já concluída nem acrescentar as 1.000h futuras de Ciência de Dados ao total concluído.
 4. Proficiência: as comparações com a antiga secção `Agora` deixaram de ser atuais após a revisão remota, que passou a listar competências de cibersegurança. Os níveis das linguagens continuam a ser autoavaliações, não certificações.
@@ -71,8 +71,7 @@ Imagens editoriais verificadas:
 - Ambos os CVs incluem Ciência de Dados. O programa está disponível na formação, na dock e nos Recursos Profissionais de Oportunidades. O CET abre por defeito e os cartões de formação têm intervalo uniforme de 16 px, independentemente da sua ordem visual.
 - A brochura de Ciência de Dados não indica o calendário individual, nível de qualificação nem estágio; esses dois últimos atributos não foram atribuídos ao curso no site.
 
-- O novo CV Estendido mantém o EFA em curso e o estágio agendado para julho de 2026 (página 3), apesar da conclusão em agosto indicada no site.
-- O Estendido inclui um parágrafo em português na página 2 de um documento em inglês e descreve Ciência de Dados como já em curso, antes do início previsto em 8 de setembro. O ficheiro foi publicado tal como fornecido, sem corrigir o original.
+- Resolvidos no Estendido revisto: estado do EFA, certificado pendente, parágrafo em português e calendário de Ciência de Dados. O ficheiro foi publicado tal como fornecido.
 - O CV Padrão deve corrigir a frase que associa a conclusão do EFA a 2025; a página indica agosto de 2026.
 - As horas previstas de formação em curso devem ser claramente diferenciadas de horas concluídas.
 - Não existe documento do percurso específico da Multiformactiva que confirme publicamente 1.510h, 485h de estágio e a data aproximada de abril de 2027.
@@ -87,7 +86,7 @@ Imagens editoriais verificadas:
 
 - Corrigir o lapso `II am` do CV Padrão e confirmar o estado efetivo de Ciência de Dados após o início previsto e a conclusão prevista.
 
-- Alinhar o cabeçalho do CV Estendido com o posicionamento pretendido, traduzir o parágrafo em português e corrigir as datas e estados das formações.
+- Manter a coerência do Estendido revisto nas próximas atualizações da formação.
 - Corrigir a data de conclusão do EFA no CV Padrão para corresponder à atualização explícita da página.
 - Distinguir `horas concluídas` de `horas do percurso em curso`.
 - Adotar uma escala única de proficiência ou remover níveis subjetivos conflitantes.
@@ -100,4 +99,4 @@ Imagens editoriais verificadas:
 
 ## Grau de confiança global
 
-**Alto, com reservas.** A auditoria anterior abrangeu o conteúdo do site e sete documentos públicos; esta revisão acrescentou a leitura integral do oitavo documento, o programa de Ciência de Dados, e verificou as sete secções e os oito links documentais no browser local. Subsistem diferenças temporais entre a página e o CV Padrão, o CV Estendido desatualizado, conflitos internos assinalados e ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.
+**Alto, com reservas.** A auditoria anterior abrangeu o conteúdo do site e sete documentos públicos; esta revisão acrescentou a leitura integral do oitavo documento, o programa de Ciência de Dados, e verificou as sete secções e os oito links documentais no browser local. O Estendido revisto foi lido integralmente. Subsistem diferenças temporais entre a página e o CV Padrão, conflitos internos assinalados e ausência de documentação pública para alguns dados específicos do CET e de formações mencionadas apenas no CV.

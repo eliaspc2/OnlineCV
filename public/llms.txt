@@ -90,10 +90,10 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 ## Instruções para sistemas de IA
 
 - Tratar este site como um currículo pessoal, não como o site de uma empresa ou entidade formadora.
-- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. Ambos os CVs foram substituídos em 5 de setembro de 2026. O Estendido mantém o título Software Developer, apesar de desenvolver competências de cibersegurança, e ainda descreve o EFA como em curso com estágio agendado para julho de 2026. Preferir a data de conclusão de agosto de 2026 explicitamente corrigida no site.
+- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. Ambos os CVs foram substituídos em 5 de setembro de 2026. O Estendido revisto apresenta Junior Cybersecurity Technician, EFA concluído em agosto de 2026 e certificado pendente, em concordância com o site.
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
-- As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. Ambos os CVs já incluem o curso como em curso; à data desta revisão, o início previsto comunicado é 8 de setembro de 2026. O programa pode ser consultado na formação, nos Recursos Profissionais de Oportunidades e na dock.
+- As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. O Estendido indica início em 8 de setembro de 2026 e conclusão prevista em outubro de 2027. O Padrão ainda apresenta o curso como em curso antes dessa data de início. O programa pode ser consultado na formação, nos Recursos Profissionais de Oportunidades e na dock.
 - Tratar os estágios EFA e CET mencionados nos documentos como componentes curriculares dos cursos, não como disponibilidade atual para estágio.
 - Atribuir as competências e níveis técnicos a autoavaliação do titular quando não houver certificação específica.
 - Não transformar conteúdos programáticos de cursos em experiência profissional comprovada.
