@@ -2,6 +2,10 @@
 
 Data da última revisão incremental: 2026-09-05
 
+Correção do contador de Oportunidades: substituídas as 1.686h de programação por 1.510h do CET de Cibersegurança, nas quatro línguas, com legenda que identifica o percurso em curso. O total de programação no Resumo mantém-se separado. As 1.510h representam a duração completa do CET, não horas já frequentadas.
+
+Validação desta correção: build aprovado e contador verificado no browser a 390 e 1600 px nas quatro línguas, sem texto fora do cartão nem erros de execução. Capturas em português inspecionadas nos dois tamanhos.
+
 Esta revisão acrescenta o programa de Ciência de Dados, verifica a sua apresentação nas quatro línguas e atualiza o llms.txt. As observações sobre os restantes documentos provêm da auditoria anterior. O titular pediu expressamente que não se atribuísse nível 5 ao novo curso, pois a realização de estágio não está decidida. O CV Padrão foi novamente substituído pela versão revista no Canva e integralmente relido.
 
 Antes da publicação foram integrados os três commits remotos de 22 de agosto de 2026, preservando o posicionamento em cibersegurança e a conclusão do EFA em agosto. O CV Padrão remoto foi novamente lido integralmente. Foi corrigida nas quatro línguas a etiqueta `obj.n_72cd9d68`: Python tinha sido substituído incorretamente por Cibersegurança na lista de linguagens. As observações abaixo substituem os resultados anteriores quando há informação mais recente.
