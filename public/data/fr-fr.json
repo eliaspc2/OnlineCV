@@ -73,12 +73,6 @@
       }
     },
     {
-      "ref": "obj.n_953165a8",
-      "strings": {
-        "text": ""
-      }
-    },
-    {
       "ref": "obj.n_1df6d2e0",
       "strings": {}
     },
@@ -422,56 +416,6 @@
       "ref": "obj.footer.contact.location.link",
       "strings": {
         "text": "Quintanilha, Bragança"
-      }
-    },
-    {
-      "ref": "obj.floating.action.top",
-      "strings": {
-        "attrs": {
-          "aria-label": "Retour en haut"
-        }
-      }
-    },
-    {
-      "ref": "obj.floating.action.top.icon",
-      "strings": {
-        "attrs": {
-          "alt": "Haut"
-        }
-      }
-    },
-    {
-      "ref": "obj.floating.action.phone",
-      "strings": {
-        "attrs": {
-          "title": "Appeler",
-          "aria-label": "Appeler"
-        }
-      }
-    },
-    {
-      "ref": "obj.floating.action.phone.icon",
-      "strings": {
-        "attrs": {
-          "alt": "Téléphone"
-        }
-      }
-    },
-    {
-      "ref": "obj.floating.action.email",
-      "strings": {
-        "attrs": {
-          "title": "Envoyer un e-mail",
-          "aria-label": "Envoyer un e-mail"
-        }
-      }
-    },
-    {
-      "ref": "obj.floating.action.email.icon",
-      "strings": {
-        "attrs": {
-          "alt": "E-mail"
-        }
       }
     },
     {
