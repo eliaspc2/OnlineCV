@@ -2,6 +2,8 @@
 
 Data da última revisão incremental: 2026-09-05
 
+Otimização interna: a dock deixou de executar uma verificação periódica a cada 120 ms. O estado passa a atualizar por scroll, redimensionamento e alterações reais da altura do conteúdo; a atualização dos links de navegação só ocorre quando a secção ativa muda. `llms.txt` foi relido e continua factual. Versão `2026-09-06.1`, cache `json-site-v58`.
+
 Limpeza interna incremental: removido o ícone `arrow-up.svg` e o seletor `.interactive-icon`, ambos sem referências no código, dados ou DOM renderizado. As ações com pulsação foram preservadas; `llms.txt` relido e mantém-se factual, pois não houve alteração de conteúdo público. Versão `2026-09-05.11`, cache `json-site-v57`.
 
 Revisão estética: contraste do texto secundário, navegação e indicadores em mobile, densidade da lista de linguagens e espaço dos ícones nos recursos. Conteúdo, documentos e destinos dos links preservados; `public/llms.txt` relido e continua factual para estas alterações de apresentação.

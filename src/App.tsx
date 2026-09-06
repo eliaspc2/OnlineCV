@@ -4,7 +4,7 @@ import { validateConfig, type ClassPresetGroup, type Config } from './validator'
 
 const STORAGE_KEY = 'json-site-lang';
 const DEFAULT_STRINGS_FILE = 'data/uk-en.json';
-const APP_BUILD_VERSION = '2026-09-05.11';
+const APP_BUILD_VERSION = '2026-09-06.1';
 const DATA_CACHE_KEY = APP_BUILD_VERSION;
 
 const FOOTER_DOCUMENT_LINKS = [
@@ -415,7 +415,7 @@ export default function App() {
   const [strings, setStrings] = useState<StringsBundle | null>(null);
   const [isLangTransition, setIsLangTransition] = useState(false);
   const [sectionNotePositions, setSectionNotePositions] = useState<SectionNotePosition[]>([]);
-  const activeSectionRef = useRef<SectionId>('hero');
+  const activeSectionRef = useRef<SectionId | null>(null);
   const [docViewer, setDocViewer] = useState<{
     url: string;
     title: string;
@@ -454,7 +454,7 @@ export default function App() {
         classKeys: classKeysFile
           ? withCacheVersion(toPublicUrlIfRelative(classKeysFile) || toPublicUrl(classKeysFile))
           : 'inline',
-        serviceWorker: 'json-site-v57'
+        serviceWorker: 'json-site-v58'
       });
       setClassPresetTree(classTree || {});
       setClassPresetMap(flattenClassPresets(classTree));
@@ -495,6 +495,8 @@ export default function App() {
 
   useEffect(() => {
     if (!config) return;
+
+    activeSectionRef.current = null;
 
     const result = validateConfig(config, classPresetTree || undefined);
     if (result.errors.length) {
@@ -684,6 +686,7 @@ export default function App() {
     };
 
     const footerElement = document.getElementById('site-footer');
+    const mainElement = document.querySelector('main');
     let footerDockMode: 'auto' | 'manual-open' | 'manual-closed' = 'auto';
     let manualFooterDockScrollY = 0;
     let footerDockPinnedDuringNavigation = false;
@@ -781,6 +784,14 @@ export default function App() {
     }
     footerElement?.addEventListener('click', onFooterBackgroundClick);
 
+    const footerDockResizeObserver =
+      mainElement && 'ResizeObserver' in window
+        ? new ResizeObserver(() => updateFooterDockState())
+        : null;
+    if (footerDockResizeObserver && mainElement) {
+      footerDockResizeObserver.observe(mainElement);
+    }
+
     const handleScroll = () => {
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -789,14 +800,14 @@ export default function App() {
         if (rect.top <= 200 && rect.bottom >= 200) {
           if (activeSectionRef.current !== section) {
             activeSectionRef.current = section;
+            document.querySelectorAll('[data-nav-link]').forEach((link) => {
+              const el = link as HTMLElement;
+              const base = el.getAttribute('data-base-class') || '';
+              const active = el.getAttribute('data-active-class') || '';
+              const isActive = el.getAttribute('data-nav-link') === section;
+              el.className = `${base}${isActive ? ` ${active}` : ''}`.trim();
+            });
           }
-          document.querySelectorAll('[data-nav-link]').forEach((link) => {
-            const el = link as HTMLElement;
-            const base = el.getAttribute('data-base-class') || '';
-            const active = el.getAttribute('data-active-class') || '';
-            const isActive = el.getAttribute('data-nav-link') === section;
-            el.className = `${base}${isActive ? ` ${active}` : ''}`.trim();
-          });
           break;
         }
       }
@@ -818,7 +829,6 @@ export default function App() {
       updateScrollNoteParallax();
       updateFooterDockState();
     }, 600);
-    const footerDockInterval = window.setInterval(updateFooterDockState, 120);
     handleScroll();
     updateFooterDockState();
     updateScrollNotePositions();
@@ -1081,7 +1091,7 @@ export default function App() {
         heroProfileContactTrigger.removeEventListener('click', openHeroProfileContact);
         heroProfileContactTrigger.removeEventListener('keydown', onHeroProfileContactKeyDown);
       }
-      window.clearInterval(footerDockInterval);
+      footerDockResizeObserver?.disconnect();
       if (footerDockNavigationTimer) window.clearTimeout(footerDockNavigationTimer);
       if (footerBrand) {
         footerBrand.removeEventListener('click', goToPageStart);
