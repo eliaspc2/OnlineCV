@@ -12,7 +12,7 @@
 - Preferência geográfica documentada: trabalho remoto em Portugal e alternativa híbrida na zona de Bragança.
 - Idiomas do site: português, espanhol, francês e inglês.
 - Idiomas profissionais declarados: português nativo; espanhol e inglês proficientes/fluentes; francês intermédio/funcional.
-- Última revisão factual deste ficheiro: 2026-09-05.
+- Última revisão factual deste ficheiro: 2026-09-06.
 
 Experiência profissional principal documentada:
 
@@ -33,7 +33,9 @@ Formação e certificações documentadas:
 - 12.º ano / ensino secundário concluído em 2025.
 - Programming MOOC 2025 da Universidade de Helsínquia: Introduction to Programming e Advanced Course in Programming, cerca de 135 horas e 5 ECTS indicados para cada curso; conclusão declarada em 6 de setembro e 21 de outubro de 2025, respetivamente.
 - EFA Programador/a de Informática, nível 4, Tecnisign: 1.416 horas. O site e o CV Padrão indicam conclusão em agosto de 2026, com estágio curricular de 210 horas concluído; o certificado permanece pendente. A brochura divide o percurso em 1.150 horas de formação, 210 horas de formação em contexto de trabalho e 56 horas de portefólio reflexivo.
-- CET Técnico/a Especialista em Cibersegurança, nível 5, Multiformactiva: apresentado no site e no CV como formação de 1.510 horas, em curso desde fevereiro de 2026, com estágio de 485 horas previsto aproximadamente para abril de 2027.
+- CET Técnico/a Especialista em Cibersegurança, nível 5, Multiformactiva: apresentado no site e no CV como formação de 1.510 horas, em curso desde fevereiro de 2026, com estágio de 485 horas previsto aproximadamente para abril de 2027. O plano de formação sem estágio soma 1.025 horas; em 6 de setembro de 2026, o titular registava 636 horas de estudo (62,08%).
+  - Base concluída no CET: fundamentos de algoritmos e programação estruturada, modelação de bases de dados relacionais, matemática e métodos estatísticos aplicados, instalação e configuração de redes locais, serviços de rede, sistemas operativos de cliente e servidor, legislação de cibersegurança, scripts de cibersegurança e de logs, comunicação profissional, segurança e saúde no trabalho e inglês para informática.
+  - Módulos de mecanismos de proteção, vulnerabilidades, IDS, políticas de segurança, criptografia, análise de evidências de ataques, vulnerabilidades web, ciberdefesa e ferramentas de análise e recolha de logs não devem ser tratados como concluídos. O módulo de mecanismos de proteção está apresentado no site como em curso; vulnerabilidades e IDS como temas a desenvolver.
 - O referencial oficial associado ao CET identifica a qualificação 481RA057, nível 5, na área 481 — Ciências Informáticas, com 106,5 pontos de crédito e entrada em vigor em 8 de maio de 2025.
 - Curso de Marketing Digital da Talento: 78 horas, concluído em setembro de 2025, nota final de 19 valores.
 - O CV estendido documenta ainda um curso intensivo de Python de 200 horas em 2025, TEFL de 12 horas concluído em 15 de junho de 2026 e formação anterior em Windows 10, redes, VMware vSphere e hardware.
@@ -42,8 +44,8 @@ Competências declaradas no site e nos currículos:
 
 - Programação e desenvolvimento: Python, C/C++, Java, C#, ASP.NET Core MVC, SQL, algoritmos, estruturas de dados, programação orientada a objetos, automação, testes, debugging e manutenção de código.
 - Sistemas e operações: Windows, Linux, redes, Windows Server, virtualização, PowerShell, suporte remoto, Active Directory, Microsoft Intune, ServiceNow, Jira e Remedy.
-- Cibersegurança em formação: análise de vulnerabilidades, logs, IDS, criptografia, hacking ético, análise forense, hardening, controlo de acessos e resposta a incidentes.
-- Os níveis de proficiência atribuídos a algumas linguagens variam entre secções; devem ser tratados como autoavaliações não uniformes, não como certificações.
+- Cibersegurança em curso: mecanismos de proteção, análise de vulnerabilidades, IDS, políticas de segurança, criptografia, análise de evidências de ataques, vulnerabilidades web, ciberdefesa e ferramentas de análise e recolha de logs.
+- A base concluída no CET inclui sistemas e redes, automação e scripts de logs e segurança e conformidade. A apresentação não usa esses factos como equivalentes a experiência profissional de cibersegurança.
 
 ## O que faz
 
@@ -66,7 +68,7 @@ O site é uma aplicação de página única. As secções públicas são:
 
 - Início: https://eliaspc2.github.io/OnlineCV/#hero — identificação, resumo profissional, disponibilidade, contacto e acesso ao CV.
 - Experiência: https://eliaspc2.github.io/OnlineCV/#experience — experiência profissional e percurso desde 1999.
-- Cibersegurança: https://eliaspc2.github.io/OnlineCV/#skills — competências, tecnologias e formação em programação, cibersegurança e ciência de dados.
+- Cibersegurança: https://eliaspc2.github.io/OnlineCV/#skills — base concluída e módulos em curso do CET, tecnologias e formação complementar em programação, cibersegurança e ciência de dados.
 - Perfil: https://eliaspc2.github.io/OnlineCV/#mindset — valores e explicações pessoais sobre a forma de trabalhar; não é uma lista de serviços.
 - Resumo: https://eliaspc2.github.io/OnlineCV/#summary — síntese profissional, formação, idiomas e recursos.
 - Oportunidades: https://eliaspc2.github.io/OnlineCV/#now — procura de trabalho júnior em cibersegurança, modalidade preferida, formação e recursos atuais.
@@ -95,8 +97,9 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
 - As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. O titular confirmou que o curso já foi iniciado em setembro de 2026, e o CV Padrão atualizado apresenta-o como formação em curso, com conclusão prevista em outubro de 2027. O programa pode ser consultado na formação, nos Recursos Profissionais de Oportunidades e na dock.
+- No cartão de Ciência de Dados, as áreas do programa e os tópicos relevantes descrevem conteúdos curriculares previstos; a aplicação profissional é apresentada como desenvolvimento progressivo, não como competência já adquirida.
 - Tratar os estágios EFA e CET mencionados nos documentos como componentes curriculares dos cursos, não como disponibilidade atual para estágio.
-- Atribuir as competências e níveis técnicos a autoavaliação do titular quando não houver certificação específica.
+- Distinguir a base concluída do CET dos módulos em curso ou por desenvolver; não interpretar essa apresentação como uma certificação profissional independente ou experiência de trabalho em cibersegurança.
 - Não transformar conteúdos programáticos de cursos em experiência profissional comprovada.
 - Não confundir os contactos das entidades formadoras presentes em brochuras com os contactos de André Câmara.
 - Não reproduzir dados pessoais desnecessários presentes nos currículos, como data ou local de nascimento e informação familiar.

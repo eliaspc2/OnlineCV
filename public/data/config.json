@@ -3683,7 +3683,7 @@
                               "children": [
                                 {
                                   "attrs": {
-                                    "src": "assets/images/icons/cpu.svg"
+                        "src": "assets/images/icons/shield.svg"
                                   },
                                   "id": "n_2cc9e7e4",
                                   "ref": "icon.lg.accent"
@@ -3709,7 +3709,7 @@
                                         {
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "85",
+                                "data-level": "70",
                                             "data-delay": "0"
                                           },
                                           "id": "n_29b546c4",
@@ -3738,7 +3738,7 @@
                                         {
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "65",
+                                "data-level": "65",
                                             "data-delay": "100"
                                           },
                                           "id": "n_58cfd498",
@@ -3767,7 +3767,7 @@
                                         {
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "55",
+                                "data-level": "45",
                                             "data-delay": "200"
                                           },
                                           "id": "n_4aeead98",
@@ -3796,7 +3796,7 @@
                                         {
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "60",
+                                "data-level": "25",
                                             "data-delay": "300"
                                           },
                                           "id": "n_e644eab4",
@@ -3825,7 +3825,7 @@
                                         {
                                           "attrs": {
                                             "data-skill-bar": "true",
-                                            "data-level": "70",
+                                "data-level": "18",
                                             "data-delay": "400"
                                           },
                                           "id": "n_574289f8",
@@ -5119,7 +5119,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "55",
+                                                        "data-level": "70",
                                                         "data-delay": "0"
                                                       },
                                                       "id": "n_669af298",
@@ -5154,7 +5154,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "50",
+                                                        "data-level": "70",
                                                         "data-delay": "100"
                                                       },
                                                       "id": "n_1d115da2",
@@ -5189,7 +5189,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "45",
+                                                        "data-level": "65",
                                                         "data-delay": "200"
                                                       },
                                                       "id": "n_88908e10",
@@ -5224,7 +5224,7 @@
                                                     {
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "40",
+                                                        "data-level": "60",
                                                         "data-delay": "300"
                                                       },
                                                       "id": "n_d6de626c",
@@ -5265,7 +5265,7 @@
                                                       "ref": "skills.row.fill",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "50",
+                                                        "data-level": "25",
                                                         "data-delay": "400"
                                                       }
                                                     }
@@ -5300,7 +5300,7 @@
                                                       "ref": "skills.row.fill",
                                                       "attrs": {
                                                         "data-skill-bar": "true",
-                                                        "data-level": "48",
+                                                        "data-level": "18",
                                                         "data-delay": "500"
                                                       }
                                                     }
@@ -5429,7 +5429,7 @@
                                               "id": "data_course_3",
                                               "ref": "icon.sm",
                                               "attrs": {
-                                                "src": "assets/images/icons/calendar.svg",
+                                                "src": "assets/images/icons/clock.svg",
                                                 "alt": ""
                                               }
                                             },
@@ -5580,13 +5580,94 @@
                                     {
                                       "id": "data_course_25",
                                       "ref": "text.sm.muted.p"
+                                    },
+                                    {
+                                      "id": "data_course_32",
+                                      "ref": "skills.grid.md2",
+                                      "children": [
+                                        {
+                                          "id": "data_course_33",
+                                          "ref": "card.soft",
+                                          "children": [
+                                            {
+                                              "id": "data_course_34",
+                                              "ref": "skills.h4.accent"
+                                            },
+                                            {
+                                              "id": "data_course_35",
+                                              "ref": "text.sm.muted.p"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "data_course_36",
+                                          "ref": "skills.panel.soft",
+                                          "children": [
+                                            {
+                                              "id": "data_course_37",
+                                              "ref": "heading.sm.accent"
+                                            },
+                                            {
+                                              "id": "data_course_38",
+                                              "ref": "text.sm.accent"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "data_course_39",
+                                      "ref": "spacing.mb6",
+                                      "children": [
+                                        {
+                                          "id": "data_course_40",
+                                          "ref": "skills.h4.mb4"
+                                        },
+                                        {
+                                          "id": "data_course_41",
+                                          "ref": "skills.grid.cards",
+                                          "children": [
+                                            { "id": "data_course_42", "ref": "common.div.plain" },
+                                            { "id": "data_course_43", "ref": "common.div.plain" },
+                                            { "id": "data_course_44", "ref": "common.div.plain" },
+                                            { "id": "data_course_45", "ref": "common.div.plain" },
+                                            { "id": "data_course_46", "ref": "common.div.plain" },
+                                            { "id": "data_course_47", "ref": "common.div.plain" }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "data_course_48",
+                                      "ref": "common.div.plain",
+                                      "children": [
+                                        {
+                                          "id": "data_course_49",
+                                          "ref": "skills.h4.mb3"
+                                        },
+                                        {
+                                          "id": "data_course_50",
+                                          "ref": "skills.group.wrap",
+                                          "children": [
+                                            { "id": "data_course_51", "ref": "skills.pill" },
+                                            { "id": "data_course_52", "ref": "skills.pill" },
+                                            { "id": "data_course_53", "ref": "skills.pill" },
+                                            { "id": "data_course_54", "ref": "skills.pill" },
+                                            { "id": "data_course_55", "ref": "skills.pill" },
+                                            { "id": "data_course_56", "ref": "skills.pill" },
+                                            { "id": "data_course_57", "ref": "skills.pill" },
+                                            { "id": "data_course_58", "ref": "skills.pill" },
+                                            { "id": "data_course_59", "ref": "skills.pill" }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
                               ],
                               "attrs": {
                                 "data-accordion-panel": "skills-data-science",
-                                "data-accordion-max": "max-h-[2000px]"
+                                "data-accordion-max": "max-h-[3000px]"
                               }
                             }
                           ],
@@ -5869,91 +5950,6 @@
                                 }
                               ],
                               "id": "n_4d364d96",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/shield.svg"
-                                  },
-                                  "id": "n_5870b0da",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_3568a686",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_055b5b36",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/terminal.svg"
-                                  },
-                                  "id": "n_a1fdc12e",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_02c39430",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_be0a53f6",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/shield.svg"
-                                  },
-                                  "id": "n_c7ae761b",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_66b87462",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_951e3b43",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/shield.svg"
-                                  },
-                                  "id": "n_86d9dc25",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_b8f956c6",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_cb6d472a",
-                              "ref": "chip.no_motion"
-                            },
-                            {
-                              "children": [
-                                {
-                                  "attrs": {
-                                    "src": "assets/images/icons/shield.svg"
-                                  },
-                                  "id": "n_314192c4",
-                                  "ref": "icon.sm.accent"
-                                },
-                                {
-                                  "id": "n_42971d07",
-                                  "ref": "text.sm.muted.span"
-                                }
-                              ],
-                              "id": "n_4c8dbcb4",
                               "ref": "chip.no_motion"
                             }
                           ],
@@ -7671,7 +7667,7 @@
                                   "children": [
                                     {
                                       "attrs": {
-                                        "src": "assets/images/icons/cpu.svg"
+                          "src": "assets/images/icons/shield.svg"
                                       },
                                       "id": "n_aae41e6c",
                                       "ref": "icon.sm.accent"

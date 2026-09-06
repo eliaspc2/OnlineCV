@@ -17,6 +17,27 @@
   outline-offset: 4px;
 }
 
+/* Keep the cybersecurity capability panel on one shared vertical rhythm. */
+@media (min-width: 768px) {
+  #skills .grid:has(> .text-center [data-skill-bar]) > .text-center {
+    display: grid;
+    grid-template-rows: 64px 8px 20px;
+    align-items: center;
+  }
+
+  #skills .text-center:has([data-skill-bar]) > .inline-block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    min-height: 56px;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    line-height: 1.15;
+  }
+}
+
 /* Resource titles can wrap without compressing their leading and trailing icons. */
 :is(#now, #contact) a.card-hover.flex > :is(div:first-child, img) {
   flex-shrink: 0;

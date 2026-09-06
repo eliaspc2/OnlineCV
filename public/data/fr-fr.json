@@ -1606,14 +1606,14 @@
       "ref": "obj.n_2cc9e7e4",
       "strings": {
         "attrs": {
-          "alt": "CPU"
+          "alt": "Bouclier"
         }
       }
     },
     {
       "ref": "obj.n_2dc9e978",
       "strings": {
-        "text": "Langages de programmation"
+        "text": "Base actuelle du CET"
       }
     },
     {
@@ -1627,7 +1627,7 @@
     {
       "ref": "obj.n_aa066b7c",
       "strings": {
-        "text": "Python"
+        "text": "Systèmes & réseaux"
       }
     },
     {
@@ -1641,7 +1641,7 @@
     {
       "ref": "obj.n_ac066ea2",
       "strings": {
-        "text": "85%"
+        "text": "Base validée"
       }
     },
     {
@@ -1651,7 +1651,7 @@
     {
       "ref": "obj.n_362da06c",
       "strings": {
-        "text": "C/C++"
+        "text": "Scripts & journaux"
       }
     },
     {
@@ -1665,7 +1665,7 @@
     {
       "ref": "obj.n_382da392",
       "strings": {
-        "text": "65%"
+        "text": "Base validée"
       }
     },
     {
@@ -1675,7 +1675,7 @@
     {
       "ref": "obj.n_f4ac55b0",
       "strings": {
-        "text": "C#"
+        "text": "Sécurité & conformité"
       }
     },
     {
@@ -1689,7 +1689,7 @@
     {
       "ref": "obj.n_f6ac58d8",
       "strings": {
-        "text": "55%"
+        "text": "Base validée"
       }
     },
     {
@@ -1699,7 +1699,7 @@
     {
       "ref": "obj.n_2a4ef480",
       "strings": {
-        "text": "Java"
+        "text": "Protection & durcissement"
       }
     },
     {
@@ -1713,7 +1713,7 @@
     {
       "ref": "obj.n_2c4ef7a6",
       "strings": {
-        "text": "60%"
+        "text": "En cours"
       }
     },
     {
@@ -1723,7 +1723,7 @@
     {
       "ref": "obj.n_b9413358",
       "strings": {
-        "text": "SQL"
+        "text": "Vulnérabilités & IDS"
       }
     },
     {
@@ -1737,7 +1737,7 @@
     {
       "ref": "obj.n_bb41367e",
       "strings": {
-        "text": "70%"
+        "text": "À développer"
       }
     },
     {
@@ -2857,13 +2857,13 @@
     {
       "ref": "obj.n_eb5ea660",
       "strings": {
-        "text": "Détection et Réponse aux Menaces"
+        "text": "Systèmes et réseaux"
       }
     },
     {
       "ref": "obj.n_ec5ea7f3",
       "strings": {
-        "text": "55%"
+        "text": "Base acquise"
       }
     },
     {
@@ -2885,13 +2885,13 @@
     {
       "ref": "obj.n_1e8fe848",
       "strings": {
-        "text": "Réseaux, Systèmes et Services Sécurisés"
+        "text": "Systèmes d’exploitation et services"
       }
     },
     {
       "ref": "obj.n_1f8fe9dc",
       "strings": {
-        "text": "50%"
+        "text": "Base acquise"
       }
     },
     {
@@ -2913,13 +2913,13 @@
     {
       "ref": "obj.n_67114fd0",
       "strings": {
-        "text": "Automatisation et Scripting de Sécurité"
+        "text": "Scripts de cybersécurité et journaux"
       }
     },
     {
       "ref": "obj.n_68115164",
       "strings": {
-        "text": "45%"
+        "text": "Base acquise"
       }
     },
     {
@@ -2941,13 +2941,13 @@
     {
       "ref": "obj.n_baa8d0a8",
       "strings": {
-        "text": "Sécurité Appliquée au Développement et aux Données"
+        "text": "Sécurité et conformité"
       }
     },
     {
       "ref": "obj.n_bba8d23c",
       "strings": {
-        "text": "40%"
+        "text": "Base acquise"
       }
     },
     {
@@ -2969,13 +2969,13 @@
     {
       "ref": "obj.n_0e9588b3",
       "strings": {
-        "text": "Analyse de Vulnérabilités et Pentesting"
+        "text": "Protection et hardening"
       }
     },
     {
       "ref": "obj.n_37310a73",
       "strings": {
-        "text": "50%"
+        "text": "En cours"
       }
     },
     {
@@ -2997,13 +2997,13 @@
     {
       "ref": "obj.n_b3970d1e",
       "strings": {
-        "text": "SIEM, Logs et IDS"
+        "text": "Vulnérabilités et IDS"
       }
     },
     {
       "ref": "obj.n_ba422218",
       "strings": {
-        "text": "48%"
+        "text": "À développer"
       }
     },
     {
@@ -3021,7 +3021,7 @@
     {
       "ref": "obj.n_77d4ec90",
       "strings": {
-        "text": "Compétences pertinentes"
+        "text": "Contenus prévus du CET"
       }
     },
     {
@@ -3233,7 +3233,7 @@
     {
       "ref": "obj.n_734c5e78",
       "strings": {
-        "text": "Mentalité & logique humaine"
+        "text": "Profil & méthode de travail"
       }
     },
     {
@@ -3249,13 +3249,13 @@
     {
       "ref": "obj.n_fec73bd4",
       "strings": {
-        "text": "précision du code"
+        "text": "rigueur de la sécurité"
       }
     },
     {
       "ref": "obj.n_754c61a0",
       "strings": {
-        "text": "Mon raisonnement est déterministe. Je crois au processus, au bon timing pour chaque étape, et à l'isolement absolu des variables pour résoudre tout problème."
+        "text": "Je travaille de façon structurée : j'évalue le contexte, j'isole les variables et je valide chaque étape avant d'avancer. C'est une discipline utile pour les opérations, la sécurité et la réponse aux incidents."
       }
     },
     {
@@ -3367,13 +3367,13 @@
     {
       "ref": "obj.n_17e4f1d0",
       "strings": {
-        "text": "Pain & Dépendances"
+        "text": "Planification & dépendances"
       }
     },
     {
       "ref": "obj.n_18e4f360",
       "strings": {
-        "text": "Fermentation lente"
+        "text": "Temps & préparation"
       }
     },
     {
@@ -3400,7 +3400,7 @@
       "ref": "obj.n_813d87a8",
       "strings": {
         "attrs": {
-          "alt": "Pizza & Itération"
+          "alt": "Observation & ajustement"
         }
       }
     },
@@ -3411,7 +3411,7 @@
     {
       "ref": "obj.n_6d1fdcd0",
       "strings": {
-        "text": "Pizza & Itération"
+        "text": "Observation & ajustement"
       }
     },
     {
@@ -3455,7 +3455,7 @@
     {
       "ref": "obj.n_18946afe",
       "strings": {
-        "text": "Maintenance & Prévention"
+        "text": "Prévention & intégrité"
       }
     },
     {
@@ -3499,7 +3499,7 @@
     {
       "ref": "obj.n_d1c65010",
       "strings": {
-        "text": "Marketing & conscience produit"
+        "text": "Communication & valeur"
       }
     },
     {
@@ -3543,7 +3543,7 @@
     {
       "ref": "obj.n_e3bc8044",
       "strings": {
-        "text": "Lois & systèmes"
+        "text": "Règles & systèmes"
       }
     },
     {
@@ -3679,7 +3679,7 @@
     {
       "ref": "obj.n_4c7bfc27",
       "strings": {
-        "text": "Logique humaine & ingénierie"
+        "text": "Logique humaine & opérations"
       }
     },
     {
@@ -3743,7 +3743,7 @@
     {
       "ref": "obj.n_a1029a08",
       "strings": {
-        "text": "Pain & Dépendances"
+        "text": "Planification & dépendances"
       }
     },
     {
@@ -3803,13 +3803,13 @@
     {
       "ref": "obj.n_e446cf48",
       "strings": {
-        "text": "Logique humaine & ingénierie"
+        "text": "Logique humaine & opérations"
       }
     },
     {
       "ref": "obj.n_b9d796a8",
       "strings": {
-        "text": "En logiciel, des architectures robustes exigent le bon temps pour la conception et la validation. Respecter les dépendances et le temps de maturation du code évite une dette technique catastrophique."
+        "text": "Dans les opérations et la sécurité, des systèmes fiables exigent préparation, validation et respect des dépendances. La précipitation crée du risque ; des changements contrôlés protègent la continuité."
       }
     },
     {
@@ -3832,7 +3832,7 @@
       "ref": "obj.n_3b0a7068",
       "strings": {
         "attrs": {
-          "alt": "Pizza & Itération"
+          "alt": "Observation & ajustement"
         }
       }
     },
@@ -3856,7 +3856,7 @@
       "ref": "obj.n_759d560c",
       "strings": {
         "attrs": {
-          "alt": "Pizza & Itération"
+          "alt": "Observation & ajustement"
         }
       }
     },
@@ -3867,7 +3867,7 @@
     {
       "ref": "obj.n_22695320",
       "strings": {
-        "text": "Pizza & Itération"
+        "text": "Observation & ajustement"
       }
     },
     {
@@ -3927,13 +3927,13 @@
     {
       "ref": "obj.n_e29c1291",
       "strings": {
-        "text": "Logique humaine & ingénierie"
+        "text": "Logique humaine & opérations"
       }
     },
     {
       "ref": "obj.n_9d3f6ed8",
       "strings": {
-        "text": "La programmation est itérative. Je préfère de petites livraisons fréquentes qui permettent des corrections rapides, garantissant un produit final aligné avec la réalité."
+        "text": "En sécurité et en opérations, l'amélioration continue consiste à observer, ajuster et valider. Je privilégie des changements petits et vérifiables qui réduisent le risque et maintiennent le service aligné sur la réalité."
       }
     },
     {
@@ -3991,7 +3991,7 @@
     {
       "ref": "obj.n_17f884b0",
       "strings": {
-        "text": "Maintenance & Prévention"
+        "text": "Prévention & intégrité"
       }
     },
     {
@@ -4051,13 +4051,13 @@
     {
       "ref": "obj.n_cb48f364",
       "strings": {
-        "text": "Logique humaine & ingénierie"
+        "text": "Logique humaine & opérations"
       }
     },
     {
       "ref": "obj.n_1814b584",
       "strings": {
-        "text": "En logiciel, la prévention passe par un refactoring constant, des tests réguliers et une attention quotidienne aux détails. La même logique évite les pannes silencieuses et maintient la fiabilité des systèmes au fil des années."
+        "text": "Dans les systèmes, la prévention passe par une maintenance régulière, la validation et une attention quotidienne aux détails. Cette discipline réduit les pannes silencieuses et préserve la fiabilité dans le temps."
       }
     },
     {
@@ -4115,7 +4115,7 @@
     {
       "ref": "obj.n_88a69680",
       "strings": {
-        "text": "Marketing & conscience produit"
+        "text": "Communication & valeur"
       }
     },
     {
@@ -4175,7 +4175,7 @@
     {
       "ref": "obj.n_03b3aed0",
       "strings": {
-        "text": "Logique humaine & ingénierie"
+        "text": "Logique humaine & opérations"
       }
     },
     {
@@ -4239,7 +4239,7 @@
     {
       "ref": "obj.n_d27a9878",
       "strings": {
-        "text": "Lois & systèmes"
+        "text": "Règles & systèmes"
       }
     },
     {
@@ -4299,7 +4299,7 @@
     {
       "ref": "obj.n_5a2dd090",
       "strings": {
-        "text": "Logique humaine & ingénierie"
+        "text": "Logique humaine & opérations"
       }
     },
     {
@@ -4315,7 +4315,7 @@
     {
       "ref": "obj.n_42d01578",
       "strings": {
-        "text": "Cela montre que je valorise le bon timing, la prévention et le soin continu — et j'applique cette logique chaque jour en logiciel."
+        "text": "Cela montre que je valorise le bon timing, la prévention et le soin continu — et j'applique cette logique chaque jour aux opérations de systèmes et à la cybersécurité."
       }
     },
     {
@@ -4405,7 +4405,7 @@
     {
       "ref": "obj.n_a82695c8",
       "strings": {
-        "text": "Je suis marié et j'ai un fils de 14 ans ; cette stabilité familiale se traduit par de la concentration, de la prévisibilité et de la fiabilité technique au travail. J'apporte au code la discipline d'environnements où l'échec n'était pas une option."
+        "text": "Je suis marié et j'ai un fils de 14 ans ; cette stabilité familiale se traduit par de la concentration, de la prévisibilité et de la fiabilité technique au travail. J'apporte aux opérations de systèmes et à la sécurité la discipline d'environnements où l'échec n'était pas une option."
       }
     },
     {
@@ -4426,14 +4426,14 @@
       "ref": "obj.n_aae41e6c",
       "strings": {
         "attrs": {
-          "alt": "CPU"
+          "alt": "Bouclier"
         }
       }
     },
     {
       "ref": "obj.n_abe41fff",
       "strings": {
-        "text": "Langages de programmation"
+        "text": "Base actuelle du CET"
       }
     },
     {
@@ -4443,45 +4443,45 @@
     {
       "ref": "obj.n_72cd9d68",
       "strings": {
-        "text": "Python",
+        "text": "Systèmes & réseaux",
         "attrs": {
-          "title": "Avancé"
+          "title": "Base validée"
         }
       }
     },
     {
       "ref": "obj.n_73cd9efc",
       "strings": {
-        "text": "C/C++",
+        "text": "Scripts & journaux",
         "attrs": {
-          "title": "Intermédiaire"
+          "title": "Base validée"
         }
       }
     },
     {
       "ref": "obj.n_74cda090",
       "strings": {
-        "text": "C#",
+        "text": "Sécurité & conformité",
         "attrs": {
-          "title": "Intermédiaire"
+          "title": "Base validée"
         }
       }
     },
     {
       "ref": "obj.n_75cda220",
       "strings": {
-        "text": "Java",
+        "text": "Protection & durcissement",
         "attrs": {
-          "title": "Intermédiaire"
+          "title": "En cours"
         }
       }
     },
     {
       "ref": "obj.n_76cda3b4",
       "strings": {
-        "text": "SQL",
+        "text": "Vulnérabilités & IDS",
         "attrs": {
-          "title": "Avancé"
+          "title": "À développer"
         }
       }
     },
@@ -6440,96 +6440,6 @@
       }
     },
     {
-      "ref": "obj.n_055b5b36",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_5870b0da",
-      "strings": {
-        "attrs": {
-          "alt": "IDS"
-        }
-      }
-    },
-    {
-      "ref": "obj.n_3568a686",
-      "strings": {
-        "text": "IDS"
-      }
-    },
-    {
-      "ref": "obj.n_be0a53f6",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_a1fdc12e",
-      "strings": {
-        "attrs": {
-          "alt": "Analyse de Logs"
-        }
-      }
-    },
-    {
-      "ref": "obj.n_02c39430",
-      "strings": {
-        "text": "Analyse de Logs"
-      }
-    },
-    {
-      "ref": "obj.n_951e3b43",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_c7ae761b",
-      "strings": {
-        "attrs": {
-          "alt": "Cryptographie"
-        }
-      }
-    },
-    {
-      "ref": "obj.n_66b87462",
-      "strings": {
-        "text": "Cryptographie"
-      }
-    },
-    {
-      "ref": "obj.n_cb6d472a",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_86d9dc25",
-      "strings": {
-        "attrs": {
-          "alt": "Hacking Ethique"
-        }
-      }
-    },
-    {
-      "ref": "obj.n_b8f956c6",
-      "strings": {
-        "text": "Hacking Ethique"
-      }
-    },
-    {
-      "ref": "obj.n_4c8dbcb4",
-      "strings": {}
-    },
-    {
-      "ref": "obj.n_314192c4",
-      "strings": {
-        "attrs": {
-          "alt": "Analyse Forensique Numerique"
-        }
-      }
-    },
-    {
-      "ref": "obj.n_42971d07",
-      "strings": {
-        "text": "Analyse Forensique Numerique"
-      }
-    },
-    {
       "ref": "obj.n_754ba802",
       "strings": {}
     },
@@ -6718,7 +6628,7 @@
     {
       "ref": "obj.data_course_4",
       "strings": {
-        "text": "Début : 08/09/2026"
+        "text": "En cours"
       }
     },
     {
@@ -6748,7 +6658,7 @@
     {
       "ref": "obj.data_course_20",
       "strings": {
-        "text": "Formation spécialisée débutant le 8 septembre 2026, avec une fin prévue en octobre 2027. Les 30 unités du programme totalisent 1 000 heures."
+        "text": "Formation spécialisée en cours, avec une fin prévue en octobre 2027. Les 30 unités du programme totalisent 1 000 heures."
       }
     },
     {
@@ -6786,6 +6696,90 @@
       "strings": {
         "text": "Gestion de l’information et science des données (Tecnisign, 1 000h ; septembre 2026 – octobre 2027)"
       }
+    },
+    {
+      "ref": "obj.data_course_34",
+      "strings": { "text": "Contexte" }
+    },
+    {
+      "ref": "obj.data_course_35",
+      "strings": { "text": "Formation en cours qui complète une base en systèmes, automatisation et cybersécurité par la gestion et l’analyse de données." }
+    },
+    {
+      "ref": "obj.data_course_37",
+      "strings": { "text": "Application professionnelle" }
+    },
+    {
+      "ref": "obj.data_course_38",
+      "strings": { "text": "En développement : lecture de données, identification de motifs et soutien à l’analyse de journaux, avec une application progressive à l’automatisation et à la sécurité." }
+    },
+    {
+      "ref": "obj.data_course_40",
+      "strings": { "text": "Axes du programme" }
+    },
+    {
+      "ref": "obj.data_course_42",
+      "strings": { "text": "Python pour les données" }
+    },
+    {
+      "ref": "obj.data_course_43",
+      "strings": { "text": "SQL et modélisation" }
+    },
+    {
+      "ref": "obj.data_course_44",
+      "strings": { "text": "Nettoyage et transformation" }
+    },
+    {
+      "ref": "obj.data_course_45",
+      "strings": { "text": "Statistiques et analyse" }
+    },
+    {
+      "ref": "obj.data_course_46",
+      "strings": { "text": "Visualisation de données" }
+    },
+    {
+      "ref": "obj.data_course_47",
+      "strings": { "text": "Gouvernance des données" }
+    },
+    {
+      "ref": "obj.data_course_49",
+      "strings": { "text": "Thèmes pertinents" }
+    },
+    {
+      "ref": "obj.data_course_51",
+      "strings": { "text": "Programmation avancée avec Python" }
+    },
+    {
+      "ref": "obj.data_course_52",
+      "strings": { "text": "Nettoyage, transformation et visualisation" }
+    },
+    {
+      "ref": "obj.data_course_53",
+      "strings": { "text": "Fondements des modèles analytiques" }
+    },
+    {
+      "ref": "obj.data_course_54",
+      "strings": { "text": "Gestion, stockage et ingestion" }
+    },
+    {
+      "ref": "obj.data_course_55",
+      "strings": { "text": "Modélisation de données" }
+    },
+    {
+      "ref": "obj.data_course_56",
+      "strings": { "text": "Statistiques et analyse exploratoire" }
+    },
+    {
+      "ref": "obj.data_course_57",
+      "strings": { "text": "Storytelling avec les données" }
+    },
+    {
+      "ref": "obj.data_course_58",
+      "strings": { "text": "Business intelligence et analyse de données" }
+    },
+    {
+      "ref": "obj.data_course_59",
+      "strings": { "text": "Gouvernance et protection des données personnelles" }
     }
   ]
 }
