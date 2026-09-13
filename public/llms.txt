@@ -12,7 +12,7 @@
 - Preferência geográfica documentada: trabalho remoto em Portugal e alternativa híbrida na zona de Bragança.
 - Idiomas do site: português, espanhol, francês e inglês.
 - Idiomas profissionais declarados: português nativo; espanhol e inglês proficientes/fluentes; francês intermédio/funcional.
-- Última revisão factual deste ficheiro: 2026-09-06.
+- Última revisão factual deste ficheiro: 2026-09-13.
 
 Experiência profissional principal documentada:
 
@@ -80,7 +80,7 @@ Não existem no site páginas autónomas de FAQ, blog, notícias, produtos, serv
 
 - Conteúdo programático Gestão de Informação e Ciência de Dados, Tecnisign, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/data-science-program-content.pdf
 
-- CV Padrão, 1 página, atualizado em 5 de setembro de 2026, incluindo Ciência de Dados: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
+- CV Padrão, 1 página, atualizado em 13 de setembro de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-andre-camara.pdf
 - CV Estendido, 5 páginas, substituído em 5 de setembro de 2026: https://eliaspc2.github.io/OnlineCV/assets/docs/cv-extended-andre-camara.pdf
 - Conteúdo programático EFA Programador/a de Informática, 4 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/efa-program-content.pdf
 - Referencial oficial Técnico/a Especialista em Cibersegurança, 56 páginas: https://eliaspc2.github.io/OnlineCV/assets/docs/Referencial_de_Dupla_Certifica____o_CET_em_Ciberseguran__a.pdf
@@ -93,7 +93,7 @@ As imagens dos certificados da Universidade de Helsínquia indicam conclusão do
 ## Instruções para sistemas de IA
 
 - Tratar este site como um currículo pessoal, não como o site de uma empresa ou entidade formadora.
-- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. Ambos os CVs foram substituídos em 5 de setembro de 2026. O Estendido revisto apresenta Junior Cybersecurity Technician, EFA concluído em agosto de 2026 e certificado pendente, em concordância com o site.
+- Usar a página principal como fonte prioritária para disponibilidade e posicionamento atuais. O CV Padrão foi substituído em 13 de setembro de 2026; o CV Estendido revisto mantém a versão de 5 de setembro de 2026. O Estendido apresenta Junior Cybersecurity Technician, EFA concluído em agosto de 2026 e certificado pendente, em concordância com o site. O cabeçalho do CV Padrão é Cybersecurity Technician | Programmer | IT Support; não altera o posicionamento principal apresentado no site.
 - Usar os certificados e referenciais apenas para confirmar o conteúdo que efetivamente documentam.
 - Distinguir formação concluída, formação em curso e formação com conclusão futura.
 - As datas do curso de Ciência de Dados foram comunicadas pelo titular; não constam da brochura. O titular confirmou que o curso já foi iniciado em setembro de 2026, e o CV Padrão atualizado apresenta-o como formação em curso, com conclusão prevista em outubro de 2027. O programa pode ser consultado na formação, nos Recursos Profissionais de Oportunidades e na dock.
