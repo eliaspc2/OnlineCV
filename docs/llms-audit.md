@@ -1,8 +1,10 @@
 # Auditoria para o llms.txt
 
-Data da última revisão incremental: 2026-09-13
+Data da última revisão incremental: 2026-11-16
 
-Substituição do CV Padrão: PDF A4 de uma página fornecido pelo titular em 13 de setembro de 2026, com 466.262 bytes e SHA-256 `24c85665db0903d60ff1a035cee7a8f16ce37dc194aada1b57ea51fc3e98e01c`. O texto foi extraído integralmente e a página foi renderizada para inspeção visual, sem cortes ou sobreposições. O documento apresenta o cabeçalho `Cybersecurity Technician | Programmer | IT Support`, experiência na Devoteam / BNP Paribas (Lisboa, 2019-2024) e CAS Training / BNP Paribas (Madrid, 2016-2018), além da formação CET em Cibersegurança e Ciência de Dados em curso. `llms.txt` foi atualizado para registar esta versão, sem alterar o posicionamento principal do site. Versão `2026-09-13.1`, cache `json-site-v70`.
+Substituição do CV Padrão: PDF A4 de uma página fornecido pelo titular em 16 de novembro de 2026, com 358.107 bytes e SHA-256 `7e815b927aa201e840db28349c9399015016a0f6fa5af574a2ebd1a0211bf54d`. O texto foi extraído integralmente e a página foi renderizada para inspeção visual, sem cortes ou sobreposições. O documento apresenta o cabeçalho `Cybersecurity Trainee | IT Support & Systems`, a experiência em suporte IT na Devoteam / BNP Paribas, CAS Training / BNP Paribas e Tecnocom / CEPSA, e a formação CET em Cibersegurança e Ciência de Dados em curso. `llms.txt` foi atualizado para registar esta versão. Versão `2026-11-16.1`, cache `json-site-v71`.
+
+Substituição anterior do CV Padrão: PDF A4 de uma página fornecido pelo titular em 13 de setembro de 2026, com 466.262 bytes e SHA-256 `24c85665db0903d60ff1a035cee7a8f16ce37dc194aada1b57ea51fc3e98e01c`. Foi substituído pela versão de 16 de novembro de 2026.
 
 Correcao visual sem alteracao factual: a pill `Em curso` da Ciencia de Dados passou do preset azul de data prevista para o mesmo preset ambar usado no estado em curso do CET; a conclusao prevista mantem o preset azul. `llms.txt` relido e continua factual. Versao `2026-09-06.12`, cache `json-site-v69`.
 
